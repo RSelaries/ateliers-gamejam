@@ -1,0 +1,36 @@
+:root {
+    /* Themes Colors */
+    --background-color-light-theme: #e1e1e1;
+    --background-color-dark-theme: #1b1b1b;
+
+    --text-color-light-theme: #1b1b1b;
+    --text-color-dark-theme: #f1f1f1;
+
+    --highlight-color-light-theme: #1717f0;
+    --highlight-color-dark-theme: #2f2fe5;
+
+    --hover-background-color-light-theme: #c1c1c1;
+    --hover-background-color-dark-theme: #2b2b2b;
+
+    /* Variables */
+    --background-color: light-dark(var(--background-color-light-theme), var(--background-color-dark-theme));
+    --body-text-color: light-dark(var(--text-color-light-theme), var(--text-color-dark-theme));
+    --highlight-color: light-dark(var(--highlight-color-light-theme), var(--highlight-color-dark-theme));
+    --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--body-text-color);
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+
+    height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
