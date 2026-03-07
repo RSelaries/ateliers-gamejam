@@ -11,15 +11,15 @@ export default
         ],
     },
     {
-        "name": "Tutoriels",
+        "name": "Ateliers",
         "pages": [
             {
-                "title": "Devine le nombre",
+                "title": "1. Devine le nombre",
                 "type": "markdown",
                 "link": "#",
             },
             {
-                "title": "Jeu de plateforme",
+                "title": "2. Jeu de plateforme",
                 "type": "markdown",
                 "link": "#",
             },

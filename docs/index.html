@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Ateliers Game jam</title>
 
-    <!-- <zero-md></zero-md> web component that decompile md files
+    <!-- <zero-md> web component that decompile md files -->
     <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-    -->
 
     <!-- Import modules -->
     <script type="module" src="./main.js"></script>
@@ -20,7 +19,15 @@
     <wc-header></wc-header>
     <section class="content">
         <left-panel></left-panel>
+        <section class="article">
+            <zero-md src="pages/introduction/devine-le-nombre.md">
+                <template data-append>
+                    <style>
+                    </style>
+                </template>
+            </zero-md>
+        </section>
     </section>
-    <wc-footer></wc-footer>
+    <!-- <wc-footer></wc-footer> -->
 </body>
 </html>

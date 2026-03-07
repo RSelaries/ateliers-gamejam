@@ -1,26 +1,70 @@
-import { LitElement, html, css } from 'https://unpkg.com/lit?module'
+import { LitElement, html, css, unsafeCSS } from 'https://unpkg.com/lit?module'
+
 import pages from '../pages/pages.js'
+
+const opened = new URL( "../medias/icons/folder-opened.svg", import.meta.url).href
+const closed = new URL( "../medias/icons/folder-closed.svg", import.meta.url).href
 
 class LeftPanel extends LitElement {
     static styles = css`
         .left-panel-nav {
             text-decoration: none;
+            padding: 0 10px;
+        }
+        *::marker {
+            content: "";
+        }
+        *[open]::marker {
+            content: "";
+        }
+
+        .category-list {
+            padding: 0px;
+        }
+
+
+        details > summary {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            margin: 5px;
+            padding: 5px;
+            font-weight: 500;
+            text-transform: uppercase;
+            user-select: none;
+        }
+
+        details > summary > div {
+            background-color: var(--body-text-color);
+            mask-size: 100%;
+            -webkit-mask-repeat: no-<repeat;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-image: url(${unsafeCSS(closed)});
+            width: 24px;
+            aspect-ratio: 1;
+            display: inline-block;
+        }
+        details[open] > summary > div {
+            mask-image: url(${unsafeCSS(opened)});
         }
     `
 
     render() {
         function pageLink(category) {
-            return category.pages.map((page) => html`<li>
+            return category.pages.map((page) => html`<li class="page">
                 ${page.title}
             </li>`)
         }
 
         return html`
         <nav class="left-panel-nav">
-            <ol>
-                ${pages.map((category) => html`<li>
+            <ol class="category-list">
+                ${pages.map((category) => html`<li class="category">
                     <details>
                         <summary style="cursor: pointer">
+                            <div></div>
                             ${category.name}
                         </summary>
                         <ol>

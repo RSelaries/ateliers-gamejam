@@ -6,13 +6,16 @@ class WCHeader extends LitElement {
             width: 100vw;
             padding: 0;
             margin: 0;
-            border-bottom: solid 1px var(--body-text-color);
+            border-bottom: solid 1px var(--border-color);
         }
         nav {
-            padding: 5px;
+            padding: 5px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center
+        }
+        .logo {
+            cursor: pointer;
         }
     `
 
@@ -20,7 +23,7 @@ class WCHeader extends LitElement {
         return html`
             <header>
                 <nav>
-                    <a src="#" style="cursor: pointer">Logo</a>
+                    <a src="#" class="logo">Logo</a>
                     <theme-button></theme-button>
                 </nav>
             </header>

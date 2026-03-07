@@ -6,7 +6,7 @@ class WCFooter extends LitElement {
             width: 100vw;
             padding: 0;
             margin: 0;
-            border-top: solid 1px var(--body-text-color);
+            border-top: solid 1px var(--border-color);
         }
     `
 
