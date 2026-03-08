@@ -16,12 +16,12 @@ export default
             {
                 "title": "1. Devine le nombre",
                 "type": "markdown",
-                "link": "#",
+                "link": "ateliers/devine-le-nombre.md",
             },
             {
                 "title": "2. Jeu de plateforme",
-                "type": "markdown",
-                "link": "#",
+                "type": "html",
+                "link": "ateliers/jeu-de-plateforme.md",
             },
         ],
     },
@@ -30,7 +30,7 @@ export default
         "pages": [
             {
                 "title": "GDQuest",
-                "type": "markdown",
+                "type": "html",
                 "link": "#",
             },
         ],

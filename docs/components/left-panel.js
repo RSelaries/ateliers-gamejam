@@ -10,6 +10,8 @@ class LeftPanel extends LitElement {
         .left-panel-nav {
             text-decoration: none;
             padding: 0 10px;
+            border-right: solid 1px var(--border-color);
+            height: 100%;
         }
         *::marker {
             content: "";
@@ -21,7 +23,6 @@ class LeftPanel extends LitElement {
         .category-list {
             padding: 0px;
         }
-
 
         details > summary {
             display: flex;
@@ -49,11 +50,18 @@ class LeftPanel extends LitElement {
         details[open] > summary > div {
             mask-image: url(${unsafeCSS(opened)});
         }
+        .page-btn {
+            cursor: pointer;
+        }
     `
 
+    changeToPage(page) {
+        console.log(page)
+    }
+
     render() {
-        function pageLink(category) {
-            return category.pages.map((page) => html`<li class="page">
+        const pageLink = (category) => {
+            return category.pages.map((page) => html`<li class="page-btn" @click=${() => this.changeToPage(page)}>
                 ${page.title}
             </li>`)
         }

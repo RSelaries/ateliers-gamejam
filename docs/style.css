@@ -1,8 +1,9 @@
 :root {
     /* Themes Colors */
     --background-color-light-theme-1: #e1e1e1;
-    --background-color-light-theme-2: #c9c9c9;
     --background-color-dark-theme-1: #151515;
+    
+    --background-color-light-theme-2: #dadada;
     --background-color-dark-theme-2: #0e0e0e;
 
     --text-color-light-theme: #1b1b1b;
@@ -50,6 +51,11 @@ body {
     flex-direction: row;
 
     background-color: var(--background-color-2);
+}
+
+.content > left-panel {
+    padding: 0;
+    margin: 0;
 }
 
 .article {
