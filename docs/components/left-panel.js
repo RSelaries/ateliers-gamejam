@@ -62,10 +62,14 @@ class LeftPanel extends LitElement {
     constructor() {
         super()
 
-        this.openActivePage()
         window.addEventListener("hashchange", () => {
             this.openActivePage()
         })
+    }
+
+    firstUpdated() {
+        super.firstUpdated();
+        this.openActivePage()
     }
 
     render() {
@@ -96,6 +100,7 @@ class LeftPanel extends LitElement {
 
     openActivePage() {
         let caterogy = window.location.hash.replace("#", "").split("/")[0]
+        console.log(this.renderRoot.querySelector(`.${caterogy}`).querySelector("details").open = true)
     }
 }
 
