@@ -56,7 +56,16 @@ class LeftPanel extends LitElement {
     `
 
     changeToPage(page) {
-        console.log(page)
+        window.location.hash = page.link
+    }
+
+    constructor() {
+        super()
+
+        this.openActivePage()
+        window.addEventListener("hashchange", () => {
+            this.openActivePage()
+        })
     }
 
     render() {
@@ -69,7 +78,7 @@ class LeftPanel extends LitElement {
         return html`
         <nav class="left-panel-nav">
             <ol class="category-list">
-                ${pages.map((category) => html`<li class="category">
+                ${pages.map((category) => html`<li class="category ${category.slug}">
                     <details>
                         <summary style="cursor: pointer">
                             <div></div>
@@ -83,6 +92,10 @@ class LeftPanel extends LitElement {
             </ol>
         </nav>
         `
+    }
+
+    openActivePage() {
+        let caterogy = window.location.hash.replace("#", "").split("/")[0]
     }
 }
 

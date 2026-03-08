@@ -7,12 +7,15 @@ class WCHeader extends LitElement {
             padding: 0;
             margin: 0;
             border-bottom: solid 1px var(--border-color);
+            z-index: 2;
+            position: sticky;
         }
         nav {
             padding: 5px 30px;
             display: flex;
             justify-content: space-between;
-            align-items: center
+            align-items: center;
+            box-shadow: 0px 0px 15px #0007;
         }
         .logo {
             cursor: pointer;
