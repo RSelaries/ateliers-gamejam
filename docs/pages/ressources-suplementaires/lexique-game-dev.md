@@ -21,9 +21,13 @@ Agencements de tuiles *(à partir d'un [tileset](#ressources-suplementaires/lexi
 
 ## Pixel Art
 
-**Medium artistique** découlant des mediums **numériques** où la dimmension *(en pixels)* de l'image est très limités.
+**Medium artistique** découlant des mediums **numériques** où la dimmension *(en pixels)* de l'image est très limité. Il s'agissait à l'origine d'une contrainte technique. 
 
 ## Mesh
 
 De l'anglais mesh *(maillage)*, un mesh est une collections de points dans un espace 3D.<br>
 Autrement dit: **un modèle 3D**.
+
+## Low Poly
+
+Désigne des modèles 3D *(ou [meshs](#ressources-suplementaires/lexique-game-dev.md#mesh))* qui ont peut de polygones. C'est aujourd'hui un style artistique mais il sagissait d'une contrainte technique (tout comme pour le [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art)).

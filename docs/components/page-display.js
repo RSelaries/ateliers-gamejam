@@ -84,6 +84,13 @@ class PageDisplay extends LitElement {
                                 p {
                                     margin: 0px;
                                 }
+                                blockquote {
+                                    border-left: 2px solid var(--highlight-color);
+                                    border-radius: 5px; 
+                                    margin: 15px;
+                                    margin-left: 0px;
+                                    padding: 0px 30px;
+                                }
                             </style>
                         </template>
                     </zero-md>

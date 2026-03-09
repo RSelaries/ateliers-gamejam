@@ -3,6 +3,8 @@
 Ce site est la documentation des ateliers de **création de jeux-vidéo** organisé par *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et *<a class="external-link" href="https://www.lasierraprod.com">La Sierra Prod</a>*.
 Ces ateliers ont pour but de vous apprender les bases du développement de jeu-vidéo pour participer à une gamejam.
 
+> Les textes en <span style="color: var(--redirection-color)">jaune</span> sont des liens internes *(ils redirigent vers d'autres pages de cette documentation)* et les textes <span style="color: var(--highlight-color); text-decoration: underline">bleu soulignés</span> sont des liens externes *(ils redirigent vers des sites externes)*.
+
 > Si vous trouvez quelconque **faute**, **erreure**, **manquement**... n'hésitez pas à ouvrir une *<a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/issues/new">issue sur le Github</a>* ou bien à m'envoyer un <a class="external-link" href="https://discordapp.com/users/cri.staline">mp discord</a> !
 
 ## Qu'est-ce qu'une gamejam ?
@@ -41,9 +43,9 @@ Blender est un logiciel de **modélisation 3D** gratuit et **open source**. On v
 
 ### ![Blockbench Logo](../../medias/blockbench-logo.png) [Blockbench](#ressources-suplementaires/blockbench.md)
 
-Blockbench est un logiciel gratuit et **open-source**
+Blockbench est un logiciel gratuit et **open-source** de **modélisation 3D** simplifié. Il sert originellement à modéliser des personnages et blocks pour Minecraft et Hytale mais peut aussi être utilisé pour faire des modèles en [low-poly](#ressources-suplementaires/lexique-game-dev.md#low-poly) et [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art).
 
 ### ![Pixelorama Logo](../../medias/pixelorama-logo.svg) [Pixelorama](#ressources-suplementaires/pixelorama.md)
 
-Pixelorama est un logiciel de [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art) gratuit et **open source**. On pourra l'utiliser pour créer les [sprites](#ressources-suplementaires/lexique-game-dev.md#sprite) des nos jeux 2D.
+Pixelorama est un logiciel de [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art) gratuit et **open source**. On pourra l'utiliser pour créer les [sprites](#ressources-suplementaires/lexique-game-dev.md#sprite) pour nos jeux 2D.
 > Pixelorama a été développé avec le moteur [Godot](#ressources-suplementaires/godot.md) !
