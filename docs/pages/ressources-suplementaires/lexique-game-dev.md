@@ -6,7 +6,7 @@
 
 ## Version Control
 
-Le **version control** est le fait de garder une trace de chaque ligne de code changé dans un fichier. Cela permet de revenir en arrière très facilement en cas de problème et est un très bon outil pour travailler à plusieur. **Git** est l'outil de version control le plus utilisé *(~90%)* dans le monde. **Github** est une des plateforme qui permet d'héberger un projet **git** gratuitement (Ce site par exemple).<br>
+Le **version control** est le fait de garder une trace de chaque ligne de code changé dans un fichier. Cela permet de revenir en arrière très facilement en cas de problème et c'est un très bon outil pour travailler à plusieurs. **Git** est l'outil de version control le plus utilisé *(~90%)* dans le monde. **Github** est une des plateforme qui permet d'héberger un projet **git** gratuitement (Ce site par exemple).<br>
 > Google doc contient d'ailleurs une fonctionnalité de version control !
 
 > Le **version controling** est **extrèmement utile** ! Je recommande de l'**utiliser pour tous vous projets** qui se composent de fichiers textes (programmation, docummentation, etc...)

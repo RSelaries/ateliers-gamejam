@@ -27,6 +27,8 @@ class NavButtons extends LitElement {
                 background-color: var(--background-color-1);
                 border: solid 2px var(--background-color-2);
                 color: var(--body-text-color-faded);
+                pointer-events: none;
+                cursor: default;
             }
 
             > a:hover {

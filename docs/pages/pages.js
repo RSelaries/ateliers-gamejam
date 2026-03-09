@@ -57,7 +57,7 @@ export default
             },
             {
                 title: "Blockbench",
-                link: "ressources-suplementaires/blender.md",
+                link: "ressources-suplementaires/blockbench.md",
             },
             {
                 title: "Pixelorama",

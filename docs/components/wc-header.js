@@ -24,6 +24,11 @@ class WCHeader extends LitElement {
             text-decoration: none;
             color: var(--body-text-color);
         }
+        .buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
     `
 
     render() {
@@ -31,7 +36,10 @@ class WCHeader extends LitElement {
             <header>
                 <nav>
                     <a href="https://sirius-productions.fr" class="logo">Site Sirius Productions</a>
-                    <theme-button></theme-button>
+                    <div class="buttons">
+                        <suggestion-button></suggestion-button>
+                        <theme-button></theme-button>
+                    </div>
                 </nav>
             </header>
         `
