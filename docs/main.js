@@ -4,4 +4,4 @@ import "./components/wc-header.js"
 import "./components/theme-button.js"
 import "./components/wc-footer.js"
 import "./components/page-display.js"
-
+import "./components/right-panel.js"

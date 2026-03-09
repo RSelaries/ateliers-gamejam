@@ -9,9 +9,8 @@ class LeftPanel extends LitElement {
     static styles = css`
         .left-panel-nav {
             text-decoration: none;
-            padding: 0 10px;
-            border-right: solid 1px var(--border-color);
-            height: 100%;
+            padding: 20px 10px;
+            /* height: 100%; */
         }
         *::marker {
             content: "";
@@ -68,7 +67,7 @@ class LeftPanel extends LitElement {
     }
 
     firstUpdated() {
-        super.firstUpdated();
+        super.firstUpdated()
         this.openActivePage()
     }
 
@@ -100,7 +99,11 @@ class LeftPanel extends LitElement {
 
     openActivePage() {
         let caterogy = window.location.hash.replace("#", "").split("/")[0]
-        console.log(this.renderRoot.querySelector(`.${caterogy}`).querySelector("details").open = true)
+        if (caterogy) {
+            this.renderRoot.querySelector(`.${caterogy}`).querySelector("details").open = true
+        } else {
+            this.renderRoot.querySelector(`.introduction`).querySelector("details").open = true
+        }
     }
 }
 

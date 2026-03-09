@@ -9,6 +9,9 @@
     --text-color-light-theme: #1b1b1b;
     --text-color-dark-theme: #f1f1f1;
 
+    --text-color-faded-light-theme: #808080;
+    --text-color-faded-dark-theme: #898989;
+
     --highlight-color-light-theme: #1717f0;
     --highlight-color-dark-theme: #2f2fe5;
 
@@ -25,6 +28,7 @@
     --background-color-1: light-dark(var(--background-color-light-theme-1), var(--background-color-dark-theme-1));
     --background-color-2: light-dark(var(--background-color-light-theme-2), var(--background-color-dark-theme-2));
     --body-text-color: light-dark(var(--text-color-light-theme), var(--text-color-dark-theme));
+    --body-text-color-faded: light-dark(var(--text-color-faded-light-theme), var(--text-color-faded-dark-theme));
     --highlight-color: light-dark(var(--highlight-color-light-theme), var(--highlight-color-dark-theme));
     --highlight-color-transparent: light-dark(var(--highlight-color-transparent-light-theme), var(--highlight-color-transparent-dark-theme)),
     --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
@@ -53,16 +57,21 @@ body {
 
     background-color: var(--background-color-2);
     min-height: 0;
+    /* padding-top: 20px; */
 }
 
 .content > left-panel {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .article {
     flex: 1;
-    background-color: var(--background-color-1);
-    padding: 0 30px;
-    overflow: scroll;
+    padding: 30px 0px;
+    overflow-y: scroll;
+}
+
+right-panel, left-panel {
+    overflow-y: scroll;
 }

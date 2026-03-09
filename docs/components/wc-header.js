@@ -20,13 +20,17 @@ class WCHeader extends LitElement {
         .logo {
             cursor: pointer;
         }
+        a {
+            text-decoration: none;
+            color: var(--body-text-color);
+        }
     `
 
     render() {
         return html`
             <header>
                 <nav>
-                    <a src="#" class="logo">Logo</a>
+                    <a href="https://sirius-productions.fr" class="logo">Site Sirius Productions</a>
                     <theme-button></theme-button>
                 </nav>
             </header>
