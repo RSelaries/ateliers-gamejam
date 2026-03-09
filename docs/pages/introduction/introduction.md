@@ -1,7 +1,9 @@
 # Ateliers création de jeux-vidéo
 
-Ce site est la documentation des ateliers de **création de jeux-vidéo** organisé par *[Sirius Productions](https://sirius-productions.fr)* et *[La Sierra Prod](https://www.lasierraprod.com/)*.
+Ce site est la documentation des ateliers de **création de jeux-vidéo** organisé par *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et *<a class="external-link" href="https://www.lasierraprod.com">La Sierra Prod</a>*.
 Ces ateliers ont pour but de vous apprender les bases du développement de jeu-vidéo pour participer à une gamejam.
+
+> Si vous trouvez quelconque **faute**, **erreure**, **manquement**... n'hésitez pas à ouvrir une *<a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/issues/new">issue sur le Github</a>* ou bien à m'envoyer un <a class="external-link" href="https://discordapp.com/users/cri.staline">mp discord</a> !
 
 ## Qu'est-ce qu'une gamejam ?
 
@@ -17,9 +19,31 @@ Il y aura **deux ateliers par mois**. Le premier est un atelier **théorique**, 
 ### Ateliers théoriques
 
 Les ateliers théoriques sont l'occasion d'aborder le **game-design**, l'**écriture de scénario**, le design **UI**/**UX** et plus.<br>
-Ils prennent place aux locaux de *[La Sierra Prod](https://www.lasierraprod.com/)* et sont organisés par leurs animateurs.
+Ils prennent place aux locaux de *<a class="external-link" href="[https://www.lasierraprod.com">La Sierra Prod</a>* et sont organisés par leurs animateurs.
 
 ### Ateliers pratiques
 
 Les ateliers pratiques s'organisent par **projet**. Chaque atelier sera **un nouveau jeu** que l'on va développer pour **apprendre** petit à petit la programmation et le développement de jeux-vidéo.
-Ils prennet place aux locaux de *[Sirius Productions](https://sirius-productions.fr)* et sont organisé par moi-même *(Raphaël, service civique à Sirius)*.
+Ils prennet place aux locaux de *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et sont organisé par moi-même *(Raphaël, service civique à Sirius)*.
+
+## Quels outils on va utiliser ?
+
+Voici la liste des outils que l'on va utiliser pendant ces ateliers.<br>
+*(Je fais ici une liste de **tous** les outils utiles pour le gamedev, nous n'aurons peut-être pas le temps de tous les utiliser mais vous pouvez aller les voir si vous êtes intéressés)*
+
+### ![Logo Godot](../../medias/godot-logo.svg)  [Godot](#ressources-suplementaires/godot.md)
+
+Godot est un **moteur de jeu** gratuit et **open source**. C'est le logiciel que l'on va le plus utilisé.
+
+### ![Blender Godot](../../medias/blender-logo.svg) [Blender](#ressources-suplementaires/blender.md)
+
+Blender est un logiciel de **modélisation 3D** gratuit et **open source**. On va l'utiliser pour créer les objets et personages (les [meshs](#ressources-suplementaires/lexique-game-dev.md#mesh)) de nos jeux en 3D.
+
+### ![Blockbench Logo](../../medias/blockbench-logo.png) [Blockbench](#ressources-suplementaires/blockbench.md)
+
+Blockbench est un logiciel gratuit et **open-source**
+
+### ![Pixelorama Logo](../../medias/pixelorama-logo.svg) [Pixelorama](#ressources-suplementaires/pixelorama.md)
+
+Pixelorama est un logiciel de [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art) gratuit et **open source**. On pourra l'utiliser pour créer les [sprites](#ressources-suplementaires/lexique-game-dev.md#sprite) des nos jeux 2D.
+> Pixelorama a été développé avec le moteur [Godot](#ressources-suplementaires/godot.md) !

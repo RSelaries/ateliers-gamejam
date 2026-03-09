@@ -12,7 +12,7 @@ class PageDisplay extends LitElement {
     static styles = css`
         .article-wrapper {
             border: solid 1px var(--border-color);        
-            padding: 0 30px;
+            padding: 30px;
             background-color: var(--background-color-1);
         }
     `
@@ -34,6 +34,7 @@ class PageDisplay extends LitElement {
                     <zero-md
                         src=${pagesUrl + this.page.link}
                         @zero-md-rendered=${() => {
+                            this.fixHeadingIds()
                             this.scrollToAnchor()
                             this.buildHierarchy()
                         }}
@@ -50,8 +51,38 @@ class PageDisplay extends LitElement {
                                 em {
                                     color: var(--highlight-color);
                                 }
-                                a {
+                                a.external-link {
                                     color: var(--highlight-color);
+                                    text-decoration: underline;
+                                }
+                                a {
+                                    text-decoration: none;
+                                    color: var(--redirection-color);
+                                }
+                                h1, h2, h3, h4, h5, h6 {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 5px;
+                                    margin: 0px;
+                                    margin-top: 15px;
+
+                                    > img {
+                                        height: 24px;
+                                    }
+                                }
+                                h1 {
+                                    margin-bottom: 30px;
+                                    color: var(--highlight-color);
+                                }
+                                h2 {
+                                    border: solid 2px var(--highlight-color);
+                                    background-color: light-dark(#0000, var(--highlight-color));
+                                    padding: 2px 20px;
+                                    border-radius: 15px;
+                                    margin-bottom: 15px;
+                                }
+                                p {
+                                    margin: 0px;
                                 }
                             </style>
                         </template>
@@ -68,6 +99,26 @@ class PageDisplay extends LitElement {
             `
         }
         
+    }
+
+    fixHeadingIds() {
+        const body = this.renderRoot
+            .querySelector("zero-md")
+            .shadowRoot.querySelector(".markdown-body")
+
+        const headings = body.querySelectorAll("h1,h2,h3,h4,h5,h6")
+
+        headings.forEach(h => {
+            const newId = h.textContent
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, "")
+                .trim()
+                .replace(/\s+/g, "-")
+
+            h.id = newId
+        })
     }
 
     changeToPage(page) {

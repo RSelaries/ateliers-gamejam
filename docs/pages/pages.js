@@ -41,12 +41,33 @@ export default
     // Ressources Suplémentaires
     {
         name: "Ressources Suplémentaires",
-        slug: "ressources-suplémentaires",
+        slug: "ressources-suplementaires",
         pages: [
             {
+                title: "Lexique du Game dev",
+                link: "ressources-suplementaires/lexique-game-dev.md",
+            },
+            {
+                title: "Godot",
+                link: "ressources-suplementaires/godot.md",
+            },
+            {
+                title: "Blender",
+                link: "ressources-suplementaires/blender.md",
+            },
+            {
+                title: "Blockbench",
+                link: "ressources-suplementaires/blender.md",
+            },
+            {
+                title: "Pixelorama",
+                link: "ressources-suplementaires/pixelorama.md",
+            },
+            {
                 title: "GDQuest",
-                link: "ateliers/devine-le-nombre.md",
+                link: "ressources-suplementaires/gd-quest.md",
             },
         ],
     },
 ]
+

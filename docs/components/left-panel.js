@@ -118,9 +118,9 @@ class LeftPanel extends LitElement {
         const pageBtns = this.renderRoot.querySelectorAll(".page-btn")
         const caterogyToOpen = window.location.hash.replace("#", "").split("/")[0]
         const pageToOpen = window.location.hash
-            .replace("#", "").replace(".md", "")
-            .replace(".html", "").split("/")[1]
-
+            .split("#")[1].replace(".html", "")
+            .replace(".md", "").split("/")[1]
+        
         for(let i = 0; i < categories.length; i++) {
             if (caterogyToOpen) {
                 categories[i].querySelector("details").open = categories[i].className.includes(caterogyToOpen)

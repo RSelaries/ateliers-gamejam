@@ -17,6 +17,9 @@
     --highlight-color-light-theme: #008B8B;
     --highlight-color-dark-theme: #65BED4;
 
+    --redirection-color-light-theme: #E79A00;
+    --redirection-color-dark-theme: #F2BF4A;
+
     --highlight-color-transparent-light-theme: #65bed44f;
     --highlight-color-transparent-dark-theme: #008B8B4f;
 
@@ -34,6 +37,7 @@
     --body-text-color-faded: light-dark(var(--text-color-faded-light-theme), var(--text-color-faded-dark-theme));
     --highlight-color: light-dark(var(--highlight-color-light-theme), var(--highlight-color-dark-theme));
     --highlight-color-transparent: light-dark(var(--highlight-color-transparent-light-theme), var(--highlight-color-transparent-dark-theme));
+    --redirection-color: light-dark(var(--redirection-color-light-theme), var(--redirection-color-dark-theme));
     --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
     --border-color: light-dark(var(--border-color-light-theme), var(--border-color-dark-theme));
 }

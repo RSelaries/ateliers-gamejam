@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'https://unpkg.com/lit?module'
 
+import pages from '../pages/pages.js'
+
 class NavButtons extends LitElement {
     static styles = css`
         .nav-btn-wrapper {
@@ -8,7 +10,9 @@ class NavButtons extends LitElement {
             justify-content: space-between;
             padding: 30px;
             padding-bottom: 0px;
-            > button {
+
+            > a {
+                text-decoration: none;
                 padding: 5px 20px;
                 font-family: prompt;
                 font-weight: 500;
@@ -17,22 +21,80 @@ class NavButtons extends LitElement {
                 border: solid 2px var(--highlight-color);
                 background-color: var(--highlight-color);
                 cursor: pointer;
+                color: var(--body-text-color);
             }
-            > button:hover {
+            > a.disabled {
+                background-color: var(--background-color-1);
+                border: solid 2px var(--background-color-2);
+                color: var(--body-text-color-faded);
+            }
+
+            > a:hover {
                 border: solid 2px var(--highlight-color);
                 background-color: transparent;
+            }
+            > a.disabled:hover {
+                background-color: var(--background-color-1);
+                border: solid 2px var(--background-color-2);
+                color: var(--body-text-color-faded);
             }
         }
     `
 
+    static properties = {
+        nextUrl: {},
+        prevUrl: {},
+    }
+
+    constructor() {
+        super()
+        this.getPrevNextPagesUrls()
+        window.addEventListener("hashchange", () => {
+            this.getPrevNextPagesUrls()
+        })
+    }
+
     render() {
         return html`
             <div class="nav-btn-wrapper">
-                <button onclick="console.log('Caca')">← Précédent</button>
-                <button>Suivant →</button>
+                <a href="${this.prevUrl}" class=${this.prevUrl ? "" : "disabled"}>← Précédent</a>
+                <a href="${this.nextUrl}" class=${this.nextUrl ? "" : "disabled"}>Suivant →</a>
             </div>
         `
     }
+
+    getPrevNextPagesUrls() {
+        const currentPage = this.getPageFromHash()
+        const allPages = pages.flatMap(c => c.pages)
+
+        const index = allPages.findIndex(p => p.link === currentPage.link)
+
+        this.prevUrl = allPages[index - 1] ? `#${allPages[index - 1].link}` : null
+        this.nextUrl = allPages[index + 1] ? `#${allPages[index + 1].link}` : null
+    }
+
+    getRoute() {
+            const parts = window.location.hash.split("#")
+    
+            return {
+                page: parts[1],
+                anchor: parts[2]
+            }
+        }
+    
+        getPageFromHash() {
+            const route = this.getRoute()
+    
+            for (const category of pages) {
+                for (const page of category.pages) {
+                    if (page.link === route.page) {   
+                        return page
+                    }
+                }
+            }
+    
+            return pages[0].pages[0]
+        }
 }
 
 customElements.define('nav-buttons', NavButtons)
