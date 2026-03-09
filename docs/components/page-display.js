@@ -44,21 +44,26 @@ class PageDisplay extends LitElement {
                                 .markdown-body {
                                     font-size: 17px;
                                 }
+
                                 strong {
                                     font-weight: 500;
                                     color: var(--highlight-color);
                                 }
+
                                 em {
                                     color: var(--highlight-color);
                                 }
+
                                 a.external-link {
                                     color: var(--highlight-color);
                                     text-decoration: underline;
                                 }
+
                                 a {
                                     text-decoration: none;
                                     color: var(--redirection-color);
                                 }
+
                                 h1, h2, h3, h4, h5, h6 {
                                     display: flex;
                                     align-items: center;
@@ -70,26 +75,36 @@ class PageDisplay extends LitElement {
                                         height: 24px;
                                     }
                                 }
+
                                 h1 {
                                     margin-bottom: 30px;
                                     color: var(--highlight-color);
                                 }
+
                                 h2 {
                                     border: solid 2px var(--highlight-color);
                                     background-color: light-dark(#0000, var(--highlight-color));
                                     padding: 2px 20px;
                                     border-radius: 15px;
                                     margin-bottom: 15px;
+                                    margin-top: 40px;
                                 }
+                                
                                 p {
                                     margin: 0px;
                                 }
+                                
                                 blockquote {
                                     border-left: 2px solid var(--highlight-color);
                                     border-radius: 5px; 
                                     margin: 15px;
                                     margin-left: 0px;
                                     padding: 0px 30px;
+                                }
+
+                                img {
+                                    max-width: 100%;
+                                    margin: 15px 0px;
                                 }
                             </style>
                         </template>

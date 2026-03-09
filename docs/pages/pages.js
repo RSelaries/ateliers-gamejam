@@ -26,7 +26,7 @@ export default
             },
             {
                 title: "Théorique 1",
-                link: "ateliers/devine-le-nombre.md",
+                link: "ateliers/decouverte.md",
             },
             {
                 title: "Jeu de plateforme",
@@ -34,7 +34,7 @@ export default
             },
             {
                 title: "Théorique 2",
-                link: "ateliers/devine-le-nombre.md",
+                link: "ateliers/decouverte.md",
             },
         ],
     },

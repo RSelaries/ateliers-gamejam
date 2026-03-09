@@ -35,7 +35,7 @@ Voici la liste des outils que l'on va utiliser pendant ces ateliers.<br>
 
 ### ![Logo Godot](../../medias/godot-logo.svg)  [Godot](#ressources-suplementaires/godot.md)
 
-Godot est un **moteur de jeu** gratuit et **open source**. C'est le logiciel que l'on va le plus utilisé.
+Godot est un **moteur de jeu** gratuit et **open source**. C'est le logiciel que l'on va le plus utiliser.
 
 ### ![Blender Godot](../../medias/blender-logo.svg) [Blender](#ressources-suplementaires/blender.md)
 
