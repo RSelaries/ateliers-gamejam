@@ -1,9 +1,11 @@
 :root {
     /* Themes Colors */
     --background-color-light-theme-1: #e1e1e1;
+    /* --background-color-light-theme-1: #FEF6E4; */
     --background-color-dark-theme-1: #151515;
     
     --background-color-light-theme-2: #dadada;
+    /* --background-color-light-theme-2: #FEF6E4; */
     --background-color-dark-theme-2: #0e0e0e;
 
     --text-color-light-theme: #1b1b1b;
@@ -12,16 +14,17 @@
     --text-color-faded-light-theme: #808080;
     --text-color-faded-dark-theme: #898989;
 
-    --highlight-color-light-theme: #1717f0;
-    --highlight-color-dark-theme: #2f2fe5;
+    --highlight-color-light-theme: #008B8B;
+    --highlight-color-dark-theme: #65BED4;
 
-    --highlight-color-transparent-light-theme: #1717f030;
-    --highlight-color-transparent-dark-theme: #2f2fe530;
+    --highlight-color-transparent-light-theme: #65bed44f;
+    --highlight-color-transparent-dark-theme: #008B8B4f;
 
     --hover-background-color-light-theme: #c1c1c1;
     --hover-background-color-dark-theme: #2b2b2b;
 
     --border-color-light-theme: #adadad;
+    --border-color-light-theme: #cfc09da0;
     --border-color-dark-theme: #2d2d2d;
 
     /* Variables */
@@ -30,7 +33,7 @@
     --body-text-color: light-dark(var(--text-color-light-theme), var(--text-color-dark-theme));
     --body-text-color-faded: light-dark(var(--text-color-faded-light-theme), var(--text-color-faded-dark-theme));
     --highlight-color: light-dark(var(--highlight-color-light-theme), var(--highlight-color-dark-theme));
-    --highlight-color-transparent: light-dark(var(--highlight-color-transparent-light-theme), var(--highlight-color-transparent-dark-theme)),
+    --highlight-color-transparent: light-dark(var(--highlight-color-transparent-light-theme), var(--highlight-color-transparent-dark-theme));
     --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
     --border-color: light-dark(var(--border-color-light-theme), var(--border-color-dark-theme));
 }

@@ -39,6 +39,21 @@ class PageDisplay extends LitElement {
                         }}
                     >
                         <template>
+                            <style>
+                                .markdown-body {
+                                    font-size: 17px;
+                                }
+                                strong {
+                                    font-weight: 500;
+                                    color: var(--highlight-color);
+                                }
+                                em {
+                                    color: var(--highlight-color);
+                                }
+                                a {
+                                    color: var(--highlight-color);
+                                }
+                            </style>
                         </template>
                     </zero-md>
                 </div>
@@ -56,7 +71,7 @@ class PageDisplay extends LitElement {
     }
 
     changeToPage(page) {
-        this.page = page
+        window.location.hash = page.link
     }
 
     getRoute() {
