@@ -32,3 +32,14 @@ Autrement dit: **un modèle 3D**.
 ## Low Poly
 
 Désigne des modèles 3D *(ou [meshs](#ressources-suplementaires/lexique-game-dev.md#mesh))* qui ont peu de polygones. C'est aujourd'hui un style artistique mais il sagissait avant d'une contrainte technique (tout comme pour le [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art)).
+
+## Frame
+
+Une frame est une **image**. Plus précisément, à chaque fois que l'**image change** dans le jeu, c'est une **nouvelle frame** qui est générée.
+
+> C'est de là que vient le terme *FPS* pour **frames per second**, donc le nombre d'images différentes à la seconde. Un écran classique peut afficher 60 images par secondes.<br>
+<span style="font-size: 0.8em">/!\ Attention à ne pas confondre FPS qui désigne les images par secondes et [FPS](#ressources-suplementaires/lexique-game-dev.md#fps), un jeu à la première personne.</span>
+
+## FPS
+
+First Person Shooter *(jeu de tir à la première personne)*. Le terme est aujourd'hui souvent utilisé pour définir les jeux 3D à la première personne, même si ce ne sont pas des jeux de tir.

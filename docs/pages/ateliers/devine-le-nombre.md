@@ -6,20 +6,20 @@ Dans cet atelier, on va **installer [Godot](#godot/godot.md)**, appréhender son
 
 Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on va commencer par faire un jeu **type devine le nombre**.
 
-> Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indices: "plus grand" ou "plus petit".
+> Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indice: "plus grand" ou "plus petit".
 
 ## I. Télécharger Godot
 
 Rendez vous sur ce lien: <a href="https://godotengine.org/download/windows/" class="external-link">godotengine.org/download/windows</a>, puis téléchargez la version ***Godot Engine*** et non *Godot Engine - .NET*.
 
-> <span style="font-size: 0.8em">Il est techniquement tout à fait possible d'utiliser la version .NET pour tout le reste. Cette version est **la même** mais avec le support du language **C# en plus**, mais nous n'en avons **pas besoin**.</span>
+> <span style="font-size: 0.8em">Il est techniquement tout à fait possible d'utiliser la version .NET pour tout le reste. Cette version est **la même** mais avec le support du language **C# en plus**, nous n'en avons **pas besoin**.</span>
 
-Une fois téléchargé, vous vous retrouvez avec un fichier **.zip** qui contient deux fichier: **Godot_v4.6.1-stable_win64.exe** et **Godot_v4.6.1-stable_win64_console.exe**.
+Une fois téléchargé, vous vous retrouvez avec un fichier **.zip** qui contient deux fichiers: **Godot_v4.6.1-stable_win64.exe** et **Godot_v4.6.1-stable_win64_console.exe**.
 
 > Le **premier** est le **moteur de jeu**. <span style="font-size: 0.8em">(oui, oui, le **moteur de jeu Godot entier** ne fait que **165 Mo**, contre plus de 10 Go pour Unity)</span><br>
 > Le second *(celui en '_console')* va lancer le moteur de jeu avec une deuxième fenêtre: **une console**. On en aura pas besoin.
 
-Vous pouvez ranger ces fichiers où vous voulez. On va maintenant lancer le premier fichier: **Godot_v4.6.1-stable_win64.exe** <span style="font-size: 0.8em">(Il est possible que le nom soit différent si vous êtes sur linux ou mac, ou encore is la version de Godot est différente)</span>
+Vous pouvez ranger ces fichiers où vous voulez. On va maintenant lancer le premier fichier: **Godot_v4.6.1-stable_win64.exe**. <span style="font-size: 0.8em">(Il est possible que le nom soit différent si vous êtes sur linux ou mac, ou encore si la version de Godot est différente.)</span>
 
 ## II. Créer un projet
 
@@ -31,16 +31,18 @@ On va alors créer un nouveau projet en cliquant sur **+ Create**.
 
 <img width="200px" src="./medias/devine-le-nombre/interface-godot-2.webp">
 
-Puis rensigner le **nom du projet** et son **chemin** (là où il est enregistré).
+Puis renseigner le **nom du projet** et son **chemin** (là où il est enregistré).
 
-<img width="350px" src="./medias/devine-le-nombre/interface-godot-3.webp">
-<img width="350px" src="./medias/devine-le-nombre/interface-godot-4.webp">
+<div class="side-by-side">
+    <img src="./medias/devine-le-nombre/interface-godot-3.webp">
+    <img src="./medias/devine-le-nombre/interface-godot-4.webp">
+</div>
 
 Et enfin le [renderer](#godot/godot.md#renderer) que l'on va mettre sur **Compatibility**.<br>
 
 <img width="100px" src="./medias/devine-le-nombre/interface-godot-5.webp">
 
-Enfin, on clique sur **Create** et ça nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
+Enfin, on clique sur **Create** ce qui nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
 
 <img src="./medias/devine-le-nombre/interface-godot-6.webp">
 
@@ -75,7 +77,7 @@ La fenêtre du [file system](#godot/interface.md#file-system) permet de voir et 
 ### L'Inspecteur
 
 L'[inspecteur](#godot/interface.md#inspecteur) permet de modifier les propriétés de nos objets.<br>
-Sur cette fenêtre on a égallement accès à l'[historique](#godot/interface.md#historique), les [signaux](#godot/godot.md#signaux), et les [groupes](#godot/godot.md#groupes)
+Sur cette fenêtre, on a également accès à l'[historique](#godot/interface.md#historique), les [signaux](#godot/godot.md#signaux), et les [groupes](#godot/godot.md#groupes).
 
 <img src="./medias/devine-le-nombre/interface-godot-11.webp">
 
@@ -123,6 +125,24 @@ La partie que vous attendiez sûrement tous·tes: on va faire de la **programmat
 Pour cela, on va commencer par ajouter un script à notre scène. On clique sur le node racine de notre scène *(dans mon cas, le node "Game")*, puis sur le bouton pour ajouter un script.
 
 <img src="./medias/devine-le-nombre/programmation-1.png">
+
 <img src="./medias/devine-le-nombre/programmation-2.png">
 
-Cela va alors nous ouvrir l'onglet de [Script](#godot/interface.md#onglet-script)
+Cela va alors nous ouvrir l'onglet de [Script](#godot/interface.md#onglet-script) avec un template basique d'un script **GDScript**.
+
+> Le **language de programmation** par défaut de [Godot](#godot/godot.md) est le **GDScript**. C'est un language avec une **syntaxe simplifiée**, **similaire à celle de Python**.
+
+> Si vous voulez **apprendre** les bases de **GDScript** sans avoir **jamais fait de programmation**, vous pouvez essayer [GD-Quest](#ressources-suplementaires/gd-quest.md), c'est une formation express au **GDScript**, très **simple** et **rapide** !
+
+<img src="./medias/devine-le-nombre/programmation-3.png">
+
+Il y a par défaut deux fonctions:
+
+### `_ready()`
+
+Cette fonction est appellée **une seule fois**: quand elle est prète *(au tout début)* et que **tous ses enfants sont également prêts**.
+
+### `_process(delta: float)`
+
+Cette fonction est appellée **chaque [frame](#ressources-suplementaires/lexique-game-dev.md#frame)**, donc **continuellement**.
+
