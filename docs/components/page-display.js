@@ -106,6 +106,21 @@ class PageDisplay extends LitElement {
                                     max-width: 100%;
                                     margin: 15px 0px;
                                 }
+
+                                /* code {
+                                    color: var(--code-color);
+                                } */
+
+                                .side-by-side {
+                                    max-width: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    gap: 15px;
+                                    > * {
+                                        width: 100%;    
+                                        flex: 1;
+                                    }
+                                }
                             </style>
                         </template>
                     </zero-md>

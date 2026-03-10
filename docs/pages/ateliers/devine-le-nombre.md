@@ -1,10 +1,10 @@
 # Projet 1 - Devine le nombre
 
-Dans cet atelier, on va **installer [Godot](#ressources-suplementaires/godot.md)**, appréhender son **interface**, puis créer notre **premier projet**.<br>
+Dans cet atelier, on va **installer [Godot](#godot/godot.md)**, appréhender son **interface**, puis créer notre **premier projet**.<br>
 
 <br>
 
-Pour apprendre les bases de [Godot](#ressources-suplementaires/godot.md) et de la programmation on va commencer par faire un jeu **type devine le nombre**.
+Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on va commencer par faire un jeu **type devine le nombre**.
 
 > Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indices: "plus grand" ou "plus petit".
 
@@ -23,62 +23,106 @@ Vous pouvez ranger ces fichiers où vous voulez. On va maintenant lancer le prem
 
 ## II. Créer un projet
 
-Une fois [Godot](#ressources-suplementaires/godot.md) ouvert, on tombe sur le [Project Manager](#ressources-suplementaires/godot.md#project-manager):
+Une fois [Godot](#godot/godot.md) ouvert, on tombe sur le [Project Manager](#godot/interface.md#project-manager):
 
-![Projet Manager de Godot](../../medias/devine-le-nombre/interface-godot-1.png)
+<img src="./medias/devine-le-nombre/interface-godot-1.webp">
 
 On va alors créer un nouveau projet en cliquant sur **+ Create**.
 
-<img width="200px" src="./medias/devine-le-nombre/interface-godot-2.png">
+<img width="200px" src="./medias/devine-le-nombre/interface-godot-2.webp">
 
 Puis rensigner le **nom du projet** et son **chemin** (là où il est enregistré).
 
-<img width="350px" src="./medias/devine-le-nombre/interface-godot-3.png">
-<img width="350px" src="./medias/devine-le-nombre/interface-godot-4.png">
+<img width="350px" src="./medias/devine-le-nombre/interface-godot-3.webp">
+<img width="350px" src="./medias/devine-le-nombre/interface-godot-4.webp">
 
-Et enfin le [renderer](#ressources-suplementaires/godot.md#renderer) que l'on va mettre sur **Compatibility**.<br>
+Et enfin le [renderer](#godot/godot.md#renderer) que l'on va mettre sur **Compatibility**.<br>
 
-<img width="100px" src="./medias/devine-le-nombre/interface-godot-5.png">
+<img width="100px" src="./medias/devine-le-nombre/interface-godot-5.webp">
 
-Enfin, on clique sur **Create** et ça nous ouvre la fenêtre de l'**éditeur** de [Godot](#ressources-suplementaires/godot.md).
+Enfin, on clique sur **Create** et ça nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
 
-<img src="./medias/devine-le-nombre/interface-godot-6.png">
+<img src="./medias/devine-le-nombre/interface-godot-6.webp">
 
 ## L'interface de Godot
 
-L'interface de l'**éditeur** de [Godot](#ressources-suplementaires/godot.md) se compose de plusieurs fenêtres et menus.
+L'interface de l'**éditeur** de [Godot](#godot/godot.md) se compose de plusieurs fenêtres et menus.
 
 ### Le menu des onglets
 
-<img src="./medias/devine-le-nombre/interface-godot-7.png">
+<img src="./medias/devine-le-nombre/interface-godot-7.webp">
 
-Ce menu permet de changer la **fenêtre** affichée au **centre** entre cinq onglets: [2D](#ressources-suplementaires/godot.md#onglet-2d), [3D](#ressources-suplementaires/godot.md#onglet-3d), [Script](#ressources-suplementaires/godot.md#onglet-script), [Game](#ressources-suplementaires/godot.md#onglet-game) et [AssetLib](#ressources-suplementaires/godot.md#onglet-assetlib).
+Ce menu permet de changer la **fenêtre** affichée au **centre** entre cinq onglets: [2D](#godot/interface.md#onglet-2d), [3D](#godot/interface.md#onglet-3d), [Script](#godot/interface.md#onglet-script), [Game](#godot/interface.md#onglet-game) et [AssetLib](#godot/interface.md#onglet-assetlib).
 
 ### La fenêtre principale
 
-La fenêtre centrale qui va afficher un des cinq onglets ([2D](#ressources-suplementaires/godot.md#onglet-2d), [3D](#ressources-suplementaires/godot.md#onglet-3d), [Script](#ressources-suplementaires/godot.md#onglet-script), [Game](#ressources-suplementaires/godot.md#onglet-game) et [AssetLib](#ressources-suplementaires/godot.md#onglet-assetlib)). Dans cet atelier, on va utiliser les onglets [2D](#ressources-suplementaires/godot.md#onglet-2d), pour poser **nos éléments de jeux 2D** (boutons, images, textes etc...) et [Script](#ressources-suplementaires/godot.md#onglet-script), pour **programmer la logique** de notre jeu.
+La fenêtre centrale qui va afficher un des cinq onglets ([2D](#godot/interface.md#onglet-2d), [3D](#godot/interface.md#onglet-3d), [Script](#godot/interface.md#onglet-script), [Game](#godot/interface.md#onglet-game) et [AssetLib](#godot/interface.md#onglet-assetlib)). Dans cet atelier, on va utiliser les onglets [2D](#godot/interface.md#onglet-2d), pour poser **nos éléments de jeux 2D** (boutons, images, textes etc...) et [Script](#godot/interface.md#onglet-script), pour **programmer la logique** de notre jeu.
 
-<img src="./medias/devine-le-nombre/interface-godot-8.png">
+<img src="./medias/devine-le-nombre/interface-godot-8.webp">
 
 ### La fenêtre Scene
 
-La fenêtre scene représente notre [Scene Tree](#ressources-suplementaires/godot.md#scene-tree) *(l'arborescance de notre scène)*. Et juste à coté, la fenêtre d'[import](#ressources-suplementaires/godot.md#import).
+La fenêtre scene représente notre [Scene Tree](#godot/interface.md#scene-tree) *(l'arborescance de notre scène)*. Et juste à coté, la fenêtre d'[import](#godot/godot.md#import).
 
-<img src="./medias/devine-le-nombre/interface-godot-9.png">
+<img src="./medias/devine-le-nombre/interface-godot-9.webp">
 
 ###  Le FileSystem
 
-La fenêtre du [file system](#ressources-suplementaires/godot.md#file-system) permet de voir et d'accéder à tous nos fichiers.
+La fenêtre du [file system](#godot/interface.md#file-system) permet de voir et d'accéder à tous nos fichiers.
 
-<img src="./medias/devine-le-nombre/interface-godot-10.png">
+<img src="./medias/devine-le-nombre/interface-godot-10.webp">
 
 ### L'Inspecteur
 
-L'[inspecteur](#ressources-suplementaires/godot.md#inspecteur) permet de modifier les propriétés de nos objets.<br>
-Sur cette fenêtre on a égallement accès à l'[historique](#ressources-suplementaires/godot.md#historique), les [signaux](#ressources-suplementaires/godot.md#signaux), et les [groupes](#ressources-suplementaires/godot.md#groupes)
+L'[inspecteur](#godot/interface.md#inspecteur) permet de modifier les propriétés de nos objets.<br>
+Sur cette fenêtre on a égallement accès à l'[historique](#godot/interface.md#historique), les [signaux](#godot/godot.md#signaux), et les [groupes](#godot/godot.md#groupes)
 
-<img src="./medias/devine-le-nombre/interface-godot-11.png">
+<img src="./medias/devine-le-nombre/interface-godot-11.webp">
 
 ## III. Créer la scène de jeu
 
-Au niveau de la fenêtre de la [scène](#ressources-suplementaires/godot.md#scene-tree), on va appuyer sur **User Interface**.
+Au niveau de la fenêtre de la [scène](#godot/interface.md#scene-tree), on va appuyer sur **User Interface**.
+
+<img width="300px" src="./medias/devine-le-nombre/scene-jeu-1.webp">
+
+Ce qui va nous ouvrir l'onglet [2D](#godot/interface.md#onglet-2d) et dans la fenêtre [scène](#godot/interface.md#scene-tree) on voit notre nouvelle scène que l'on a créé:
+
+<img src="./medias/devine-le-nombre/scene-jeu-2.webp">
+
+On va commencer par renommer le [Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
+
+Puis on va enregistrer cette scène. *(ctrl-S ou Scene > Save Scene)*
+
+<img src="./medias/devine-le-nombre/scene-jeu-3.webp">
+
+Une fois ça fait, on va ajouter un node [Label](#godot/nodes.md#label). *(Soit avec le + au niveau de la fenêtre Scene, soit en faisant ctrl-A)* Puis un [LineEdit](#godot/nodes.md#lineedit).
+
+<img src="./medias/devine-le-nombre/scene-jeu-4.webp">
+
+<div class="side-by-side">
+    <img src="./medias/devine-le-nombre/scene-jeu-5.webp">
+    <img src="./medias/devine-le-nombre/scene-jeu-6.webp">
+</div>
+
+On va selectionner le label en cliquand dessus dans le [Scene Tree](#godot/godot.md#scene-tree) *(la hiérarchie de la scène)*, puis modifier sa propriété `text` dans l'[inspecteur](#godot/godot.md#inspecteur). Je vais y écrire *"Devine le nombre"*. 
+
+<img src="./medias/devine-le-nombre/scene-jeu-7.webp">
+
+On peut le déplacer vers le centre de l'écran en le glissant.
+
+Enfin, on va placer le [LineEdit](#godot/nodes.md#lineedit) juste en dessous de notre [Label](#godot/nodes.md#label) et modifier sa propriété `placeholder_text` et y écrire: *"Votre réponse"*.
+
+> Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control.md).
+
+<img src="./medias/devine-le-nombre/scene-jeu-8.gif">
+
+## IV. Programmation du jeu
+
+La partie que vous attendiez sûrement tous·tes: on va faire de la **programmation**!
+
+Pour cela, on va commencer par ajouter un script à notre scène. On clique sur le node racine de notre scène *(dans mon cas, le node "Game")*, puis sur le bouton pour ajouter un script.
+
+<img src="./medias/devine-le-nombre/programmation-1.png">
+<img src="./medias/devine-le-nombre/programmation-2.png">
+
+Cela va alors nous ouvrir l'onglet de [Script](#godot/interface.md#onglet-script)
