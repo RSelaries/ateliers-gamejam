@@ -144,5 +144,18 @@ Cette fonction est appellée **une seule fois**: quand elle est prète *(au tout
 
 ### `_process(delta: float)`
 
-Cette fonction est appellée **chaque [frame](#ressources-suplementaires/lexique-game-dev.md#frame)**, donc **continuellement**.
+Cette fonction est appellée **chaque [frame](#ressources-suplementaires/lexique-game-dev.md#frame)**, donc **continuellement**.<br>
+<br>
+On peut supprimer la fonction `_process`, nous n'en aurons pas besoin. Ensuite, on va **définir** une **variable** qui va détenir la **valeur du nombre mystère** que le joueur devra déviner.
 
+Pour cela, on ajoute la ligne suivante en haut du script:
+```gdscript
+var nombre_mystère: int
+```
+
+Décortiquons ensemble cette ligne de code.<br>
+
+D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span></code>: suivit d'un mot, il définit une variable. Ensuite, <code class="hljs">nombre_mystère</code>: le **nom de la variable**. <span style="font-size: 0.8em">(Un nom de variable **ne peut pas** contenir d'espaces. Par convention, on écrit le nom des variables en **snake_case**)</span> Enfin, <code class="hljs">: <span class="hljs-built_in">int</span></code>: il dit à Godot que la **variable** est du type **int** <span style="font-size: 0.8em">(c'est à dire un **nombre entier**, positif ou négatif)</span>.
+
+> Le **snake_case** est le fait d'écrire tout en **minuscule**, sans accents, et de **remplacer les espaces par des tirets** du bas *(_)*.<br>
+> <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **pascal_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>

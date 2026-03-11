@@ -40,6 +40,7 @@ class PageDisplay extends LitElement {
                         }}
                     >
                         <template>
+                            <link rel="stylesheet" href="./code-block-style.css">
                             <style>
                                 .markdown-body {
                                     font-size: 17px;
