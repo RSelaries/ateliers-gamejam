@@ -33,10 +33,17 @@ class PageDisplay extends LitElement {
                 <div class="article-wrapper">
                     <zero-md
                         src=${pagesUrl + this.page.link}
-                        @zero-md-rendered=${() => {
+                        @zero-md-rendered=${async() => {
                             this.fixHeadingIds()
+                            
+                            const body = this.renderRoot
+                                .querySelector("zero-md")
+                                .shadowRoot.querySelector(".markdown-body")
+                            await this.waitForImages(body)
+                            
+                            // await new Promise(requestAnimationFrame)
+                            this.buildHierarchy(body)
                             this.scrollToAnchor()
-                            this.buildHierarchy()
                         }}
                     >
                         <template>
@@ -71,10 +78,24 @@ class PageDisplay extends LitElement {
                                     gap: 5px;
                                     margin: 0px;
                                     margin-top: 15px;
+                                }
 
-                                    > img {
-                                        height: 24px;
-                                    }
+                                h3 > img {
+                                    height: 24px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
+                                
+                                p > img {
+                                    height: 16px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
+
+                                a > img {
+                                    height: 16px;
+                                    margin: 0px;
+                                    padding: 0px;
                                 }
 
                                 h1 {
@@ -122,6 +143,11 @@ class PageDisplay extends LitElement {
                                         flex: 1;
                                     }
                                 }
+
+                                li {
+                                    margin-bottom: 10px;
+                                }
+
                             </style>
                         </template>
                     </zero-md>
@@ -204,62 +230,52 @@ class PageDisplay extends LitElement {
         }
     }
 
+    async waitForImages(container) {
+        const images = container.querySelectorAll("img")
+
+        await Promise.all(
+            [...images].map(img => {
+                if (img.complete) return Promise.resolve()
+
+                return new Promise(resolve => {
+                    img.addEventListener("load", resolve)
+                    img.addEventListener("error", resolve)
+                })
+            })
+        )
+    }
+
     // j'avoue c'est écrit par chatGPT mais je crois que ça fonctionne
     // un peu la honte je sais
-    buildHierarchy() {
-        const elements = document.querySelector("page-display")
-            .shadowRoot.querySelector("zero-md")
-            .shadowRoot.querySelector(".markdown-body").children
+    buildHierarchy(body) {
+        const headings = body.querySelectorAll("h1,h2,h3,h4,h5,h6")
 
-        const root = [];
-        const stack = [];
+        const root = []
+        const stack = []
 
-        function getLevel(el) {
-            const match = el.tagName?.match(/^H([1-6])$/);
-            return match ? parseInt(match[1]) : null;
-        }
+        for (const h of headings) {
+            const level = parseInt(h.tagName[1])
 
-        for (const el of elements) {
-            const level = getLevel(el);
-
-            if (level) {
             const node = {
-                name: el.textContent.trim(),
-                id: el.id,
-                level: level,
+                id: h.id,
+                name: h.textContent.trim(),
                 children: []
-            };
+            }
 
             while (stack.length && stack[stack.length - 1].level >= level) {
-                stack.pop();
+                stack.pop()
             }
 
             if (stack.length === 0) {
-                root.push(node);
+                root.push(node)
             } else {
-                stack[stack.length - 1].children.push(node);
+                stack[stack.length - 1].node.children.push(node)
             }
 
-            stack.push(node);
-            } else {
-            if (stack.length) {
-                stack[stack.length - 1].children.push({
-                type: el.tagName?.toLowerCase() || "text",
-                content: el.textContent.trim()
-                });
-            }
-            }
+            stack.push({ level, node })
         }
 
-        function clean(nodes) {
-            return nodes.map(n => ({
-                id: n.id,
-                name: n.name,
-                children: n.children ? clean(n.children) : []
-            }));
-        }
-
-        document.querySelector("right-panel").hierarchy = clean(root)
+        document.querySelector("right-panel").hierarchy = root
     }
 }
 

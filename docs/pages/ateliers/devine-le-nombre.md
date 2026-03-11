@@ -54,11 +54,11 @@ L'interface de l'**éditeur** de [Godot](#godot/godot.md) se compose de plusieur
 
 <img src="./medias/devine-le-nombre/interface-godot-7.webp">
 
-Ce menu permet de changer la **fenêtre** affichée au **centre** entre cinq onglets: [2D](#godot/interface.md#onglet-2d), [3D](#godot/interface.md#onglet-3d), [Script](#godot/interface.md#onglet-script), [Game](#godot/interface.md#onglet-game) et [AssetLib](#godot/interface.md#onglet-assetlib).
+Ce menu permet de changer la **fenêtre** affichée au **centre** entre cinq onglets: [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), [![Godot - 3D](../../medias/godot-icons/3D.svg) 3D](#godot/interface.md#onglet-3d), [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), [![Godot - Game](../../medias/godot-icons/Game.svg) Game](#godot/interface.md#onglet-game) et [![Godot - AssetLib](../../medias/godot-icons/AssetLib.svg) AssetLib](#godot/interface.md#onglet-assetlib).
 
 ### La fenêtre principale
 
-La fenêtre centrale qui va afficher un des cinq onglets ([2D](#godot/interface.md#onglet-2d), [3D](#godot/interface.md#onglet-3d), [Script](#godot/interface.md#onglet-script), [Game](#godot/interface.md#onglet-game) et [AssetLib](#godot/interface.md#onglet-assetlib)). Dans cet atelier, on va utiliser les onglets [2D](#godot/interface.md#onglet-2d), pour poser **nos éléments de jeux 2D** (boutons, images, textes etc...) et [Script](#godot/interface.md#onglet-script), pour **programmer la logique** de notre jeu.
+La fenêtre centrale qui va afficher un des cinq onglets ([![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), [![Godot - 3D](../../medias/godot-icons/3D.svg) 3D](#godot/interface.md#onglet-3d), [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), [![Godot - Game](../../medias/godot-icons/Game.svg) Game](#godot/interface.md#onglet-game) et [![Godot - AssetLib](../../medias/godot-icons/AssetLib.svg) AssetLib](#godot/interface.md#onglet-assetlib)). Dans cet atelier, on va utiliser les onglets [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), pour poser **nos éléments de jeux 2D** (boutons, images, textes etc...) et [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), pour **programmer la logique** de notre jeu.
 
 <img src="./medias/devine-le-nombre/interface-godot-8.webp">
 
@@ -87,17 +87,17 @@ Au niveau de la fenêtre de la [scène](#godot/interface.md#scene-tree), on va a
 
 <img width="300px" src="./medias/devine-le-nombre/scene-jeu-1.webp">
 
-Ce qui va nous ouvrir l'onglet [2D](#godot/interface.md#onglet-2d) et dans la fenêtre [scène](#godot/interface.md#scene-tree) on voit notre nouvelle scène que l'on a créé:
+Ce qui va nous ouvrir l'onglet [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d) et dans la fenêtre [scène](#godot/interface.md#scene-tree) on voit notre nouvelle scène que l'on a créé:
 
 <img src="./medias/devine-le-nombre/scene-jeu-2.webp">
 
-On va commencer par renommer le [Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
+On va commencer par renommer le [![Godot - Node](../../medias/godot-icons/node.svg) Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
 
 Puis on va enregistrer cette scène. *(ctrl-S ou Scene > Save Scene)*
 
 <img src="./medias/devine-le-nombre/scene-jeu-3.webp">
 
-Une fois ça fait, on va ajouter un node [Label](#godot/nodes.md#label). *(Soit avec le + au niveau de la fenêtre Scene, soit en faisant ctrl-A)* Puis un [LineEdit](#godot/nodes.md#lineedit).
+Une fois ça fait, on va ajouter un node [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label). *(Soit avec le + au niveau de la fenêtre Scene, soit en faisant ctrl-A)* Puis un [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit).
 
 <img src="./medias/devine-le-nombre/scene-jeu-4.webp">
 
@@ -112,7 +112,7 @@ On va selectionner le label en cliquand dessus dans le [Scene Tree](#godot/godot
 
 On peut le déplacer vers le centre de l'écran en le glissant.
 
-Enfin, on va placer le [LineEdit](#godot/nodes.md#lineedit) juste en dessous de notre [Label](#godot/nodes.md#label) et modifier sa propriété `placeholder_text` et y écrire: *"Votre réponse"*.
+Enfin, on va placer le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) juste en dessous de notre [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label) et modifier sa propriété `placeholder_text` et y écrire: *"Votre réponse"*.
 
 > Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control.md).
 
@@ -128,7 +128,7 @@ Pour cela, on va commencer par ajouter un script à notre scène. On clique sur 
 
 <img src="./medias/devine-le-nombre/programmation-2.png">
 
-Cela va alors nous ouvrir l'onglet de [Script](#godot/interface.md#onglet-script) avec un template basique d'un script **GDScript**.
+Cela va alors nous ouvrir l'onglet de [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script) avec un template basique d'un script **GDScript**.
 
 > Le **language de programmation** par défaut de [Godot](#godot/godot.md) est le **GDScript**. C'est un language avec une **syntaxe simplifiée**, **similaire à celle de Python**.
 
@@ -138,11 +138,11 @@ Cela va alors nous ouvrir l'onglet de [Script](#godot/interface.md#onglet-script
 
 Il y a par défaut deux fonctions:
 
-### `_ready()`
+### <code class="hljs">_ready()</code>
 
 Cette fonction est appellée **une seule fois**: quand elle est prète *(au tout début)* et que **tous ses enfants sont également prêts**.
 
-### `_process(delta: float)`
+### <code class="hljs">_process(delta: float)</code>
 
 Cette fonction est appellée **chaque [frame](#ressources-suplementaires/lexique-game-dev.md#frame)**, donc **continuellement**.<br>
 <br>
@@ -150,12 +150,91 @@ On peut supprimer la fonction `_process`, nous n'en aurons pas besoin. Ensuite, 
 
 Pour cela, on ajoute la ligne suivante en haut du script:
 ```gdscript
-var nombre_mystère: int
+var nombre_mystere: int
 ```
 
 Décortiquons ensemble cette ligne de code.<br>
 
-D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span></code>: suivit d'un mot, il définit une variable. Ensuite, <code class="hljs">nombre_mystère</code>: le **nom de la variable**. <span style="font-size: 0.8em">(Un nom de variable **ne peut pas** contenir d'espaces. Par convention, on écrit le nom des variables en **snake_case**)</span> Enfin, <code class="hljs">: <span class="hljs-built_in">int</span></code>: il dit à Godot que la **variable** est du type **int** <span style="font-size: 0.8em">(c'est à dire un **nombre entier**, positif ou négatif)</span>.
+D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span></code>: suivit d'un mot, il définit une variable. Ensuite, <code class="hljs">nombre_mystere</code>: le **nom de la variable**. <span style="font-size: 0.8em">(Un nom de variable **ne peut pas** contenir d'espaces. Par convention, on écrit le nom des variables en **snake_case**)</span> Enfin, <code class="hljs">: <span class="hljs-built_in">int</span></code>: il dit à Godot que la **variable** est du type **int** <span style="font-size: 0.8em">(c'est à dire un **nombre entier**)</span>.
 
 > Le **snake_case** est le fait d'écrire tout en **minuscule**, sans accents, et de **remplacer les espaces par des tirets** du bas *(_)*.<br>
 > <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **pascal_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
+
+<img src="./medias/devine-le-nombre/programmation-4.png">
+<span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\</strong></span>
+
+<br>Maintenant que notre variable <code class="hljs">nombre_mystere</code> a été définie, on va lui donner une valeur. On va lors ajouter cette ligne dans la fonction <code class="hljs">_ready</code>:
+```gdscript
+func _ready() -> void:
+    nombre_mystere = 158
+```
+
+Pour que le joueur puisse **entrer sa réponse**, on utilise le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit). On va alors le sélectionner, puis dans la fenêtre de l'[inspecteur](#godot/interface.md#inspecteur), on va choisir l'onglet des [signaux](#godot/godot.md#signaux) et sélectionner le signal <code class="hljs">text_submitted</code>.
+
+<img src="./medias/devine-le-nombre/programmation-5.png">
+
+<img src="./medias/devine-le-nombre/programmation-6.png">
+
+Cela ajoute la ligne suivante à notre script:
+```gdscript
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    pass
+```
+
+L'idée de ce **signal** est que, quand le joueur **appuye sur la touche 'Entrée'** dans le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit), le signal <code class="hljs">text_submitted</code> est émit. Et dès que ce signal est émit, notre fonction <code class="hljs">_on_line_edit_text_submitted</code> sera appellée. La variable <code class="hljs">new_text</code> contient le **texte entré par le joueur**.
+
+Pour tester si cela fonctionne, on va utiliser la fonction <code class="hljs">print</code>, qui permet d'afficher une valeur dans l'[Output](#godot/interface.md#output).
+
+```gdscript
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    print(new_text)
+```
+
+<img src="./medias/devine-le-nombre/programmation-7.png">
+
+### Test du jeu
+
+On peut maintenant tester le jeu. Pour cela, il suffit de cliquer sur l'icône pour lancer le jeu à la scène actuelle ![Icône lancer la scène active - Godot](../../medias/godot-icons/godot-play-scene-icon.svg).
+
+<img src="./medias/devine-le-nombre/test-du-jeu-1.gif">
+
+On voit effectivement que quand on écrit quelque chose dans le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) puis qu'on appuie sur la touche **'Entrée'**, notre mot est <code class="hljs">print</code> dans l'[Output](#godot/interface.md#output).
+
+Cependant, nous ne voulons pas que le joueur puisse **écrire n'importe quoi**, mais **seulement** qu'il puisse entrer **un nombre**. Pour changer ça, on a deux solutions:
+
+- **Solution 1**: On change le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) par un [![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox](#godot/nodes.md#spinbox) qui n'accepte que des nombres.
+
+- **Solution 2**: On accepte n'importe quel entrée, mais on ne s'intéresse qu'aux nombres.
+
+Pour ma part, je vais partir sur la **solution 2**, un [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) étant plus pratique à mon goût.
+
+<br>*Retournons sur notre code.* Quand le joueur entre une valeur, on veut la **comparer au <code class="hljs">nombre_mystere</code>**, puis dire si le nombre donné par le joueur doit être **plus grand**, **plus petit**, ou si il a trouvé **le bon**.
+
+```gdscript
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    var reponse_joueur: int = int(new_text)
+
+    if reponse_joueur > nombre_mystere:
+        print("Plus petit!")
+    elif reponse_joueur < nombre_mystère:
+        print("Plus grand!")
+    else:
+        print("Trouvé!")
+```
+
+Analysons ce code ligne par ligne:
+
+- <code class="hljs"><span class="hljs-keyword">var</span> reponse_joueur: <span class="hljs-built_in">int</span> = <span class="hljs-built_in">int</span>(new_text)</code>: Ici on définie une nouvelle **variable** du nom de <code>reponse_joueur</code>, on lui attribue le type <code><span class="hljs-built_in">int</span></code> puis on lui donne la valeur de <code><span class="hljs-built_in">int</span>(new_text)</code></code>. <code><span class="hljs-built_in">int</span>()</code> est une fonction qui prend en entrée une variable, et en sort un <code><span class="hljs-built_in">int</span></code>. <em>(Donc ici on transforme un <code><span class="hljs-built_in">String</span></code>, du texte, en un <code><span class="hljs-built_in">int</span></code>, un nombre entier.)</em>
+
+    >  La ligne <code class="hljs"><span class="hljs-built_in">int</span>("Texte test 123")</code> retournerais le nombre <code class="hljs-number">123</code>.
+
+- <code class="hljs"><span class="hljs-keyword">if</span> reponse_joueur > nombre_mystere:</code>: Le mot clé <code><span class="hljs-keyword">if</span></code> permet de **tester une condition**. Si la **condition est remplie**, les lignes en dessous sont **exécutées**, **sinon** elles sont **ignorées**. Notre condition est `reponse_joueur > nombre_mystere`. Ici, le signe `>` test si la valeur à **gauche** est **plus grande** que la valeur à **droite**.
+
+- <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Plus petit!"</span>)</code>: Si la condition définie au dessus est remplie on exécute cette ligne. Ici on appelle la fonction <code><span class="hljs-built_in">print</span></code> pour afficher le message <code><span class="hljs-string">"Plus petit!"</span></code>.
+
+- <code class="hljs"><span class="hljs-keyword">elif</span> reponse_joueur < nombre_mystere:</code> et <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Plus petit!"</span>)</code> sont **similaires aux deux lignes au dessus**, mais pour tester si la réponse du joueur est plus petite que la réponse attendue.
+
+- <code class="hljs"><span class="hljs-keyword">else</span>:</code> et <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Trouvé!"</span>)</code>: Si **aucune des deux conditons précédentes** ne sont **vraies** *(la réponse du joueur n'est ni plus grande, ni plus petite que la réponse attendue)* alors c'est forcément la **bonne réponse**.
+
+> Le mot clé <code><span class="hljs-keyword">else</span></code> **exécute le code en dessous** si la condition <code><span class="hljs-keyword">if</span></code> précédente était **fausse**.<br>
+> Le mot clé <code><span class="hljs-keyword">elif</span></code> est la **contraction** de <code><span class="hljs-keyword">else if</span></code>.

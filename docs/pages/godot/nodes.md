@@ -9,3 +9,5 @@
 ### Button
 
 ### LineEdit
+
+### SpinBox
