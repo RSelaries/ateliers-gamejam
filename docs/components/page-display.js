@@ -148,6 +148,12 @@ class PageDisplay extends LitElement {
                                     margin-bottom: 10px;
                                 }
 
+                                iframe {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                }
+
                             </style>
                         </template>
                     </zero-md>
