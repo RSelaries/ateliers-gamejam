@@ -216,7 +216,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 
     if reponse_joueur > nombre_mystere:
         print("Plus petit!")
-    elif reponse_joueur < nombre_mystère:
+    elif reponse_joueur < nombre_mystere:
         print("Plus grand!")
     else:
         print("Trouvé!")
@@ -234,7 +234,166 @@ Analysons ce code ligne par ligne:
 
 - <code class="hljs"><span class="hljs-keyword">elif</span> reponse_joueur < nombre_mystere:</code> et <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Plus petit!"</span>)</code> sont **similaires aux deux lignes au dessus**, mais pour tester si la réponse du joueur est plus petite que la réponse attendue.
 
+    > Le mot clé <code><span class="hljs-keyword">else</span></code> **exécute le code en dessous** si la condition <code><span class="hljs-keyword">if</span></code> précédente était **fausse**.<br>
+    > Le mot clé <code><span class="hljs-keyword">elif</span></code> est la **contraction** de <code><span class="hljs-keyword">else if</span></code>.
+
 - <code class="hljs"><span class="hljs-keyword">else</span>:</code> et <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Trouvé!"</span>)</code>: Si **aucune des deux conditons précédentes** ne sont **vraies** *(la réponse du joueur n'est ni plus grande, ni plus petite que la réponse attendue)* alors c'est forcément la **bonne réponse**.
 
-> Le mot clé <code><span class="hljs-keyword">else</span></code> **exécute le code en dessous** si la condition <code><span class="hljs-keyword">if</span></code> précédente était **fausse**.<br>
-> Le mot clé <code><span class="hljs-keyword">elif</span></code> est la **contraction** de <code><span class="hljs-keyword">else if</span></code>.
+### On test encore notre jeu !
+
+Il est important de **régulièrement tester** son jeu pour s'assurer qu'il n'y a **pas de problème**.
+
+> Je vous conseille aussi de d'**enregistrer souvent** votre travail *(ctrl-S)*.
+
+<img src="./medias/devine-le-nombre/test-du-jeu-2.gif">
+
+## Amméliorations
+
+**Tout fonctionne !** On pourrais alors *s'arrêter là et se dire qu'on a un super jeu*.
+
+Mais on peut aussi **rêgler quelques problèmes** avec notre jeu:
+
+- On préfèrerais que les indices "plus grand", "plus petit" et "trouvé" soient **visibles par le joueur** directement dans le jeu **sans avoir à passer par l'[Output](#godot/interface.md#output)**.
+
+- On pourrais aussi **effacer le nombre entré** par le joueur pour qu'il n'ai pas à le **supprimer manuellement** à chaque fois.
+
+- **Mais surtout**, on peut rendre le numéro de départ **aléatoire**!
+
+### Indices visibles et références
+Pour faire tout cela, il nous faut dans notre code une **référence** à nos nodes pour pouvoir les modifer.
+
+On va commencer avec la manière la **plus simple**, mais **pas la meilleure**. **Puis** on va voir **les méthodes que je recommande**.
+
+#### Méthode '<code>$</code>'
+
+Pour modifier le texte affiché sur notre [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label), il nous suffit d'avoir accès à sa **référence**, puis de modifier sa **propriété** <code>text</code>.
+
+```gdscript
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    var reponse_joueur: int = int(new_text)
+
+    if reponse_joueur > nombre_mystere:
+        $Label.text = "Plus petit!"
+    elif reponse_joueur < nombre_mystere:
+        $Label.text = "Plus grand!"
+    else:
+        $Label.text = "Trouvé!"
+```
+
+<code class="hljs"><span class="hljs-variable">\$</span></code> nous permet de **chercher l'enfant** du node auquel est rattaché ce script *(ici 'Game', un node [![Godot - Control](../../medias/godot-icons/Control.svg) Control](#godot/nodes.md#control))*. Donc <code class="hljs"><span class="hljs-variable">\$Label</span></code> va rechercher un **enfant direct** qui s'appelle *'Label'*.
+
+> Si on avait renommé ce node 'Message', alors on aurait utilisé <code class="hljs"><span class="hljs-variable">\$Message</span></code>.
+
+Une fois sa référence récupéré, on peut **accéder à ses propriété** en utilisant un **point**, puis le **nom de la propriété**. Ce qui nous donne: <code class="hljs"><span class="hljs-variable">\$Label</span>.text</code>.
+
+> <span style="font-size: 0.8em">On peut aussi utiliser la notation suivante: <code class="hljs"><span class="hljs-variable">\$Label</span>["text"]</code> mais c'est moins pratique, et moins sécurisé donc à éviter.</span>
+
+Pour éviter de chercher le node **à chaque fois**, on peut créer une **variable**:
+
+```gdscript
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    var reponse_joueur: int = int(new_text)
+    var reference_label: Label = $Label
+
+    if reponse_joueur > nombre_mystere:
+        reference_label.text = "Plus petit!"
+    elif reponse_joueur < nombre_mystere:
+        reference_label.text = "Plus grand!"
+    else:
+        reference_label.text = "Trouvé!"
+```
+
+<img src="./medias/devine-le-nombre/ammelioration-1.gif">
+
+#### Variable globale
+
+On peut encore **améliorer** cela en définissant la variable **en haut du script** pour qu'elle soit **disponible partout**. Puis récupérer la référence au [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label) une seule fois, dans la fonction <code class="hljs">_ready()</code>.
+
+```gdscript
+extends Control
+
+
+var reference_label: Label
+var nombre_mystere: int
+
+
+func _ready() -> void:
+    reference_label = $Label
+    nombre_mystere = 158
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    var reponse_joueur: int = int(new_text)
+    
+    if reponse_joueur > nombre_mystere:
+        reference_label.text = "Plus petit!"
+    elif reponse_joueur < nombre_mystere:
+        reference_label.text = "Plus grand!"
+    else:
+        reference_label.text = "Trouvé!"
+```
+
+#### @onready
+
+Le mot clé <code class="hljs">@onready</code> permet de **définir une variable** et de définir sa valeur **au moment de la fonction <code class="hljs">_ready()</code>**. Cela nous donne alors:
+
+```gdscript
+extends Control
+
+
+@onready var reference_label: Label = $Label
+
+var nombre_mystere: int
+
+
+func _ready() -> void:
+    nombre_mystere = 158
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    var reponse_joueur: int = int(new_text)
+    
+    if reponse_joueur > nombre_mystere:
+        reference_label.text = "Plus petit!"
+    elif reponse_joueur < nombre_mystere:
+        reference_label.text = "Plus grand!"
+    else:
+        reference_label.text = "Trouvé!"
+```
+
+### Réinitialiser le LineEdit
+
+Pour **supprimer** le nombre que le joueur à rentré dans le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit), il faut ici aussi avoir sa référence. On rajoute alors la ligne suivante:
+
+```gdscript
+@onready var reference_line_edit: LineEdit = $LineEdit
+```
+
+Ensuite, quand le joueur rentre un nombre, on le supprime du [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit):
+
+```gdscript
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    reference_line_edit.text = ""
+
+    var reponse_joueur: int = int(new_text)
+    
+    if reponse_joueur > nombre_mystere:
+        reference_label.text = "Plus petit!"
+    elif reponse_joueur < nombre_mystere:
+        reference_label.text = "Plus grand!"
+    else:
+        reference_label.text = "Trouvé!"
+```
+
+<img src="./medias/devine-le-nombre/ammelioration-2.gif">
+
+### Nombre aléatoire
+
+**Pour conclure** *(enfin)* on va rendre le nombre de départ **aléatoire** !
+
+Pour ça, on va faire appel à la fonction <code class="hljs">randi_range</code> qui permet de **générer un nombre aléatoire** entre deux valeurs:
+
+```gdscript
+func _ready() -> void:
+    nombre_mystere = randi_range(0, 100)
+```
