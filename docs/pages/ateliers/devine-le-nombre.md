@@ -397,3 +397,39 @@ Pour ça, on va faire appel à la fonction <code class="hljs">randi_range</code>
 func _ready() -> void:
     nombre_mystere = randi_range(0, 100)
 ```
+
+Maintenant, à chaque fois qu'on va lancer le jeu, le nombre à deviner sera aléatoire.
+
+## Jeu fini !
+
+Voici le code final:
+
+```gdscript
+extends Control
+
+
+@onready var reference_label: Label = $Label
+@onready var reference_line_edit: LineEdit = $LineEdit
+
+var nombre_mystere: int
+
+
+func _ready() -> void:
+    nombre_mystere = randi_range(0, 100)
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    reference_line_edit.text = ""
+    
+    var reponse_joueur: int = int(new_text)
+    
+    if reponse_joueur > nombre_mystere:
+        reference_label.text = "Plus petit!"
+    elif reponse_joueur < nombre_mystere:
+        reference_label.text = "Plus grand!"
+    else:
+        reference_label.text = "Trouvé!"
+
+```
+
+<img src="./medias/devine-le-nombre/jeu-fini.png">
