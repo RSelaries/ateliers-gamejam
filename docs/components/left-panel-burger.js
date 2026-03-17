@@ -54,6 +54,7 @@ class LeftPanelBurger extends LitElement {
                 display: flex;
                 flex-direction: column;
                 gap: 0px;
+                overflow-y: auto;
             }
         }
 

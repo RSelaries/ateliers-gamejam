@@ -108,6 +108,7 @@ class LeftPanel extends LitElement {
 
     changeToPage(page) {
         window.location.hash = page.link
+        document.querySelector("wc-header").shadowRoot.querySelector("left-panel-burger").closeMenu()
     }
 
     firstUpdated() {
