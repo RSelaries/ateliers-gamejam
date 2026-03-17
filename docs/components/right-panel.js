@@ -7,9 +7,10 @@ class RightPanel extends LitElement {
 
     static styles = css`
         nav {
-            min-width: 300px;
+            /* min-width: 300px; */
             text-decoration: none;
-            padding: 20px 10px;
+            padding: 20px 0px;
+            padding-right: 10px;
             /* height: 100%; */
         }
         .title-btn {
@@ -28,6 +29,7 @@ class RightPanel extends LitElement {
         }
         ol {
             padding-left: 15px;
+            margin: 0px;
         }
     `
 
@@ -54,11 +56,9 @@ class RightPanel extends LitElement {
 
         return html`
             <nav>
-                <ol>
-                    ${this.hierarchy.map((node) => {
-                        return nodeElement(node)
-                    })}
-                </ol>
+                ${this.hierarchy.map((node) => {
+                    return nodeElement(node)
+                })}
             </nav>
         `
     }

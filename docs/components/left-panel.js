@@ -44,7 +44,8 @@ class LeftPanel extends LitElement {
             font-weight: 500;
             text-transform: uppercase;
             user-select: none;
-            cursor: pointer
+            cursor: pointer;
+            white-space: nowrap;
         }
         details > summary:hover {
             background-color: var(--highlight-color-transparent);
@@ -59,6 +60,7 @@ class LeftPanel extends LitElement {
             mask-position: center;
             mask-image: url(${unsafeCSS(closed)});
             width: 24px;
+            min-width: 24px;
             aspect-ratio: 1;
             display: inline-block;
         }
@@ -89,7 +91,7 @@ class LeftPanel extends LitElement {
         <nav class="left-panel-nav">
             <ol class="category-list">
                 ${pages.map((category) => html`<li class="category ${category.slug}">
-                    <details>
+                    <details open="">
                         <summary>
                             <div class="folder-icon"></div>
                             ${category.name}
@@ -114,26 +116,31 @@ class LeftPanel extends LitElement {
     }
 
     openActivePage() {
-        const categories = this.renderRoot.querySelectorAll(".category")
+        // const categories = this.renderRoot.querySelectorAll(".category")
         const pageBtns = this.renderRoot.querySelectorAll(".page-btn")
         const caterogyToOpen = window.location.hash.replace("#", "").split("/")[0]
-        const pageToOpen = window.location.hash
-            .split("#")[1].replace(".html", "")
-            .replace(".md", "").split("/")[1]
+        const hash = window.location.hash.split("#")
+        const pageToOpen = hash.length > 1 ? hash[1].replace(".html", "").replace(".md", "").split("/")[1] : null
         
-        for(let i = 0; i < categories.length; i++) {
-            if (caterogyToOpen) {
-                categories[i].querySelector("details").open = categories[i].className.includes(caterogyToOpen)
-            } else {
-                categories[i].querySelector("details").open = categories[i].className.includes("introduction")
-            }
-        }
+        // for(let i = 0; i < categories.length; i++) {
+        //     if (caterogyToOpen) {
+        //         if 
+        //         categories[i].querySelector("details").open = categories[i].className.includes(caterogyToOpen)
+        //     } else {
+        //         categories[i].querySelector("details").open = categories[i].className.includes("introduction")
+        //     }
+        // }
 
         for(let i = 0; i< pageBtns.length; i++) {
-            if (pageBtns[i].className.includes(pageToOpen)) {
-                pageBtns[i].setAttribute("open", true)
+            if (caterogyToOpen) {
+                if (pageBtns[i].className.includes(pageToOpen)) {
+                    pageBtns[i].setAttribute("open", true)
+                } else {
+                    pageBtns[i].removeAttribute("open")
+                }
             } else {
-                pageBtns[i].removeAttribute("open")
+                if (pageBtns[i].className.includes("introduction")) pageBtns[i].setAttribute("open", true)
+                else pageBtns[i].removeAttribute("open")
             }
         }
     }

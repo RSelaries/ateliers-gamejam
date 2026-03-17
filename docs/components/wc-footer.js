@@ -9,6 +9,8 @@ class WCFooter extends LitElement {
             font-weight: 200;
             font-size: 10px;
             padding: 5px;
+
+            height: 150vh;
         }
     `
 

@@ -1,8 +1,14 @@
 /* Style 'Github Dark' de Highlight.js */
 pre code.hljs { 
     display: block;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     padding: 1em;
+}
+
+pre:has(code) {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
 }
 
 code.hljs {

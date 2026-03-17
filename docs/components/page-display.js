@@ -250,7 +250,7 @@ class PageDisplay extends LitElement {
                 element.scrollIntoView({ behavior: "smooth" })
             }
         } else {
-            element = document.querySelector(".article")
+            element = document.querySelector("html")
             if (element) {
                 element.scroll({ top: 0, behavior: "smooth" })
             }

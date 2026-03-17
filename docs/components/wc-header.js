@@ -7,8 +7,7 @@ class WCHeader extends LitElement {
             padding: 0;
             margin: 0;
             border-bottom: solid 1px var(--border-color);
-            z-index: 2;
-            position: sticky;
+            background-color: var(--background-color-1);
         }
         nav {
             padding: 5px 30px;
@@ -29,15 +28,34 @@ class WCHeader extends LitElement {
             align-items: center;
             gap: 15px;
         }
+
+        .burger {
+            display:none;
+        }
+
+        @media screen and (max-width: 700px) {
+            .suggestion-button {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .burger {
+                display: block;
+            }
+        }
     `
 
     render() {
         return html`
             <header>
                 <nav>
-                    <a href="https://sirius-productions.fr" class="logo">Site Sirius Productions</a>
                     <div class="buttons">
-                        <suggestion-button></suggestion-button>
+                        <left-panel-burger class="burger"></left-panel-burger>
+                        <a href="https://sirius-productions.fr" class="logo">Sirius Productions</a>
+                    </div>
+                    <div class="buttons">
+                        <suggestion-button class="suggestion-button"></suggestion-button>
                         <theme-button></theme-button>
                     </div>
                 </nav>
