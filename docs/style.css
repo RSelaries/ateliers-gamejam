@@ -97,9 +97,18 @@ left-panel {
     width: max-content;
 }
 
+bottom-hierarchy {
+    display: none;
+}
+
+
 @media only screen and (max-width: 1350px) {
     right-panel {
         display: none;
+    }
+
+    bottom-hierarchy {
+        display: flex;
     }
 }
 

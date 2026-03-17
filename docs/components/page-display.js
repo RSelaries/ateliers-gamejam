@@ -314,6 +314,7 @@ class PageDisplay extends LitElement {
         }
 
         document.querySelector("right-panel").hierarchy = root
+        // document.querySelector("bottom-hierarchy").shadowRoot.querySelector("right-panel").hierarchy = root
         this.shadowRoot.querySelector("right-panel").hierarchy = root
     }
 }
