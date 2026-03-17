@@ -154,6 +154,27 @@ class PageDisplay extends LitElement {
                                     display: block;
                                 }
 
+                                .itch-embed {
+                                    /* border-bottom: solid 1px #363636; */
+                                    border-right: solid 1px #363636;
+                                }
+
+                                .tags-wrapper {
+                                    display: flex;
+                                    margin: 5px 0px;
+                                    gap: 5px;
+
+                                    > span {
+                                        white-space: pre;
+                                        border: solid 2px var(--redirection-color);
+                                        /* background-color: var(--redirection-color); */
+                                        border-radius: 10000px;
+                                        padding: 0px 10px;
+                                        font-weight: 300;
+                                        font-size: 10px;
+                                    }
+                                }
+
                             </style>
                         </template>
                     </zero-md>
