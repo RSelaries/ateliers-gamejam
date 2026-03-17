@@ -15,6 +15,12 @@ class PageDisplay extends LitElement {
             padding: 30px;
             background-color: var(--background-color-1);
         }
+
+        @media screen and (min-width: 1350px) {
+            .hierarchy {
+                display: none;
+            }
+        }
     `
 
     constructor() {
@@ -31,6 +37,11 @@ class PageDisplay extends LitElement {
         if (this.page.link.endsWith(".md")) {
             return html`
                 <div class="article-wrapper">
+                    <details class="hierarchy" style="cursor: pointer">
+                        <summary>Hiérarchie</summary>
+                        <right-panel></right-panel>
+                    </details>
+
                     <zero-md
                         src=${pagesUrl + this.page.link}
                         @zero-md-rendered=${async() => {
@@ -247,7 +258,7 @@ class PageDisplay extends LitElement {
         if (anchor) {
             element = zeroMdShadowRoot.querySelector(`#${anchor}`)
             if (element) {
-                element.scrollIntoView({ behavior: "smooth" })
+                element.scrollIntoView({ behavior: "smooth", block: "center" })
             }
         } else {
             element = document.querySelector("html")
@@ -303,6 +314,7 @@ class PageDisplay extends LitElement {
         }
 
         document.querySelector("right-panel").hierarchy = root
+        this.shadowRoot.querySelector("right-panel").hierarchy = root
     }
 }
 
