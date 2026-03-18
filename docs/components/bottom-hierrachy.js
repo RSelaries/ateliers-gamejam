@@ -63,7 +63,7 @@ class BottomHierarchy extends LitElement {
                 <details>
                     <summary>
                         <div style="mask-image: url(${detailsArrow})" class="details-arrow"></div>
-                        <h3>Hiérarie</h3>
+                        <h3>Table des Matières</h3>
                         <div style="mask-image: url(${detailsArrow})" class="details-arrow"></div>
                     </summary>
                     <div class="hierarchy">
