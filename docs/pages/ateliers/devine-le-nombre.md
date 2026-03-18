@@ -402,7 +402,7 @@ Maintenant, à chaque fois qu'on va lancer le jeu, le nombre à deviner sera al�
 
 ## Jeu fini !
 
-Voici le code final:
+Voici le code final.
 
 ```gdscript
 extends Control

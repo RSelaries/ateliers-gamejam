@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dswx32eqwv5es"]
+
+[ext_resource type="Script" uid="uid://8aemfw3nmht7" path="res://game.gd" id="1_80nbo"]
+
+[node name="Game" type="Control" unique_id=1272568525]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80nbo")
+
+[node name="Label" type="Label" parent="." unique_id=368989824]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 322.0
+offset_right = 637.0
+offset_bottom = 345.0
+text = "Devine le nombre"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=777380251]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 355.0
+offset_right = 647.0
+offset_bottom = 386.0
+placeholder_text = "Votre réponse"
+virtual_keyboard_type = 2
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
