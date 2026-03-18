@@ -9,6 +9,9 @@ pre:has(code) {
     max-width: 100%;
     overflow-x: auto;
     box-sizing: border-box;
+    background: #1c1c1c;
+    border: solid 1px var(--border-color);
+    border-radius: 10px;
 }
 
 code.hljs {
@@ -18,9 +21,6 @@ code.hljs {
 .hljs {
     color: #c9d1d9;
     /* Ce que j'ai modifié */
-    background: #1c1c1c;
-    border: solid 1px var(--border-color);
-    border-radius: 10px;
     /* Ce que j'ai modifié */
 }
 
