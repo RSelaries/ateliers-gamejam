@@ -432,4 +432,8 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 
 ```
 
+> Vous pouvez **retrouver l'intégraliter du projet** dans le <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam">repo</a> de ces ateliers au lien suivant: <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre</a>.
+
+> Vous pouvez aussi directement **télécharger le projet** <a class="external-link" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">ici</a>.
+
 <img src="./medias/devine-le-nombre/jeu-fini.png">
