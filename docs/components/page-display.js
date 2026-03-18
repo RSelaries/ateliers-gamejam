@@ -71,6 +71,7 @@ class PageDisplay extends LitElement {
                                 a.external-link {
                                     color: var(--highlight-color);
                                     text-decoration: underline;
+                                    word-break: break-word;
                                 }
 
                                 a {
@@ -141,17 +142,13 @@ class PageDisplay extends LitElement {
                                     margin: 15px 0px;
                                 }
 
-                                /* code {
-                                    color: var(--code-color);
-                                } */
-
                                 .side-by-side {
                                     max-width: 100%;
                                     display: flex;
                                     flex-direction: row;
                                     gap: 15px;
                                     > * {
-                                        width: 100%;    
+                                        width: 20px;    
                                         flex: 1;
                                     }
                                 }
@@ -159,6 +156,10 @@ class PageDisplay extends LitElement {
                                 @media screen and (max-width: 700px) {
                                     .side-by-side {
                                         flex-direction: column;
+
+                                        > * {
+                                            width: 100%;    
+                                        }
                                     }
                                 }
 
