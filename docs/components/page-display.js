@@ -37,11 +37,6 @@ class PageDisplay extends LitElement {
         if (this.page.link.endsWith(".md")) {
             return html`
                 <div class="article-wrapper">
-                    <details class="hierarchy" style="cursor: pointer">
-                        <summary>Hiérarchie</summary>
-                        <right-panel></right-panel>
-                    </details>
-
                     <zero-md
                         src=${pagesUrl + this.page.link}
                         @zero-md-rendered=${async() => {
@@ -152,6 +147,12 @@ class PageDisplay extends LitElement {
                                     > * {
                                         width: 100%;    
                                         flex: 1;
+                                    }
+                                }
+
+                                @media screen and (max-width: 700px) {
+                                    .side-by-side {
+                                        flex-direction: column;
                                     }
                                 }
 
@@ -314,8 +315,7 @@ class PageDisplay extends LitElement {
         }
 
         document.querySelector("right-panel").hierarchy = root
-        // document.querySelector("bottom-hierarchy").shadowRoot.querySelector("right-panel").hierarchy = root
-        this.shadowRoot.querySelector("right-panel").hierarchy = root
+        document.querySelector("bottom-hierarchy").shadowRoot.querySelector("right-panel").hierarchy = root
     }
 }
 

@@ -72,6 +72,8 @@ class RightPanel extends LitElement {
         currentHash.title = titleId
 
         window.location.hash = `#${currentHash.category}#${currentHash.title}`
+
+        document.querySelector("bottom-hierarchy").shadowRoot.querySelector("details").removeAttribute("open")
     }
 }
 

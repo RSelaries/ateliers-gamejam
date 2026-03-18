@@ -108,7 +108,7 @@ bottom-hierarchy {
     }
 
     bottom-hierarchy {
-        display: flex;
+        display: contents;
     }
 }
 

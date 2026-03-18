@@ -5,13 +5,12 @@ const detailsArrow = new URL( "../medias/icons/details-arrow.svg", import.meta.u
 class BottomHierarchy extends LitElement {
     static styles = css`
         .bottom-hierarchy {
-            width: 100vw;
+            width: 100%;
             position: sticky;
             bottom: 0;
 
             background-color: #0007;
             backdrop-filter: blur(4px);
-            border-top: solid 1px var(--border-color);
             display: flex;
         }
 
