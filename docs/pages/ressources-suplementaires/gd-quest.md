@@ -1,4 +1,4 @@
-# GDQuest
+# ![GDQuest Logo](../../medias/gd-quest-logo.svg) GDQuest
 
 GD Quest est une plateforme de **formations** et **tutos** pour **Godot**. Je vous partage ici leur **outil gratuit** pour **apprendre** le **DGScript** de zéro. Je le trouve **très intuitif** même pour quelqu'un n'ayant jamais codé de sa vie.
 

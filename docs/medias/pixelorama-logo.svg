@@ -1,15 +1,8 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_44_32)">
-<path d="M112 128H16V112H0V96H128V112H112V128Z" fill="#47091A"/>
-<path d="M48 0V112H80V0H48Z" fill="#3BB167"/>
-<rect x="32" y="16" width="64" height="64" fill="#DFE1C3"/>
-<rect x="48" y="32" width="32" height="32" fill="#47091A"/>
-<path d="M0 16V96H16V112H48V80H32V32H48V0H16V16H0Z" fill="#3C78C4"/>
-<path d="M128 16V96H112V112H80V80H96V32H80V0H112V16H128Z" fill="#AF294E"/>
-</g>
-<defs>
-<clipPath id="clip0_44_32">
-<rect width="128" height="128" fill="white"/>
-</clipPath>
-</defs>
+<path d="M106 120H22V106H8V92H120V106H106V120Z" fill="#47091A"/>
+<path d="M50 8V106H78V8H50Z" fill="#3BB167"/>
+<rect x="36" y="22" width="56" height="56" fill="#DFE1C3"/>
+<rect x="50" y="36" width="28" height="28" fill="#47091A"/>
+<path d="M8 22V92H22V106H50V78H36V36H50V8H22V22H8Z" fill="#3C78C4"/>
+<path d="M120 22V92H106V106H78V78H92V36H78V8H106V22H120Z" fill="#AF294E"/>
 </svg>

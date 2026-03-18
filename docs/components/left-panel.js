@@ -25,12 +25,19 @@ class LeftPanel extends LitElement {
 
         .page-btn {
             cursor: pointer;
+            align-items: center;
+            display: flex;
+            gap: 5px;
         }
         .page-btn:hover {
             color: var(--highlight-color);
         }
         .page-btn[open] {
             color: var(--highlight-color);
+        }
+
+        .page-btn > img {
+            height: 16px;
         }
 
         details > summary {
@@ -82,6 +89,7 @@ class LeftPanel extends LitElement {
             return category.pages.map((page) => {
                 const pageSlug = page.link.split("/")[1].split(".")[0]
                 return html`<li class="page-btn ${pageSlug}" @click=${() => this.changeToPage(page)}>
+                    ${page.icon !== "" ? html`<img src=${page.icon}>` : ""}
                     ${page.title}
                 </li>`
             })

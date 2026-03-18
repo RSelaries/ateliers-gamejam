@@ -1,4 +1,4 @@
-# Godot
+# ![Logo Godot](../../medias/godot-logo.svg) Godot
 
 ## Paramètres
 

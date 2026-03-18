@@ -1,4 +1,4 @@
-# Pixelorama
+# ![Pixelorama Logo](../../medias/pixelorama-logo.svg) Pixelorama
 
 <a href="https://pixelorama.org/" class="external-link">Pixelorama</a> est un logiciel de dessin en [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art) **gratuit** et **open-source**.
 
@@ -9,3 +9,5 @@ Aujourd'hui le logiciel de dessin [pixel art](#ressources-suplementaires/lexique
 > Pixelorama a été développé avec le moteur [Godot](#ressources-suplementaires/godot.md) !
 
 > Il existe aussi le logiciel <a href="https://www.materialmaker.org/" class="external-link">Material Maker</a> qui permet de créer des textures et shaders pour le game-dev qui est développé avec [Godot](#ressources-suplementaires/godot.md). *(Il est lui aussi **gratuit** et **open-spource**)*
+
+<a href="https://pixelorama.org/" style="width:100%"><img style="width:100%; height: auto" src="./medias/pixelorama.jpg"></a>

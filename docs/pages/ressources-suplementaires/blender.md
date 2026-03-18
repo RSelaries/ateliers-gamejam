@@ -1,4 +1,4 @@
-# Blender
+# ![Blender Godot](../../medias/blender-logo.svg) Blender
 
 <a href="https://www.blender.org/" class="external-link">Blender</a> est un logiciel de modélisation 3D gratuit et open source. C'est aujourd'hui le logiciel de 3D le plus utilisé par tous les indépendants et il commence à être de plus en plus utilisé dans les milieux professionels.
 

@@ -91,6 +91,12 @@ class PageDisplay extends LitElement {
                                     margin: 0px;
                                     padding: 0px;
                                 }
+
+                                h1 > img {
+                                    height: 32px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
                                 
                                 p > img {
                                     height: 16px;
