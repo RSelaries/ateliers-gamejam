@@ -27,6 +27,11 @@ export default
                 link: "ateliers/devine-le-nombre.md",
                 icon: "./medias/icons/devine-nombre-icon.svg",
             },
+            {
+                title: "Jeu de plateforme",
+                link: "ateliers/jeu-de-plateforme.md",
+                icon: "./medias/icons/plateformer-icon.svg",
+            },
         ],
     },
     // Godot

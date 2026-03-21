@@ -24,6 +24,10 @@ Autrement dit: **un modèle 3D**.
 
 **Medium artistique** découlant des mediums **numériques** où la dimmension *(en pixels)* de l'image est très limitée. Il s'agissait à l'origine d'une contrainte technique. 
 
+## Side Scroller
+
+Jeu en 2D avec la camera en vue de coté. Les personnages se déplacent de gauche à droite et sont affectés par la gravité.
+
 ## Sprite
 
 **Image** représentant le plus souvent un **personnage** ou un **objet** dans un jeu 2D.
@@ -32,9 +36,13 @@ Autrement dit: **un modèle 3D**.
 
 Agencement de tuiles *(à partir d'un [tileset](#ressources-suplementaires/lexique-game-dev.md#tileset))* pour former des décors.
 
+> Dans Godot, on utiliserais le node [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer)
+
 ## Tileset
 
 Ensemble de tuiles *(tiles)* regroupées sur une même image. Souvent utilisé pour les environements.
+
+> Dans Godot, on utiliserais une ressource <a class="external-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset">TileSet</a>
 
 ## Version Control
 

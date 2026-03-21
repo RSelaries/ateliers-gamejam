@@ -36,8 +36,14 @@ class LeftPanel extends LitElement {
             color: var(--highlight-color);
         }
 
-        .page-btn > img {
+        .page-btn > .page-icon {
             height: 16px;
+            aspect-ratio: 1;
+            background-color: var(--body-text-color);
+            mask-size: 100%;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            mask-position: center;
         }
 
         details > summary {
@@ -89,7 +95,7 @@ class LeftPanel extends LitElement {
             return category.pages.map((page) => {
                 const pageSlug = page.link.split("/")[1].split(".")[0]
                 return html`<li class="page-btn ${pageSlug}" @click=${() => this.changeToPage(page)}>
-                    ${page.icon !== "" ? html`<img src=${page.icon}>` : ""}
+                    ${page.icon !== "" ? html`<div class="page-icon" style="mask-image: url(${page.icon})"></div>` : ""}
                     ${page.title}
                 </li>`
             })

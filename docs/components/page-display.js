@@ -72,6 +72,12 @@ class PageDisplay extends LitElement {
                                     color: var(--highlight-color);
                                     text-decoration: underline;
                                     word-break: break-word;
+
+                                    background-image: var(--external-link-icon);
+                                    background-size: 12px;
+                                    background-position: center right;
+                                    background-repeat: no-repeat;
+                                    padding-right: 16px;
                                 }
 
                                 a {
@@ -88,6 +94,12 @@ class PageDisplay extends LitElement {
                                 }
 
                                 h3 > img {
+                                    height: 24px;
+                                    margin: 0px;
+                                    padding: 0px;
+                                }
+
+                                h2 > img {
                                     height: 24px;
                                     margin: 0px;
                                     padding: 0px;
