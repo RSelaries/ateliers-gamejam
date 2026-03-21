@@ -3,7 +3,7 @@
 Ceci est le repo des ateliers création de jeux-vidéo et gamejam.
 
 Il comprend:
-- [unedocumentation](https://rselaries.github.io/ateliers-gamejam) des tous les projets créés pendants ces ateliers et des ressources pratiques.
+- [une documentation](https://rselaries.github.io/ateliers-gamejam) des tous les projets créés pendants ces ateliers et des ressources pratiques.
 - Les fichiers sources de chaque projet Godot fait durant les ateliers
 - Les assets utilisés dans les projets
 
