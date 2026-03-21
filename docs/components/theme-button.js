@@ -54,8 +54,7 @@ class ThemeButton extends LitElement {
 
     changeTheme() {
         let body = document.querySelector("body")
-        let bodyColorScheme = body.style.colorScheme
-        body.style.colorScheme = bodyColorScheme === "light" ? "dark" : "light"
+        body.className = body.className.includes("light") ? body.className.replace("light", "dark") : body.className.replace("dark", "light")
         this.currentTheme = body.style.colorScheme
     }
 }

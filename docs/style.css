@@ -45,7 +45,6 @@
     --code-color: light-dark(var(--code-color-light-theme), var(--code-color-dark-theme));
     --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
     --border-color: light-dark(var(--border-color-light-theme), var(--border-color-dark-theme));
-    --external-link-icon: light-dark(var(--external-link-icon-light), var(--external-link-icon-dark));
 }
 
 ::-webkit-scrollbar {
@@ -62,9 +61,17 @@ body {
 
     padding: 0;
     margin: 0;
+}
 
-    /* height: 100vh;
-    max-height: 100vh; */
+
+body.light {
+    color-scheme: light;
+    --external-link-icon: var(--external-link-icon-light);
+}
+
+body.dark {
+    color-scheme: dark;
+    --external-link-icon: var(--external-link-icon-dark);
 }
 
 wc-header {

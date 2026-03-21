@@ -20,13 +20,13 @@ La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D rep
 
 ### ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D
 
-Un ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) utilisé pour créer des **personnages** qui subissent la **physique**. (Gravité, collisions avec les murs...)
+Un ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) utilisé pour créer des **personnages** qui subissent la **physique** (Gravité, collisions avec les murs...).
 
 > <span style="font-size: 0.8em; align-items:center; display: flex; gap: 8px"><img style="height:16px; margin: 0px;" src="./medias/godot-docs-icon.ico"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="external-link">Documentation officielle</a></span>
 
 ### ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer
 
-Un ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) qui permet d'arranger des tuiles d'un <a class="external-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset"><img style="height:16px; margin: 0px;" src="./medias/godot-docs-icon.ico"> TileSet</a>
+Un ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) qui permet d'arranger des tuiles d'un <a class="external-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset"><img style="height:16px; margin: 0px;" src="./medias/godot-docs-icon.ico"> TileSet</a>.
 
 > <span style="font-size: 0.8em; align-items:center; display: flex; gap: 8px"><img style="height:16px; margin: 0px;" src="./medias/godot-docs-icon.ico"><a href="https://docs.godotengine.org/en/stable/classes/class_tilemaplayer.html" class="external-link">Documentation officielle</a></span>
 

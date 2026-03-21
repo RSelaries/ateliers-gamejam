@@ -11,6 +11,7 @@ class RightPanel extends LitElement {
             text-decoration: none;
             padding: 20px 0px;
             padding-right: 10px;
+            width: 250px;
             /* height: 100%; */
         }
         .title-btn {

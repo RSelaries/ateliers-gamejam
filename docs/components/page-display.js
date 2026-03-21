@@ -74,6 +74,7 @@ class PageDisplay extends LitElement {
                                     word-break: break-word;
 
                                     background-image: var(--external-link-icon);
+                                    background-image: var(--external-link-icon);
                                     background-size: 12px;
                                     background-position: center right;
                                     background-repeat: no-repeat;
