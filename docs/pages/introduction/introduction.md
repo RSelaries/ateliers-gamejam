@@ -16,6 +16,10 @@ Les gamejams sont des évènements très ouverts, de nombreuses personnes partic
 
 ## Comment s'organisent ces ateliers ?
 
+<span style="font-size: 2em">/!\ Organisation à prévoir /!\</span>
+
+<!--
+
 Il y aura **deux ateliers par mois**. Le premier est un atelier **théorique**, et le deuxième un atelier **pratique**.
 
 ### Ateliers théoriques
@@ -27,6 +31,8 @@ Ils prennent place dans les locaux de *<a class="external-link" href="[https://w
 
 Les ateliers pratiques s'organisent par **projet**. Chaque atelier sera **un nouveau jeu** que l'on va développer pour **apprendre** petit à petit la programmation et le développement de jeux-vidéo.
 Ils prennent place aux seins des locaux de *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et sont organisés par moi-même *(Raphaël, service civique à Sirius)*.
+
+ -->
 
 ## Quels outils on va utiliser ?
 
