@@ -3,13 +3,15 @@
 Merci d'être présents pour ce premier atelier !
 
 Pour débuter, on va simplement **jouer à des jeux de gamejams** pour se rendre compte de **ce qui peut être produit** en un **temps limité**.
-J'ai préparé une **collection** *itch.io* de <a href="https://itch.io/c/5926827/gamejams" class="external-link">jeux de gamejams.</a> Sinon vous pouvez aussi chercher des jeux vous même <a href="https://itch.io/games/tag-game-jam" class="external-link">ici</a>.
+J'ai préparé une **collection** *itch.io* de <a href="https://itch.io/c/5926827/gamejams" class="external-link">jeux de gamejams</a>. Sinon vous pouvez aussi chercher des jeux vous même <a href="https://itch.io/games/tag-game-jam" class="external-link">ici</a>.
 
 ## Exemples que je trouve intéressants
 
 J'ai fait une petite sélection de jeux que je trouve intéressants.
 
 <br>
+
+<div class="itch-grid">
 
 <iframe class="itch-embed" width="552" height="167" frameborder="0" src="https://itch.io/embed/2156549?dark=true"><a href="https://kindanice.itch.io/making-the-game">Making the Game by kindanice</a></iframe>
 
@@ -34,3 +36,5 @@ J'ai fait une petite sélection de jeux que je trouve intéressants.
 <iframe class="itch-embed" src="https://itch.io/embed/2900665?dark=true" width="552" height="167" frameborder="0"><a href="https://zeehatcher.itch.io/windowframe">Windowframe by ZeeHatcher, Zircon332</a></iframe>
 
 <iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/2149381?dark=true" width="552"><a href="https://pulni.itch.io/sneakerdoodle">Sneakerdoodle by Pulni, Lithimlin, Katamarang_Art, andrground, Nikkar, VexenD, MokeyMokey, Jenny Schukin, Aviv Youker Harel</a></iframe>
+
+</div>

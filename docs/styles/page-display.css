@@ -1,0 +1,158 @@
+.markdown-body {
+    font-size: 17px;
+}
+
+strong {
+    font-weight: 500;
+    color: var(--highlight-color);
+}
+
+em {
+    color: var(--highlight-color);
+}
+
+a.external-link {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    word-break: break-word;
+
+    background-image: var(--external-link-icon);
+    background-size: 12px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--redirection-color);
+
+    > img {
+        height: 16px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0px;
+    margin-top: 15px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: var(--highlight-color);
+
+    > img {
+        height: 32px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+h2 {
+    border: solid 2px var(--highlight-color);
+    background-color: light-dark(#0000, var(--highlight-color));
+    padding: 2px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+
+    > img {
+        height: 24px;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+h3 > img {
+    height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p > img {
+    height: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+blockquote {
+    border-left: 2px solid var(--highlight-color);
+    border-radius: 5px; 
+    margin: 15px;
+    margin-left: 0px;
+    padding: 0px 30px;
+}
+
+img {
+    max-width: 100%;
+    margin: 15px 0px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.side-by-side {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    > * {
+        width: 20px;    
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .side-by-side {
+        flex-direction: column;
+
+        > * {
+            width: 100%;    
+        }
+    }
+}
+
+/* ----- itch-grid ----- */
+.itch-grid {
+    display: grid;
+    /* Au dessus de 1000px */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* 0 à 440 */
+@media screen and (max-width: 440px) {
+    .itch-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 440 à 700*/
+@media screen and (min-width: 440px) and (max-width: 700px) {
+    .itch-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 700 à 1000 */
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .itch-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* ----- itch-grid ----- */

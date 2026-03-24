@@ -1,4 +1,4 @@
-@import url(./fonts/prompt/prompt.css);
+@import url(../fonts/prompt/prompt.css);
 
 :root {
     /* Themes Colors */
@@ -21,9 +21,6 @@
 
     --redirection-color-light-theme: #E79A00;
     --redirection-color-dark-theme: #F2BF4A;
-
-    --external-link-icon-light: url(./medias/icons/external-link-icon-light.svg);
-    --external-link-icon-dark: url(./medias/icons/external-link-icon-dark.svg);
     
     --highlight-color-transparent-light-theme: #65bed44f;
     --highlight-color-transparent-dark-theme: #008B8B4f;
@@ -33,6 +30,9 @@
     
     --border-color-light-theme: #adadad;
     --border-color-dark-theme: #2d2d2d;
+
+    --external-link-icon-light: url(../medias/icons/external-link-icon-light.svg);
+    --external-link-icon-dark: url(../medias/icons/external-link-icon-dark.svg);
     
     /* Variables */
     --background-color-1: light-dark(var(--background-color-light-theme-1), var(--background-color-dark-theme-1));

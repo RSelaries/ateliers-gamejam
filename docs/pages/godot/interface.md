@@ -22,4 +22,25 @@
 
 ## Historique
 
-## Output
+## Onglets en bas
+
+### Output
+
+### Debugger
+
+### Animation
+
+### Audio
+
+### Shader Editor
+
+## Autres fenêtres
+
+### Import
+
+### History
+
+### Signaux
+
+### Groupes
+

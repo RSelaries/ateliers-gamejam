@@ -1,7 +1,5 @@
 # ![Logo Godot](../../medias/godot-logo.svg) Godot
 
-## SceneTree
-
 ## Paramètres
 
 ### Renderer
