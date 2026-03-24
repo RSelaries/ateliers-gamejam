@@ -16,7 +16,7 @@ Les gamejams sont des évènements très ouverts, de nombreuses personnes partic
 
 ## Comment s'organisent ces ateliers ?
 
-<span style="font-size: 2em">/!\ Organisation à prévoir /!\</span>
+<span style="font-size: 2em">/!\ Organisation à prévoir /!\\</span>
 
 <!--
 
