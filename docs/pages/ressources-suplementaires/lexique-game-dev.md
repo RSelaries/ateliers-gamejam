@@ -21,6 +21,8 @@ Désigne des modèles 3D *(ou [meshs](#ressources-suplementaires/lexique-game-de
 De l'anglais mesh *(maillage)*, un mesh est une collection de points dans un espace 3D.<br>
 Autrement dit: **un modèle 3D**.
 
+> Le [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) équivalent: [![Godot - MeshInstance3D](../../medias/godot-icons/MeshInstance3D.svg) MeshInstance3D](#godot/nodes.md#meshinstance3d)
+
 ## Pixel Art
 
 **Medium artistique** découlant des mediums **numériques** où la dimmension *(en pixels)* de l'image est très limitée. Il s'agissait à l'origine d'une contrainte technique. 
@@ -33,11 +35,13 @@ Jeu en 2D avec la camera en vue de coté. Les personnages se déplacent de gauch
 
 **Image** représentant le plus souvent un **personnage** ou un **objet** dans un jeu 2D.
 
+> Le [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) équivalent: [![Godot - Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d)
+
 ## Tilemap
 
 Agencement de tuiles *(à partir d'un [tileset](#ressources-suplementaires/lexique-game-dev.md#tileset))* pour former des décors.
 
-> Dans Godot, on utiliserais le node [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer).
+> Le [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) équivalent: [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer)
 
 ## Tileset
 

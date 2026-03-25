@@ -2,6 +2,8 @@
 
 Cette page contient une explication courte et simple des Nodes que nous allons utiliser. Pour plus d'informations vous pouvez aller directement sur la <a href="https://docs.godotengine.org/en/stable/classes/index.html#nodes" class="external-link">documentation officielle de Godot</a>.
 
+<!--      -->
+<!--      -->
 <!-- Node -->
 
 ## ![Godot - Node](../../medias/godot-icons/Node.svg) Node
@@ -16,11 +18,13 @@ Le ![Godot - Node](../../medias/godot-icons/Node.svg) Node le plus simple, il fo
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_worldenvironment.html" class="documentation-link">Documentation officielle</a></span>
 
+<!--        -->
+<!--        -->
 <!-- Node2D -->
 
 ## ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D
 
-La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D représente tous les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour tous les éléments de jeu en 2D (sauf les éléments d'[interfaces utilisateur](#godot/control.md)).
+La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D représente les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour tous les éléments de jeu en 2D (sauf les éléments d'[interfaces utilisateur](#godot/control.md)).
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link">Documentation officielle</a></span>
 
@@ -36,6 +40,28 @@ Un ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLay
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_tilemaplayer.html" class="documentation-link">Documentation officielle</a></span>
 
+<!--        -->
+<!--        -->
+<!-- Node3D -->
+
+## ![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D
+
+La famille des ![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D représente les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour tous les éléments de jeu en 3D.
+
+### ![Godot - CharacterBody3D](../../medias/godot-icons/CharacterBody3D.svg) CharacterBody3D
+
+Un ![Godot - CharacterBody3D](../../medias/godot-icons/CharacterBody3D.svg) CharacterBody3D est un [![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D](#godot/nodes.md#node) utilisé pour créer des **personnages** qui subissent la **physique** (Gravité, collisions avec les murs...).
+
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody3d.html" class="documentation-link">Documentation officielle</a></span>
+
+### ![Godot - DirectionalLight3D](../../medias/godot-icons/DirectionalLight3D.svg) DirectionalLight3D
+
+À rédiger
+
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_directionallight3d.html" class="documentation-link">Documentation officielle</a></span>
+
+<!--         -->
+<!--         -->
 <!-- Control -->
 
 ## ![Godot - Control](../../medias/godot-icons/Control.svg) Control

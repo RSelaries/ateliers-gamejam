@@ -2,7 +2,7 @@
 
 ## Project Manager
 
-C'est la **première fenêtre** qui s'ouvre quand on ouvre l'exécutable [Godot](#godot/godot.md).
+C'est la **première fenêtre** qui s'ouvre quand on ouvre l'exécutable [![Godot Logo](../../medias/godot-logo.svg) Godot](#godot/godot.md).
 
 <img src="./medias/interface-godot/interface-project-manager-1.png">
 
@@ -12,13 +12,13 @@ C'est ici que l'on va retrouver **tous nos projets**. À partir de cette fenêtr
 
 En haut, on retrouve les boutons:
 
-- **Create**: Ce bouton ouvre la fenêtre de création de projet
+- **![Godot - Add](../../medias/godot-icons/Add.svg) Create**: Ce bouton ouvre la fenêtre de création de projet
 
 <img width="300px" src="./medias/interface-godot/interface-project-manager-3.png">
 
-- **Import**: Ce bouton permet d'**importer** un projet.
+- **![Godot - Load](../../medias/godot-icons/Load.svg) Import**: Ce bouton permet d'**importer** un projet.
 
-- **Scan**: Ce bouton permet de **scanner un dossier entier** pour importer **plusieurs projets d'un coup**.
+- **![Godot - Search](../../medias/godot-icons/Search.svg) Scan**: Ce bouton permet de **scanner un dossier entier** pour importer **plusieurs projets d'un coup**.
 
 Ensuite on a une liste de tous nos projets.
 
@@ -26,17 +26,17 @@ Ensuite on a une liste de tous nos projets.
 
 ## Onglets principaux
 
-La fenêtre principale de [Godot](#godot/godot.md) se compose par défaut de 5 onglets. Certains plugins peuvent ajouter de nouveaux onglet.
+La fenêtre principale de [![Godot Logo](../../medias/godot-logo.svg) Godot](#godot/godot.md) se compose par défaut de 5 onglets. Certains plugins peuvent ajouter de nouveaux onglets.
 
 <img src="./medias/interface-godot/interface-main-panels-1.png">
 
-On retrouve à chaque onglet les [scènes](#godot/godot.md#scenes) que l'on a ouvert.
+On retrouve à chaque fois les [![Godot - PackedScene](../../medias/godot-icons/PackedScene.svg) scènes](#godot/godot.md#scenes) que l'on a ouvert.
 
 <img src="./medias/interface-godot/interface-main-panels-2.png">
 
 ### Onglet ![Godot - 2D Panel](../../medias/godot-icons/2D.svg) 2D
 
-Permet d'**éditer** tous les **élements 2D** (les [Node2D](#godot/nodes.md#node2d) et [Control](#godot/nodes.md#control)).
+Permet d'**éditer** tous les **élements 2D** (les [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node2d) et [![Godot - Control](../../medias/godot-icons/Control.svg) Control](#godot/nodes.md#control)).
 
 <img src="./medias/interface-godot/interface-2d-1.png">
 
@@ -80,7 +80,7 @@ Dans l'ordre:
 
 ### Onglet ![Godot - 3D Panel](../../medias/godot-icons/3D.svg) 3D
 
-Permet d'**éditer** tous les **élements 3D** (les [Node3D](#godot/nodes.md#node3d)).
+Permet d'**éditer** tous les **élements 3D** (les [![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D](#godot/nodes.md#node3d)).
 
 <img src="./medias/interface-godot/interface-3d-1.png">
 
@@ -124,11 +124,68 @@ Dans l'ordre:
 
 ### Onglet ![Godot - Script Panel](../../medias/godot-icons/Script.svg) Script
 
+Permet d'**éditer** les scripts de nos [![Godot - node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node).
+
+<img src="./medias/interface-godot/interface-script-1.png">
+
+On y retrouve en **haut à gauche** la liste des **scripts ouverts**. En **bas à gauche** la **liste des fonctions** du script actuel. Enfin la **fenêtre de droite** où on retrouve le **script en lui-même**.
+
 ### Onglet ![Godot - Game Panel](../../medias/godot-icons/Game.svg) Game
+
+Cette fenêtre permet d'**intéragir avec le jeu** quand on le lance.
+
+<div class="side-by-side">
+    <img src="./medias/interface-godot/interface-game-1.png">
+    <img src="./medias/interface-godot/interface-game-2.png">
+</div>
+
+Quand le jeu est lancé on peut voir que l'[Output](#godot/interface.md#output) s'ouvre automatiquement.
+
+#### Outils Game
+
+<img src="./medias/interface-godot/interface-game-3.png">
+
+Dans l'ordre:
+
+- ![Godot - Suspend](../../medias/godot-icons/Suspend.svg) Play / Pause
+
+- ![Godot - NextFrame](../../medias/godot-icons/NextFrame.svg) Prochaine [Frame](#ressources-suplementaires/lexique-game-dev.md#frame) <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet d'avancer d'une frame quand le jeu est en pause)</span>
+
+- 1.0x Vitesse du jeu
+
+- ![Godot - Reload](../../medias/godot-icons/Reload.svg) Réinitialiser la vitesse du jeu <span style="font-size: .8em; color: var(--body-text-color-faded)">(Remet la vitesse du jeu à 1.0x)</span>
+
+- ![Godot - InputEventJoypadMotion](../../medias/godot-icons/InputEventJoypadMotion.svg) Intéragir avec le jeu <span style="font-size: .8em; color: var(--body-text-color-faded)">(Les appuies de touches et les clics de souris seronts captés par le jeu)</span>
+
+- ![Godot - 2DNodes](../../medias/godot-icons/2DNodes.svg) Sélection 2D <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de sélectionner les [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node2d) et [![Godot - Control](../../medias/godot-icons/Control.svg) Control](#godot/nodes.md#control))</span>
+
+- ![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Sélection 3D <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de sélectionner les [![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D](#godot/nodes.md#node3d))</span>
+
+- ![Godot - ToolSelect](../../medias/godot-icons/ToolSelect.svg) Sélection
+
+- ![Godot - ListSelect](../../medias/godot-icons/ListSelect.svg) Sélection Liste <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de sélectionner un objet précis quand plusieurs objets se superposent)</span>
+
+- ![Godot - GuiVisibilityVisible](../../medias/godot-icons/GuiVisibilityVisible.svg) Affichage de la sélection <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet d'afficher ou non le rectangle jaune autour de l'objet sélectionné)</span>
+
+- ![Godot - GuiTabMenuHl](../../medias/godot-icons/GuiTabMenuHl.svg) Paramètres de sélection
+
+- ![Godot - AudioStreamPlayer](../../medias/godot-icons/AudioStreamPlayer.svg) Couper le son
+
+- ![Godot - Camera](../../medias/godot-icons/Camera.svg) Camera Libre
+
+- ![Godot - GuiTabMenuHl](../../medias/godot-icons/GuiTabMenuHl.svg) Paramètres de camera
+
+- ![Godot - KeepAspect](../../medias/godot-icons/KeepAspect.svg) Paramètres d'Affichage
 
 ### Onglet ![Godot - AssetLib Panel](../../medias/godot-icons/AssetLib.svg) AssetLib
 
+L'onglet **AssetLib** permet d'accéder aux **créations** et [plugins](#godot/godot.md#plugins) de la **communauté**.
+
+<img src="./medias/interface-godot/interface-assetlib-1.png">
+
 ## Scene Tree
+
+Le scène tree
 
 ## File System
 
