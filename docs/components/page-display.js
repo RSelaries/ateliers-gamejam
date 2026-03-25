@@ -126,7 +126,7 @@ class PageDisplay extends LitElement {
         if (anchor) {
             element = zeroMdShadowRoot.querySelector(`#${anchor}`)
             if (element) {
-                element.scrollIntoView({ behavior: "smooth", block: "center" })
+                element.scrollIntoView({ behavior: "smooth", block: "start" })
             }
         } else {
             element = document.querySelector("html")

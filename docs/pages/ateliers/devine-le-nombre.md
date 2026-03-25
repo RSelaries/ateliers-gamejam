@@ -48,7 +48,7 @@ Enfin, on clique sur **Create** ce qui nous ouvre la fenêtre de l'**éditeur** 
 
 ## L'interface de Godot
 
-L'interface de l'**éditeur** de [Godot](#godot/godot.md) se compose de plusieurs fenêtres et menus.
+L'[interface](#godot/interface.md) de l'**éditeur** de [Godot](#godot/godot.md) se compose de plusieurs fenêtres et menus.
 
 ### Le menu des onglets
 
