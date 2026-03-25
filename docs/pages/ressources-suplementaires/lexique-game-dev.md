@@ -9,7 +9,8 @@ First Person Shooter *(jeu de tir à la première personne)*. Le terme est aujou
 Une frame est une **image**. Plus précisément, à chaque fois que l'**image change** dans le jeu, c'est une **nouvelle frame** qui est générée.
 
 > C'est de là que vient le terme *FPS* pour **frames per second**, donc le nombre d'images différentes à la seconde. Un écran classique peut afficher 60 images par secondes.<br>
-<span style="font-size: 0.8em">/!\ Attention à ne pas confondre FPS qui désigne les images par secondes et [FPS](#ressources-suplementaires/lexique-game-dev.md#fps), un jeu à la première personne.</span>
+
+> *<span style="font-size: 0.8em">/!\ Attention à ne pas confondre FPS qui désigne les images par secondes et [FPS](#ressources-suplementaires/lexique-game-dev.md#fps), un jeu à la première personne.</span>*
 
 ## Low Poly
 
@@ -36,17 +37,17 @@ Jeu en 2D avec la camera en vue de coté. Les personnages se déplacent de gauch
 
 Agencement de tuiles *(à partir d'un [tileset](#ressources-suplementaires/lexique-game-dev.md#tileset))* pour former des décors.
 
-> Dans Godot, on utiliserais le node [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer)
+> Dans Godot, on utiliserais le node [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer).
 
 ## Tileset
 
 Ensemble de tuiles *(tiles)* regroupées sur une même image. Souvent utilisé pour les environements.
 
-> Dans Godot, on utiliserais une ressource <a class="external-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset">TileSet</a>
+> Dans Godot, on utiliserais une ressource <a class="documentation-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset">TileSet</a>.
 
 ## Version Control
 
-Le **version control** est le fait de garder une trace de chaque modification apportée aux lignes de code. Cela permet de revenir en arrière très facilement en cas de problème et c'est un très bon outil pour travailler à plusieurs. **Git** est l'outil de version control le plus utilisé *(~90%)* dans le monde. **Github** est une des plateformes qui permettent d'héberger un projet **git** gratuitement (Ce site par exemple).<br>
+Le [version control](#ressources-suplementaires/version-control.md) est le fait de garder une trace de chaque modification apportée aux lignes de code. Cela permet de revenir en arrière très facilement en cas de problème et c'est un très bon outil pour travailler à plusieurs. **Git** est l'outil de version control le plus utilisé *(~90%)* dans le monde. **Github** est une des plateformes qui permettent d'héberger un projet **git** gratuitement (Ce site par exemple).<br>
 
 > Google doc contient d'ailleurs une fonctionnalité de version control !
 

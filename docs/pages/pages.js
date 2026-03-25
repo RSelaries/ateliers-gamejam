@@ -72,6 +72,11 @@ export default
                 icon: "./medias/icons/lexique-icon.svg",
             },
             {
+                title: "Version Control",
+                link: "ressources-suplementaires/version-control.md",
+                icon: "./medias/icons/git-icon.svg",
+            },
+            {
                 title: "GDQuest",
                 link: "ressources-suplementaires/gd-quest.md",
                 icon: "./medias/icons/gd-quest-icon.svg",

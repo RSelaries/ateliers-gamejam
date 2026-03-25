@@ -31,9 +31,17 @@ class LeftPanel extends LitElement {
         }
         .page-btn:hover {
             color: var(--highlight-color);
+
+            > .page-icon {
+                background-color: var(--highlight-color);
+            }
         }
         .page-btn[open] {
             color: var(--highlight-color);
+
+            > .page-icon {
+                background-color: var(--highlight-color);
+            }
         }
 
         .page-btn > .page-icon {
