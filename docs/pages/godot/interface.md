@@ -26,7 +26,9 @@ Ensuite on a une liste de tous nos projets.
 
 ## Onglets principaux
 
-La fenêtre principale de [![Godot Logo](../../medias/godot-logo.svg) Godot](#godot/godot.md) se compose par défaut de 5 onglets. Certains plugins peuvent ajouter de nouveaux onglets.
+La fenêtre principale de [![Godot Logo](../../medias/godot-logo.svg) Godot](#godot/godot.md) se compose par défaut de 5 onglets: [![Godot - 2D Panel](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), [![Godot - 3D Panel](../../medias/godot-icons/3D.svg) 3D](#godot/interface.md#onglet-3d), [![Godot - Script Panel](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), [![Godot - Game Panel](../../medias/godot-icons/Game.svg) Game](#godot/interface.md#onglet-game), [![Godot - AssetLib Panel](../../medias/godot-icons/AssetLib.svg) AssetLib](#godot/interface.md#onglet-assetlib).
+
+Certains [plugins](#godot/godot.md#plugins) peuvent ajouter de **nouveaux onglets**.
 
 <img src="./medias/interface-godot/interface-main-panels-1.png">
 
@@ -183,7 +185,7 @@ L'onglet **AssetLib** permet d'accéder aux **créations** et [plugins](#godot/g
 
 <img src="./medias/interface-godot/interface-assetlib-1.png">
 
-## Scene Tree
+## SceneTree
 
 Le SceneTree permet de **visualiser** et **modifer** l'**arborescence de la scène** actuellement ouverte.
 
@@ -191,25 +193,55 @@ Le SceneTree permet de **visualiser** et **modifer** l'**arborescence de la scè
 
 Les [![Godot - Node](../../medias/godot-icons/Node.svg) nodes](#godot/nodes.md#node) en **bas** de la liste sont au **premier plan**. Les **enfants** d'un [![Godot - Node](../../medias/godot-icons/Node.svg) node](#godot/nodes.md#node) sont représentés **en dessous** et **décalés à droite**.
 
-## File System
+## FileSystem
+
+Le FileSystem permet d'**accéder à tous les fichiers de notre projet**. Il se situe par défaut en bas à gauche en forme de liste, mais il est possible de **changer son emplacement et son affichage**.
+
+<div class="side-by-side content">
+    <img src="./medias/interface-godot/interface-filesystem-1.png">
+    <img src="./medias/interface-godot/interface-filesystem-2.png">
+</div>
 
 ## Inspecteur
 
-## Historique
+L'inspecteur permet de **modifier** les **propriétés** d'un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) ou d'une [![Godot - Object](../../medias/godot-icons/Object.svg) Ressource](#godot/godot.md#ressources).
+
+<div class="side-by-side">
+    <img src="./medias/interface-godot/interface-inspector-1.png">
+    <img src="./medias/interface-godot/interface-inspector-2.png">
+</div>
 
 ## Onglets en bas
 
-### Output
+Par défaut, le menu du bas contient 5 onglets: [![Godot - OutputPanel](../../medias/godot-icons/OutputPanel.svg) Output](#godot/interface.md#output), [![Godot - Debug](../../medias/godot-icons/Debug.svg) Debugger](#godot/interface.md#debugger), [![Godot - AudioStreamPlayer](../../medias/godot-icons/AudioStreamPlayer.svg) Audio](#godot/interface.md#audio), [![Godot - Animation](../../medias/godot-icons/Animation.svg) Animation](#godot/interface.md#animation), [![Godot - ShaderPanel](../../medias/godot-icons/ShaderPanel.svg) Shader Editor](#godot/interface.md#shader-editor). En modifiant **certains [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node)** ou **[![Godot - Object](../../medias/godot-icons/Object.svg) Ressource](#godot/godot.md#ressources)**, ou bien avec certains **plugins**, de **nouveaux onglets** peuvent s'ajouter.
 
-### Debugger
+<img src="./medias/interface-godot/interface-bottom-dock-1.png">
 
-### Animation
+<img src="./medias/interface-godot/interface-bottom-dock-2.png">
 
-### Audio
+### ![Godot - OutputPanel](../../medias/godot-icons/OutputPanel.svg) Output
 
-### Shader Editor
+L'output affiche toutes les **erreurs**, les **avertissements**, et les text qui ont été `print`.
+
+<img src="./medias/interface-godot/interface-output-1.png">
+
+### ![Godot - Debug](../../medias/godot-icons/Debug.svg) Debugger
+
+Le Debugger est une interface riche et complexe qui vas afficher les erreurs et leur *stack trace* <span style="font-size: .8em; color: var(--body-text-color-faded)">(Tect)</span>
+
+<img src="./medias/interface-godot/interface-debugger-1.png">
+
+### ![Godot - AudioStreamPlayer](../../medias/godot-icons/AudioStreamPlayer.svg) Audio 
+
+### ![Godot - Animation](../../medias/godot-icons/Animation.svg) Animation
+
+### ![Godot - ShaderPanel](../../medias/godot-icons/ShaderPanel.svg) Shader Editor
+
+### ![Godot - ThemePanel](../../medias/godot-icons/ThemePanel.svg) Theme
 
 ## Autres fenêtres
+
+### Historique
 
 ### Import
 
