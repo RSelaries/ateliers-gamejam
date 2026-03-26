@@ -227,9 +227,11 @@ L'output affiche toutes les **erreurs**, les **avertissements**, et les text qui
 
 ### ![Godot - Debug](../../medias/godot-icons/Debug.svg) Debugger
 
-Le Debugger est une interface riche et complexe qui vas afficher les erreurs et leur *stack trace* <span style="font-size: .8em; color: var(--body-text-color-faded)">(Tect)</span>
+Le Debugger est une interface riche et complexe qui vas afficher les erreurs et leur *stack trace* <span style="font-size: .8em; color: var(--body-text-color-faded)">(C'est à dire la fonction dans laquelle l'erreur à eu lieu, et la ligne qui a appelé cette fonction et la fonction qui l'a appelé...)</span>
 
 <img src="./medias/interface-godot/interface-debugger-1.png">
+
+Le Debugger est très utile pour l'**optimisation**, mais ce n'est pas quelque chose qui nous intéresse pour l'instant. <span style="font-size: .8em; color: var(--body-text-color-faded)">(Et je ne sais moi-même pas trop utiliser le debugger...)</span>
 
 ### ![Godot - AudioStreamPlayer](../../medias/godot-icons/AudioStreamPlayer.svg) Audio 
 

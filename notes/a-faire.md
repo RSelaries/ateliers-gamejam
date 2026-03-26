@@ -6,16 +6,15 @@ kanban-plugin: board
 
 ## À faire
 
-- [ ] Page | Jeu de Plateforme
-- [ ] **Page/Interface Utilisateur** - [[remplir-page-control]]
-- [ ] **Godot/Godot** - [[remplir-page-godot|À remplir]]
-- [ ] **Ressources Sup/Version Control** - [[remplir-page-vs|À remplir]]
+- [ ] **Ateliers/Jeu de Plateforme** - À faire
+- [ ] **Godot/Control** - À remplir
+- [ ] **Godot/Godot** - À remplir
+- [ ] **Ressources Sup/Version Control** - À remplir
 
 
 ## En cours
 
-- [ ] Page | Interface de Godot
-- [ ] Page | Node
+- [ ] **Godot/Interface de Godot** - À remplir
 
 
 ## À relire
@@ -24,17 +23,17 @@ kanban-plugin: board
 
 ## Fini
 
+**Complete**
 
 
 ***
 
 ## Archive
 
-- [ ] Page | Godot
-- [ ] Page | Interface de Godot
+- [ ] **Godot/Nodes** - Remplir les nodes utilisés
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false,false,false,false]}
+{"kanban-plugin":"board","list-collapse":[false,false,false,false],"show-checkboxes":false,"full-list-lane-width":false}
 ```
 %%
