@@ -3,6 +3,7 @@ import { LitElement, html, css } from 'https://unpkg.com/lit?module'
 class RightPanel extends LitElement {
     static properties = {
         hierarchy: {},
+        activeId: { type: String },
     }
 
     static styles = css`
@@ -22,6 +23,9 @@ class RightPanel extends LitElement {
         .title-btn:hover {
             color: var(--body-text-color);
         }
+        .title-btn.active {
+            color: var(--highlight-color);
+        }
         *::marker {
             content: "";
         }
@@ -37,13 +41,30 @@ class RightPanel extends LitElement {
     constructor() {
         super()
         this.hierarchy = []
+        this.activeId = null
+    }
+
+    connectedCallback() {
+        super.connectedCallback()
+
+        this._headingListener = (e) => {
+            console.log("RIGHT PANEL RECEIVED:", e.detail)
+            this.activeId = e.detail
+        }
+
+        window.addEventListener("active-heading", this._headingListener)
+    }
+
+    disconnectedCallback() {
+        window.removeEventListener("active-heading", this._headingListener)
+        super.disconnectedCallback()
     }
 
     render() {
         const nodeElement = (node) => {
             return html`
                 <li>
-                    <div class="title-btn" @click=${() => this.goToTitle(node.id)}>${node.name}</div>
+                    <div class='title-btn ${this.activeId === node.id ? "active" : ""}' @click=${() => this.goToTitle(node.id)}>${node.name}</div>
                     <ol>
                         ${node.children.map((node) => {
                             if (node.name) {

@@ -185,7 +185,11 @@ L'onglet **AssetLib** permet d'accéder aux **créations** et [plugins](#godot/g
 
 ## Scene Tree
 
-Le scène tree
+Le SceneTree permet de **visualiser** et **modifer** l'**arborescence de la scène** actuellement ouverte.
+
+<img src="./medias/interface-godot/interface-scene-tree-1.png">
+
+Les [![Godot - Node](../../medias/godot-icons/Node.svg) nodes](#godot/nodes.md#node) en **bas** de la liste sont au **premier plan**. Les **enfants** d'un [![Godot - Node](../../medias/godot-icons/Node.svg) node](#godot/nodes.md#node) sont représentés **en dessous** et **décalés à droite**.
 
 ## File System
 

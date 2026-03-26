@@ -46,9 +46,9 @@ class PageDisplay extends LitElement {
                                 .querySelector("zero-md")
                                 .shadowRoot.querySelector(".markdown-body")
                             await this.waitForImages(body)
-                            
-                            // await new Promise(requestAnimationFrame)
+
                             this.buildHierarchy(body)
+                            this.setupScrollSpy(body)
                             this.scrollToAnchor()
                         }}
                     >
@@ -183,6 +183,45 @@ class PageDisplay extends LitElement {
 
         document.querySelector("right-panel").hierarchy = root
         document.querySelector("bottom-hierarchy").shadowRoot.querySelector("right-panel").hierarchy = root
+    }
+
+    setupScrollSpy(body) {
+        const headings = [...body.querySelectorAll("h1,h2,h3,h4,h5,h6")]
+
+        if (this.headingObserver) {
+            this.headingObserver.disconnect()
+        }
+
+        this.headingObserver = new IntersectionObserver(
+            (entries) => {
+                const visible = entries
+                    .filter(e => e.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+
+                if (!visible.length) return
+
+                const id = visible[0].target.id
+
+                this.updateUrlHash(id)
+            },
+            {
+                root: null,
+                rootMargin: "0px 0px -90% 0px",
+                threshold: 0
+            }
+        )
+
+        headings.forEach(h => this.headingObserver.observe(h))
+    }
+
+    updateUrlHash(anchor) {
+        const route = this.getRoute()
+
+        const newHash = `#${route.page}#${anchor}`
+
+        if (window.location.hash === newHash) return
+
+        history.replaceState(null, "", newHash)
     }
 }
 
