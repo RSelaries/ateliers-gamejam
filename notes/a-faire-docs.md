@@ -14,11 +14,13 @@ kanban-plugin: board
 - [ ] **Godot/Nodes** - Remplir *WorldEnvironment*
 - [ ] **Godot/Nodes** - Remplir *DirectionalLight3D*
 - [ ] **Ressources Sup/Assets** - À remplir
-- [ ] Créer une entrée pour les shaders
+- [ ] **Godot/Shaders** - À remplir
 - [ ] **Godot/Interface de Godot** - Mettre à jour les liens vers Shaders
 - [ ] Créer une entrée pour les thèmes
 - [ ] **Godot/Interface de Godot** - Mettre à jour les liens vers Themes
 - [ ] **Ressources Sup/Assets** - À remplir
+- [ ] **Introduction/Introduction** - Remplir l'organisation
+- [ ] **Godot/Plugins** - À remplir
 
 
 ## En cours

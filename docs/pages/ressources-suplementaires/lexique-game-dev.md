@@ -1,4 +1,4 @@
-# Lexique du Game dev
+# <div class="icon" style="mask-image: url(./medias/icons/lexique-icon.svg)"></div> Lexique du Game dev
 
 ## FPS
 

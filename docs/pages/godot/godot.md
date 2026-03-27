@@ -1,4 +1,4 @@
-# ![Logo Godot](../../medias/godot-logo.svg) Godot
+# <div class="icon" style="mask-image: url(./medias/icons/godot-icon.svg)"></div> Godot
 
 ## Paramètres
 

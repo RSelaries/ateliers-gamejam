@@ -1,4 +1,4 @@
-# Ateliers création de jeux-vidéo
+# <div class="icon" style="mask-image: url(./medias/icons/introduction-icon.svg)"></div> Ateliers création de jeux-vidéo
 
 Ce site est la documentation des ateliers de **création de jeux-vidéo** organisés par *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et *<a class="external-link" href="https://www.lasierraprod.com">La Sierra Prod</a>*.
 Ces ateliers ont pour but de vous apprendre les bases du développement de jeux-vidéo pour ensuite organiser une gamejam.

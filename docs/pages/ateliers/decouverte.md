@@ -1,4 +1,4 @@
-# Atelier 1: Découverte
+# <div class="icon" style="mask-image: url(./medias/icons/itch-icon.svg)"></div> Atelier 1: Découverte
 
 Merci d'être présents pour ce premier atelier !
 

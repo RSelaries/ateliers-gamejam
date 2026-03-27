@@ -1,4 +1,4 @@
-# L'Interface de Godot
+# <div class="icon" style="mask-image: url(./medias/icons/interface-icon.svg)"></div> L'Interface de Godot
 
 ## Project Manager
 
@@ -126,7 +126,7 @@ Dans l'ordre:
 
 ### Onglet ![Godot - Script Panel](../../medias/godot-icons/Script.svg) Script
 
-Permet d'**éditer** les scripts de nos [![Godot - node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node).
+Permet d'**éditer** les [scripts](#godot/godot.md#programmation) de nos [![Godot - node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node).
 
 <img src="./medias/interface-godot/interface-script-1.png">
 
@@ -249,9 +249,9 @@ Le panel Animation permet de **voir**, **modifier** et **créer** des **animatio
 
 ### ![Godot - ShaderPanel](../../medias/godot-icons/ShaderPanel.svg) Shader Editor
 
-Le Shader Editor permet d'**écrire** et **modifier** des ![Godot - Shaders](../../medias/godot-icons/Shader.svg) **shaders**. L'interface est similaire à celle de l'onglet [![Godot - Script Panel](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script).
+Le Shader Editor permet d'**écrire** et **modifier** des [![Godot - Shaders](../../medias/godot-icons/Shader.svg) shaders](#godot/shaders.md). L'interface est similaire à celle de l'onglet [![Godot - Script Panel](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script).
 
-Dans le même onglet, on peut également y modifier les ![Godot - Shaders](../../medias/godot-icons/VisualShader.svg) VisualShaders.
+Dans le même onglet, on peut également y modifier les [![Godot - Shaders](../../medias/godot-icons/VisualShader.svg) VisualShaders](#godot/shaders.md#visualshaders).
 
 <img src="./medias/interface-godot/interface-shaders-1.png">
 

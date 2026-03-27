@@ -1,1 +1,1 @@
-# Version Control
+# <div class="icon" style="mask-image: url(./medias/icons/git-icon.svg)"></div> Version Control

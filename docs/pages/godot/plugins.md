@@ -1,0 +1,1 @@
+# <div class="icon" style="mask-image: url(./medias/godot-icons/PluginScript.svg)"></div> Plugins

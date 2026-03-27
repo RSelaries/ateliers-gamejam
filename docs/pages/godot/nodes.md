@@ -1,4 +1,4 @@
-# Les Nodes de Godot
+# <div class="icon" style="mask-image: url(./medias/icons/nodes-icon.svg)"></div> Les Nodes de Godot
 
 Cette page contient une explication courte et simple des Nodes que nous allons utiliser. Pour plus d'informations vous pouvez aller directement sur la <a href="https://docs.godotengine.org/en/stable/classes/index.html#nodes" class="external-link">documentation officielle de Godot</a>.
 

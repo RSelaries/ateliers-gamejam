@@ -11,6 +11,18 @@ em {
     color: var(--highlight-color);
 }
 
+.icon {
+    mask-position: center center;
+    mask-size: contain;
+    height: 24px;
+    aspect-ratio: 1;
+    background-color: var(--highlight-color);
+}
+
+h1 > .icon {
+    height: 30px;
+}
+
 a.external-link {
     color: var(--highlight-color);
     text-decoration: underline;

@@ -59,6 +59,16 @@ export default
                 link: "godot/control.md",
                 icon: "./medias/icons/control-icon.svg",
             },
+            {
+                title: "Shaders",
+                link: "godot/shaders.md",
+                icon: "./medias/godot-icons/Shader.svg",
+            },
+            {
+                title: "Plugins",
+                link: "godot/plugins.md",
+                icon: "./medias/godot-icons/PluginScript.svg",
+            },
         ],
     },
     // Ressources Suplémentaires

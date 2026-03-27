@@ -1,4 +1,4 @@
-# ![Pixelorama Logo](../../medias/pixelorama-logo.svg) Pixelorama
+# <div class="icon" style="mask-image: url(./medias/icons/pixelorama-icon.svg)"></div> Pixelorama
 
 <a href="https://pixelorama.org/" class="external-link">Pixelorama</a> est un logiciel de dessin en [pixel art](#ressources-suplementaires/lexique-game-dev.md#pixel-art) **gratuit** et **open-source**.
 

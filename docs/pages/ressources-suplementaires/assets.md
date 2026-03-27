@@ -1,0 +1,1 @@
+# <div class="icon" style="mask-image: url(./medias/godot-icons/AssetLib.svg)"></div> Assets

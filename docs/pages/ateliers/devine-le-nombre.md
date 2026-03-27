@@ -1,4 +1,4 @@
-# Projet 1 - Devine le nombre
+# <div class="icon" style="mask-image: url(./medias/icons/devine-nombre-icon.svg)"></div> Projet 1 - Devine le nombre
 
 Dans cet atelier, on va **installer [Godot](#godot/godot.md)**, appréhender son **interface**, puis créer notre **premier projet**.<br>
 

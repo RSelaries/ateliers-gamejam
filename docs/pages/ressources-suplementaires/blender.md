@@ -1,10 +1,12 @@
-# ![Blender Godot](../../medias/blender-logo.svg) Blender
+# <div class="icon" style="mask-image: url(./medias/icons/blender-icon.svg)"></div> Blender
 
-<a href="https://www.blender.org/" class="external-link">Blender</a> est un logiciel de modélisation 3D gratuit et open source. C'est aujourd'hui le logiciel de 3D le plus utilisé par tous les indépendants et il commence à être de plus en plus utilisé dans les milieux professionels.
+<a href="https://www.blender.org/" class="external-link">Blender</a> est un logiciel de **modélisation 3D** **gratuit** et **open source**. C'est aujourd'hui le logiciel de 3D **le plus utilisé** par tous les **indépendants** et il commence à être de plus en plus utilisé dans les **milieux professionels**.
 
-Il est majoritairement utilisé pour la modésilation de personnages, pour les jeux-vidéo et l'animation. Il a l'avantage de réunir tous les outils nécessaires à la 3D en un seul logiciel.
+<br>
 
-Étant donné qu'il est open-source, il dispose de nombreux addons créés par la communauté qui le rendent d'autant plus pratique et performant.
+Il est majoritairement utilisé pour la **modélisation de personnages**, pour les **jeux-vidéo** et l'**animation**. Il a l'avantage de réunir **tous les outils nécessaires à la 3D en un seul logiciel**.
+
+Étant donné qu'il est open-source, il dispose de **nombreux addons** créés par la communauté qui le rendent d'autant plus pratique et performant.
 
 <br>
 
