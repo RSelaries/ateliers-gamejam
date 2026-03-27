@@ -84,7 +84,7 @@ export default
             {
                 title: "Assets",
                 link: "ressources-suplementaires/assets.md",
-                icon: "./medias/icons/gd-quest-icon.svg",
+                icon: "./medias/godot-icons/AssetLib.svg",
             },
             {
                 title: "Blender",

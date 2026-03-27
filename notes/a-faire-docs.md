@@ -18,6 +18,7 @@ kanban-plugin: board
 - [ ] **Godot/Interface de Godot** - Mettre à jour les liens vers Shaders
 - [ ] Créer une entrée pour les thèmes
 - [ ] **Godot/Interface de Godot** - Mettre à jour les liens vers Themes
+- [ ] **Ressources Sup/Assets** - À remplir
 
 
 ## En cours
