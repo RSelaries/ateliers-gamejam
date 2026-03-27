@@ -18,6 +18,8 @@ Le ![Godot - Node](../../medias/godot-icons/Node.svg) Node le plus simple, il fo
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_worldenvironment.html" class="documentation-link">Documentation officielle</a></span>
 
+### ![Godot - AnimationPlayer](../../medias/godot-icons/AnimationPlayer.svg) AnimationPlayer
+
 <!--        -->
 <!--        -->
 <!-- Node2D -->

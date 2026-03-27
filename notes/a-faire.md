@@ -10,6 +10,14 @@ kanban-plugin: board
 - [ ] **Godot/Control** - À remplir
 - [ ] **Godot/Godot** - À remplir
 - [ ] **Ressources Sup/Version Control** - À remplir
+- [ ] **Godot/Nodes** - Remplir *AnimationPlayer*
+- [ ] **Godot/Nodes** - Remplir *WorldEnvironment*
+- [ ] **Godot/Nodes** - Remplir *DirectionalLight3D*
+- [ ] **Ressources Sup/Assets** - À remplir
+- [ ] Créer une entrée pour les shaders
+- [ ] **Godot/Interface de Godot** - Mettre à jour les liens vers Shaders
+- [ ] Créer une entrée pour les thèmes
+- [ ] **Godot/Interface de Godot** - Mettre à jour les liens vers Themes
 
 
 ## En cours
@@ -24,13 +32,10 @@ kanban-plugin: board
 ## Fini
 
 **Complete**
+- [x] **Godot/Nodes** - Remplir les nodes utilisés
 
 
-***
 
-## Archive
-
-- [ ] **Godot/Nodes** - Remplir les nodes utilisés
 
 %% kanban:settings
 ```

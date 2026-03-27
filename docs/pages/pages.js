@@ -82,6 +82,11 @@ export default
                 icon: "./medias/icons/gd-quest-icon.svg",
             },
             {
+                title: "Assets",
+                link: "ressources-suplementaires/assets.md",
+                icon: "./medias/icons/gd-quest-icon.svg",
+            },
+            {
                 title: "Blender",
                 link: "ressources-suplementaires/blender.md",
                 icon: "./medias/icons/blender-icon.svg",

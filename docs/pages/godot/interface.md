@@ -233,15 +233,39 @@ Le Debugger est une interface riche et complexe qui vas afficher les erreurs et 
 
 Le Debugger est très utile pour l'**optimisation**, mais ce n'est pas quelque chose qui nous intéresse pour l'instant. <span style="font-size: .8em; color: var(--body-text-color-faded)">(Et je ne sais moi-même pas trop utiliser le debugger...)</span>
 
-### ![Godot - AudioStreamPlayer](../../medias/godot-icons/AudioStreamPlayer.svg) Audio 
+### ![Godot - AudioStreamPlayer](../../medias/godot-icons/AudioStreamPlayer.svg) Audio
+
+Le panel audio permet de **créer** et **modifier** différents **canaux sonores** pour pouvoir, par exemple, **découpler** les valeurs audios de différents types *(les bruitages, les voix, la musique etc...)*.
+
+<img src="./medias/interface-godot/interface-audio-1.png">
+
+<span style="font-size: .8em; color: var(--body-text-color-faded)">(Sur cette image notament, les effets sonores ont un niveau plus bas que le reste. Le canal audio 'Master' est le volume global, celui qui sera transmis aux haut parleurs)</span>
 
 ### ![Godot - Animation](../../medias/godot-icons/Animation.svg) Animation
 
+Le panel Animation permet de **voir**, **modifier** et **créer** des **animation** d'un [![Godot - AnimationPlayer](../../medias/godot-icons/AnimationPlayer.svg) AnimationPlayer](#godot/nodes.md#animationplayer).
+
+<img src="./medias/interface-godot/interface-animation-1.png">
+
 ### ![Godot - ShaderPanel](../../medias/godot-icons/ShaderPanel.svg) Shader Editor
+
+Le Shader Editor permet d'**écrire** et **modifier** des ![Godot - Shaders](../../medias/godot-icons/Shader.svg) **shaders**. L'interface est similaire à celle de l'onglet [![Godot - Script Panel](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script).
+
+Dans le même onglet, on peut également y modifier les ![Godot - Shaders](../../medias/godot-icons/VisualShader.svg) VisualShaders.
+
+<img src="./medias/interface-godot/interface-shaders-1.png">
+
+<img src="./medias/interface-godot/interface-shaders-2.png">
 
 ### ![Godot - ThemePanel](../../medias/godot-icons/ThemePanel.svg) Theme
 
+Le panel Thème permet de **modifier** des ![Godot - Theme](../../medias/godot-icons/Theme.svg) thèmes qui vont venir **modifier** le **visuel** du *texte*, des *boutons*, des *menus* de notre [interface](#godot/control.md).
+
+<img src="./medias/interface-godot/interface-theme-1.png">
+
 ## Autres fenêtres
+
+### Signaux
 
 ### Historique
 
@@ -249,7 +273,4 @@ Le Debugger est très utile pour l'**optimisation**, mais ce n'est pas quelque c
 
 ### History
 
-### Signaux
-
 ### Groupes
-
