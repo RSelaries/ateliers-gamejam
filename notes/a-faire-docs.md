@@ -23,11 +23,11 @@ kanban-plugin: board
 
 ## En cours
 
-- [ ] **Godot/Interface de Godot** - À remplir
 
 
 ## À relire
 
+- [ ] **Godot/Interface de Godot** - À remplir
 
 
 ## Fini
