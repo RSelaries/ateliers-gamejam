@@ -265,7 +265,7 @@ Le panel Thème permet de **modifier** des ![Godot - Theme](../../medias/godot-i
 
 ## Autres fenêtres
 
-### Signaux
+### ![Godot - Signals](../../medias/godot-icons/Signals.svg) Signaux
 
 Le fenêtre des Signaux permet de **voir** tous les [![Godot - Signal](../../medias/godot-icons/Signals.svg) signaux](#godot/godot.md#signaux) d'un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node).
 
@@ -277,13 +277,13 @@ Le fenêtre des Signaux permet de **voir** tous les [![Godot - Signal](../../med
 
 </div>
 
-### History
+### ![Godot - History](../../medias/godot-icons/History.svg) History
 
 L'historique affiche toutes les actions qui ont été effectuées.
 
 <img src="./medias/interface-godot/interface-history-1.png">
 
-### Import
+### ![Godot - FileAccess](../../medias/godot-icons/FileAccess.svg) Import
 
 La fenêtre Import permet de **mofidier** les **paramètres d'importation** d'une **ressource**.
 
@@ -291,8 +291,8 @@ La fenêtre Import permet de **mofidier** les **paramètres d'importation** d'un
 
 <span style="font-size: .8em; color: var(--body-text-color-faded)">Ici j'ai par exemple selectionné une image.</span>
 
-### Groupes
+### ![Godot - Groups](../../medias/godot-icons/Groups.svg) Groupes
 
-La fenêtre des Groupes permet d'ajouter un node à un groupe, de créer un nouveau groupe et de modifier les groupes actuels.
+La fenêtre des Groupes permet d'ajouter un node à un [![Godot - Groups](../../medias/godot-icons/Groups.svg) groupe](#godot/godot.md#groupes), de créer un nouveau groupe et de modifier les groupes actuels.
 
 <img src="./medias/interface-godot/interface-groups-1.png">
