@@ -263,6 +263,32 @@ Le panel Thème permet de **modifier** des ![Godot - Theme](../../medias/godot-i
 
 <img src="./medias/interface-godot/interface-theme-1.png">
 
+### ![Godot - TileSetPanel](../../medias/godot-icons/TileSet.svg) TileSet
+
+### ![Godot - TileMapPanel](../../medias/godot-icons/TileMapPanel.svg) TileMap
+
+<img src="./medias/interface-godot/interface-tilemap-1.png">
+
+#### Outils TileMap
+
+<img src="./medias/interface-godot/interface-tilemap-2.png">
+
+Dans l'ordre:
+
+- ![Godot - Select](../../medias/godot-icons/ToolSelect.svg) Selction Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de sélectionner et délplacer des tuiles)</span>
+
+- ![Godot - Edit](../../medias/godot-icons/Edit.svg) Paint Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de peindre des tuiles sur une [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes#tilemaplayer))</span>
+
+- ![Godot - Line](../../medias/godot-icons/Line.svg) Line Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de peindre en ligne)</span>
+
+- ![Godot - Rectangle](../../medias/godot-icons/Rectangle.svg) Rect Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet une surface rectangulaire)</span>
+
+- ![Godot - Bucket](../../medias/godot-icons/Bucket.svg) Bucket Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de remplir une zone, comme l'outil pot de peinture de paint)</span>
+
+- ![Godot - ColorPick](../../medias/godot-icons/ColorPick.svg) Picker Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet de sélectionner une tuile en cliquant dessus)</span>
+
+- ![Godot - Eraser](../../medias/godot-icons/Eraser.svg) Eraser Tool <span style="font-size: .8em; color: var(--body-text-color-faded)">(Permet d'effacer une tuile)</span>
+
 ## Autres fenêtres
 
 ### ![Godot - Signals](../../medias/godot-icons/Signals.svg) Signaux

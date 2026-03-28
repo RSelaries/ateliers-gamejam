@@ -6,7 +6,6 @@ kanban-plugin: board
 
 ## À faire
 
-- [ ] **Ateliers/Jeu de Plateforme** - À faire
 - [ ] **Godot/Control** - À remplir
 - [ ] **Godot/Godot** - À remplir
 - [ ] **Ressources Sup/Version Control** - À remplir
@@ -21,10 +20,13 @@ kanban-plugin: board
 - [ ] **Ressources Sup/Assets** - À remplir
 - [ ] **Introduction/Introduction** - Remplir l'organisation
 - [ ] **Godot/Plugins** - À remplir
+- [ ] **Godot/Interface** - TileSet à remplir
 
 
 ## En cours
 
+- [ ] **Ateliers/Jeu de Plateforme** - À faire
+- [ ] **Godot/Interface** - TileMap à remplir
 
 
 ## À relire
