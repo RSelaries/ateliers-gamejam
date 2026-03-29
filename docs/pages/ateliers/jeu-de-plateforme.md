@@ -2,6 +2,10 @@
 
 Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressources-suplementaires/lexique-game-dev.md#side-scroller) en [TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
+<br><h1 style="justify-content:center">—-— À venir ! —-—</h1>
+
+<!--
+
 ## Préparation de la scène
 
 Comme la dernière fois, on vas **créer un nouveau projet**. On lui donne un **nom** et un **emplacement** puis on choisi **compatibility** pour le [renderer](#godot/godot.md#renderer).
@@ -132,3 +136,56 @@ Je vais aussi **modifier** la **couleur de fond** pour la mettre en noir.
 
 <img src="./medias/jeu-de-plateforme/plateformer-level-test-5.gif">
 
+## Création du personnage
+
+Maintenant il nous faut un **personnage** pour se balader dans notre niveau.
+
+Pour commencer on vas créer une scène avec un node [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) comme racine.
+
+<div class="side-by-side two-to-one" style='grid-template: "a c" "b c" / 1fr 2fr;'>
+<img src="./medias/jeu-de-plateforme/plateformer-player-1.png">
+<img src="./medias/jeu-de-plateforme/plateformer-player-2.png">
+<img src="./medias/jeu-de-plateforme/plateformer-player-3.png">
+</div>
+
+<div class="side-by-side">
+<img src="./medias/jeu-de-plateforme/plateformer-player-4.png">
+<img src="./medias/jeu-de-plateforme/plateformer-player-5.png">
+</div>
+
+<span style="color: var(--body-text-color-faded); font-size: .8em">N'oubliez pas de sauvegarder !</span>
+
+<br>
+
+Maintenant on aimerai que notre personnage ai une **image**. Pour ça il lui faut un [Sprite](#ressources-suplementaires/lexique-game-dev.md#sprite). Il nous suffit donc de lui ajouter un [![Godot - Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d).
+
+IL FAUT AJOUTER UN ANIMATED SPRITE PAS UN SPRITE !!!!!!!
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+On voit qu'à coté de notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) Player](#godot/nodes.md#characterbody2d) il y a un "![Godot - NodeWarning](../../medias/godot-icons/NodeWarning.svg)" qui signifie qu'il y a un ou des **avertissement(s)** qui sont les suivants:
+
+<img src="./medias/jeu-de-plateforme/plateformer-player-6.png">
+
+Ce message nous indique que notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) n'as pas de collision et nous conseille d'en ajouter une.
+
+Effectivement, le [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) est un Node qui **réagit à la physique** *(la gravité, les murs etc...)*. Il lui faut donc une zone de **collision**. On lui **ajoute** alors tout simplement un node [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
+
+<img src="./medias/jeu-de-plateforme/plateformer-player-7.png">
+
+De même, notre [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d) a aussi un ![Godot - NodeWarning](../../medias/godot-icons/NodeWarning.svg) **warning**:
+> "A shape must be provided for CollisionShape2D to function. Please create a shape resource for it!"
+
+Ce qui signifie que notre collision nécessite une **forme** pour fonctionner, on va donc lui ajouter une forme dans sa propriété `shape`.

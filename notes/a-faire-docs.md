@@ -21,6 +21,7 @@ kanban-plugin: board
 - [ ] **Introduction/Introduction** - Remplir l'organisation
 - [ ] **Godot/Plugins** - À remplir
 - [ ] **Godot/Interface** - TileSet à remplir
+- [ ] **Godot/Nodes** - Ajouter une entrée pour CollisionShape2D
 
 
 ## En cours
