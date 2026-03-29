@@ -3,6 +3,7 @@ import { LitElement, html, css } from 'https://unpkg.com/lit?module'
 class IframePlayer extends LitElement {
     static properties = {
         src: {},
+        title: {},
         _visible: {},
     }
 
@@ -17,6 +18,7 @@ class IframePlayer extends LitElement {
 
         .iframe-placeholder {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
@@ -47,6 +49,7 @@ class IframePlayer extends LitElement {
     render() {
         if (!this._visible) return html`
             <div class="iframe-placeholder">
+                <h1>${this.title ? this.title : "Preview du jeu"}</h1>
                 <button @click=${() => this._visible = true}>Jouer</button>
             </div>
         `
