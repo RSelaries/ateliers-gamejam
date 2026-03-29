@@ -10,7 +10,7 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 ## Jeu
 
-<iframe src="../projets/devine_le_nombre/html_build/index.html"></iframe>
+<iframe src="./game-builds/devine-le-nombre/index.html"></iframe>
 
 ## I. Télécharger Godot
 

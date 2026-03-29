@@ -2,9 +2,9 @@
 
 Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressources-suplementaires/lexique-game-dev.md#side-scroller) en [TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
-<br><h1 style="justify-content:center">—-— À venir ! —-—</h1>
+<!-- <br><h1 style="justify-content:center">—-— À venir ! —-—</h1> -->
 
-<!--
+<!-- -->
 
 ## Préparation de la scène
 
@@ -157,10 +157,11 @@ Pour commencer on vas créer une scène avec un node [![Godot - CharacterBody2D]
 
 <br>
 
-Maintenant on aimerai que notre personnage ai une **image**. Pour ça il lui faut un [Sprite](#ressources-suplementaires/lexique-game-dev.md#sprite). Il nous suffit donc de lui ajouter un [![Godot - Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d).
+Maintenant on aimerai que notre personnage ai une **image**. Pour ça il lui faut un [Sprite](#ressources-suplementaires/lexique-game-dev.md#sprite).
 
-IL FAUT AJOUTER UN ANIMATED SPRITE PAS UN SPRITE !!!!!!!
+On va donc ajouter un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d).
 
+> <span style="color: var(--body-text-color-faded); font-size: .8em">On **pourrait** utiliser un simple [![Godot - Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d) mais un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) nous permet d'**animer** notre sprite.</span>
 
 <br>
 <br>
@@ -171,9 +172,6 @@ IL FAUT AJOUTER UN ANIMATED SPRITE PAS UN SPRITE !!!!!!!
 <br>
 <br>
 <br>
-
-
-
 
 On voit qu'à coté de notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) Player](#godot/nodes.md#characterbody2d) il y a un "![Godot - NodeWarning](../../medias/godot-icons/NodeWarning.svg)" qui signifie qu'il y a un ou des **avertissement(s)** qui sont les suivants:
 
