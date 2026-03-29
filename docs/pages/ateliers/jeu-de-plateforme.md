@@ -2,9 +2,9 @@
 
 Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressources-suplementaires/lexique-game-dev.md#side-scroller) en [TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
-<!-- <br><h1 style="justify-content:center">—-— À venir ! —-—</h1> -->
+<br><h1 style="justify-content:center">—-— À venir ! —-—</h1>
 
-<!-- -->
+<!--
 
 ## Préparation de la scène
 
