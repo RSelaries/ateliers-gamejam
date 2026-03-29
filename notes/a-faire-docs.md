@@ -22,6 +22,8 @@ kanban-plugin: board
 - [ ] **Godot/Plugins** - À remplir
 - [ ] **Godot/Interface** - TileSet à remplir
 - [ ] **Godot/Nodes** - Ajouter une entrée pour CollisionShape2D
+- [ ] **Godot/Nodes** - Ajouter une entrée pour AnimatedSprite2D
+- [ ] **Godot/Nodes** - Ajouter une entrée pour Sprite2D
 
 
 ## En cours

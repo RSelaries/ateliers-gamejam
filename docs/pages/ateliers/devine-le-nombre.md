@@ -8,6 +8,10 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 > Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indice: "plus grand" ou "plus petit".
 
+## Jeu
+
+<iframe src="../projets/devine_le_nombre/html_build/index.html"></iframe>
+
 ## I. Télécharger Godot
 
 Rendez vous sur ce lien: <a href="https://godotengine.org/download/windows/" class="external-link">godotengine.org/download/windows</a>, puis téléchargez la version ***Godot Engine*** et non *Godot Engine - .NET*.

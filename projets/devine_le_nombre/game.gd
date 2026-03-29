@@ -1,8 +1,8 @@
 extends Control
 
 
-@onready var reference_label: Label = $Label
-@onready var reference_line_edit: LineEdit = $LineEdit
+@onready var reference_label: Label = $CenterContainer/VBoxContainer/Label
+@onready var reference_line_edit: LineEdit = $CenterContainer/VBoxContainer/LineEdit
 
 var nombre_mystere: int
 
