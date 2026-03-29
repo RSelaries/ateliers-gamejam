@@ -2,6 +2,26 @@
 
 [ext_resource type="Script" uid="uid://8aemfw3nmht7" path="res://game.gd" id="1_80nbo"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_80nbo"]
+font_size = 25
+font_color = Color(0.39607844, 0.74509805, 0.83137256, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2o6t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_feb5d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_80nbo"]
+
 [node name="Game" type="Control" unique_id=1272568525]
 layout_mode = 3
 anchors_preset = 15
@@ -20,15 +40,37 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1110440562]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=368989824 groups=["boutons"]]
 layout_mode = 2
 text = "Devine le nombre"
+label_settings = SubResource("LabelSettings_80nbo")
+horizontal_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer" unique_id=777380251]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e2o6t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_feb5d")
 placeholder_text = "Votre réponse"
+alignment = 1
+keep_editing_on_text_submit = true
 virtual_keyboard_type = 2
 
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=903457129]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.39607844, 0.74509805, 0.83137256, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e2o6t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e2o6t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e2o6t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e2o6t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_80nbo")
+text = "Rejouer"
+
 [connection signal="text_submitted" from="CenterContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
