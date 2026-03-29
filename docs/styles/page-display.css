@@ -144,11 +144,6 @@ iframe {
     border: none;
 }
 
-iframe.game {
-    aspect-ratio: 16/9;
-    border: solid 1px var(--border-color);
-}
-
 .side-by-side {
     max-width: 100%;
     display: flex;
