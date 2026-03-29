@@ -34,6 +34,9 @@
     --external-link-icon-light: url(../medias/icons/external-link-icon-light.svg);
     --external-link-icon-dark: url(../medias/icons/external-link-icon-dark.svg);
 
+    --code-color-light-theme: #e700d8;
+    --code-color-dark-theme: #f0b0ec;
+
     
     /* Variables */
     --background-color-1: light-dark(var(--background-color-light-theme-1), var(--background-color-dark-theme-1));
@@ -47,6 +50,7 @@
     --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
     --border-color: light-dark(var(--border-color-light-theme), var(--border-color-dark-theme));
     --documentation-link-icon: url(../medias/godot-docs-icon.ico);
+    --code-color: light-dark(var(--code-color-light-theme), var(--code-color-dark-theme))
 }
 
 ::-webkit-scrollbar {
