@@ -4,7 +4,7 @@ Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressourc
 
 ## Jeu
 
-<iframe-player title="Jeu de Plateforme" class="game" src="./game-builds/jeu-de-plateforme/index.html"></iframe-player>
+<iframe-player launchFullscreen="true" title="Jeu de Plateforme" class="game" src="./game-builds/jeu-de-plateforme/index.html"></iframe-player>
 
 ## Préparation de la scène
 

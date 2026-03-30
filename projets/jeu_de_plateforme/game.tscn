@@ -22,3 +22,7 @@ position = Vector2(-43, 30)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=462945880]
 position = Vector2(-1, 5)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=1937373008]
+position = Vector2(195, 84)
+visibility_mode = 1

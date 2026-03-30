@@ -13,6 +13,7 @@ config_version=5
 config/name="Jeu de Plateforme"
 run/main_scene="uid://bst3e1erl3dhj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0.08235294, 0.08235294, 0.08235294, 1)
 config/icon="res://icon.svg"
 
 [display]

@@ -4,6 +4,7 @@ class IframePlayer extends LitElement {
     static properties = {
         src: {},
         title: {},
+        launchFullscreen: {},
         _visible: {},
         _isFullscreen: {}
     }
@@ -75,25 +76,45 @@ class IframePlayer extends LitElement {
     }
 
     render() {
-        if (!this._visible) return html`
-            <div class="iframe-placeholder">
-                <h1>${this.title ? this.title : "Preview du jeu"}</h1>
-                <button @click=${() => this._visible = true}>Jouer</button>
+        function iframe(element) {
+            if (!element._visible) return html`
+                <div class="iframe-placeholder">
+                    <h1>${element.title ? element.title : "Preview du jeu"}</h1>
+                    <button @click=${element.launchGame}>Jouer</button>
+                </div>
+            `
+            else return html`
+                <div class="iframe-wrapper">
+                    <iframe src="${element.src}">Ce moteur de recherche ne supporte par l'iframe.</iframe>
+                    <button @click=${element.toFullscreen}
+                        style="mask-image: url(${element._isFullscreen ? "./medias/icons/exit-fullscreen.svg" : "./medias/icons/fullscreen.svg"})"
+                    ></button>
+                </div>
+            `
+        }
+
+        return html`
+            <div class="wrapper">
+                ${iframe(this)}
             </div>
         `
-        else return html`
-            <div class="iframe-wrapper">
-                <iframe src="${this.src}">Ce moteur de recherche ne supporte par l'iframe.</iframe>
-                <button @click=${this.toFullscreen}
-                    style="mask-image: url(${this._isFullscreen ? "./medias/icons/exit-fullscreen.svg" : "./medias/icons/fullscreen.svg"})"
-                ></button>
-            </div>
-        `
+
+        
+    }
+
+    launchGame() {
+        this._visible = true
+        if (this.launchFullscreen == true || this.launchFullscreen === "true") {
+            this.toFullscreen()
+            console.log("launch fullscreen")
+        }
     }
 
     toFullscreen() {
+        let element = this.renderRoot.querySelector(".wrapper")
+        
         if (!this._isFullscreen)
-            this.renderRoot.querySelector(".iframe-wrapper").requestFullscreen()
+            element.requestFullscreen()
         else document.exitFullscreen()
     }
 }
