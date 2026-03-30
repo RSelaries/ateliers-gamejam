@@ -38,6 +38,13 @@ export default
                 title: "Jeu de plateforme",
                 link: "ateliers/jeu-de-plateforme.md",
                 icon: "./medias/icons/plateformer-icon.svg",
+                subPages: [
+                    {
+                        title: "Aller plus loin",
+                        link: "ateliers/jeu-plateforme-plus-loin.md",
+                        icon: "./medias/icons/plus-loin.svg",
+                    },
+                ],
             },
         ],
     },
