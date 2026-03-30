@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_oul6g"]
 radius = 4.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1352038896]
+[node name="Player" type="CharacterBody2D" unique_id=1352038896 groups=["player"]]
 script = ExtResource("1_rkbax")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=927946354]

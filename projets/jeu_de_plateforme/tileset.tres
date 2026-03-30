@@ -1,6 +1,8 @@
 [gd_resource type="TileSet" format=3 uid="uid://bfq0tpd2iqfgn"]
 
 [ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="1_2urvg"]
+[ext_resource type="PackedScene" uid="uid://dxr00ijh0egx5" path="res://ordinateur_bouton.tscn" id="2_14fb3"]
+[ext_resource type="PackedScene" uid="uid://ufmucssblrqv" path="res://interactible_wall.tscn" id="3_p0366"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2urvg"]
 texture = ExtResource("1_2urvg")
@@ -46,6 +48,8 @@ texture_region_size = Vector2i(12, 12)
 2:3/0 = 0
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
 2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -6, 6, -6, 6, -0.17985725, -6, 0)
+2:4/0/physics_layer_0/polygon_0/one_way = true
 3:2/0 = 0
 4:2/0 = 0
 5:2/0 = 0
@@ -64,7 +68,12 @@ texture_region_size = Vector2i(12, 12)
 3:1/0 = 0
 3:0/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hobn4"]
+scenes/1/scene = ExtResource("2_14fb3")
+scenes/2/scene = ExtResource("3_p0366")
+
 [resource]
 tile_size = Vector2i(12, 12)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_2urvg")
+sources/2 = SubResource("TileSetScenesCollectionSource_hobn4")

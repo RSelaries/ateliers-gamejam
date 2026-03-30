@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ufmucssblrqv"]
+
+[ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="1_q1qyt"]
+[ext_resource type="Script" uid="uid://bba1dkry20e1g" path="res://interactible_wall.gd" id="1_ugnqm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugnqm"]
+atlas = ExtResource("1_q1qyt")
+region = Rect2(60, 24, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yptdq"]
+atlas = ExtResource("1_q1qyt")
+region = Rect2(48, 24, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35oi7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugnqm")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yptdq")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssqvd"]
+size = Vector2(12, 12)
+
+[node name="InteractibleWall" type="StaticBody2D" unique_id=1093941045 groups=["interaction_wall"]]
+script = ExtResource("1_ugnqm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2029105242]
+sprite_frames = SubResource("SpriteFrames_35oi7")
+animation = &"closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=41979991]
+shape = SubResource("RectangleShape2D_ssqvd")

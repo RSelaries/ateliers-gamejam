@@ -6,6 +6,7 @@ kanban-plugin: board
 
 ## À faire
 
+- [ ] ### Contacter Étienne (De Ram) savoir si il a des contacts
 - [ ] **Godot/Control** - À remplir
 - [ ] **Godot/Godot** - À remplir
 - [ ] **Ressources Sup/Version Control** - À remplir
@@ -26,6 +27,8 @@ kanban-plugin: board
 - [ ] **Godot/Nodes** - Ajouter une entrée pour Sprite2D
 - [ ] **Godot/Nodes** - Ajouter une entrée pour Camera2D
 - [ ] **Godot/Tutoriels** - À écrire
+- [ ] **Godot/Nodes** - Ajouter une entrée pour Area2D
+- [ ] **Godot/Nodes** - Ajouter une entrée pour StaticBody2D
 
 
 ## En cours

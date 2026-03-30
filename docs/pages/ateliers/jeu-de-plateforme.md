@@ -1,6 +1,6 @@
 # <div class="icon" style="mask-image: url(./medias/icons/plateformer-icon.svg)"></div> Jeu de plateforme
 
-Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressources-suplementaires/lexique-game-dev.md#side-scroller) en [TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
+Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressources-suplementaires/lexique-game-dev.md#side-scroller) en [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
 ## Jeu
 
@@ -367,3 +367,202 @@ en
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 ```
+
+pour une meilleure prise en main.
+
+## Amméliorations
+
+On a maintenant un jeu **plus ou moins jouable**. Il est temps de l'**amméliorer** pour qu'il soit plus **intéressant** !
+
+### Collisions v2
+
+Pour commencer, on vas continuer la mise en place des **collisions** de notre [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) tileset](#ressources-suplementaires/lexique-game-dev.md#tileset).
+
+On va alors leur ajouter des **collisions**, changer leur **forme** et créer une **plateforme directionnelle** !
+
+<br>
+
+Pour cela, on change la forme de la **collision**, puis on active le **paramètre** `polygon_0_one_way`. L'idée est que *one way* signifie que la **collision** n'est active que d'**un coté**. On peut donc **monter** sur la plateforme **par en bas**.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-1.gif">
+
+On ajoute une plateforme pour tester le jeu.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-2.gif">
+
+### Bouton intéractible
+
+Le [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) tileset](#ressources-suplementaires/lexique-game-dev.md#tileset) que nous avont téléchargé contient des petits **écrans**, on va les utiliser pour créer de l'**intéraction** avec le **niveau**.
+
+<br>
+
+On vas alors créer une nouvelle **scène** avec un [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d) en racine.
+
+> Une [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d) nous permet de détecter quand un node **physique** entre dans son **périmètre**.
+
+On lui rajoute un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) puis une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-3.png">
+
+<span style="color: var(--body-text-color-faded); font-size: .8em">(Si vous ne vous rappelez pas de comment créer une scène, une collision ou un sprite, référez vous à [# Création du personnage](#ateliers/jeu-de-plateforme.md#creation-du-personnage))</span>
+
+#### Programmation bouton
+
+On ajoute un script (![Godot - ScriptCreate](../../medias/godot-icons/ScriptCreate.svg)) à notre [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) OrdinateurBouton](#ressources-suplementaires/lexique-game-dev.md#area2d). Ensuite on connecte son **signal** `body_entered`.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-4.gif">
+
+Maintenant on veut que quand le ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) **personnage** joueur se trouve près de l'**ordinateur**, on lui propose d'**intéragir** avec.
+
+Pour détecter si le `body` qui est entré dans le périmètre de notre [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d) est bien le **joueur**, on va l'ajouter dans un [![Godot - Groups](../../medias/godot-icons/Groups.svg) groupe](#godot/godot.md#groupes).
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-5.gif">
+
+Il nous est maintenant possible d'accèder à notre joueur simplement à l'aide de son groupe.
+
+```gdscript
+extends Area2D
+
+
+func _on_body_entered(body: Node2D) -> void:
+    if body.is_in_group("player"):
+        print("Le joueur s'est approché de l'ordinateur")
+```
+
+Pour **tester** si notre code **fonctionne**, il nous suffit de **remplacer** l'écran que l'on avait précédamment placé sur notre [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer) par la scène **OrdinateurBouton** que nous venons de créer.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-6.gif">
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-7.gif">
+
+#### Intéraction
+
+Pour **prévenir** le joueur qu'il peut **intéragir** avec l'**ordinateur**, on va ajouter le **texte**: "↑ intéragir" à l'aide d'un [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label). On va égallement changer la **fonte** (en *Tiny5*) du label pour quelque chose de plus **pixélisé**.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-8.gif">
+
+Puis on modifie le code:
+
+```gdscript
+extends Area2D
+
+
+@onready var label_interaction: Label = $LabelInteraction
+
+
+var player_inside := false
+
+
+func _ready() -> void:
+    label_interaction.hide()
+
+
+func _on_body_entered(body: Node2D) -> void:
+    if body.is_in_group("player"):
+        label_interaction.show()
+
+```
+
+Dans `_ready` on utilise la fonction `hide` pour que le **texte** ne sois **pas visible**. Si le **joueur s'approche**, on l'**affiche**.
+
+On va égallement connecter le signal `body_exited` de notre [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d). Quand le joueur s'éloigne de l'ordinateur, on n'affiche plus le texte.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-9.png">
+
+Puis modifier la **fonction** appelée par le **signal**:
+
+```gdscript
+func _on_body_entered(body: Node2D) -> void:
+    if body.is_in_group("player"):
+        label_interaction.show()
+        player_inside = true
+
+
+func _on_body_exited(body: Node2D) -> void:
+    if body.is_in_group("player"):
+        label_interaction.hide()
+        player_inside = false
+```
+
+Enfin, on teste si le joueur **appuie** sur la **touche** pour **intéragir** <span style="color: var(--body-text-color-faded); font-size: .8em">(flèche du haut)</span>, et si c'est le cas, on va ouvrir les murs intéractifs <span style="color: var(--body-text-color-faded); font-size: .8em">(que l'on va créer juste après)</span>.
+
+```gdscript
+func _unhandled_input(event: InputEvent) -> void:
+    if event.is_action_pressed("ui_up") and player_inside:
+        get_tree().call_group("interaction_wall", "toggle_open")
+```
+
+> La **fonction** `_unhandled_input(event: InputEvent)` est appelée dès qu'une **touche est pressée**, que la **souris bouge**, qu'un **bouton** d'une **manette** est appuyé etc. La fonction contient une **variable** `event` qui représente le **type d'input** qui a été détecté.
+
+La fonction `event.is_action_pressed(action_name)` permet de détecter si l'action `action_name` est appuyé. Si on détecte que le joueur appuie sur la touche flèche du haut <span style="color: var(--body-text-color-faded); font-size: .8em">(`"ui_up"`)</span> et qu'il est proche de l'ordinateur <span style="color: var(--body-text-color-faded); font-size: .8em">(`player_inside = true`)</span> alors on appelle la fonction `toggle_open` sur tous les nodes qui appartiennent au groupe `interaction_wall`.
+
+### Murs Interactibles
+
+**Il est temps de créer ces murs intéractibles !** On commence par créer une nouvelle **scène** avec pour racine un [![Godot - StaticBody2D](../../medias/godot-icons/StaticBody2D.svg) StaticBody2D](#ressources-suplementaires/lexique-game-dev.md#staticbody2d).
+
+> Un [![Godot - StaticBody2D](../../medias/godot-icons/StaticBody2D.svg) StaticBody2D](#ressources-suplementaires/lexique-game-dev.md#staticbody2d) est un node **physique** mais **immobile**. Cela permet surtout de créer des **murs** et des **collisions** pour certains éléments.
+
+Il lui fait aussi un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) ainsi qu'une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
+
+<div class="side-by-side">
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-10.png">
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-11.png">
+</div>
+
+Pour l'[![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) j'ai créé **une animation par état**: **ouvert** et **fermé**.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-12.gif">
+
+<span style="color: var(--body-text-color-faded); font-size: .8em">(Pour ajouter une nouvelle animation, il suffit d'appuyer sur ![Godot - New](../../medias/godot-icons/New.svg))</span>
+
+#### Programmation murs
+
+On ajoute un script. On va créer la fonction `toggle_open`:
+
+```gdscript
+extends StaticBody2D
+
+
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+
+var opened := false
+
+
+func toggle_open() -> void:
+    if opened:
+        collision_shape_2d.disabled = false
+        animated_sprite_2d.play("closed")
+        opened = false
+    else:
+        collision_shape_2d.disabled = true
+        animated_sprite_2d.play("opened")
+        opened = true
+```
+
+Quand la fonction `toggle_mode()` est appelée, **si le mur est fermé**, alors **on l'ouvre**.
+
+<br>
+
+C'est à dire qu'on met l'**animation** du mur **ouvert** <span style="color: var(--body-text-color-faded); font-size: .8em">(`animated_sprite_2d.play("closed")`)</span>, qu'on **désactive les collisions** <span style="color: var(--body-text-color-faded); font-size: .8em">(`collision_shape_2d.disabled = true`)</span> et qu'on change la **variable** `opened` sur `true` <span style="color: var(--body-text-color-faded); font-size: .8em">(donc ouvert)</span>.
+
+<br>
+
+Enfin, on ajoute le mur intéractif au **groupe** `interaction_wall`.
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-13.png">
+
+### Modification du niveau
+
+Comme pour l'ordinateur, on va les retirer du [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer). Mais on peut faire **mieux**: on va **ajouter** les scènes de l'ordinateur et des murs intéractifs à notre [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
+
+<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-14.gif">
+
+## C'est fini !
+
+**Le jeu est maintenant dans un état jouable!** Il manque beaucoup d'éléments pour le rendre plus agréable, malheureusement cet atelier est déjà très long. Mais si vous voulez peaufiner le jeu vous pouvez consulter la page [aller plus loin](#ateliers/jeu-plateforme-plus-loin.md).
+
+> Vous pouvez **retrouver l'intégraliter du projet** dans le <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam">repo</a> de ces ateliers au lien suivant: <a class="external-link" href="https://https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme">https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme</a>.
+
+> Vous pouvez aussi directement **télécharger le projet** <a class="external-link" target="_blank" href="https://downgit.github.io/#/home?url=https://https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme">ici</a>.
