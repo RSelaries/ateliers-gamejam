@@ -26,6 +26,13 @@ export default
                 title: "Devine le nombre",
                 link: "ateliers/devine-le-nombre.md",
                 icon: "./medias/icons/devine-nombre-icon.svg",
+                // subPages: [
+                //     {
+                //         title: "Aller plus loin",
+                //         link: "ateliers/devine-nombre-plus-loin.md",
+                //         icon: "./medias/icons/plus-loin.svg",
+                //     },
+                // ],
             },
             {
                 title: "Jeu de plateforme",
@@ -68,6 +75,11 @@ export default
                 title: "Plugins",
                 link: "godot/plugins.md",
                 icon: "./medias/godot-icons/PluginScript.svg",
+            },
+            {
+                title: "Tutoriels",
+                link: "godot/tutoriels.md",
+                icon: "./medias/icons/tutoriels.svg",
             },
         ],
     },

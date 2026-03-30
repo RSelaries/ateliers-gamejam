@@ -13,9 +13,12 @@ class IframePlayer extends LitElement {
         iframe, .iframe-placeholder {
             width: 100%;
             height: 100%;
-            aspect-ratio: 16/9;
             border: solid 1px var(--border-color);
             display: block;
+        }
+
+        .wrapper {
+            height: 100%;
         }
 
         .iframe-placeholder {
@@ -44,6 +47,7 @@ class IframePlayer extends LitElement {
 
         .iframe-wrapper {
             position: relative;
+            height: 100%;
 
             button {
                 position: absolute;

@@ -109,8 +109,11 @@ class PageDisplay extends LitElement {
 
         for (const category of pages) {
             for (const page of category.pages) {
-                if (page.link === route.page) {   
-                    return page
+                if (page.link === route.page) return page
+                if (page.subPages) {
+                    for (const subpage of page.subPages) {
+                        if (subpage.link === route.page) return subpage
+                    }
                 }
             }
         }

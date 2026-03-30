@@ -23,28 +23,64 @@ class LeftPanel extends LitElement {
             padding: 0px;
         }
 
+        .subpage-btn {
+            color: var(--body-text-color);
+            display: none;
+
+            .subpage-icon {
+                height: 16px;
+                aspect-ratio: 1;
+                background-color: var(--body-text-color);
+                mask-size: 100%;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                mask-position: center;
+            }
+        }
+
+        .subpage-btn[open] {
+            display: inline;
+            color: var(--highlight-color);
+
+            .subpage-icon {
+                background-color: var(--highlight-color);
+            }
+        }
+
+        .subpage-btn:hover {
+            color: var(--highlight-color);
+        }
+
+        .subpage-list {
+            padding-left: 2em;
+        }
+
         .page-btn {
             cursor: pointer;
-            align-items: center;
+            justify-content: center;
             display: flex;
-            gap: 5px;
+            flex-direction: column;
         }
         .page-btn:hover {
             color: var(--highlight-color);
 
-            > .page-icon {
+            .page-icon {
                 background-color: var(--highlight-color);
             }
         }
         .page-btn[open] {
             color: var(--highlight-color);
 
-            > .page-icon {
+            .page-icon {
                 background-color: var(--highlight-color);
+            }
+
+            .subpage-btn {
+                display: inline;
             }
         }
 
-        .page-btn > .page-icon {
+        .page-btn .page-icon {
             height: 16px;
             aspect-ratio: 1;
             background-color: var(--body-text-color);
@@ -56,9 +92,6 @@ class LeftPanel extends LitElement {
 
         details > summary {
             border-radius: 10px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             gap: 5px;
             margin: 5px;
             padding: 5px;
@@ -67,9 +100,16 @@ class LeftPanel extends LitElement {
             user-select: none;
             cursor: pointer;
             white-space: nowrap;
+            display: flex;
         }
         details > summary:hover {
             background-color: var(--highlight-color-transparent);
+        }
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         details .folder-icon {
@@ -102,10 +142,26 @@ class LeftPanel extends LitElement {
         const pageLink = (category) => {
             return category.pages.map((page) => {
                 const pageSlug = page.link.split("/")[1].split(".")[0]
-                return html`<li class="page-btn ${pageSlug}" @click=${() => this.changeToPage(page)}>
-                    ${page.icon !== "" ? html`<div class="page-icon" style="mask-image: url(${page.icon})"></div>` : ""}
-                    ${page.title}
+                return html`<li class="page-btn ${pageSlug}">
+                    <div class="title-wrapper" @click=${() => this.changeToPage(page)}>
+                        ${page.icon !== "" ? html`<div class="page-icon" style="mask-image: url(${page.icon})"></div>` : ""}
+                        ${page.title}
+                    </div>
+                    ${page.subPages ? html`<ol class="subpage-list">${subPageLink(page.subPages)}</ol>` : ""}
                 </li>`
+            })
+        }
+
+        const subPageLink = (pages) => {
+            return pages.map((subpage) => {
+                const subpageSlug = subpage.link.split("/")[1].split(".")[0]
+                return html`<li class="subpage-btn ${subpageSlug}">
+                    <div class="title-wrapper" @click=${() => this.changeToPage(subpage)}>
+                        ${subpage.icon !== "" ? html`<div class="subpage-icon" style="mask-image: url(${subpage.icon})"></div>` : ""}
+                        ${subpage.title}
+                    </div>
+                </li>
+                `
             })
         }
 
@@ -139,31 +195,23 @@ class LeftPanel extends LitElement {
     }
 
     openActivePage() {
-        // const categories = this.renderRoot.querySelectorAll(".category")
         const pageBtns = this.renderRoot.querySelectorAll(".page-btn")
+        const subpageBtns = this.renderRoot.querySelectorAll(".subpage-btn")
+        const allPagesBtns = [...pageBtns, ...subpageBtns]
         const caterogyToOpen = window.location.hash.replace("#", "").split("/")[0]
         const hash = window.location.hash.split("#")
         const pageToOpen = hash.length > 1 ? hash[1].replace(".html", "").replace(".md", "").split("/")[1] : null
         
-        // for(let i = 0; i < categories.length; i++) {
-        //     if (caterogyToOpen) {
-        //         if 
-        //         categories[i].querySelector("details").open = categories[i].className.includes(caterogyToOpen)
-        //     } else {
-        //         categories[i].querySelector("details").open = categories[i].className.includes("introduction")
-        //     }
-        // }
-
-        for(let i = 0; i< pageBtns.length; i++) {
+        for(let i = 0; i< allPagesBtns.length; i++) {
             if (caterogyToOpen) {
-                if (pageBtns[i].className.includes(pageToOpen)) {
-                    pageBtns[i].setAttribute("open", true)
+                if (allPagesBtns[i].className.includes(pageToOpen)) {
+                    allPagesBtns[i].setAttribute("open", true)
                 } else {
-                    pageBtns[i].removeAttribute("open")
+                    allPagesBtns[i].removeAttribute("open")
                 }
             } else {
-                if (pageBtns[i].className.includes("introduction")) pageBtns[i].setAttribute("open", true)
-                else pageBtns[i].removeAttribute("open")
+                if (allPagesBtns[i].className.includes("introduction")) allPagesBtns[i].setAttribute("open", true)
+                else allPagesBtns[i].removeAttribute("open")
             }
         }
     }

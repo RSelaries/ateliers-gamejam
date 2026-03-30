@@ -59,15 +59,26 @@ class NavButtons extends LitElement {
     render() {
         return html`
             <div class="nav-btn-wrapper">
-                <a href="${this.prevUrl}" class=${this.prevUrl ? "" : "disabled"}>← Précédent</a>
-                <a href="${this.nextUrl}" class=${this.nextUrl ? "" : "disabled"}>Suivant →</a>
+                <a href=${this.prevUrl} class=${this.prevUrl ? "" : "disabled"}>← Précédent</a>
+                <a href=${this.nextUrl} class=${this.nextUrl ? "" : "disabled"}>Suivant →</a>
             </div>
         `
     }
 
     getPrevNextPagesUrls() {
         const currentPage = this.getPageFromHash()
-        const allPages = pages.flatMap(c => c.pages)
+        let allPages = []
+
+        for (const category of pages) {
+            for (const page of category.pages) {
+                allPages = [...allPages, page]
+                if (page.subPages) {
+                    for (const subpage of page.subPages) {
+                        allPages = [...allPages, subpage]
+                    }
+                }
+            }
+        }
 
         const index = allPages.findIndex(p => p.link === currentPage.link)
 
@@ -76,27 +87,30 @@ class NavButtons extends LitElement {
     }
 
     getRoute() {
-            const parts = window.location.hash.split("#")
-    
-            return {
-                page: parts[1],
-                anchor: parts[2]
-            }
+        const parts = window.location.hash.split("#")
+
+        return {
+            page: parts[1],
+            anchor: parts[2]
         }
+    }
     
-        getPageFromHash() {
-            const route = this.getRoute()
-    
-            for (const category of pages) {
-                for (const page of category.pages) {
-                    if (page.link === route.page) {   
-                        return page
+    getPageFromHash() {
+        const route = this.getRoute()
+
+        for (const category of pages) {
+            for (const page of category.pages) {
+                if (page.link === route.page) return page
+                if (page.subPages) {
+                    for (const subpage of page.subPages) {
+                        if (subpage.link === route.page) return subpage
                     }
                 }
             }
-    
-            return pages[0].pages[0]
         }
+
+        return pages[0].pages[0]
+    }
 }
 
 customElements.define('nav-buttons', NavButtons)

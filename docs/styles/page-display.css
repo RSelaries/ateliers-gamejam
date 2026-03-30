@@ -148,6 +148,12 @@ iframe {
     border: none;
 }
 
+iframe-player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+}
+
 .side-by-side {
     max-width: 100%;
     display: flex;
@@ -217,9 +223,24 @@ iframe {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.ytb-grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ytb-grid iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
 /* 0 à 440 */
 @media screen and (max-width: 440px) {
     .itch-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .ytb-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -229,12 +250,20 @@ iframe {
     .itch-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .ytb-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* 700 à 1000 */
 @media screen and (min-width: 700px) and (max-width: 1000px) {
     .itch-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ytb-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /* ----- itch-grid ----- */

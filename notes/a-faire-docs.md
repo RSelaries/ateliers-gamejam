@@ -25,6 +25,7 @@ kanban-plugin: board
 - [ ] **Godot/Nodes** - Ajouter une entrée pour AnimatedSprite2D
 - [ ] **Godot/Nodes** - Ajouter une entrée pour Sprite2D
 - [ ] **Godot/Nodes** - Ajouter une entrée pour Camera2D
+- [ ] **Godot/Tutoriels** - À écrire
 
 
 ## En cours

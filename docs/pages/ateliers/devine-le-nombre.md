@@ -10,7 +10,7 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 ## Jeu
 
-<iframe-player title="Devine le nombre" style="display: block; width: auto; height: 250px" class="game" src="./game-builds/devine-le-nombre/index.html"></iframe-player>
+<iframe-player title="Devine le nombre" style="height: 250px" class="game" src="./game-builds/devine-le-nombre/index.html"></iframe-player>
 
 ## I. Télécharger Godot
 
@@ -95,7 +95,7 @@ Ce qui va nous ouvrir l'onglet [![Godot - 2D](../../medias/godot-icons/2D.svg) 2
 
 <img src="./medias/devine-le-nombre/scene-jeu-2.webp">
 
-On va commencer par renommer le [![Godot - Node](../../medias/godot-icons/node.svg) Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
+On va commencer par renommer le [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
 
 Puis on va enregistrer cette scène. *(ctrl-S ou Scene > Save Scene)*
 
