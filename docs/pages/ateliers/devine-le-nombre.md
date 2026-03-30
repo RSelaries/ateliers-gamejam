@@ -404,7 +404,7 @@ func _ready() -> void:
 
 Maintenant, à chaque fois qu'on va lancer le jeu, le nombre à deviner sera aléatoire.
 
-## Jeu fini !
+## C'est fini !
 
 Voici le code final.
 

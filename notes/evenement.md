@@ -9,6 +9,3 @@ Autres contacts mais moins pertinents:
 - [Pixel Up](https://www.helloasso.com/associations/pixel-up) 
 - [Game'Her](https://gameher.fr/) 
 - [Ikigai Games](https://www.gfc.ikigai.games/) 
-
-Idées:
-- Sieste

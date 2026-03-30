@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dxr00ijh0egx5"]
 
-[ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="1_1qweu"]
-[ext_resource type="Script" uid="uid://dop1m830tafny" path="res://ordinateur_bouton.gd" id="1_bdbjx"]
-[ext_resource type="FontFile" uid="uid://dge7vivcp6t6q" path="res://assets/fonts/Tiny5-Regular.ttf" id="3_g5tsc"]
+[ext_resource type="Script" uid="uid://dop1m830tafny" path="res://elements/interactible_computer.gd" id="1_exydp"]
+[ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="2_k4gl3"]
+[ext_resource type="FontFile" uid="uid://dge7vivcp6t6q" path="res://assets/fonts/Tiny5-Regular.ttf" id="3_tndxo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1qweu"]
-atlas = ExtResource("1_1qweu")
+atlas = ExtResource("2_k4gl3")
 region = Rect2(60, 48, 12, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bdbjx"]
@@ -23,11 +23,11 @@ animations = [{
 size = Vector2(11, 12)
 
 [sub_resource type="LabelSettings" id="LabelSettings_g5tsc"]
-font = ExtResource("3_g5tsc")
+font = ExtResource("3_tndxo")
 font_size = 8
 
-[node name="OrdinateurBouton" type="Area2D" unique_id=696778844]
-script = ExtResource("1_bdbjx")
+[node name="InteractibleComputer" type="Area2D" unique_id=696778844]
+script = ExtResource("1_exydp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1472797514]
 sprite_frames = SubResource("SpriteFrames_bdbjx")

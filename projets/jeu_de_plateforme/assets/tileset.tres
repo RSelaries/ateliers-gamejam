@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" format=3 uid="uid://bfq0tpd2iqfgn"]
 
 [ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="1_2urvg"]
-[ext_resource type="PackedScene" uid="uid://dxr00ijh0egx5" path="res://ordinateur_bouton.tscn" id="2_14fb3"]
-[ext_resource type="PackedScene" uid="uid://ufmucssblrqv" path="res://interactible_wall.tscn" id="3_p0366"]
+[ext_resource type="PackedScene" uid="uid://dxr00ijh0egx5" path="res://elements/interactible_computer.tscn" id="2_14fb3"]
+[ext_resource type="PackedScene" uid="uid://ufmucssblrqv" path="res://elements/interactible_wall.tscn" id="3_p0366"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2urvg"]
 texture = ExtResource("1_2urvg")

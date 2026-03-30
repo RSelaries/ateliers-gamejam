@@ -10,7 +10,8 @@ class LeftPanel extends LitElement {
         .left-panel-nav {
             text-decoration: none;
             padding: 20px 10px;
-            /* height: 100%; */
+            overflow-y: auto;
+            max-height: calc(100vh - var(--header-size));
         }
         *::marker {
             content: "";

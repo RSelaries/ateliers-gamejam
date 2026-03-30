@@ -15,7 +15,7 @@ class RightPanel extends LitElement {
             width: 250px;
             height: 100%;
             overflow-y: auto;
-            max-height: calc(100vh - 80px);
+            max-height: calc(100vh - var(--header-size));
         }
         .title-btn {
             cursor: pointer;

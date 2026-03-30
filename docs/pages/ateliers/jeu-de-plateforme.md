@@ -561,7 +561,7 @@ Comme pour l'ordinateur, on va les retirer du [![Godot - TileMapLayer](../../med
 
 ## C'est fini !
 
-**Le jeu est maintenant dans un état jouable!** Il manque beaucoup d'éléments pour le rendre plus agréable, malheureusement cet atelier est déjà très long. Mais si vous voulez peaufiner le jeu vous pouvez consulter la page [aller plus loin](#ateliers/jeu-plateforme-plus-loin.md).
+**Le jeu est maintenant dans un état jouable !** Il manque beaucoup d'éléments pour le rendre plus agréable mais malheureusement cet atelier est déjà très long. Si vous voulez peaufiner le jeu de votre côté vous pouvez consulter la page [aller plus loin](#ateliers/jeu-plateforme-plus-loin.md).
 
 > Vous pouvez **retrouver l'intégraliter du projet** dans le <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam">repo</a> de ces ateliers au lien suivant: <a class="external-link" href="https://https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme">https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme</a>.
 

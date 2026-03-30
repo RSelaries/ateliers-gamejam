@@ -24,5 +24,5 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_up") and player_inside:
+	if event.is_action_pressed("action_interact") and player_inside:
 		get_tree().call_group("interaction_wall", "toggle_open")

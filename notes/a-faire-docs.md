@@ -6,7 +6,6 @@ kanban-plugin: board
 
 ## À faire
 
-- [ ] ### Contacter Étienne (De Ram) savoir si il a des contacts
 - [ ] **Godot/Control** - À remplir
 - [ ] **Godot/Godot** - À remplir
 - [ ] **Ressources Sup/Version Control** - À remplir
@@ -33,19 +32,20 @@ kanban-plugin: board
 
 ## En cours
 
-- [ ] **Ateliers/Jeu de Plateforme** - À faire
 - [ ] **Godot/Interface** - TileMap à remplir
 
 
 ## À relire
 
 - [ ] **Godot/Interface de Godot** - À remplir
+- [ ] **Ateliers/Jeu de Plateforme** - À faire
 
 
 ## Fini
 
 **Complete**
 - [x] **Godot/Nodes** - Remplir les nodes utilisés
+- [x] Contacter Étienne (De Ram) savoir si il a des contacts
 
 
 
