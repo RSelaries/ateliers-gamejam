@@ -15,8 +15,9 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		label_interaction.show()
 		player_inside = true
+		if get_tree().get_nodes_in_group("player")[0].has_key:
+			label_interaction.show()
 
 
 func _on_body_exited(body: Node2D) -> void:

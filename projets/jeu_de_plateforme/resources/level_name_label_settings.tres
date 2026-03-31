@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bd2ke045rl5vv"]
+
+[ext_resource type="FontFile" uid="uid://cfcndb5vvcrrc" path="res://assets/fonts/CHNOPixelCodePro-Italic.otf" id="1_d5g1n"]
+
+[resource]
+font = ExtResource("1_d5g1n")
+font_size = 10

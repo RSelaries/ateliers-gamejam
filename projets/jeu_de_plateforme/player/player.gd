@@ -58,3 +58,8 @@ func die() -> void:
 	await get_tree().create_timer(1).timeout
 	get_tree().reload_current_scene()
 	dead = false
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("action_reload"):
+		get_tree().reload_current_scene()

@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bs0vpr35evud1"]
+
+[ext_resource type="FontFile" uid="uid://dge7vivcp6t6q" path="res://assets/fonts/Tiny5-Regular.ttf" id="1_wx57p"]
+
+[resource]
+paragraph_spacing = -3.0
+font = ExtResource("1_wx57p")
+font_size = 8

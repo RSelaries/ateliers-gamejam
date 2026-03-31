@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://btkmd0hqtd0j0"]
+
+[ext_resource type="TileSet" uid="uid://bfq0tpd2iqfgn" path="res://assets/tileset.tres" id="1_iss0w"]
+[ext_resource type="PackedScene" uid="uid://bhoueoekw17jn" path="res://elements/exit_door.tscn" id="2_yi3jx"]
+[ext_resource type="PackedScene" uid="uid://cm7k14twb75mg" path="res://player/player.tscn" id="3_foxie"]
+[ext_resource type="LabelSettings" uid="uid://bd2ke045rl5vv" path="res://resources/level_name_label_settings.tres" id="4_yi3jx"]
+
+[node name="Level1" type="Node2D" unique_id=848651018]
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=670053066]
+tile_map_data = PackedByteArray("AAD0//7/AQABAAAAAAD1//7/AQABAAAAAAD2//7/AQABAAAAAAD3//7/AQABAAAAAAD4//7/AQACAAAAAAD5/wAAAQABAAAAAAD6/wAAAQABAAAAAAD7/wAAAQABAAAAAAD8/wAAAQACAAAAAAD9/wEAAQABAAAAAAD+/wEAAQABAAAAAAD//wEAAQACAAAAAAD4////AQACAAEAAAD8/wEAAQAAAAQAAAD4/wAAAQAAAAQAAADz//7/AQAAAAQAAADz//3/AQACAAEAAADz//z/AQACAAEAAADz//v/AQACAAEAAAD0//r/AQACAAIAAAD4//r/AQAAAAIAAAD5//r/AQABAAIAAAD6//v/AQAAAAIAAAD7//v/AQABAAIAAAD8//z/AQAAAAIAAAD9//z/AQABAAIAAAD+//3/AQAAAAIAAAD///3/AQABAAIAAAAAAP3/AQABAAIAAAABAP7/AQAAAAIAAAACAP7/AQABAAIAAAADAP7/AQABAAMAAAADAAQAAQABAAQAAAACAAQAAQABAAAAAAABAAQAAQABAAAAAAAAAAQAAQABAAAAAAD//wMAAQACAAEAAAD//wIAAQACAAEAAAD//wQAAQAAAAQAAAABAP3/AQABAAMAAAD+//z/AQABAAMAAAD8//v/AQABAAMAAAD6//r/AQABAAMAAADz//r/AQAAAAMAAAADAP//AQAAAAEAAAADAAAAAQAAAAEAAAADAAEAAQAAAAEAAAADAAIAAQAAAAEAAAADAAMAAQAAAAEAAAABAP//AQAHAAIAAAD///7/AQAHAAIAAAD/////AQAHAAIAAAD6//z/AQAHAAIAAAD7////AgAAAAAABAD4//n/AQAAAAEAAAD4//j/AQAAAAEAAAD4//f/AQAAAAEAAAD4//b/AQAAAAEAAAD4//X/AQAAAAEAAAD4//T/AQAAAAEAAAD0//n/AQACAAEAAAD0//j/AQACAAEAAAD0//f/AQACAAEAAAD0//b/AQACAAEAAAD0//X/AQACAAEAAAD0//T/AQACAAEAAAALAAcAAQABAAAAAAAKAAEAAQAAAAMAAAAKAAIAAQACAAEAAAAKAAMAAQACAAEAAAAKAAQAAQACAAEAAAAKAAUAAQACAAEAAAAKAAYAAQACAAEAAAAKAAcAAQAAAAQAAAALAAEAAQABAAIAAAAMAAEAAQABAAIAAAAMAAIAAQAHAAIAAAAMAAYAAQAGAAEAAAAMAAcAAQABAAAAAAANAAEAAQABAAIAAAANAAcAAQABAAAAAAAOAAEAAQABAAIAAAAOAAcAAQABAAAAAAAPAAEAAQABAAIAAAAPAAcAAQABAAAAAAAQAAEAAQABAAIAAAAQAAcAAQABAAAAAAA=")
+tile_set = ExtResource("1_iss0w")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2008148780]
+
+[node name="ExitDoor" parent="." unique_id=1761587976 instance=ExtResource("2_yi3jx")]
+position = Vector2(18, 42)
+next_level = "res://levels/level_1.tscn"
+
+[node name="Player" parent="." unique_id=1352038896 instance=ExtResource("3_foxie")]
+position = Vector2(-115, -138)
+
+[node name="LevelName" type="Label" parent="." unique_id=195709035]
+offset_left = 62.0
+offset_top = -71.0
+offset_right = 98.0
+offset_bottom = -58.0
+text = "Départ"
+label_settings = ExtResource("4_yi3jx")
+
+[connection signal="body_entered" from="Walls/Key" to="Walls/Key" method="_on_body_entered"]
