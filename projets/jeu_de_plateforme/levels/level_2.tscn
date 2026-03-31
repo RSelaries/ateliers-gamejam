@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bhoueoekw17jn" path="res://elements/exit_door.tscn" id="2_5722l"]
 [ext_resource type="PackedScene" uid="uid://cm7k14twb75mg" path="res://player/player.tscn" id="3_ilhis"]
 [ext_resource type="PackedScene" uid="uid://2ajp0rcvhfsc" path="res://elements/key.tscn" id="4_ep78u"]
+[ext_resource type="PackedScene" uid="uid://4kj3mipevyv1" path="res://elements/kill_zone.tscn" id="5_5722l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ilhis"]
 
 [node name="Level2" type="Node2D" unique_id=80930788]
 
@@ -22,3 +25,10 @@ position = Vector2(-115, 44)
 
 [node name="Key" parent="." unique_id=2028624745 instance=ExtResource("4_ep78u")]
 position = Vector2(66, 36)
+
+[node name="KillZone" parent="." unique_id=1231368507 instance=ExtResource("5_5722l")]
+position = Vector2(0, 95)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=971924758]
+shape = SubResource("WorldBoundaryShape2D_ilhis")

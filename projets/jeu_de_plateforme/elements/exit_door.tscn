@@ -37,6 +37,8 @@ size = Vector2(9, 10)
 [sub_resource type="LabelSettings" id="LabelSettings_m1v65"]
 font = ExtResource("3_061gy")
 font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="ExitDoor" type="Area2D" unique_id=1761587976]
 script = ExtResource("1_udnfn")

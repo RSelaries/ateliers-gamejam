@@ -25,6 +25,8 @@ size = Vector2(11, 12)
 [sub_resource type="LabelSettings" id="LabelSettings_g5tsc"]
 font = ExtResource("3_tndxo")
 font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="InteractibleComputer" type="Area2D" unique_id=696778844]
 script = ExtResource("1_exydp")
