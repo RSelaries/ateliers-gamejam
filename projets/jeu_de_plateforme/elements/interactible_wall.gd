@@ -5,7 +5,7 @@ extends StaticBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
-var opened := false
+@export var opened := false
 
 
 func toggle_open() -> void:

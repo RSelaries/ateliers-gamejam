@@ -9,3 +9,10 @@ Autres contacts mais moins pertinents:
 - [Pixel Up](https://www.helloasso.com/associations/pixel-up) 
 - [Game'Her](https://gameher.fr/) 
 - [Ikigai Games](https://www.gfc.ikigai.games/) 
+
+> **Organiser un évènement hebdomadaire pour faire de la pub pour les ateliers** 
+- Parler de game design
+	- Trouver un bénévole en game design
+- Faire découvrir des jeux indépendants / jeu de gamejams / itch.io
+- 
+

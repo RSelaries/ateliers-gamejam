@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Jeu de Plateforme"
 run/main_scene="uid://bst3e1erl3dhj"
+run/print_header=false
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.08235294, 0.08235294, 0.08235294, 1)
 config/icon="res://icon.svg"
@@ -20,6 +21,8 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=512
 window/size/viewport_height=288
+window/size/window_width_override=1536
+window/size/window_height_override=864
 window/stretch/mode="viewport"
 
 [global_group]

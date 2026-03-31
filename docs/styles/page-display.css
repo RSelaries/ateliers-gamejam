@@ -139,6 +139,7 @@ li {
 
 code {
     color: var(--code-color);
+    word-wrap: break-word;
 }
 
 iframe {
@@ -175,7 +176,8 @@ iframe-player {
     }
 }
 
-.side-by-side.two-to-one {
+.side-by-side.two-to-one,
+.side-by-side.one-to-two {
     margin: 15px 0px;
     display: grid;
     grid-template:
@@ -200,6 +202,13 @@ iframe-player {
     }
 }
 
+.side-by-side.one-to-two {
+    grid-template:
+        "a b"
+        "a c" / 1fr 1fr
+    ;
+}
+
 @media screen and (max-width: 700px) {
     .side-by-side {
         flex-direction: column;
@@ -209,7 +218,8 @@ iframe-player {
         }
     }
 
-    .side-by-side.two-to-one {
+    .side-by-side.two-to-one,
+    .side-by-side.one-to-two {
         display: flex;
         flex-direction: column;
     }

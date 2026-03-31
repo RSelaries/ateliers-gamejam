@@ -1,27 +1,41 @@
 [gd_scene format=4 uid="uid://bst3e1erl3dhj"]
 
-[ext_resource type="TileSet" uid="uid://bfq0tpd2iqfgn" path="res://assets/tileset.tres" id="1_80nbo"]
-[ext_resource type="PackedScene" uid="uid://cm7k14twb75mg" path="res://player/player.tscn" id="2_e2o6t"]
+[ext_resource type="TileSet" uid="uid://bfq0tpd2iqfgn" path="res://assets/tileset.tres" id="1_gmgay"]
+[ext_resource type="PackedScene" uid="uid://cm7k14twb75mg" path="res://player/player.tscn" id="2_w7r7j"]
+[ext_resource type="PackedScene" uid="uid://4kj3mipevyv1" path="res://elements/kill_zone.tscn" id="3_o6mel"]
 
-[node name="Game" type="Node2D" unique_id=805501178]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fc0e3"]
+distance = -1.0
+
+[node name="TestLevel" type="Node2D" unique_id=805501178]
 
 [node name="MursSol" type="TileMapLayer" parent="." unique_id=1197295392]
 tile_map_data = PackedByteArray("AAD+/wMAAQABAAAAAAD//wMAAQABAAAAAAAAAAMAAQACAAAAAAABAAMAAQADAAMAAAADAPv/AQABAAIAAAACAPv/AQABAAIAAAABAPv/AQABAAIAAAAAAPv/AQABAAIAAAD///v/AQABAAIAAAD+//v/AQABAAIAAAAAAAQAAQACAAEAAAAAAAUAAQACAAEAAAAAAAYAAQACAAEAAAAAAAcAAQACAAEAAAD2//v/AQABAAIAAAD3//v/AQABAAIAAAD4//v/AQABAAIAAAD5//v/AQABAAIAAAD6//v/AQABAAIAAAD7//v/AQABAAIAAAD8//v/AQABAAIAAAD9//v/AQABAAIAAAD2/wMAAQABAAAAAAD3/wMAAQABAAAAAAD4/wMAAQACAAAAAAD7/wMAAQAAAAAAAAD8/wMAAQABAAAAAAD9/wMAAQABAAAAAAAAAAgAAQACAAEAAAAAAAkAAQACAAEAAAAAAAoAAQACAAEAAAAAAAsAAQACAAEAAAAAAAwAAQACAAEAAAAAAA0AAQACAAEAAAD0//v/AQAAAAMAAAD0/wMAAQAAAAQAAAD1//v/AQABAAIAAAD1/wMAAQABAAAAAADv//3/AQAAAAMAAADv//7/AQACAAEAAADv////AQACAAEAAADv/wAAAQACAAEAAADv/wEAAQAAAAQAAADw//3/AQABAAIAAADw/wEAAQABAAAAAADx//3/AQABAAIAAADx/wEAAQABAAAAAADy//3/AQABAAIAAADy/wEAAQABAAAAAADz//3/AQABAAIAAADz/wEAAQABAAAAAAD0//z/AQACAAEAAAD0//3/AQACAAIAAAD0/wEAAQACAAAAAAD0/wIAAQACAAEAAAD4/wQAAQACAAEAAAD4/wUAAQACAAEAAAD4/wYAAQACAAEAAAD4/wcAAQAAAAQAAAD5/wcAAQABAAAAAAD6/wcAAQABAAAAAAD7/wQAAQAAAAEAAAD7/wUAAQAAAAEAAAD7/wYAAQAAAAEAAAD7/wcAAQABAAQAAAAEAPv/AQABAAIAAAAFAPv/AQABAAIAAAAGAPv/AQABAAIAAAAHAPv/AQABAAIAAAAHAAUAAQABAAAAAAAIAPv/AQABAAIAAAAIAAUAAQABAAAAAAAJAPv/AQABAAIAAAAJAAUAAQABAAAAAAAKAPv/AQABAAIAAAAKAAUAAQABAAAAAAALAPv/AQABAAIAAAALAAUAAQABAAAAAAAMAAUAAQABAAAAAAANAAEAAQABAAIAAAANAAUAAQABAAAAAAAOAAEAAQABAAIAAAAOAAUAAQABAAAAAAAPAAEAAQABAAIAAAAPAAUAAQABAAAAAAAQAAEAAQABAAMAAAAQAAUAAQABAAQAAAAFAAUAAQACAAMAAAAGAAUAAQABAAAAAAALAAAAAQAAAAAAAAALAAEAAQAAAAIAAAAMAAEAAQABAAIAAAAQAAIAAQAAAAEAAAAQAAMAAQAAAAEAAAAQAAQAAQAAAAEAAAANAAAAAQABAAQAAAAMAAAAAQABAAAAAAAMAPv/AQABAAIAAAANAPz/AQAAAAEAAAANAP3/AQAAAAEAAAANAP7/AQAAAAEAAAANAP//AQAAAAEAAAANAPv/AQABAAMAAAA=")
-tile_set = ExtResource("1_80nbo")
+tile_set = ExtResource("1_gmgay")
 
 [node name="ObjetsElements" type="TileMapLayer" parent="." unique_id=837963652]
-tile_map_data = PackedByteArray("AAD6/wYAAQADAAIAAAD5/wYAAQADAAIAAADx/wAAAQAHAAEAAAAHAPz/AQAHAAIAAAAHAP3/AQAHAAIAAAAHAP7/AQAHAAIAAAAHAP//AQAHAAIAAAAIAAAAAQADAAQAAAAIAAEAAQADAAQAAAAIAAIAAQADAAQAAAAIAAMAAQADAAQAAAAOAAQAAQADAAEAAAAIAAQAAQADAAQAAAALAP//AgAAAAAAAQD5/wMAAgAAAAAAAgD6/wMAAgAAAAAAAgD0//7/AgAAAAAAAgD0////AgAAAAAAAgD0/wAAAgAAAAAAAgALAAIAAgAAAAAAAgALAAMAAgAAAAAAAgALAAQAAgAAAAAAAgA=")
-tile_set = ExtResource("1_80nbo")
+tile_map_data = PackedByteArray("AAAHAPz/AQAHAAIAAAAHAP3/AQAHAAIAAAAHAP7/AQAHAAIAAAAHAP//AQAHAAIAAAAIAAAAAQADAAQAAAAIAAEAAQADAAQAAAAIAAIAAQADAAQAAAAIAAMAAQADAAQAAAAOAAQAAQADAAEAAAAIAAQAAQADAAQAAAALAP//AgAAAAAAAQD5/wMAAgAAAAAAAgD6/wMAAgAAAAAAAgD0//7/AgAAAAAAAgD0////AgAAAAAAAgD0/wAAAgAAAAAAAgALAAIAAgAAAAAAAgALAAMAAgAAAAAAAgALAAQAAgAAAAAAAgD5/wYAAgAAAAAAAwD6/wYAAgAAAAAAAwADAP7/AgAAAAAABADx/wAAAgAAAAAABQA=")
+tile_set = ExtResource("1_gmgay")
 
 [node name="Plateformes" type="TileMapLayer" parent="." unique_id=936576621]
 tile_map_data = PackedByteArray("AAAKAAAAAQACAAQAAAAJAAAAAQACAAQAAAAIAAAAAQACAAQAAAAHAAAAAQACAAQAAAD6/wAAAQACAAQAAAD7/wAAAQACAAQAAAD8/wAAAQACAAQAAAD9/wAAAQACAAQAAAD+/wAAAQACAAQAAAACAAAAAQACAAQAAAADAAAAAQACAAQAAAAEAAAAAQACAAQAAAA=")
-tile_set = ExtResource("1_80nbo")
+tile_set = ExtResource("1_gmgay")
 
-[node name="Player" parent="." unique_id=1352038896 instance=ExtResource("2_e2o6t")]
+[node name="Player" parent="." unique_id=1352038896 instance=ExtResource("2_w7r7j")]
 position = Vector2(-43, 30)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=462945880]
 position = Vector2(-1, 5)
 
+[node name="KillZone" parent="." unique_id=1231368507 instance=ExtResource("3_o6mel")]
+position = Vector2(45, 88)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1992621987]
+shape = SubResource("WorldBoundaryShape2D_fc0e3")
+
 [connection signal="body_entered" from="ObjetsElements/InteractibleComputer" to="ObjetsElements/InteractibleComputer" method="_on_body_entered"]
 [connection signal="body_exited" from="ObjetsElements/InteractibleComputer" to="ObjetsElements/InteractibleComputer" method="_on_body_exited"]
+[connection signal="body_entered" from="ObjetsElements/Key" to="ObjetsElements/Key" method="_on_body_entered"]
+[connection signal="body_entered" from="ObjetsElements/ExitDoor" to="ObjetsElements/ExitDoor" method="_on_body_entered"]
+[connection signal="body_exited" from="ObjetsElements/ExitDoor" to="ObjetsElements/ExitDoor" method="_on_body_exited"]

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bhoueoekw17jn"]
+
+[ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="1_ligfb"]
+[ext_resource type="Script" uid="uid://dj22b3evtp75g" path="res://elements/exit_door.gd" id="1_udnfn"]
+[ext_resource type="FontFile" uid="uid://dge7vivcp6t6q" path="res://assets/fonts/Tiny5-Regular.ttf" id="3_061gy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udnfn"]
+atlas = ExtResource("1_ligfb")
+region = Rect2(84, 12, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_061gy"]
+atlas = ExtResource("1_ligfb")
+region = Rect2(72, 12, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1v65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udnfn")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_061gy")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k0qh"]
+size = Vector2(9, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1v65"]
+font = ExtResource("3_061gy")
+font_size = 8
+
+[node name="ExitDoor" type="Area2D" unique_id=1761587976]
+script = ExtResource("1_udnfn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=672764311]
+sprite_frames = SubResource("SpriteFrames_m1v65")
+animation = &"closed"
+autoplay = "closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=350397124]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_7k0qh")
+
+[node name="LabelInteraction" type="Label" parent="." unique_id=1711495788]
+offset_left = -22.0
+offset_top = -17.0
+offset_right = 23.0
+offset_bottom = -8.0
+text = "↑ intéraction"
+label_settings = SubResource("LabelSettings_m1v65")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

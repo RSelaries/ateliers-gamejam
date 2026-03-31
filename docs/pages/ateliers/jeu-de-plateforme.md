@@ -87,7 +87,7 @@ Pour cela, il faut ajouter un [![Godot - TileMapLayer](../../medias/godot-icons/
 <img src="./medias/jeu-de-plateforme/plateformer-tilemap-3.png">
 </div>
 
-Ensuite on ajoute le **TileSet** que l'on a créé dans le **paramètre** `tileset` de le [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer).
+Ensuite on ajoute le **TileSet** que l'on a créé dans le **paramètre** `tileset` du [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer).
 
 On clique dessus puis sur *"Quick load"* et on sélectionne le **TileSet** que l'on a créé.
 
@@ -195,7 +195,7 @@ De même, notre [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionS
 
 Ce qui signifie que notre **collision** nécessite une **forme** pour fonctionner. On va donc lui en ajouter une dans sa **propriété** `shape`.
 
-On veut que le **dessous** de cette forme soit **aligné** au pieds de notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) Player](#godot/nodes.md#characterbody2d) il y a un "![Godot - NodeWarning](../../medias/godot-icons/NodeWarning.svg).
+On veut que le **dessous** de cette forme soit **aligné** au pieds de notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) Player](#godot/nodes.md#characterbody2d).
 
 <img src="./medias/jeu-de-plateforme/plateformer-player-11.gif">
 
@@ -253,7 +253,7 @@ D'abord, si le **joueur** n'est **pas** sur le **sol**, on vas lui **appliquer l
 
 ```gdscript
 if not is_on_floor():
-	velocity += get_gravity() * delta
+    velocity += get_gravity() * delta
 ```
 
 > Le node [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) est utilisé avec sa **propriété** `velocity` qui servira à calculer son **mouvement**. Pour **appliquer** sa **vélocité** il suffit d'utiliser la **fonction** `move_and_slide()`.
@@ -266,7 +266,7 @@ Ensuite, on **test** si le joueur **appuye** sur la **touche de saut**. Si c'est
 
 ```gdscript
 if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-	velocity.y = JUMP_VELOCITY
+    velocity.y = JUMP_VELOCITY
 ```
 
 > La **fonction** `Input.is_action_just_pressed(input_name)` permet de **tester** si le joueur **appuie** sur un **bouton**.
@@ -408,7 +408,7 @@ On lui rajoute un [![Godot - AnimatedSprite2D](../../medias/godot-icons/Animated
 
 #### Programmation bouton
 
-On ajoute un script (![Godot - ScriptCreate](../../medias/godot-icons/ScriptCreate.svg)) à notre [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) OrdinateurBouton](#ressources-suplementaires/lexique-game-dev.md#area2d). Ensuite on connecte son **signal** `body_entered`.
+On ajoute un script      à notre [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) OrdinateurBouton](#ressources-suplementaires/lexique-game-dev.md#area2d). Ensuite on connecte son **signal** `body_entered`.
 
 <img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-4.gif">
 
@@ -502,7 +502,7 @@ La fonction `event.is_action_pressed(action_name)` permet de détecter si l'acti
 
 > Un [![Godot - StaticBody2D](../../medias/godot-icons/StaticBody2D.svg) StaticBody2D](#ressources-suplementaires/lexique-game-dev.md#staticbody2d) est un node **physique** mais **immobile**. Cela permet surtout de créer des **murs** et des **collisions** pour certains éléments.
 
-Il lui fait aussi un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) ainsi qu'une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
+Il lui faut aussi un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) ainsi qu'une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
 
 <div class="side-by-side">
 <img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-10.png">

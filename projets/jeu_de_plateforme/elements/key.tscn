@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://2ajp0rcvhfsc"]
+
+[ext_resource type="Script" uid="uid://cff8m4w00impv" path="res://elements/key.gd" id="1_00xkv"]
+[ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="2_3bhhs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aub6"]
+atlas = ExtResource("2_3bhhs")
+region = Rect2(60, 12, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nuxlk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1aub6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eeh16"]
+radius = 4.0
+
+[node name="Key" type="Area2D" unique_id=2028624745]
+script = ExtResource("1_00xkv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1490129829]
+sprite_frames = SubResource("SpriteFrames_nuxlk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1666619997]
+shape = SubResource("CircleShape2D_eeh16")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
