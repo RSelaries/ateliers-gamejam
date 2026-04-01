@@ -14,5 +14,3 @@ Autres contacts mais moins pertinents:
 - Parler de game design
 	- Trouver un bénévole en game design
 - Faire découvrir des jeux indépendants / jeu de gamejams / itch.io
-- 
-
