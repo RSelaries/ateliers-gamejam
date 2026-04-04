@@ -29,26 +29,27 @@ Vous pouvez ranger ces fichiers où vous voulez. On va maintenant lancer le prem
 
 Une fois [Godot](#godot/godot.md) ouvert, on tombe sur le [Project Manager](#godot/interface.md#project-manager):
 
-<img src="./medias/devine-le-nombre/interface-godot-1.webp">
+<!-- <viewable-image src="./medias/devine-le-nombre/interface-godot-1.webp"> -->
+<viewable-image src="./medias/devine-le-nombre/interface-godot-1.webp"></viewable-image>
 
 On va alors créer un nouveau projet en cliquant sur **+ Create**.
 
-<img width="200px" src="./medias/devine-le-nombre/interface-godot-2.webp">
+<viewable-image width="200px" src="./medias/devine-le-nombre/interface-godot-2.webp"></viewable-image>
 
 Puis renseigner le **nom du projet** et son **chemin** (là où il est enregistré).
 
 <div class="side-by-side">
-    <img src="./medias/devine-le-nombre/interface-godot-3.webp">
-    <img src="./medias/devine-le-nombre/interface-godot-4.webp">
+    <viewable-image src="./medias/devine-le-nombre/interface-godot-3.webp"></viewable-image>
+    <viewable-image src="./medias/devine-le-nombre/interface-godot-4.webp"></viewable-image>
 </div>
 
 Et enfin le [renderer](#godot/godot.md#renderer) que l'on va mettre sur **Compatibility**.<br>
 
-<img width="100px" src="./medias/devine-le-nombre/interface-godot-5.webp">
+<viewable-image width="100px" src="./medias/devine-le-nombre/interface-godot-5.webp"></viewable-image>
 
 Enfin, on clique sur **Create** ce qui nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
 
-<img src="./medias/devine-le-nombre/interface-godot-6.webp">
+<viewable-image src="./medias/devine-le-nombre/interface-godot-6.webp"></viewable-image>
 
 ## L'interface de Godot
 
@@ -56,7 +57,7 @@ L'[interface](#godot/interface.md) de l'**éditeur** de [Godot](#godot/godot.md)
 
 ### Le menu des onglets
 
-<img src="./medias/devine-le-nombre/interface-godot-7.webp">
+<viewable-image src="./medias/devine-le-nombre/interface-godot-7.webp"></viewable-image>
 
 Ce menu permet de changer la **fenêtre** affichée au **centre** entre cinq onglets: [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), [![Godot - 3D](../../medias/godot-icons/3D.svg) 3D](#godot/interface.md#onglet-3d), [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), [![Godot - Game](../../medias/godot-icons/Game.svg) Game](#godot/interface.md#onglet-game) et [![Godot - AssetLib](../../medias/godot-icons/AssetLib.svg) AssetLib](#godot/interface.md#onglet-assetlib).
 
@@ -64,55 +65,55 @@ Ce menu permet de changer la **fenêtre** affichée au **centre** entre cinq ong
 
 La fenêtre centrale qui va afficher un des cinq onglets ([![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), [![Godot - 3D](../../medias/godot-icons/3D.svg) 3D](#godot/interface.md#onglet-3d), [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), [![Godot - Game](../../medias/godot-icons/Game.svg) Game](#godot/interface.md#onglet-game) et [![Godot - AssetLib](../../medias/godot-icons/AssetLib.svg) AssetLib](#godot/interface.md#onglet-assetlib)). Dans cet atelier, on va utiliser les onglets [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d), pour poser **nos éléments de jeux 2D** (boutons, images, textes etc...) et [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script), pour **programmer la logique** de notre jeu.
 
-<img src="./medias/devine-le-nombre/interface-godot-8.webp">
+<viewable-image src="./medias/devine-le-nombre/interface-godot-8.webp"></viewable-image>
 
 ### La fenêtre Scene
 
 La fenêtre scene représente notre [Scene Tree](#godot/interface.md#scene-tree) *(l'arborescance de notre scène)*. Et juste à coté, la fenêtre d'[import](#godot/godot.md#import).
 
-<img src="./medias/devine-le-nombre/interface-godot-9.webp">
+<viewable-image src="./medias/devine-le-nombre/interface-godot-9.webp"></viewable-image>
 
 ###  Le FileSystem
 
 La fenêtre du [file system](#godot/interface.md#file-system) permet de voir et d'accéder à tous nos fichiers.
 
-<img src="./medias/devine-le-nombre/interface-godot-10.webp">
+<viewable-image src="./medias/devine-le-nombre/interface-godot-10.webp"></viewable-image>
 
 ### L'Inspecteur
 
 L'[inspecteur](#godot/interface.md#inspecteur) permet de modifier les propriétés de nos objets.<br>
 Sur cette fenêtre, on a également accès à l'[historique](#godot/interface.md#historique), les [signaux](#godot/godot.md#signaux), et les [groupes](#godot/godot.md#groupes).
 
-<img src="./medias/devine-le-nombre/interface-godot-11.webp">
+<viewable-image src="./medias/devine-le-nombre/interface-godot-11.webp"></viewable-image>
 
 ## III. Créer la scène de jeu
 
 Au niveau de la fenêtre de la [scène](#godot/interface.md#scene-tree), on va appuyer sur **User Interface**.
 
-<img width="300px" src="./medias/devine-le-nombre/scene-jeu-1.webp">
+<viewable-image width="300px" src="./medias/devine-le-nombre/scene-jeu-1.webp"></viewable-image>
 
 Ce qui va nous ouvrir l'onglet [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d) et dans la fenêtre [scène](#godot/interface.md#scene-tree) on voit notre nouvelle scène que l'on a créé:
 
-<img src="./medias/devine-le-nombre/scene-jeu-2.webp">
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-2.webp"></viewable-image>
 
 On va commencer par renommer le [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
 
 Puis on va enregistrer cette scène. *(ctrl-S ou Scene > Save Scene)*
 
-<img src="./medias/devine-le-nombre/scene-jeu-3.webp">
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-3.webp"></viewable-image>
 
 Une fois ça fait, on va ajouter un node [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label). *(Soit avec le + au niveau de la fenêtre Scene, soit en faisant ctrl-A)* Puis un [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit).
 
-<img src="./medias/devine-le-nombre/scene-jeu-4.webp">
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-4.webp"></viewable-image>
 
 <div class="side-by-side">
-    <img src="./medias/devine-le-nombre/scene-jeu-5.webp">
-    <img src="./medias/devine-le-nombre/scene-jeu-6.webp">
+    <viewable-image src="./medias/devine-le-nombre/scene-jeu-5.webp"></viewable-image>
+    <viewable-image src="./medias/devine-le-nombre/scene-jeu-6.webp"></viewable-image>
 </div>
 
 On va selectionner le label en cliquand dessus dans le [Scene Tree](#godot/godot.md#scene-tree) *(la hiérarchie de la scène)*, puis modifier sa propriété `text` dans l'[inspecteur](#godot/godot.md#inspecteur). Je vais y écrire *"Devine le nombre"*. 
 
-<img src="./medias/devine-le-nombre/scene-jeu-7.webp">
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-7.webp"></viewable-image>
 
 On peut le déplacer vers le centre de l'écran en le glissant.
 
@@ -120,7 +121,7 @@ Enfin, on va placer le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.sv
 
 > Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control.md).
 
-<img src="./medias/devine-le-nombre/scene-jeu-8.gif">
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-8.gif"></viewable-image>
 
 ## IV. Programmation du jeu
 
@@ -128,9 +129,9 @@ La partie que vous attendiez sûrement tous·tes: on va faire de la **programmat
 
 Pour cela, on va commencer par ajouter un script à notre scène. On clique sur le node racine de notre scène *(dans mon cas, le node "Game")*, puis sur le bouton pour ajouter un script.
 
-<img src="./medias/devine-le-nombre/programmation-1.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-1.png"></viewable-image>
 
-<img src="./medias/devine-le-nombre/programmation-2.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-2.png"></viewable-image>
 
 Cela va alors nous ouvrir l'onglet de [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script) avec un template basique d'un script **GDScript**.
 
@@ -138,7 +139,7 @@ Cela va alors nous ouvrir l'onglet de [![Godot - Script](../../medias/godot-icon
 
 > Si vous voulez **apprendre** les bases de **GDScript** sans avoir **jamais fait de programmation**, vous pouvez essayer [GD-Quest](#ressources-suplementaires/gd-quest.md), c'est une formation express au **GDScript**, très **simple** et **rapide** !
 
-<img src="./medias/devine-le-nombre/programmation-3.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-3.png"></viewable-image>
 
 Il y a par défaut deux fonctions:
 
@@ -164,7 +165,7 @@ D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span
 > Le **snake_case** est le fait d'écrire tout en **minuscule**, sans accents, et de **remplacer les espaces par des tirets** du bas *(_)*.<br>
 > <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **pascal_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
 
-<img src="./medias/devine-le-nombre/programmation-4.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-4.png">
 <span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\</strong></span>
 
 <br>Maintenant que notre variable <code class="hljs">nombre_mystere</code> a été définie, on va lui donner une valeur. On va lors ajouter cette ligne dans la fonction <code class="hljs">_ready</code>:
@@ -175,9 +176,9 @@ func _ready() -> void:
 
 Pour que le joueur puisse **entrer sa réponse**, on utilise le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit). On va alors le sélectionner, puis dans la fenêtre de l'[inspecteur](#godot/interface.md#inspecteur), on va choisir l'onglet des [signaux](#godot/godot.md#signaux) et sélectionner le signal <code class="hljs">text_submitted</code>.
 
-<img src="./medias/devine-le-nombre/programmation-5.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-5.png"></viewable-image>
 
-<img src="./medias/devine-le-nombre/programmation-6.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-6.png"></viewable-image>
 
 Cela ajoute la ligne suivante à notre script:
 ```gdscript
@@ -194,13 +195,13 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
     print(new_text)
 ```
 
-<img src="./medias/devine-le-nombre/programmation-7.png">
+<viewable-image src="./medias/devine-le-nombre/programmation-7.png"></viewable-image>
 
 ### Test du jeu
 
 On peut maintenant tester le jeu. Pour cela, il suffit de cliquer sur l'icône pour lancer le jeu à la scène actuelle ![Icône lancer la scène active - Godot](../../medias/godot-icons/godot-play-scene-icon.svg).
 
-<img src="./medias/devine-le-nombre/test-du-jeu-1.gif">
+<viewable-image src="./medias/devine-le-nombre/test-du-jeu-1.gif"></viewable-image>
 
 On voit effectivement que quand on écrit quelque chose dans le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) puis qu'on appuie sur la touche **'Entrée'**, notre mot est <code class="hljs">print</code> dans l'[Output](#godot/interface.md#output).
 
@@ -249,7 +250,7 @@ Il est important de **régulièrement tester** son jeu pour s'assurer qu'il n'y 
 
 > Je vous conseille aussi de d'**enregistrer souvent** votre travail *(ctrl-S)*.
 
-<img src="./medias/devine-le-nombre/test-du-jeu-2.gif">
+<viewable-image src="./medias/devine-le-nombre/test-du-jeu-2.gif"></viewable-image>
 
 ## Amméliorations
 
@@ -307,7 +308,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
         reference_label.text = "Trouvé!"
 ```
 
-<img src="./medias/devine-le-nombre/ammelioration-1.gif">
+<viewable-image src="./medias/devine-le-nombre/ammelioration-1.gif"></viewable-image>
 
 #### Variable globale
 
@@ -389,7 +390,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
         reference_label.text = "Trouvé!"
 ```
 
-<img src="./medias/devine-le-nombre/ammelioration-2.gif">
+<viewable-image src="./medias/devine-le-nombre/ammelioration-2.gif"></viewable-image>
 
 ### Nombre aléatoire
 
@@ -440,4 +441,4 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 
 > Vous pouvez aussi directement **télécharger le projet** <a class="external-link" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">ici</a>.
 
-<img src="./medias/devine-le-nombre/jeu-fini.png">
+<viewable-image src="./medias/devine-le-nombre/jeu-fini.png"></viewable-image>

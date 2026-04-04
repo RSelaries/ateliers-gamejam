@@ -27,5 +27,6 @@ offset_right = 98.0
 offset_bottom = -58.0
 text = "Départ"
 label_settings = ExtResource("4_yi3jx")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Walls/Key" to="Walls/Key" method="_on_body_entered"]
