@@ -1,3 +1,6 @@
 {
-  "accentColor": "#9467fe"
+  "accentColor": "#9467fe",
+  "enabledCssSnippets": [
+    "media-grid-snippet"
+  ]
 }

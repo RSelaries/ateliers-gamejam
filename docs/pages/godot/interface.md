@@ -42,6 +42,10 @@ Permet d'**éditer** tous les **élements 2D** (les [![Godot - Node2D](../../med
 
 <img src="./medias/interface-godot/interface-2d-1.png">
 
+#### Navigation 2D
+
+La **navigation** dans la fenêtre 2D se fait à l'aide de la **molette**. **Scroller** vers le **haut** permet de **zoomer**. **Scroller** vers le **bas** permet de **dézommer**. Et le **clic molette** permet de **déplacer la vue**.
+
 #### Outils 2D
 
 <img src="./medias/interface-godot/interface-2d-2.png">
@@ -85,6 +89,12 @@ Dans l'ordre:
 Permet d'**éditer** tous les **élements 3D** (les [![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D](#godot/nodes.md#node3d)).
 
 <img src="./medias/interface-godot/interface-3d-1.png">
+
+#### Navigation 3D
+
+La **navigation** 3D se fait à l'aide de la **molette**, du **clic-droit** et des touches **ZQSD** *(ou WASD pour un clavier QWERTY)*.
+
+Comme en 2D, le **scroll** permet de changez le **zoom**. Le **clic molette** permet de **déplacer la vue autour d'un point**. Enfin, si le **clic droit** est enfoncé, les touches **ZQSD** permettent de se **déplacer** d'avant en arrière et de droite à gauche. Les touches **A et E** permettent respectivement de **descendre et monter**. Quand le clic droit est enfoncé il est égallement possible de déplacer la souris pour tourner le regard de la caméra similaire à un jeu à la première personne.
 
 #### Outils 3D
 

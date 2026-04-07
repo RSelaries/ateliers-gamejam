@@ -14,7 +14,8 @@ config/name="devine-le-nombre"
 run/main_scene="uid://dswx32eqwv5es"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.08235294, 0.08235294, 0.08235294, 1)
-config/icon="res://icon.svg"
+config/icon="uid://d0tyx3rkjye34"
+config/tags=PackedStringArray("ateliers_gamejam")
 
 [file_customization]
 

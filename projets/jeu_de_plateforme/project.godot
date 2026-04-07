@@ -16,7 +16,8 @@ run/print_header=false
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=144
 boot_splash/bg_color=Color(0.08235294, 0.08235294, 0.08235294, 1)
-config/icon="res://icon.svg"
+config/icon="uid://ch0tyjea8foq"
+config/tags=PackedStringArray("ateliers_gamejam")
 
 [display]
 

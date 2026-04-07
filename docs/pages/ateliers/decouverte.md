@@ -45,4 +45,6 @@ J'ai fait une petite sélection de jeux que je trouve intéressants.
 
 <iframe height="167" frameborder="0" src="https://itch.io/embed/4270123?dark=true" width="552"><a href="https://papercookies.itch.io/skinface">SKINFACE by adam pype, Ties Groen</a></iframe>
 
+<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/4420109?dark=true"><a href="https://wer8888.itch.io/horse-magnifier">Horse Magnifier by wer8888</a></iframe>
+
 </div>
