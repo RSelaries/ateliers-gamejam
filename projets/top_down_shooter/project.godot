@@ -15,6 +15,20 @@ run/main_scene="uid://jsyxqq3t0x6s"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://characters/": "yellow",
+"res://custom_classes/": "pink",
+"res://weapons/": "green"
+}
+
 [input]
 
 movement_up={

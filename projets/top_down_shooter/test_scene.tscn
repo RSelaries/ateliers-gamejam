@@ -1,16 +1,8 @@
 [gd_scene format=4 uid="uid://jsyxqq3t0x6s"]
 
-[ext_resource type="TileSet" uid="uid://rcy5fdy3ltti" path="res://resources/tilesets.tres" id="1_uhqqe"]
-[ext_resource type="PackedScene" uid="uid://b1dv1tyoo10fc" path="res://player/player.tscn" id="2_ia1lp"]
-[ext_resource type="Script" uid="uid://dwlu75wpxrwcd" path="res://dummy.gd" id="3_coq8p"]
-[ext_resource type="Texture2D" uid="uid://cwiuxs55qs0jw" path="res://assets/characters.png" id="3_sasra"]
-[ext_resource type="Script" uid="uid://blrqobw75cwrt" path="res://custom_classes/hurt_box.gd" id="5_2nij2"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2nij2"]
-radius = 20.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_sasra"]
-radius = 18.027756
+[ext_resource type="TileSet" uid="uid://rcy5fdy3ltti" path="res://assets/tilesets.tres" id="1_uhqqe"]
+[ext_resource type="PackedScene" uid="uid://b1dv1tyoo10fc" path="res://characters/player/player.tscn" id="2_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://d1e30yrvy16rr" path="res://characters/dummy/dummy.tscn" id="3_sasra"]
 
 [node name="TestScene" type="Node2D" unique_id=1778632615]
 
@@ -36,38 +28,12 @@ tile_set = ExtResource("1_uhqqe")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1207372508]
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAD5//v/AwAEAAEAAAD6//v/AwACAAAAAAD7//v/AwAFAAEAAAD///v/AwADAAEAAAD///z/AwAEAAEAAAD///3/AwAJAAQAAAAAAPv/AwAAAAAAAAAAAPz/AwACAAAAAAAAAP3/AwAEAAIAAAABAPv/AwAAAAAAAAABAPz/AwACAAAAAAABAP3/AwAEAAMAAAACAPv/AwABAAEAAAACAPz/AwAFAAEAAAACAP3/AwALAAQAAAD5//f/AwAEAAAAAAD5//j/AwADAAEAAAD5//n/AwADAAEAAAD5//r/AwADAAEAAAD6//f/AwACAAIAAAD6//j/AwAAAAAAAAD6//n/AwAAAAAAAAD6//r/AwAAAAAAAAD7//f/AwACAAIAAAD7//j/AwAAAAAAAAD7//n/AwAAAAAAAAD7//r/AwABAAAAAAD8//f/AwACAAIAAAD8//j/AwAAAAAAAAD8//n/AwAAAAAAAAD8//r/AwACAAAAAAD9//f/AwACAAIAAAD9//j/AwAAAAAAAAD9//n/AwAAAAAAAAD9//r/AwACAAAAAAD+//f/AwACAAIAAAD+//j/AwAAAAAAAAD+//n/AwAAAAAAAAD+//r/AwACAAAAAAD///f/AwAFAAAAAAD///j/AwABAAIAAAD///n/AwAAAAAAAAD///r/AwADAAAAAAAAAPj/AwACAAIAAAAAAPn/AwAAAAAAAAAAAPr/AwAAAAAAAAABAPj/AwACAAIAAAABAPn/AwAAAAAAAAABAPr/AwAAAAAAAAACAPj/AwAFAAAAAAACAPn/AwABAAEAAAACAPr/AwABAAEAAAD9//v/AwAEAAMAAAD8//v/AwAEAAMAAAD+//v/AwAEAAMAAAD7//z/AwALAAQAAAD6//z/AwAEAAMAAAD5//z/AwAJAAQAAAA=")
+tile_map_data = PackedByteArray("AAD5//v/AwAEAAEAAAD6//v/AwACAAAAAAD7//v/AwAFAAEAAAD///v/AwADAAEAAAD///z/AwAEAAEAAAD///3/AwAJAAQAAAAAAPv/AwAAAAAAAAAAAPz/AwACAAAAAAAAAP3/AwAEAAIAAAABAPv/AwAAAAIAAAABAPz/AwACAAAAAAABAP3/AwAEAAMAAAACAPv/AwABAAEAAAACAPz/AwAFAAEAAAACAP3/AwALAAQAAAD5//f/AwAEAAAAAAD5//j/AwADAAEAAAD5//n/AwADAAEAAAD5//r/AwADAAEAAAD6//f/AwACAAIAAAD6//j/AwAAAAAAAAD6//n/AwAAAAAAAAD6//r/AwAAAAIAAAD7//f/AwACAAIAAAD7//j/AwAAAAAAAAD7//n/AwAAAAAAAAD7//r/AwABAAAAAAD8//f/AwACAAIAAAD8//j/AwAAAAAAAAD8//n/AwAAAAAAAAD8//r/AwACAAAAAAD9//f/AwACAAIAAAD9//j/AwAAAAAAAAD9//n/AwAAAAAAAAD9//r/AwACAAAAAAD+//f/AwACAAIAAAD+//j/AwAAAAAAAAD+//n/AwAAAAIAAAD+//r/AwACAAAAAAD///f/AwAFAAAAAAD///j/AwABAAIAAAD///n/AwAAAAAAAAD///r/AwADAAAAAAAAAPj/AwACAAIAAAAAAPn/AwAAAAAAAAAAAPr/AwAAAAAAAAABAPj/AwACAAIAAAABAPn/AwAAAAAAAAABAPr/AwAAAAAAAAACAPj/AwAFAAAAAAACAPn/AwABAAEAAAACAPr/AwABAAEAAAD9//v/AwAEAAMAAAD8//v/AwAEAAMAAAD+//v/AwAEAAMAAAD7//z/AwALAAQAAAD6//z/AwAEAAMAAAD5//z/AwAJAAQAAAA=")
 tile_set = ExtResource("1_uhqqe")
+
+[node name="Dummy" parent="." unique_id=174065229 instance=ExtResource("3_sasra")]
+position = Vector2(161, 12)
 
 [node name="Player" parent="." unique_id=1007859494 instance=ExtResource("2_ia1lp")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=210461669]
-
-[node name="Dummy" type="CharacterBody2D" parent="." unique_id=884506694]
-position = Vector2(161, 12)
-script = ExtResource("3_coq8p")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dummy" unique_id=766136907]
-shape = SubResource("CircleShape2D_2nij2")
-
-[node name="Sprite2D" type="Sprite2D" parent="Dummy" unique_id=590481168]
-scale = Vector2(3, 3)
-texture = ExtResource("3_sasra")
-region_enabled = true
-region_rect = Rect2(0, 32, 16, 16)
-
-[node name="HurtBox" type="Area2D" parent="Dummy" unique_id=842574242]
-script = ExtResource("5_2nij2")
-metadata/_custom_type_script = "uid://blrqobw75cwrt"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dummy/HurtBox" unique_id=1482045187]
-shape = SubResource("CircleShape2D_sasra")
-debug_color = Color(0, 0.64705884, 0.22352941, 0.41960785)
-
-[node name="Label" type="Label" parent="Dummy" unique_id=1618848480]
-offset_left = -23.0
-offset_top = -46.0
-offset_right = 18.0
-offset_bottom = -23.0
-text = "Ouch"

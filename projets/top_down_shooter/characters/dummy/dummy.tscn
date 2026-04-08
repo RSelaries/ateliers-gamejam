@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://d1e30yrvy16rr"]
+
+[ext_resource type="Script" uid="uid://dwlu75wpxrwcd" path="res://characters/dummy/dummy.gd" id="1_hwdan"]
+[ext_resource type="Texture2D" uid="uid://cwiuxs55qs0jw" path="res://assets/characters.png" id="2_q6n2p"]
+[ext_resource type="Script" uid="uid://blrqobw75cwrt" path="res://custom_classes/hurt_box.gd" id="3_g4clm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2nij2"]
+radius = 23.021729
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sasra"]
+radius = 18.027756
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwdan"]
+bg_color = Color(0, 0, 0, 0.29411766)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.7764706, 0.05882353, 0.41960785)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6n2p"]
+bg_color = Color(0, 1, 0, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+
+[node name="Dummy" type="CharacterBody2D" unique_id=174065229 node_paths=PackedStringArray("hurt_box", "health_bar")]
+motion_mode = 1
+script = ExtResource("1_hwdan")
+hurt_box = NodePath("HurtBox")
+health_bar = NodePath("HealthBar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=48235344]
+shape = SubResource("CircleShape2D_2nij2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=451404422]
+scale = Vector2(3, 3)
+texture = ExtResource("2_q6n2p")
+region_enabled = true
+region_rect = Rect2(0, 64, 16, 16)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=282345882]
+script = ExtResource("3_g4clm")
+metadata/_custom_type_script = "uid://blrqobw75cwrt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=9996181]
+shape = SubResource("CircleShape2D_sasra")
+debug_color = Color(0, 0.64705884, 0.22352941, 0.41960785)
+
+[node name="Label" type="Label" parent="." unique_id=1619715510]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -28.0
+offset_right = 63.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Ouch"
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=52719920]
+z_index = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -37.0
+offset_right = 27.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_hwdan")
+theme_override_styles/fill = SubResource("StyleBoxFlat_q6n2p")
+value = 50.0
+show_percentage = false

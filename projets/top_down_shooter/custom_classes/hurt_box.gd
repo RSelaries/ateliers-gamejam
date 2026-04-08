@@ -3,7 +3,7 @@ extends Area2D
 
 
 @warning_ignore("unused_signal")
-signal damage_received(damage_amount: float)
+signal damage_received(damage_amount: int)
 
 
 func _ready() -> void:

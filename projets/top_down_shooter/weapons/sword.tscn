@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwxt7csdk5m8m"]
 
 [ext_resource type="Texture2D" uid="uid://6asjvnyofna7" path="res://assets/items.png" id="1_dqhhl"]
-[ext_resource type="Script" uid="uid://cbngekyker8i0" path="res://weapons/melee_weapon.gd" id="1_id6xk"]
+[ext_resource type="Script" uid="uid://cbngekyker8i0" path="res://custom_classes/melee_weapon.gd" id="1_id6xk"]
 [ext_resource type="Script" uid="uid://b6i504jw5gmw7" path="res://custom_classes/hit_box.gd" id="3_nisn2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oivwf"]

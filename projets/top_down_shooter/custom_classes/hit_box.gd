@@ -6,4 +6,4 @@ extends Area2D
 signal damage_dealt(damage_amount: int)
 
 
-@export var damages: float = 5.0
+@export var damages: int = 5
