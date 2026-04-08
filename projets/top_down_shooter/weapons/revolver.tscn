@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://jq1tw1ga0fx3"]
+
+[ext_resource type="Script" uid="uid://b7wkq3q41us2u" path="res://weapons/firearm.gd" id="1_ofl5n"]
+[ext_resource type="Texture2D" uid="uid://ba8m82n70mcja" path="res://assets/firearms.png" id="2_phrv4"]
+
+[sub_resource type="Animation" id="Animation_857ps"]
+resource_name = "shoot"
+step = 0.0333333
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uw68t"]
+_data = {
+&"shoot": SubResource("Animation_857ps")
+}
+
+[node name="Revolver" type="Node2D" unique_id=359180635 node_paths=PackedStringArray("animation_player", "bullet_origin_point")]
+script = ExtResource("1_ofl5n")
+animation_player = NodePath("AnimationPlayer")
+bullet_origin_point = NodePath("Sprite2D/BulletOrigin")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1947906920]
+position = Vector2(21, -9)
+scale = Vector2(3, 3)
+texture = ExtResource("2_phrv4")
+region_enabled = true
+region_rect = Rect2(160, 16, 32, 16)
+
+[node name="BulletOrigin" type="Marker2D" parent="Sprite2D" unique_id=1186610366]
+position = Vector2(8, -3)
+scale = Vector2(0.33333334, 0.33333334)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1320649608]
+libraries/ = SubResource("AnimationLibrary_uw68t")

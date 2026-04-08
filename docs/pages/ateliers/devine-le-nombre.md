@@ -8,6 +8,21 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 > Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indice: "plus grand" ou "plus petit".
 
+<!-- <div class="learning-details">
+    <details>
+        <summary>Concepts Abordés</summary>
+        <ul>
+            <li>
+                caca
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary>Nodes Utilisés</summary>
+        Pipi
+    </details>
+</div> -->
+
 ## Jeu
 
 <iframe-player title="Devine le nombre" style="height: 250px" class="game" src="./game-builds/devine-le-nombre/index.html"></iframe-player>

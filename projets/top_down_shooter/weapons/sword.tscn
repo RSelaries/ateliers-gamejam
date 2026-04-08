@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cwxt7csdk5m8m"]
+
+[ext_resource type="Texture2D" uid="uid://6asjvnyofna7" path="res://assets/items.png" id="1_dqhhl"]
+[ext_resource type="Script" uid="uid://cbngekyker8i0" path="res://weapons/melee_weapon.gd" id="1_id6xk"]
+[ext_resource type="Script" uid="uid://b6i504jw5gmw7" path="res://custom_classes/hit_box.gd" id="3_nisn2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oivwf"]
+radius = 23.01
+height = 67.49
+
+[sub_resource type="Animation" id="Animation_nisn2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RotationPoint:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox/CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CapsuleShape2D_oivwf")]
+}
+
+[sub_resource type="Animation" id="Animation_oivwf"]
+resource_name = "attack"
+length = 0.43333334
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RotationPoint:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.26666668, 0.26676667, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.6108652381980153, 2.2951079663725436, 2.0726748, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [SubResource("CapsuleShape2D_oivwf"), SubResource("CapsuleShape2D_oivwf")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.033333335, 0.1, 0.15552108, 0.26661497),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(8.92, -4.513), Vector2(15.745, -1.463), Vector2(27.08, 13.112), Vector2(8.3, 31.072)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nisn2"]
+_data = {
+&"RESET": SubResource("Animation_nisn2"),
+&"attack": SubResource("Animation_oivwf")
+}
+
+[node name="Sword" type="Node2D" unique_id=844874087]
+script = ExtResource("1_id6xk")
+
+[node name="RotationPoint" type="Node2D" parent="." unique_id=1728327100]
+
+[node name="Sprite2D" type="Sprite2D" parent="RotationPoint" unique_id=928478893]
+position = Vector2(8.713858, -11.974842)
+rotation = 0.61086524
+scale = Vector2(3, 3)
+skew = 0.0035731792
+texture = ExtResource("1_dqhhl")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1577297427]
+position = Vector2(0.080194, -15.112246)
+script = ExtResource("3_nisn2")
+metadata/_custom_type_script = "uid://b6i504jw5gmw7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=745128666]
+shape = SubResource("CapsuleShape2D_oivwf")
+disabled = true
+debug_color = Color(1, 0.003921569, 0.09019608, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=874652473]
+libraries/ = SubResource("AnimationLibrary_nisn2")
