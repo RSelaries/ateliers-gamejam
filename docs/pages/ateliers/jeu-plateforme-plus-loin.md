@@ -1,4 +1,4 @@
-# Jeu de plateforme - suite
+# <div class="icon" style="mask-image: url(./medias/icons/plus-loin.svg)"></div> Jeu de plateforme - suite
 
 **Si vous êtes là c'est que vous voulez finir votre jeu et j'en suis ravi !**
 
