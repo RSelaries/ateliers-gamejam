@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bwe4o6wby66gf"]
+
+[ext_resource type="Script" uid="uid://dsynvri1fqcvr" path="res://custom_classes/ennemy_character.gd" id="1_v3vxk"]
+[ext_resource type="Texture2D" uid="uid://cwiuxs55qs0jw" path="res://assets/characters.png" id="2_oakov"]
+[ext_resource type="Script" uid="uid://blrqobw75cwrt" path="res://custom_classes/hurt_box.gd" id="3_0nyxq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0nyxq"]
+radius = 24.020824
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sl76h"]
+radius = 17.0
+height = 46.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nyxq"]
+bg_color = Color(0, 0, 0, 0.29411766)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7928048, 0.16319206, 2.8878452e-07, 0.5647059)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl76h"]
+bg_color = Color(0.9999998, 0.2807454, 0.13408351, 1)
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_radius_bottom_right = 1000
+corner_radius_bottom_left = 1000
+
+[node name="Cyclop" type="CharacterBody2D" unique_id=1016526065 node_paths=PackedStringArray("hurt_box", "health_bar", "navigation_agent")]
+script = ExtResource("1_v3vxk")
+hurt_box = NodePath("HurtBox")
+health_bar = NodePath("HealthBar")
+navigation_agent = NodePath("NavigationAgent2D")
+metadata/_custom_type_script = "uid://dsynvri1fqcvr"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=99635409]
+scale = Vector2(3, 3)
+texture = ExtResource("2_oakov")
+region_enabled = true
+region_rect = Rect2(16, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1987276066]
+shape = SubResource("CircleShape2D_0nyxq")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=324558187]
+script = ExtResource("3_0nyxq")
+metadata/_custom_type_script = "uid://blrqobw75cwrt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1620401698]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_sl76h")
+debug_color = Color(0, 0.64705884, 0.22352941, 0.41960785)
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1302592546]
+z_index = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -37.0
+offset_right = 27.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_0nyxq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_sl76h")
+value = 50.0
+show_percentage = false
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1253089453]
+target_desired_distance = 20.0
+path_postprocessing = 1
+avoidance_enabled = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.9546147, 0.00057511433, 0.21328023, 1)

@@ -1,8 +1,12 @@
+class_name Player
 extends CharacterBody2D
 
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+
+
+static var player_reference: Player
 
 
 var weapon: Weapon:
@@ -12,6 +16,11 @@ var weapon: Weapon:
 
 
 @onready var weapon_hand: Node2D = %WeaponHand
+
+
+func _enter_tree() -> void:
+	Player.player_reference = self
+	print(Player.player_reference)
 
 
 func _physics_process(_delta: float) -> void:
