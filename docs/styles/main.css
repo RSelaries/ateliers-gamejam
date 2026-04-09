@@ -50,6 +50,7 @@
     --hover-background-color: light-dark(var(--hover-background-color-light-theme), var(--hover-background-color-dark-theme));
     --border-color: light-dark(var(--border-color-light-theme), var(--border-color-dark-theme));
     --documentation-link-icon: url(../medias/godot-docs-icon.ico);
+    --wip-icon: url(../medias/icons/attention.svg);
     --code-color: light-dark(var(--code-color-light-theme), var(--code-color-dark-theme));
     --header-size: 80px;
 }

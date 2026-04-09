@@ -8,12 +8,23 @@ strong {
 }
 
 .learning-details {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    border: solid 1px var(--border-color);
+    padding: 1em 2em;
+    border-radius: 15px;
+    margin: 15px;
+    margin-left: 0px;
 
-    details {
-        flex: 1;
+    summary {
+        /* color: var(--highlight-color); */
+        font-weight: 700;
+    }
+
+    summary:hover {
+        cursor: pointer;
+    }
+
+    ul {
+        margin-bottom: 0;
     }
 }
 
@@ -61,6 +72,7 @@ a.documentation-link {
 a {
     text-decoration: none;
     color: var(--redirection-color);
+    white-space: nowrap;
 
     > img {
         height: 16px;
@@ -245,13 +257,14 @@ iframe-player {
 
 .ytb-grid {
     display: grid;
-    gap: 1em;
+    gap: 5px;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .ytb-grid iframe {
     width: 100%;
     aspect-ratio: 16/9;
+    border-radius: 10px;
 }
 
 /* 0 à 440 */

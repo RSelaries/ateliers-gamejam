@@ -8,20 +8,14 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 > Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indice: "plus grand" ou "plus petit".
 
-<!-- <div class="learning-details">
-    <details>
-        <summary>Concepts Abordés</summary>
-        <ul>
-            <li>
-                caca
-            </li>
-        </ul>
-    </details>
-    <details>
-        <summary>Nodes Utilisés</summary>
-        Pipi
-    </details>
-</div> -->
+<details class="learning-details">
+    <summary>Concepts Abordés</summary>
+    <ul>
+        <li>L'interface de Godot</li>
+        <li>Les Nodes et scènes</li>
+        <li>Le GDScript</li>
+    </ul>
+</details>
 
 ## Jeu
 
