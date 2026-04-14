@@ -174,8 +174,9 @@ D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span
 > Le **snake_case** est le fait d'écrire tout en **minuscule**, sans accents, et de **remplacer les espaces par des tirets** du bas *(_)*.<br>
 > <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **pascal_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
 
-<viewable-image src="./medias/devine-le-nombre/programmation-4.png">
-<span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\</strong></span>
+<viewable-image src="./medias/devine-le-nombre/programmation-4.png"></viewable-image>
+
+<span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\</strong></span>
 
 <br>Maintenant que notre variable <code class="hljs">nombre_mystere</code> a été définie, on va lui donner une valeur. On va lors ajouter cette ligne dans la fonction <code class="hljs">_ready</code>:
 ```gdscript
