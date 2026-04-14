@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://b50uwii3uqtos"]
 
 [ext_resource type="Texture2D" uid="uid://ba8m82n70mcja" path="res://assets/firearms.png" id="1_fc8e7"]
+[ext_resource type="Script" uid="uid://d1ucwcwix6jdq" path="res://weapons/bullet.gd" id="1_l3ktd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fc8e7"]
 radius = 8.0
 height = 36.0
 
-[node name="Bullet" type="Area2D" unique_id=1186763471]
+[node name="Bullet" type="Area2D" unique_id=2057177836]
+top_level = true
+script = ExtResource("1_l3ktd")
+metadata/_custom_type_script = "uid://b6i504jw5gmw7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=331090781]
+position = Vector2(18, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fc8e7")
+debug_color = Color(1, 0.003921569, 0.09019608, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=97614643]
 position = Vector2(18, -1)
@@ -14,9 +24,3 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_fc8e7")
 region_enabled = true
 region_rect = Rect2(176, 48, 16, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=331090781]
-position = Vector2(18, 0)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_fc8e7")
-debug_color = Color(1, 0.003921569, 0.09019608, 0.41960785)

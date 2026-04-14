@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://b6i504jw5gmw7" path="res://custom_classes/hit_box.gd" id="3_nisn2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oivwf"]
-radius = 23.01
-height = 67.49
+radius = 7.67
+height = 22.5
 
 [sub_resource type="Animation" id="Animation_nisn2"]
 length = 0.001
@@ -109,7 +109,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0.033333335, 0.1, 0.15552108, 0.26661497),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(8.92, -4.513), Vector2(15.745, -1.463), Vector2(27.08, 13.112), Vector2(8.3, 31.072)]
+"values": [Vector2(2.973, -9.938), Vector2(6.873, -8.846), Vector2(9.977, 0.566), Vector2(2.767, 10.357)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nisn2"]
@@ -124,9 +124,8 @@ script = ExtResource("1_id6xk")
 [node name="RotationPoint" type="Node2D" parent="." unique_id=1728327100]
 
 [node name="Sprite2D" type="Sprite2D" parent="RotationPoint" unique_id=928478893]
-position = Vector2(8.713858, -11.974842)
+position = Vector2(3, -4)
 rotation = 0.61086524
-scale = Vector2(3, 3)
 skew = 0.0035731792
 texture = ExtResource("1_dqhhl")
 flip_h = true
@@ -134,7 +133,6 @@ region_enabled = true
 region_rect = Rect2(48, 0, 16, 16)
 
 [node name="HitBox" type="Area2D" parent="." unique_id=1577297427]
-position = Vector2(0.080194, -15.112246)
 script = ExtResource("3_nisn2")
 metadata/_custom_type_script = "uid://b6i504jw5gmw7"
 

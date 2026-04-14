@@ -13,3 +13,4 @@ func _ready() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area is HitBox:
 		damage_received.emit(area.damages)
+		area.damage_dealt.emit()

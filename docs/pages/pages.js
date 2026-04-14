@@ -46,6 +46,11 @@ export default
                     },
                 ],
             },
+            {
+                title: "Tiny Dungeon",
+                link: "ateliers/tiny-dungeon.md",
+                icon: "./medias/icons/tiny-dungeon.svg",
+            },
         ],
     },
     // Godot

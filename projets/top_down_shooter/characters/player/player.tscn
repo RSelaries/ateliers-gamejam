@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cwiuxs55qs0jw" path="res://assets/characters.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://62sakfcktj65" path="res://characters/player/player.gd" id="1_onrkg"]
-[ext_resource type="PackedScene" uid="uid://cwxt7csdk5m8m" path="res://weapons/sword.tscn" id="3_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://cwxt7csdk5m8m" path="res://weapons/sword.tscn" id="3_5dc8e"]
+[ext_resource type="Script" uid="uid://blrqobw75cwrt" path="res://custom_classes/hurt_box.gd" id="4_5dc8e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 17.0
@@ -305,6 +306,7 @@ transitions = ["Start", "idle_right", SubResource("AnimationNodeStateMachineTran
 graph_offset = Vector2(-39, 142)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1jxqw"]
+graph_offset = Vector2(-289, 17)
 nodes/MovementStateMachine/node = SubResource("AnimationNodeStateMachine_b26j0")
 nodes/MovementStateMachine/position = Vector2(-20, 140)
 node_connections = [&"output", 0, &"MovementStateMachine"]
@@ -320,21 +322,28 @@ region_enabled = true
 region_rect = Rect2(48, 0, 16, 16)
 region_filter_clip_enabled = true
 
-[node name="WeaponHand" type="Marker2D" parent="CharacterSprite" unique_id=1459668620]
+[node name="WeaponHandRight" type="Marker2D" parent="CharacterSprite" unique_id=1459668620]
 unique_name_in_owner = true
 position = Vector2(5, 5)
-scale = Vector2(0.34301105, 0.32418737)
 skew = 0.0017054081
 gizmo_extents = 4.0
 
-[node name="Sword" parent="CharacterSprite/WeaponHand" unique_id=844874087 instance=ExtResource("3_g1dw6")]
+[node name="Sword" parent="CharacterSprite/WeaponHandRight" unique_id=844874087 instance=ExtResource("3_5dc8e")]
+
+[node name="WeaponHandLeft" type="Marker2D" parent="CharacterSprite" unique_id=1326963235]
+unique_name_in_owner = true
+position = Vector2(-5, 5)
+skew = 0.0017054081
+gizmo_extents = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=984436277]
 position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_onrkg")
 
-[node name="HurtBox" type="Area2D" parent="." unique_id=647208456]
+[node name="HurtBox" type="Area2D" parent="." unique_id=696948609]
 position = Vector2(0, 3)
+script = ExtResource("4_5dc8e")
+metadata/_custom_type_script = "uid://blrqobw75cwrt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=931531306]
 shape = SubResource("CapsuleShape2D_i3pqv")

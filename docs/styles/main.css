@@ -3,11 +3,9 @@
 :root {
     /* Themes Colors */
     --background-color-light-theme-1: #ffffff;
-    /* --background-color-light-theme-1: #FEF6E4; */
     --background-color-dark-theme-1: #151515;
     
-    --background-color-light-theme-2: #f1f1f1;
-    /* --background-color-light-theme-2: #FEF6E4; */
+    --background-color-light-theme-2: #f6f6f6;
     --background-color-dark-theme-2: #0e0e0e;
 
     --text-color-light-theme: #1b1b1b;

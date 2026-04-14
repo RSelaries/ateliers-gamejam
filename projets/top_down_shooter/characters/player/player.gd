@@ -9,18 +9,17 @@ const JUMP_VELOCITY = -400.0
 static var player_reference: Player
 
 
-var weapon: Weapon:
-	get():
-		var fst_child := weapon_hand.get_child(0) 
-		return fst_child if fst_child is Weapon else null
+var weapon: Weapon
 
 
-@onready var weapon_hand: Node2D = %WeaponHand
+@onready var sprite: Sprite2D = $CharacterSprite
+@onready var weapon_hand_right: Node2D = %WeaponHandRight
+@onready var weapon_hand_left: Node2D = %WeaponHandLeft
 
 
-func _enter_tree() -> void:
+func _ready() -> void:
 	Player.player_reference = self
-	print(Player.player_reference)
+	weapon = weapon_hand_right.get_child(0)
 
 
 func _physics_process(_delta: float) -> void:
@@ -31,6 +30,30 @@ func _physics_process(_delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED)
 	
 	move_and_slide()
+	_manage_weapon_hand()
+
+
+func _manage_weapon_hand() -> void:
+	var mouse_x = get_local_mouse_position().x * sprite.scale.x
+	
+	if mouse_x >= 0:
+		weapon.reparent(weapon_hand_right, false)
+		match weapon.symmetry_axis:
+			weapon.SymmetryAxis.X:
+				weapon.scale.y = 1
+				weapon.scale.x = 1
+			weapon.SymmetryAxis.Y:
+				weapon.scale.y = 1
+				weapon.scale.x = 1
+	else:
+		weapon.reparent(weapon_hand_left, false)
+		match weapon.symmetry_axis:
+			weapon.SymmetryAxis.X:
+				weapon.scale.y = 1
+				weapon.scale.x = -1
+			weapon.SymmetryAxis.Y:
+				weapon.scale.y = -1
+				weapon.scale.x = 1
 
 
 func _unhandled_input(event: InputEvent) -> void:

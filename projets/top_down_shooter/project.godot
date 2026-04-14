@@ -62,6 +62,11 @@ combat_block={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Physics"
+2d_physics/layer_2="Damages"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
