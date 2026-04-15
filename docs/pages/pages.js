@@ -47,6 +47,11 @@ export default
                 ],
             },
             {
+                title: "Visual Novel",
+                link: "ateliers/visual-novel.md",
+                icon: "./medias/icons/visual-novel.svg",
+            },
+            {
                 title: "Tiny Dungeon",
                 link: "ateliers/tiny-dungeon.md",
                 icon: "./medias/icons/tiny-dungeon.svg",
@@ -75,7 +80,7 @@ export default
             },
             {
                 title: "Interface Utilisateur",
-                link: "godot/control.md",
+                link: "godot/control_nodes.md",
                 icon: "./medias/icons/control-icon.svg",
             },
             {

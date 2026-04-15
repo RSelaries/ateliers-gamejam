@@ -269,7 +269,7 @@ Dans le même onglet, on peut également y modifier les [![Godot - Shaders](../.
 
 ### ![Godot - ThemePanel](../../medias/godot-icons/ThemePanel.svg) Theme
 
-Le panel Thème permet de **modifier** des ![Godot - Theme](../../medias/godot-icons/Theme.svg) thèmes qui vont venir **modifier** le **visuel** du *texte*, des *boutons*, des *menus* de notre [interface](#godot/control.md).
+Le panel Thème permet de **modifier** des ![Godot - Theme](../../medias/godot-icons/Theme.svg) thèmes qui vont venir **modifier** le **visuel** du *texte*, des *boutons*, des *menus* de notre [interface](#godot/control_nodes.md).
 
 <img src="./medias/interface-godot/interface-theme-1.png">
 

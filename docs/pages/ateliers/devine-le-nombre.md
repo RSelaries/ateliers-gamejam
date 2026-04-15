@@ -1,4 +1,4 @@
-# <div class="icon" style="mask-image: url(./medias/icons/devine-nombre-icon.svg)"></div> Projet 1 - Devine le nombre
+# <div class="icon" style="mask-image: url(./medias/icons/devine-nombre-icon.svg)"></div> Atelier 1 - Devine le nombre
 
 Dans cet atelier, on va **installer [Godot](#godot/godot.md)**, appréhender son **interface**, puis créer notre **premier projet**.<br>
 
@@ -38,10 +38,11 @@ Vous pouvez ranger ces fichiers où vous voulez. On va maintenant lancer le prem
 
 Une fois [Godot](#godot/godot.md) ouvert, on tombe sur le [Project Manager](#godot/interface.md#project-manager):
 
-<!-- <viewable-image src="./medias/devine-le-nombre/interface-godot-1.webp"> -->
 <viewable-image src="./medias/devine-le-nombre/interface-godot-1.webp"></viewable-image>
 
-On va alors créer un nouveau projet en cliquant sur **+ Create**.
+> <span style="color: var(--body-text-color-faded)">Durant tous les ateliers, je vais utiliser Godot en anglais. Je vous conseil de faire de même: "![tools](../../medias/godot-icons/Tools.svg) Paramètres" > "Langage" > "[en] Engligh"</span>
+
+On va alors créer un nouveau projet en cliquant sur "![Add](../../medias/godot-icons/Add.svg) Create".
 
 <viewable-image width="200px" src="./medias/devine-le-nombre/interface-godot-2.webp"></viewable-image>
 
@@ -56,7 +57,7 @@ Et enfin le [renderer](#godot/godot.md#renderer) que l'on va mettre sur **Compat
 
 <viewable-image width="100px" src="./medias/devine-le-nombre/interface-godot-5.webp"></viewable-image>
 
-Enfin, on clique sur **Create** ce qui nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
+On clique sur **Create** ce qui nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
 
 <viewable-image src="./medias/devine-le-nombre/interface-godot-6.webp"></viewable-image>
 
@@ -95,6 +96,8 @@ Sur cette fenêtre, on a également accès à l'[historique](#godot/interface.md
 
 <viewable-image src="./medias/devine-le-nombre/interface-godot-11.webp"></viewable-image>
 
+> Si ces explications vous ont laissé dubitatif, je vous invite à consulter l'<a href="https://docs.godotengine.org/fr/4.x/about/introduction.html" class="external-link">introduction</a> de la documentation de Godot. Et plus précisément la partie sur l'<a class="external-link" href="https://docs.godotengine.org/fr/4.x/getting_started/introduction/first_look_at_the_editor.html">interface</a> de Godot.
+
 ## III. Créer la scène de jeu
 
 Au niveau de la fenêtre de la [scène](#godot/interface.md#scene-tree), on va appuyer sur **User Interface**.
@@ -107,18 +110,20 @@ Ce qui va nous ouvrir l'onglet [![Godot - 2D](../../medias/godot-icons/2D.svg) 2
 
 On va commencer par renommer le [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) racine de la scène. Pour ma part je vais l'appeler *"Game"* étant donné que ce sera ma scène de jeu.
 
+> <span style="color: var(--body-text-color-faded)">Pour **renommer** un Node, vous pouvez soit **double-cliquer** dessus. Ou bien faire **clic-droit** "![rename](../../medias/godot-icons/Rename.svg) Rename"</span>
+
 Puis on va enregistrer cette scène. *(ctrl-S ou Scene > Save Scene)*
 
-<viewable-image src="./medias/devine-le-nombre/scene-jeu-3.webp"></viewable-image>
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-3.gif"></viewable-image>
 
 Une fois ça fait, on va ajouter un node [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label). *(Soit avec le + au niveau de la fenêtre Scene, soit en faisant ctrl-A)* Puis un [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit).
 
-<viewable-image src="./medias/devine-le-nombre/scene-jeu-4.webp"></viewable-image>
+<viewable-image src="./medias/devine-le-nombre/scene-jeu-4.gif"></viewable-image>
 
-<div class="side-by-side">
+<!-- <div class="side-by-side">
     <viewable-image src="./medias/devine-le-nombre/scene-jeu-5.webp"></viewable-image>
     <viewable-image src="./medias/devine-le-nombre/scene-jeu-6.webp"></viewable-image>
-</div>
+</div> -->
 
 On va selectionner le label en cliquand dessus dans le [Scene Tree](#godot/godot.md#scene-tree) *(la hiérarchie de la scène)*, puis modifier sa propriété `text` dans l'[inspecteur](#godot/godot.md#inspecteur). Je vais y écrire *"Devine le nombre"*. 
 
@@ -128,7 +133,7 @@ On peut le déplacer vers le centre de l'écran en le glissant.
 
 Enfin, on va placer le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) juste en dessous de notre [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label) et modifier sa propriété `placeholder_text` et y écrire: *"Votre réponse"*.
 
-> Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control.md).
+> Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control_nodes.md).
 
 <viewable-image src="./medias/devine-le-nombre/scene-jeu-8.gif"></viewable-image>
 
@@ -176,7 +181,7 @@ D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span
 
 <viewable-image src="./medias/devine-le-nombre/programmation-4.png"></viewable-image>
 
-<span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\</strong></span>
+<span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\\</strong></span>
 
 <br>Maintenant que notre variable <code class="hljs">nombre_mystere</code> a été définie, on va lui donner une valeur. On va lors ajouter cette ligne dans la fonction <code class="hljs">_ready</code>:
 ```gdscript

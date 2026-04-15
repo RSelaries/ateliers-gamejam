@@ -1,0 +1,1 @@
+# <div class="icon" style="mask-image: url(./medias/icons/visual-novel.svg)"></div> Atelier ? - Visual Novel

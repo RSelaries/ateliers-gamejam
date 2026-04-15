@@ -26,7 +26,7 @@ Le ![Godot - Node](../../medias/godot-icons/Node.svg) Node le plus simple, il fo
 
 ## ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D
 
-La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D représente les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour tous les éléments de jeu en 2D (sauf les éléments d'[interfaces utilisateur](#godot/control.md)).
+La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D représente les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour tous les éléments de jeu en 2D (sauf les éléments d'[interfaces utilisateur](#godot/control_nodes.md)).
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link">Documentation officielle</a></span>
 
@@ -68,7 +68,7 @@ Un ![Godot - CharacterBody3D](../../medias/godot-icons/CharacterBody3D.svg) Char
 
 ## ![Godot - Control](../../medias/godot-icons/Control.svg) Control
 
-La famille des ![Godot - Control](../../medias/godot-icons/Control.svg) Control représente tous les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour les [interfaces utilisateur](#godot/control.md).
+La famille des ![Godot - Control](../../medias/godot-icons/Control.svg) Control représente tous les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour les [interfaces utilisateur](#godot/control_nodes.md).
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_control.html" class="documentation-link">Documentation officielle</a></span>
 
