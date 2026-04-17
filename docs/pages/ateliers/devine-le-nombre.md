@@ -23,16 +23,16 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 ## I. Télécharger Godot
 
-Rendez vous sur ce lien: <a href="https://godotengine.org/download/windows/" class="external-link">godotengine.org/download/windows</a>, puis téléchargez la version ***Godot Engine*** et non *Godot Engine - .NET*.
+Rendez vous sur ce lien: <a href="https://godotengine.org/download/windows/" class="external-link">godotengine.org/download/windows</a>, puis téléchargez la version ***Godot Engine***, pas *Godot Engine - .NET*.
 
-> <span style="font-size: 0.8em">Il est techniquement tout à fait possible d'utiliser la version .NET pour tout le reste. Cette version est **la même** mais avec le support du language **C# en plus**, nous n'en avons **pas besoin**.</span>
+<!-- > <span style="font-size: 0.8em">Il est techniquement tout à fait possible d'utiliser la version .NET pour tout le reste. Cette version est **la même** mais avec le support du language **C# en plus**, nous n'en avons **pas besoin**.</span> -->
 
 Une fois téléchargé, vous vous retrouvez avec un fichier **.zip** qui contient deux fichiers: **Godot_v4.6.1-stable_win64.exe** et **Godot_v4.6.1-stable_win64_console.exe**.
 
-> Le **premier** est le **moteur de jeu**. <span style="font-size: 0.8em">(oui, oui, le **moteur de jeu Godot entier** ne fait que **165 Mo**, contre plus de 10 Go pour Unity)</span><br>
-> Le second *(celui en '_console')* va lancer le moteur de jeu avec une deuxième fenêtre: **une console**. On en aura pas besoin.
+<!-- > Le **premier** est le **moteur de jeu**. <span style="font-size: 0.8em">(oui, oui, le **moteur de jeu Godot entier** ne fait que **165 Mo**, contre plus de 10 Go pour Unity)</span><br>
+> Le second *(celui en '_console')* va lancer le moteur de jeu avec une deuxième fenêtre: **une console**. On en aura pas besoin. -->
 
-Vous pouvez ranger ces fichiers où vous voulez. On va maintenant lancer le premier fichier: **Godot_v4.6.1-stable_win64.exe**. <span style="font-size: 0.8em">(Il est possible que le nom soit différent si vous êtes sur linux ou mac, ou encore si la version de Godot est différente.)</span>
+Vous pouvez ranger ces fichiers où vous voulez. On va lancer le premier: **Godot_v4.6.1-stable_win64.exe**. <span style="font-size: 0.8em; color: var(--body-text-color-faded)">(Il est possible que le nom soit différent si vous êtes sur linux ou mac, ou encore si la version de Godot est différente.)</span>
 
 ## II. Créer un projet
 
@@ -55,7 +55,7 @@ Puis renseigner le **nom du projet** et son **chemin** (là où il est enregistr
 
 Et enfin le [renderer](#godot/godot.md#renderer) que l'on va mettre sur **Compatibility**.<br>
 
-<viewable-image width="100px" src="./medias/devine-le-nombre/interface-godot-5.webp"></viewable-image>
+<viewable-image width="100px" src="./medias/devine-le-nombre/interface-godot-5.png"></viewable-image>
 
 On clique sur **Create** ce qui nous ouvre la fenêtre de l'**éditeur** de [Godot](#godot/godot.md).
 
@@ -102,7 +102,7 @@ Sur cette fenêtre, on a également accès à l'[historique](#godot/interface.md
 
 Au niveau de la fenêtre de la [scène](#godot/interface.md#scene-tree), on va appuyer sur **User Interface**.
 
-<viewable-image width="300px" src="./medias/devine-le-nombre/scene-jeu-1.webp"></viewable-image>
+<viewable-image width="300px" src="./medias/devine-le-nombre/scene-jeu-1.png"></viewable-image>
 
 Ce qui va nous ouvrir l'onglet [![Godot - 2D](../../medias/godot-icons/2D.svg) 2D](#godot/interface.md#onglet-2d) et dans la fenêtre [scène](#godot/interface.md#scene-tree) on voit notre nouvelle scène que l'on a créé:
 
@@ -167,29 +167,47 @@ Cette fonction est appellée **chaque [frame](#ressources-suplementaires/lexique
 <br>
 On peut supprimer la fonction `_process`, nous n'en aurons pas besoin. Ensuite, on va **définir** une **variable** qui va détenir la **valeur du nombre mystère** que le joueur devra déviner.
 
-Pour cela, on ajoute la ligne suivante en haut du script:
+Pour cela, on ajoute la ligne suivante en dessous de `extends Control`:
 ```gdscript
 var nombre_mystere: int
 ```
 
 Décortiquons ensemble cette ligne de code.<br>
 
-D'abord, le **mot clé** <code class="hljs"><span class="hljs-keyword">var</span></code>: suivit d'un mot, il définit une variable. Ensuite, <code class="hljs">nombre_mystere</code>: le **nom de la variable**. <span style="font-size: 0.8em">(Un nom de variable **ne peut pas** contenir d'espaces. Par convention, on écrit le nom des variables en **snake_case**)</span> Enfin, <code class="hljs">: <span class="hljs-built_in">int</span></code>: il dit à Godot que la **variable** est du type **int** <span style="font-size: 0.8em">(c'est à dire un **nombre entier**)</span>.
+- <code class="hljs"><span class="hljs-keyword">var</span></code>: suivit d'un mot, il définit une variable.
+- <code class="hljs">nombre_mystere</code>: le **nom de la variable**. <span style="font-size: 0.8em">(Un nom de variable **ne peut pas** contenir d'espaces. Par convention, on écrit le nom des variables en **snake_case**)</span>
+
+- <code class="hljs">: <span class="hljs-built_in">int</span></code>: il dit à Godot que la **variable** est du type **int** <span style="font-size: 0.8em">(c'est à dire un **nombre entier**)</span>.
 
 > Le **snake_case** est le fait d'écrire tout en **minuscule**, sans accents, et de **remplacer les espaces par des tirets** du bas *(_)*.<br>
-> <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **pascal_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
+> <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **snake_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
 
-<viewable-image src="./medias/devine-le-nombre/programmation-4.png"></viewable-image>
+Ce qui nous donne:
 
-<span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\\</strong></span>
+```gdscript
+extends Control
 
-<br>Maintenant que notre variable <code class="hljs">nombre_mystere</code> a été définie, on va lui donner une valeur. On va lors ajouter cette ligne dans la fonction <code class="hljs">_ready</code>:
+
+var nombre_mystere: int
+
+
+func _ready() -> void:
+    pass # Replace with function body.
+
+```
+
+<!-- <viewable-image src="./medias/devine-le-nombre/programmation-4.png"></viewable-image> -->
+
+<!-- <span style="font-size: 0.8em; color: var(--body-text-color-faded)"><strong>/!\\</strong> Dans les quelques prochains screenshots j'ai écrit <em>nombre_mystère</em> au lieu de <strong>nombre_mystere</strong>. Ce n'est pas une erreur très grave mais en programmation il est important de ne pas mettre d'accents sur les noms de variables. <strong>/!\\</strong></span> -->
+
+<br>Maintenant que notre variable <code class="hljs">nombre_mystere</code> a été définie, on va lui donner une valeur. On ajoute cette ligne dans la fonction <code class="hljs">_ready</code>:
+
 ```gdscript
 func _ready() -> void:
     nombre_mystere = 158
 ```
 
-Pour que le joueur puisse **entrer sa réponse**, on utilise le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit). On va alors le sélectionner, puis dans la fenêtre de l'[inspecteur](#godot/interface.md#inspecteur), on va choisir l'onglet des [signaux](#godot/godot.md#signaux) et sélectionner le signal <code class="hljs">text_submitted</code>.
+Pour que le joueur puisse **entrer sa réponse**, on utilise le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit). On le sélectionne, puis dans la fenêtre de l'[inspecteur](#godot/interface.md#inspecteur), on choisi l'onglet des [signaux](#godot/godot.md#signaux) puis on sélectionne le signal <code class="hljs">text_submitted</code>.
 
 <viewable-image src="./medias/devine-le-nombre/programmation-5.png"></viewable-image>
 
@@ -210,7 +228,24 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
     print(new_text)
 ```
 
-<viewable-image src="./medias/devine-le-nombre/programmation-7.png"></viewable-image>
+Le code complet:
+
+```gdscript
+extends Control
+
+
+var nombre_mystere: int
+
+
+func _ready() -> void:
+    nombre_mystere = 158
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+    print(new_text)
+```
+
+<!-- <viewable-image src="./medias/devine-le-nombre/programmation-7.png"></viewable-image> -->
 
 ### Test du jeu
 
@@ -224,11 +259,13 @@ Cependant, nous ne voulons pas que le joueur puisse **écrire n'importe quoi**, 
 
 - **Solution 1**: On change le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) par un [![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox](#godot/nodes.md#spinbox) qui n'accepte que des nombres.
 
-- **Solution 2**: On accepte n'importe quel entrée, mais on ne s'intéresse qu'aux nombres.
+- **Solution 2**: On accepte n'importe quelle entrée, mais on ne s'intéresse qu'aux nombres.
 
 Pour ma part, je vais partir sur la **solution 2**, un [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) étant plus pratique à mon goût.
 
-<br>*Retournons sur notre code.* Quand le joueur entre une valeur, on veut la **comparer au <code class="hljs">nombre_mystere</code>**, puis dire si le nombre donné par le joueur doit être **plus grand**, **plus petit**, ou si il a trouvé **le bon**.
+<br>
+
+*Retournons sur notre code.* Quand le joueur entre une valeur, on veut la **comparer au** <code class="hljs">nombre_mystere</code>, puis dire si le nombre donné par le joueur doit être **plus grand**, **plus petit**, ou si il a trouvé **le bon**.
 
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:

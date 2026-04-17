@@ -56,6 +56,11 @@ export default
                 link: "ateliers/tiny-dungeon.md",
                 icon: "./medias/icons/tiny-dungeon.svg",
             },
+            {
+                title: "Walking Simulator",
+                link: "ateliers/walking-simulator.md",
+                icon: "./medias/godot-icons/Camera.svg",
+            },
         ],
     },
     // Godot

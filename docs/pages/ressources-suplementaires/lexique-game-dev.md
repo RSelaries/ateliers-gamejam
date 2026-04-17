@@ -1,5 +1,11 @@
 # <div class="icon" style="mask-image: url(./medias/icons/lexique-icon.svg)"></div> Lexique du Game dev
 
+## Dungeon Crawler
+
+Un style de jeu d'exploration de donjons.
+
+> Exemple: Enter the Gungeon
+
 ## FPS
 
 First Person Shooter *(jeu de tir à la première personne)*. Le terme est aujourd'hui souvent utilisé pour définir les jeux 3D à la première personne, même si ce ne sont pas des jeux de tir.
