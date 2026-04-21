@@ -9,12 +9,12 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 > Le jeu génère un nombre aléatoire. Le joueur doit deviner ce nombre avec comme indice: "plus grand" ou "plus petit".
 
 <details class="learning-details">
-    <summary>Concepts Abordés</summary>
-    <ul>
-        <li>L'interface de Godot</li>
-        <li>Les Nodes et scènes</li>
-        <li>Le GDScript</li>
-    </ul>
+	<summary>Concepts Abordés</summary>
+	<ul>
+		<li>L'interface de Godot</li>
+		<li>Les Nodes et scènes</li>
+		<li>Le GDScript</li>
+	</ul>
 </details>
 
 ## Jeu
@@ -49,8 +49,8 @@ On va alors créer un nouveau projet en cliquant sur "![Add](../../medias/godot-
 Puis renseigner le **nom du projet** et son **chemin** (là où il est enregistré).
 
 <div class="side-by-side">
-    <viewable-image src="./medias/devine-le-nombre/interface-godot-3.webp"></viewable-image>
-    <viewable-image src="./medias/devine-le-nombre/interface-godot-4.webp"></viewable-image>
+	<viewable-image src="./medias/devine-le-nombre/interface-godot-3.webp"></viewable-image>
+	<viewable-image src="./medias/devine-le-nombre/interface-godot-4.webp"></viewable-image>
 </div>
 
 Et enfin le [renderer](#godot/godot.md#renderer) que l'on va mettre sur **Compatibility**.<br>
@@ -121,8 +121,8 @@ Une fois ça fait, on va ajouter un node [![Godot - Label](../../medias/godot-ic
 <viewable-image src="./medias/devine-le-nombre/scene-jeu-4.gif"></viewable-image>
 
 <!-- <div class="side-by-side">
-    <viewable-image src="./medias/devine-le-nombre/scene-jeu-5.webp"></viewable-image>
-    <viewable-image src="./medias/devine-le-nombre/scene-jeu-6.webp"></viewable-image>
+	<viewable-image src="./medias/devine-le-nombre/scene-jeu-5.webp"></viewable-image>
+	<viewable-image src="./medias/devine-le-nombre/scene-jeu-6.webp"></viewable-image>
 </div> -->
 
 On va selectionner le label en cliquand dessus dans le [Scene Tree](#godot/godot.md#scene-tree) *(la hiérarchie de la scène)*, puis modifier sa propriété `text` dans l'[inspecteur](#godot/godot.md#inspecteur). Je vais y écrire *"Devine le nombre"*. 
@@ -193,7 +193,7 @@ var nombre_mystere: int
 
 
 func _ready() -> void:
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 ```
 
@@ -205,7 +205,7 @@ func _ready() -> void:
 
 ```gdscript
 func _ready() -> void:
-    nombre_mystere = 158
+	nombre_mystere = 158
 ```
 
 Pour que le joueur puisse **entrer sa réponse**, on utilise le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit). On le sélectionne, puis dans la fenêtre de l'[inspecteur](#godot/interface.md#inspecteur), on choisi l'onglet des [signaux](#godot/godot.md#signaux) puis on sélectionne le signal <code class="hljs">text_submitted</code>.
@@ -217,7 +217,7 @@ Pour que le joueur puisse **entrer sa réponse**, on utilise le node [![Godot - 
 Cela ajoute la ligne suivante à notre script:
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    pass
+	pass
 ```
 
 L'idée de ce **signal** est que, quand le joueur **appuye sur la touche 'Entrée'** dans le node [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit), le signal <code class="hljs">text_submitted</code> est émit. Et dès que ce signal est émit, notre fonction <code class="hljs">_on_line_edit_text_submitted</code> sera appellée. La variable <code class="hljs">new_text</code> contient le **texte entré par le joueur**.
@@ -226,7 +226,7 @@ Pour tester si cela fonctionne, on va utiliser la fonction <code class="hljs">pr
 
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    print(new_text)
+	print(new_text)
 ```
 
 Le code complet:
@@ -239,11 +239,11 @@ var nombre_mystere: int
 
 
 func _ready() -> void:
-    nombre_mystere = 158
+	nombre_mystere = 158
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    print(new_text)
+	print(new_text)
 ```
 
 <!-- <viewable-image src="./medias/devine-le-nombre/programmation-7.png"></viewable-image> -->
@@ -270,21 +270,21 @@ Pour ma part, je vais partir sur la **solution 2**, un [![Godot - LineEdit](../.
 
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    var reponse_joueur: int = int(new_text)
+	var reponse_joueur: int = int(new_text)
 
-    if reponse_joueur > nombre_mystere:
-        print("Plus petit!")
-    elif reponse_joueur < nombre_mystere:
-        print("Plus grand!")
-    else:
-        print("Trouvé!")
+	if reponse_joueur > nombre_mystere:
+		print("Plus petit!")
+	elif reponse_joueur < nombre_mystere:
+		print("Plus grand!")
+	else:
+		print("Trouvé!")
 ```
 
 Analysons ce code ligne par ligne:
 
 - <code class="hljs"><span class="hljs-keyword">var</span> reponse_joueur: <span class="hljs-built_in">int</span> = <span class="hljs-built_in">int</span>(new_text)</code>: Ici on définie une nouvelle **variable** du nom de <code>reponse_joueur</code>, on lui attribue le type <code><span class="hljs-built_in">int</span></code> puis on lui donne la valeur de <code><span class="hljs-built_in">int</span>(new_text)</code></code>. <code><span class="hljs-built_in">int</span>()</code> est une fonction qui prend en entrée une variable, et en sort un <code><span class="hljs-built_in">int</span></code>. <em>(Donc ici on transforme un <code><span class="hljs-built_in">String</span></code>, du texte, en un <code><span class="hljs-built_in">int</span></code>, un nombre entier.)</em>
 
-    >  La ligne <code class="hljs"><span class="hljs-built_in">int</span>("Texte test 123")</code> retournerais le nombre <code class="hljs-number">123</code>.
+	>  La ligne <code class="hljs"><span class="hljs-built_in">int</span>("Texte test 123")</code> retournerais le nombre <code class="hljs-number">123</code>.
 
 - <code class="hljs"><span class="hljs-keyword">if</span> reponse_joueur > nombre_mystere:</code>: Le mot clé <code><span class="hljs-keyword">if</span></code> permet de **tester une condition**. Si la **condition est remplie**, les lignes en dessous sont **exécutées**, **sinon** elles sont **ignorées**. Notre condition est `reponse_joueur > nombre_mystere`. Ici, le signe `>` test si la valeur à **gauche** est **plus grande** que la valeur à **droite**.
 
@@ -292,8 +292,8 @@ Analysons ce code ligne par ligne:
 
 - <code class="hljs"><span class="hljs-keyword">elif</span> reponse_joueur < nombre_mystere:</code> et <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Plus petit!"</span>)</code> sont **similaires aux deux lignes au dessus**, mais pour tester si la réponse du joueur est plus petite que la réponse attendue.
 
-    > Le mot clé <code><span class="hljs-keyword">else</span></code> **exécute le code en dessous** si la condition <code><span class="hljs-keyword">if</span></code> précédente était **fausse**.<br>
-    > Le mot clé <code><span class="hljs-keyword">elif</span></code> est la **contraction** de <code><span class="hljs-keyword">else if</span></code>.
+	> Le mot clé <code><span class="hljs-keyword">else</span></code> **exécute le code en dessous** si la condition <code><span class="hljs-keyword">if</span></code> précédente était **fausse**.<br>
+	> Le mot clé <code><span class="hljs-keyword">elif</span></code> est la **contraction** de <code><span class="hljs-keyword">else if</span></code>.
 
 - <code class="hljs"><span class="hljs-keyword">else</span>:</code> et <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Trouvé!"</span>)</code>: Si **aucune des deux conditons précédentes** ne sont **vraies** *(la réponse du joueur n'est ni plus grande, ni plus petite que la réponse attendue)* alors c'est forcément la **bonne réponse**.
 
@@ -328,14 +328,14 @@ Pour modifier le texte affiché sur notre [![Godot - Label](../../medias/godot-i
 
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    var reponse_joueur: int = int(new_text)
+	var reponse_joueur: int = int(new_text)
 
-    if reponse_joueur > nombre_mystere:
-        $Label.text = "Plus petit!"
-    elif reponse_joueur < nombre_mystere:
-        $Label.text = "Plus grand!"
-    else:
-        $Label.text = "Trouvé!"
+	if reponse_joueur > nombre_mystere:
+		$Label.text = "Plus petit!"
+	elif reponse_joueur < nombre_mystere:
+		$Label.text = "Plus grand!"
+	else:
+		$Label.text = "Trouvé!"
 ```
 
 <code class="hljs"><span class="hljs-variable">\$</span></code> nous permet de **chercher l'enfant** du node auquel est rattaché ce script *(ici 'Game', un node [![Godot - Control](../../medias/godot-icons/Control.svg) Control](#godot/nodes.md#control))*. Donc <code class="hljs"><span class="hljs-variable">\$Label</span></code> va rechercher un **enfant direct** qui s'appelle *'Label'*.
@@ -350,15 +350,15 @@ Pour éviter de chercher le node **à chaque fois**, on peut créer une **variab
 
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    var reponse_joueur: int = int(new_text)
-    var reference_label: Label = $Label
+	var reponse_joueur: int = int(new_text)
+	var reference_label: Label = $Label
 
-    if reponse_joueur > nombre_mystere:
-        reference_label.text = "Plus petit!"
-    elif reponse_joueur < nombre_mystere:
-        reference_label.text = "Plus grand!"
-    else:
-        reference_label.text = "Trouvé!"
+	if reponse_joueur > nombre_mystere:
+		reference_label.text = "Plus petit!"
+	elif reponse_joueur < nombre_mystere:
+		reference_label.text = "Plus grand!"
+	else:
+		reference_label.text = "Trouvé!"
 ```
 
 <viewable-image src="./medias/devine-le-nombre/ammelioration-1.gif"></viewable-image>
@@ -376,19 +376,19 @@ var nombre_mystere: int
 
 
 func _ready() -> void:
-    reference_label = $Label
-    nombre_mystere = 158
+	reference_label = $Label
+	nombre_mystere = 158
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    var reponse_joueur: int = int(new_text)
-    
-    if reponse_joueur > nombre_mystere:
-        reference_label.text = "Plus petit!"
-    elif reponse_joueur < nombre_mystere:
-        reference_label.text = "Plus grand!"
-    else:
-        reference_label.text = "Trouvé!"
+	var reponse_joueur: int = int(new_text)
+	
+	if reponse_joueur > nombre_mystere:
+		reference_label.text = "Plus petit!"
+	elif reponse_joueur < nombre_mystere:
+		reference_label.text = "Plus grand!"
+	else:
+		reference_label.text = "Trouvé!"
 ```
 
 #### @onready
@@ -405,18 +405,18 @@ var nombre_mystere: int
 
 
 func _ready() -> void:
-    nombre_mystere = 158
+	nombre_mystere = 158
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    var reponse_joueur: int = int(new_text)
-    
-    if reponse_joueur > nombre_mystere:
-        reference_label.text = "Plus petit!"
-    elif reponse_joueur < nombre_mystere:
-        reference_label.text = "Plus grand!"
-    else:
-        reference_label.text = "Trouvé!"
+	var reponse_joueur: int = int(new_text)
+	
+	if reponse_joueur > nombre_mystere:
+		reference_label.text = "Plus petit!"
+	elif reponse_joueur < nombre_mystere:
+		reference_label.text = "Plus grand!"
+	else:
+		reference_label.text = "Trouvé!"
 ```
 
 ### Réinitialiser le LineEdit
@@ -428,19 +428,19 @@ Pour **supprimer** le nombre que le joueur à rentré dans le [![Godot - LineEdi
 ```
 
 Ensuite, quand le joueur rentre un nombre, on le supprime du [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit):
-
+    
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    reference_line_edit.text = ""
+	reference_line_edit.text = ""
 
-    var reponse_joueur: int = int(new_text)
-    
-    if reponse_joueur > nombre_mystere:
-        reference_label.text = "Plus petit!"
-    elif reponse_joueur < nombre_mystere:
-        reference_label.text = "Plus grand!"
-    else:
-        reference_label.text = "Trouvé!"
+	var reponse_joueur: int = int(new_text)
+	
+	if reponse_joueur > nombre_mystere:
+		reference_label.text = "Plus petit!"
+	elif reponse_joueur < nombre_mystere:
+		reference_label.text = "Plus grand!"
+	else:
+		reference_label.text = "Trouvé!"
 ```
 
 <viewable-image src="./medias/devine-le-nombre/ammelioration-2.gif"></viewable-image>
@@ -453,7 +453,7 @@ Pour ça, on va faire appel à la fonction <code class="hljs">randi_range</code>
 
 ```gdscript
 func _ready() -> void:
-    nombre_mystere = randi_range(0, 100)
+	nombre_mystere = randi_range(0, 100)
 ```
 
 Maintenant, à chaque fois qu'on va lancer le jeu, le nombre à deviner sera aléatoire.
@@ -473,20 +473,20 @@ var nombre_mystere: int
 
 
 func _ready() -> void:
-    nombre_mystere = randi_range(0, 100)
+	nombre_mystere = randi_range(0, 100)
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-    reference_line_edit.text = ""
-    
-    var reponse_joueur: int = int(new_text)
-    
-    if reponse_joueur > nombre_mystere:
-        reference_label.text = "Plus petit!"
-    elif reponse_joueur < nombre_mystere:
-        reference_label.text = "Plus grand!"
-    else:
-        reference_label.text = "Trouvé!"
+	reference_line_edit.text = ""
+	
+	var reponse_joueur: int = int(new_text)
+	
+	if reponse_joueur > nombre_mystere:
+		reference_label.text = "Plus petit!"
+	elif reponse_joueur < nombre_mystere:
+		reference_label.text = "Plus grand!"
+	else:
+		reference_label.text = "Trouvé!"
 
 ```
 

@@ -162,6 +162,7 @@ li {
 code {
     color: var(--code-color);
     word-wrap: break-word;
+    tab-size: 4;
 }
 
 iframe {
