@@ -133,7 +133,7 @@ On peut le déplacer vers le centre de l'écran en le glissant.
 
 Enfin, on va placer le [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit) juste en dessous de notre [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label) et modifier sa propriété `placeholder_text` et y écrire: *"Votre réponse"*.
 
-> Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control_nodes.md).
+<!-- > Si vous êtes en avance n'hésitez pas à aller voir la page des [interfaces utilisateur](#godot/control_nodes.md). -->
 
 <viewable-image src="./medias/devine-le-nombre/scene-jeu-8.gif"></viewable-image>
 
@@ -180,7 +180,8 @@ Décortiquons ensemble cette ligne de code.<br>
 - <code class="hljs">: <span class="hljs-built_in">int</span></code>: il dit à Godot que la **variable** est du type **int** <span style="font-size: 0.8em">(c'est à dire un **nombre entier**)</span>.
 
 > Le **snake_case** est le fait d'écrire tout en **minuscule**, sans accents, et de **remplacer les espaces par des tirets** du bas *(_)*.<br>
-> <span style="font-size: 0.8em">Dans [Godot](#godot/godot.md), on utilise le **snake_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
+
+> <span style="font-size: 0.8em; color: var(--body-text-color-faded)">Dans [Godot](#godot/godot.md), on utilise le **snake_case** pour tout, sauf pour: les noms des **classes** et les noms des **nodes**. Pour ceux-là, on utilise le **PascalCase** (**pas d'espaces**, une **majuscule** au début et à **chaque** nouveau **mot**).</span>
 
 Ce qui nous donne:
 

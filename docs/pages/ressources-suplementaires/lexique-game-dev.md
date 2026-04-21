@@ -62,3 +62,9 @@ Le [version control](#ressources-suplementaires/version-control.md) est le fait 
 > Google doc contient d'ailleurs une fonctionnalité de version control !
 
 > Le **version controling** est **extrèmement utile** ! Je recommande de l'**utiliser pour tous vos projets** qui se composent de fichiers textes (programmation, docummentation, etc...)
+
+## Walking Simulator
+
+Un jeu en 3D, souvent à la première personne, où le gameplay principal consiste à se déplacer dans un environement.
+
+> Exemple: The Stanley Parable

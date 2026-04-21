@@ -102,7 +102,7 @@ wc-header {
 
 right-panel, left-panel {
     position: sticky;
-    top: 50px;
+    top: 56px;
     height: fit-content;
 }
 
