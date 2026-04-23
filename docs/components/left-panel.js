@@ -70,7 +70,9 @@ class LeftPanel extends LitElement {
             }
         }
         .page-btn[open] {
-            color: var(--highlight-color);
+            .title-wrapper {
+                color: var(--highlight-color);
+            }
 
             .page-icon {
                 background-color: var(--highlight-color);
@@ -111,6 +113,12 @@ class LeftPanel extends LitElement {
             display: flex;
             align-items: center;
             gap: 5px;
+            color: var(--body-text-color);
+            text-decoration: none;
+        }
+
+        .title-wrapper:hover {
+            color: var(--highlight-color);
         }
 
         details .folder-icon {
@@ -144,10 +152,10 @@ class LeftPanel extends LitElement {
             return category.pages.map((page) => {
                 const pageSlug = page.link.split("/")[1].split(".")[0]
                 return html`<li class="page-btn ${pageSlug}">
-                    <div class="title-wrapper" @click=${() => this.changeToPage(page)}>
+                    <a class="title-wrapper" href=${'#' + page.link}>
                         ${page.icon !== "" ? html`<div class="page-icon" style="mask-image: url(${page.icon})"></div>` : ""}
                         ${page.title}
-                    </div>
+                    </a>
                     ${page.subPages ? html`<ol class="subpage-list">${subPageLink(page.subPages)}</ol>` : ""}
                 </li>`
             })
@@ -157,7 +165,7 @@ class LeftPanel extends LitElement {
             return pages.map((subpage) => {
                 const subpageSlug = subpage.link.split("/")[1].split(".")[0]
                 return html`<li class="subpage-btn ${subpageSlug}">
-                    <div class="title-wrapper" @click=${() => this.changeToPage(subpage)}>
+                    <div class="subtitle-wrapper" @click=${() => this.changeToPage(subpage)}>
                         ${subpage.icon !== "" ? html`<div class="subpage-icon" style="mask-image: url(${subpage.icon})"></div>` : ""}
                         ${subpage.title}
                     </div>

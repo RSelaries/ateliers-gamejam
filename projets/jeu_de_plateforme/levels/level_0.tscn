@@ -29,4 +29,4 @@ text = "Départ"
 label_settings = ExtResource("4_yi3jx")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="body_entered" from="Walls/@Area2D@20764" to="Walls/@Area2D@20764" method="_on_body_entered"]
+[connection signal="body_entered" from="Walls/Key" to="Walls/Key" method="_on_body_entered"]

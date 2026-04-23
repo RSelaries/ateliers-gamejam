@@ -10,6 +10,11 @@ export default
                 link: "introduction/introduction.md",
                 icon: "./medias/icons/introduction-icon.svg",
             },
+            {
+                title: "Cette documentation",
+                link: "introduction/cette-documentation.md",
+                icon: "./medias/icons/documentation-icon.svg",
+            },
         ],
     },
     // Ateliers
@@ -110,6 +115,11 @@ export default
         name: "Ressources Suplémentaires",
         slug: "ressources-suplementaires",
         pages: [
+            {
+                title: "Je suis perdu",
+                link: "ressources-suplementaires/je-suis-perdu.md",
+                icon: "./medias/icons/je-suis-perdu-icon.svg",
+            },
             {
                 title: "Lexique du Game dev",
                 link: "ressources-suplementaires/lexique-game-dev.md",

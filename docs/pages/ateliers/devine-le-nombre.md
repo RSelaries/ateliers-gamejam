@@ -169,6 +169,9 @@ On peut supprimer la fonction `_process`, nous n'en aurons pas besoin. Ensuite, 
 
 Pour cela, on ajoute la ligne suivante en dessous de `extends Control`:
 ```gdscript
+extends Control
+
+
 var nombre_mystere: int
 ```
 
@@ -194,7 +197,6 @@ var nombre_mystere: int
 
 func _ready() -> void:
 	pass # Replace with function body.
-
 ```
 
 <!-- <viewable-image src="./medias/devine-le-nombre/programmation-4.png"></viewable-image> -->
@@ -286,7 +288,7 @@ Analysons ce code ligne par ligne:
 
 	>  La ligne <code class="hljs"><span class="hljs-built_in">int</span>("Texte test 123")</code> retournerais le nombre <code class="hljs-number">123</code>.
 
-- <code class="hljs"><span class="hljs-keyword">if</span> reponse_joueur > nombre_mystere:</code>: Le mot clé <code><span class="hljs-keyword">if</span></code> permet de **tester une condition**. Si la **condition est remplie**, les lignes en dessous sont **exécutées**, **sinon** elles sont **ignorées**. Notre condition est `reponse_joueur > nombre_mystere`. Ici, le signe `>` test si la valeur à **gauche** est **plus grande** que la valeur à **droite**.
+- <code class="hljs"><span class="hljs-keyword">if</span> reponse_joueur > nombre_mystere:</code>: Le mot clé <code><span class="hljs-keyword">if</span></code> permet de **tester une condition**. Si la **condition est vraie**, les lignes en dessous sont **exécutées**, **sinon** elles sont **ignorées**. Notre condition est `reponse_joueur > nombre_mystere`. Ici, le signe `>` test si la valeur à **gauche** est **plus grande** que la valeur à **droite**.
 
 - <code class="hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Plus petit!"</span>)</code>: Si la condition définie au dessus est remplie on exécute cette ligne. Ici on appelle la fonction <code><span class="hljs-built_in">print</span></code> pour afficher le message <code><span class="hljs-string">"Plus petit!"</span></code>.
 
@@ -319,8 +321,6 @@ Mais on peut aussi **rêgler quelques problèmes** avec notre jeu:
 
 ### Indices visibles et références
 Pour faire tout cela, il nous faut dans notre code une **référence** à nos nodes pour pouvoir les modifer.
-
-On va commencer avec la manière la **plus simple**, mais **pas la meilleure**. **Puis** on va voir **les méthodes que je recommande**.
 
 #### Méthode '<code>$</code>'
 
@@ -428,7 +428,7 @@ Pour **supprimer** le nombre que le joueur à rentré dans le [![Godot - LineEdi
 ```
 
 Ensuite, quand le joueur rentre un nombre, on le supprime du [![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit](#godot/nodes.md#lineedit):
-    
+
 ```gdscript
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	reference_line_edit.text = ""
@@ -487,7 +487,6 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 		reference_label.text = "Plus grand!"
 	else:
 		reference_label.text = "Trouvé!"
-
 ```
 
 > Vous pouvez **retrouver l'intégraliter du projet** dans le <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam">repo</a> de ces ateliers au lien suivant: <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre</a>.

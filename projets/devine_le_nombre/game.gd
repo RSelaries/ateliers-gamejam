@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var reference_label: Label = $CenterContainer/VBoxContainer/Label
+@onready var reference_label = $CenterContainer/VBoxContainer/Bienvenu
 @onready var reference_line_edit: LineEdit = $CenterContainer/VBoxContainer/LineEdit
 @onready var button: Button = $CenterContainer/VBoxContainer/Button
 

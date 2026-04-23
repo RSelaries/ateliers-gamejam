@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Jeu de Plateforme"
+config/tags=PackedStringArray("ateliers_gamejam")
 run/main_scene="uid://btkmd0hqtd0j0"
 run/print_header=false
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=144
 boot_splash/bg_color=Color(0.08235294, 0.08235294, 0.08235294, 1)
 config/icon="uid://ch0tyjea8foq"
-config/tags=PackedStringArray("ateliers_gamejam")
 
 [display]
 

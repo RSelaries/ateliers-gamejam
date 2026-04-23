@@ -18,6 +18,10 @@ class WCHeader extends LitElement {
         }
         .logo {
             cursor: pointer;
+            font-weight: 500;
+        }
+        .logo:hover {
+            color: var(--highlight-color);
         }
         a {
             text-decoration: none;
@@ -52,7 +56,7 @@ class WCHeader extends LitElement {
                 <nav>
                     <div class="buttons">
                         <left-panel-burger class="burger"></left-panel-burger>
-                        <a href="https://sirius-productions.fr" class="logo">Sirius Productions</a>
+                        <a href="https://github.com/RSelaries/ateliers-gamejam" class="logo">Repo Github</a>
                     </div>
                     <div class="buttons">
                         <suggestion-button class="suggestion-button"></suggestion-button>
