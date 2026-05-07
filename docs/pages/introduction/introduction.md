@@ -16,6 +16,8 @@ Les gamejams sont des évènements très ouverts, de nombreuses personnes partic
 
 ## Où et quand ?
 
+**Premier atelier le vendredi 15 mai!**
+
 Les ateliers vont prendre place un vendredi sur deux, de 19h à 22h au CiNey.
 
 ## Quels outils on va utiliser ?
