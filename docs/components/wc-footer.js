@@ -44,7 +44,7 @@ class WCFooter extends LitElement {
         return html`
         <footer class="logo-row">
             <div>
-                Site et Ateliers créé par Raphaël Selaries
+                Site et Ateliers créés par Raphaël Selaries
             </div>
 
             <div style="display: flex">
