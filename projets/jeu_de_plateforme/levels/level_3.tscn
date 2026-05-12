@@ -39,3 +39,5 @@ text = "Le feu de l'âme"
 label_settings = ExtResource("5_20opy")
 
 [connection signal="body_entered" from="Walls/Key" to="Walls/Key" method="_on_body_entered"]
+[connection signal="body_entered" from="Walls/Chest" to="Walls/Chest" method="_on_body_entered"]
+[connection signal="body_exited" from="Walls/Chest" to="Walls/Chest" method="_on_body_exited"]

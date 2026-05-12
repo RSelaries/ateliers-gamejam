@@ -49,3 +49,6 @@ offset_bottom = -8.0
 text = "↑ ouvrir"
 label_settings = SubResource("LabelSettings_2v0an")
 horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

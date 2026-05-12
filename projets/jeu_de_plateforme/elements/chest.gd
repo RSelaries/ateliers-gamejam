@@ -28,4 +28,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("action_interact") and player_inside:
 		animated_sprite_2d.hide()
 		label_interaction.text = "Vous avez trouvé le secret !"
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(4.0).timeout
