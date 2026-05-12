@@ -44,8 +44,8 @@ h1 > .icon {
     height: 30px;
 }
 
-a.external-link {
-    color: var(--highlight-color);
+.external-link {
+    color: var(--external-link-color);
     text-decoration: underline;
     word-break: break-word;
 
@@ -57,7 +57,7 @@ a.external-link {
 }
 
 a.documentation-link {
-    color: var(--highlight-color);
+    color: var(--external-link-color);
     text-decoration: underline;
     word-break: break-word;
     

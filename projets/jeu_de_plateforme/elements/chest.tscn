@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cfnlgv33n0f53"]
+
+[ext_resource type="Script" uid="uid://bten1geocqla7" path="res://elements/chest.gd" id="1_5sl2q"]
+[ext_resource type="Texture2D" uid="uid://b06u3rafawsi8" path="res://assets/tileset_atlas.png" id="1_l4tuq"]
+[ext_resource type="FontFile" uid="uid://dge7vivcp6t6q" path="res://assets/fonts/Tiny5-Regular.ttf" id="3_q0yrj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sl2q"]
+atlas = ExtResource("1_l4tuq")
+region = Rect2(36, 12, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q0yrj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sl2q")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v0an"]
+size = Vector2(8, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2v0an"]
+font = ExtResource("3_q0yrj")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Chest" type="Area2D" unique_id=117720351]
+script = ExtResource("1_5sl2q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=644192933]
+sprite_frames = SubResource("SpriteFrames_q0yrj")
+animation = &"closed"
+autoplay = "closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851360801]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_2v0an")
+
+[node name="LabelInteraction" type="Label" parent="." unique_id=614160099]
+unique_name_in_owner = true
+offset_left = -22.0
+offset_top = -17.0
+offset_right = 23.0
+offset_bottom = -8.0
+text = "↑ ouvrir"
+label_settings = SubResource("LabelSettings_2v0an")
+horizontal_alignment = 1

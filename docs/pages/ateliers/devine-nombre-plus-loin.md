@@ -1,1 +1,1 @@
-# Devine le nomre - Aller plus loin
+# <div class="icon" style="mask-image: url(./medias/icons/plus-loin.svg)"></div> Devine le nombre - Aller plus loin

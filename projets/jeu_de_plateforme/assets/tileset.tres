@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ufmucssblrqv" path="res://elements/interactible_wall.tscn" id="3_p0366"]
 [ext_resource type="PackedScene" uid="uid://gdyw1tytikvm" path="res://elements/fire.tscn" id="4_7lii3"]
 [ext_resource type="PackedScene" uid="uid://2ajp0rcvhfsc" path="res://elements/key.tscn" id="5_uyjym"]
+[ext_resource type="PackedScene" uid="uid://cfnlgv33n0f53" path="res://elements/chest.tscn" id="6_80oah"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2urvg"]
 resource_name = "Tiles"
@@ -77,6 +78,7 @@ scenes/1/scene = ExtResource("2_14fb3")
 scenes/2/scene = ExtResource("3_p0366")
 scenes/3/scene = ExtResource("4_7lii3")
 scenes/4/scene = ExtResource("5_uyjym")
+scenes/6/scene = ExtResource("6_80oah")
 
 [resource]
 tile_size = Vector2i(12, 12)

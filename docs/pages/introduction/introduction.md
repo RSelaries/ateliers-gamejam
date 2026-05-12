@@ -1,11 +1,7 @@
 # <div class="icon" style="mask-image: url(./medias/icons/introduction-icon.svg)"></div> Ateliers création de jeux-vidéo
 
-Ce site est la documentation des ateliers de **création de jeux-vidéo** organisés par *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et *<a class="external-link" href="https://www.lasierraprod.com">La Sierra Prod</a>*.
+Ce site est la [documentation](#introduction/cette-documentation.md) des ateliers de **création de jeux-vidéo** organisés par *<a class="external-link" href="https://sirius-productions.fr">Sirius Productions</a>* et *<a class="external-link" href="https://www.lasierraprod.com">La Sierra Prod</a>*.  
 Ces ateliers ont pour but de vous apprendre les bases du développement de jeux-vidéo pour ensuite organiser une gamejam.
-
-> Les textes en <span style="color: var(--redirection-color)">jaune</span> sont des liens internes *(ils redirigent vers d'autres pages de cette documentation)* et les textes <span style="color: var(--highlight-color); text-decoration: underline">bleu soulignés</span> sont des liens externes *(ils redirigent vers des sites externes)*.
-
-> Si vous trouvez quelconque **faute**, **erreure**, **manquement**... n'hésitez pas à ouvrir une *<a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/issues/new">issue sur le Github</a>* ou bien à m'envoyer un <a class="external-link" href="https://discordapp.com/users/cri.staline">mp discord</a> !
 
 ## Qu'est-ce qu'une gamejam ?
 

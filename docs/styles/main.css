@@ -17,6 +17,9 @@
     --highlight-color-light-theme: #008B8B;
     --highlight-color-dark-theme: #65BED4;
 
+    --external-link-color-light-theme: #00e;
+    --external-link-color-dark-theme: #66e;
+
     --redirection-color-light-theme: #E79A00;
     --redirection-color-dark-theme: #F2BF4A;
     
@@ -42,6 +45,7 @@
     --body-text-color: light-dark(var(--text-color-light-theme), var(--text-color-dark-theme));
     --body-text-color-faded: light-dark(var(--text-color-faded-light-theme), var(--text-color-faded-dark-theme));
     --highlight-color: light-dark(var(--highlight-color-light-theme), var(--highlight-color-dark-theme));
+    --external-link-color: light-dark(var(--external-link-color-light-theme), var(--external-link-color-dark-theme));
     --highlight-color-transparent: light-dark(var(--highlight-color-transparent-light-theme), var(--highlight-color-transparent-dark-theme));
     --redirection-color: light-dark(var(--redirection-color-light-theme), var(--redirection-color-dark-theme));
     --code-color: light-dark(var(--code-color-light-theme), var(--code-color-dark-theme));

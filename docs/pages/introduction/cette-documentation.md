@@ -8,4 +8,8 @@ Pour chaque atelier, il y aura une *retranscription textuelle et imagée* (La se
 
 <br>
 
-**<span style="font-weight: 800">Mais</span>**, cette documentation peut aussi vous servir de **boîte à outils** pour le gamedev. Si vous voulez réutiliser un des aspects abordés pendant un atelier, il vous suffit de retourner voir sa page. Il y a aussi différentes pages sur des **ressources** comme des *tutoriels*, des *assets*, des *applications* etc...   
+**<span style="font-weight: 800">Mais</span>**, cette documentation peut aussi vous servir de **boîte à outils** pour le gamedev. Si vous voulez réutiliser un des aspects abordés pendant un atelier, il vous suffit de retourner voir sa page. Il y a aussi différentes pages sur des **ressources** comme des *tutoriels*, des *assets*, des *applications* etc...
+
+> Les textes en <span style="color: var(--redirection-color)">jaune</span> sont des liens internes *(ils redirigent vers d'autres pages de cette documentation)* et les textes <span class="external-link">bleu soulignés</span> sont des liens externes *(ils redirigent vers des sites externes)*.
+
+> Si vous trouvez quelconque **faute**, **erreure**, **manquement**... n'hésitez pas à ouvrir une *<a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/issues/new">issue sur le Github</a>* ou bien à m'envoyer un <a class="external-link" href="https://discordapp.com/users/cri.staline">mp discord</a> !

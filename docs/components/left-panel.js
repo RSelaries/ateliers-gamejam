@@ -137,6 +137,11 @@ class LeftPanel extends LitElement {
         details[open] .folder-icon {
             mask-image: url(${unsafeCSS(opened)});
         }
+        .subpage-btn .subtitle-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
     `
 
     constructor() {

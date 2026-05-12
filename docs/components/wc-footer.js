@@ -50,11 +50,11 @@ class WCFooter extends LitElement {
             <div style="display: flex">
                 <div style="display: flex; gap: 5px">
                     <div class="logo" style="mask-image: url(./medias/logo-sirius.svg)"></div>
-                    <a href="https://sirius-productions.fr/accueil/">Sirius Productions</a>
+                    <a href="https://sirius-productions.fr/accueil">Sirius Productions</a>
                 </div>
                 <div style="display: flex; gap: 5px">
                     <div class="logo" style="mask-image: url(./medias/logo-sierra.svg)"></div>
-                    <a href="https://www.lasierraprod.com/">La Sierra Prod</a>
+                    <a href="https://www.lasierraprod.com">La Sierra Prod</a>
                 </div>
                 <div style="display: flex; gap: 5px">
                     <div class="logo" style="mask-image: url(./medias/logo-ciney.svg); aspect-ratio: 2"></div>

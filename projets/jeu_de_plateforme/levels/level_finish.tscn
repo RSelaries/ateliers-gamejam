@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://wlqjw33ak6ey"]
+
+[ext_resource type="Script" uid="uid://br5arolb8nqce" path="res://levels/level_finish.gd" id="1_t0luv"]
+[ext_resource type="LabelSettings" uid="uid://bd2ke045rl5vv" path="res://resources/level_name_label_settings.tres" id="2_h5ncm"]
+[ext_resource type="Theme" uid="uid://bjh3chj53bmll" path="res://resources/button.theme" id="3_h5ncm"]
+
+[node name="LevelFinish" type="Control" unique_id=705515204]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t0luv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1832764788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1785844261]
+layout_mode = 2
+text = "Vous avez gagné !"
+label_settings = ExtResource("2_h5ncm")
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=649294130]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_h5ncm")
+text = "Rejouer"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
