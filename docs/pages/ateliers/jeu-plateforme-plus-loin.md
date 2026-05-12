@@ -6,7 +6,7 @@
 
 Pour reprendre sur de **bonnes bases**, je vais **ranger** les fichiers avec cette organisation:
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-1.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-1.png"></viewable-image>
 
 <span style="color: var(--body-text-color-faded); font-size: .8em">(J'ai rennomé la scène <em>"OrdinateurBouton"</em> en <em>"InteractibleComputer"</em> pour plus cohérence avec le reste de la nomenclature.)</span>
 
@@ -49,13 +49,13 @@ Il est souvent **recommandé** de **modifier les actions** de nos jeux et de ne 
 
 On se rend alors dans *Project -> Project Settings*. Puis on sélectionne l'onglet *Input Map*. Ensuite on viens renseigner le **nom** de notre **action** dans le champ *Add New Action* et on y paramètre les **touches associées**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-2.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-2.gif"></viewable-image>
 
 > <span style="color: var(--body-text-color-faded); font-size: .8em">Pour ajouter une touche, il suffit de cliquer sur ![Godot - Add](../../medias/godot-icons/Add.svg) puis d'appuyer sur la touche voulue.</span>
 
 Voici la liste des actions et leurs touches que j'ai choisi d'utiliser:
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-3.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-3.png"></viewable-image>
 
 > <span style="color: var(--body-text-color-faded); font-size: .8em">Ici les touches **WAD** sont affichées au lieu de **ZQD** que j'ai utilisé parce que les touches sont enregistrées pour leur **position** sur le clavier et non leur valeur. Ça permet de jouer avec autant un clavier **AZERTY** que **QWERTY** sans avoir à modifier les touches.</span>
 
@@ -85,7 +85,7 @@ Maintenant qu'on peut contrôler notre personnage avec les touches ZQD et ESPACE
 
 On va retourner sur la ressource ![Godot - SpriteFrames](../../medias/godot-icons/SpriteFrames.svg) **SpriteFrames** de notre [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) pour y créer les animations *"idle"* <span style="color: var(--body-text-color-faded); font-size: .8em">(immobile)</span> *"moving"* <span style="color: var(--body-text-color-faded); font-size: .8em">(en mouvement)</span> et *"dead"* <span style="color: var(--body-text-color-faded); font-size: .8em">(mort)</span>. Puis ont vas activé l'annimation idle en ![Godot - AutoPlay](../../medias/godot-icons/AutoPlay.svg) **autoplay**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-4.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-4.gif"></viewable-image>
 
 > <span style="color: var(--body-text-color-faded); font-size: .8em">J'avais oublié de le faire avant d'enregistrer le gif, mais pour une **meilleure animation** vous pouvez changer la **vitesse d'animation** à **10.0 FPS** au lieu de **5**.</span>
 
@@ -157,7 +157,7 @@ elif Input.is_action_just_released("movement_jump") and not is_on_floor():
         velocity.y = move_toward(velocity.y, -20, SPEED)
 ```
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-5.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-5.gif"></viewable-image>
 
 ### D. La mort
 
@@ -220,7 +220,7 @@ Maintenant il nous faut quelque chose qui va tuer le joueur. Pour cela on va uti
 
 On ne vas pas lui ajouter de [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d), le but: pouvoir **changer la forme** de de la `KillZone` selon le besoin.
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-6.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-6.png"></viewable-image>
 
 Ensuite on lui ajoute un script ![Godot - ScriptCreate](../../medias/godot-icons/ScriptCreate.svg). 
 <span style="color: var(--body-text-color-faded); font-size: .8em">(J'ai rangé la scène et le script dans le dossier */elements/*)
@@ -243,7 +243,7 @@ Je rajoute à notre *killzone* une [![Godot - CollisionShape2D](../../medias/god
 
 > La forme ![Godot - WorldBoundaryShape2D](../../medias/godot-icons/WorldBoundaryShape2D.svg) **WorldBoundaryShape2D** permet de détecter tout ce qui dépasse une certaine coordonnée, c'est donc une sorte de trait infini.
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-7.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-7.gif"></viewable-image>
 
 ### B. Le feu
 
@@ -257,18 +257,18 @@ Donc on créé une nouvelle scène *Fire* avec pour racine un [![Godot - Animate
 
 J'y ajoute égallement la *KillZone* pour que le feu puisse **tuer le joueur**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-8.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-8.png"></viewable-image>
 
 Maintenant on rajoute la scène *Fire* à notre [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset) puis on remplace les anciennes tuiles de feu par nos scène.
 
 <div class="side-by-side content">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-9.png">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-10.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-9.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-10.png"></viewable-image>
 </div>
 
 Et si on **teste le jeu**:
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-11.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-11.gif"></viewable-image>
 
 ## III. Plusieurs niveaux
 
@@ -279,8 +279,8 @@ Notre jeu commence à ressembler à quelque chose. Cependant, on aimerais pouvoi
 Encore une fois, on va créer une nouvelle scène, vous connaissez la chanson: une scène [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d) avec une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d), un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d)un [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label) et un script.
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-12.png">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-12-2.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-12.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-12-2.png"></viewable-image>
 </div>
 
 On connecte les ![Godot - Signal](../../medias/godot-icons/Signals.svg) **signaux** `body_entered` et `body_exited`. Puis on y ajoute le code suivant:
@@ -341,8 +341,8 @@ Pour ouvrir notre porte il nous faut une clé. Pour cela, on va encore utiliser 
 Cette fois ci on a seulement besoin de son ![Godot - Signal](../../medias/godot-icons/Signals.svg) **signal** `body_entered`.
 
 <div class="side-by-side content">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-13.png">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-14.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-13.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-14.png"></viewable-image>
 </div>
 
 On y ajoute le **code** suivant:
@@ -358,7 +358,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 On peut maintenant **remplacer** la porte de sortie par notre scène, et **ajouter la clé au niveau**. Ce qui devrais nous donner:
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-15.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-15.gif"></viewable-image>
 
 ### C. Niveaux 1 et 2
 
@@ -373,9 +373,9 @@ On va renommer notre scène *Game* <span style="color: var(--body-text-color-fad
 Puis on va créer deux premiers niveaux qui vont chaqu'un contenir: un <span style="color: var(--body-text-color-faded); font-size: .8em">(ou plusieurs)</span> [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer), une scène ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) *Player*, une [![Godot - Camera2D](../../medias/godot-icons/Camera2D.svg) Camera2D](#godot/nodes.md#camera2d) et une scène ![Godot - Area2D](../../medias/godot-icons/Area2D.svg) *ExitDoor*.
 
 <div class="side-by-side one-to-two" style="grid-template-columns: 4fr 5fr;">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-16.png">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-17.png">
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-18.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-16.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-17.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-18.png"></viewable-image>
 </div>
 
 ### D. Relier les niveaux
@@ -399,10 +399,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 Et maintenant on n'as plus qu'à mettre à jour la propriété *next_level* de nos portes.
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-19.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-19.gif"></viewable-image>
 
 **Testons ça !**
 
-<img src="./medias/jeu-de-plateforme/plateformer-plus-loin-20.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-plus-loin-20.gif"></viewable-image>
 
 
