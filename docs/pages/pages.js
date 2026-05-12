@@ -31,13 +31,13 @@ export default
                 title: "Devine le nombre",
                 link: "ateliers/devine-le-nombre.md",
                 icon: "./medias/icons/devine-nombre-icon.svg",
-                subPages: [
-                    {
-                        title: "Aller plus loin",
-                        link: "ateliers/devine-nombre-plus-loin.md",
-                        icon: "./medias/icons/plus-loin.svg",
-                    },
-                ],
+                // subPages: [
+                //     {
+                //         title: "Aller plus loin",
+                //         link: "ateliers/devine-nombre-plus-loin.md",
+                //         icon: "./medias/icons/plus-loin.svg",
+                //     },
+                // ],
             },
             {
                 title: "Jeu de plateforme",

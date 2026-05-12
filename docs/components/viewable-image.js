@@ -11,7 +11,7 @@ class ViewableImage extends LitElement {
             margin: 15px 0px;
         }
         .img-btn:hover {
-            cursor: pointer;
+            cursor: zoom-in;
         }
 
         .viewer-wrapper {
@@ -43,7 +43,7 @@ class ViewableImage extends LitElement {
         }
 
         .viewer-wrapper:hover {
-            cursor: pointer;
+            cursor: zoom-out;
         }
 
     `

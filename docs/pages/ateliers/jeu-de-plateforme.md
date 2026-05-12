@@ -19,17 +19,17 @@ Dans cet atelier, on va créer un jeu de plateforme 2D [side-scroller](#ressourc
 
 Comme la dernière fois, on vas **créer un nouveau projet**. On lui donne un **nom** et un **emplacement** puis on choisi **compatibility** pour le [renderer](#godot/godot.md#renderer).
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-1.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-1.png"></viewable-image>
 
 Cette fois-ci on va créer une **scène 2D**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-2.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-2.png"></viewable-image>
 
 Je vais l'appeller *Game*. <span style="color: var(--body-text-color-faded); font-size: .8em">(N'oubliez pas d'**enregistrer la scène** et d'**enregistrer souvent** votre travail !)</span>
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-start-3.png">
-<img src="./medias/jeu-de-plateforme/plateformer-start-4.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-3.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-4.png"></viewable-image>
 </div>
 
 ### Télécharger les assets
@@ -42,88 +42,88 @@ Vous pouvez utiliser le même que moi en le **téléchargant** à ce <a class="e
 
 Une fois ça fait vous pouvez ajouter le dossier *assets* à votre projet *(ou bien le créer)*.
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-5.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-5.png"></viewable-image>
 
 Ici, on vient d'ajouter une **image** <span style="color: var(--body-text-color-faded); font-size: .8em">(une texture)</span> d'un **tileset** <span style="color: var(--body-text-color-faded); font-size: .8em">(une texture atlas)</span>. Mais pour qu'il soit **utilisable** par Godot il faut créer une **ressource** [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
 ### Création du TileSet
 
 <div class="side-by-side content">
-<img src="./medias/jeu-de-plateforme/plateformer-start-6.png">
-<img src="./medias/jeu-de-plateforme/plateformer-start-7.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-6.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-7.png"></viewable-image>
 </div>
 
 On peut alors l'**enregistrer**, je l'ai appelé simplement *"tileset"*. Cela nous **ouvre** alors l'**onglet** de [![Godot - TileSetPanel](../../medias/godot-icons/TileSet.svg) TileSet](#godot/interface.md#tileset) en bas de l'écran où l'on peut **paramétrer** notre ![Godot - TileSetPanel](../../medias/godot-icons/TileSet.svg) TileSet.
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-8.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-8.png"></viewable-image>
 
 Il faut maintenant ajouter la texture atlas <span style="color: var(--body-text-color-faded); font-size: .8em">(notre image *tileset_atlas.png*)</span>.
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-9.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-9.png"></viewable-image>
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-10.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-10.png"></viewable-image>
 
 Godot vas alors nous proposer de **créer automatiquement** les **Tiles** pour nous. **On vas répondre non** étant donné que ce tileset fait **12x12** au lieu des **16x16** traditionnels. <span style="color: var(--body-text-color-faded); font-size: .8em">(Si vous avez téléchargé un tileset 16x16 ou 32x32 vous pouvez répondre oui, il y a plus de chance que cela fonctionne pour vous)</span>
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-11.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-11.png"></viewable-image>
 
 On se retrouve alors devant cet écran, on doit maintenant paramétrer notre tileset.
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-12.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-12.png"></viewable-image>
 
 Le plus **important** est le **paramètre** `texture_region`. Il est par défaut en **16x16**, je vais donc le mettre à **12x12**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-13.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-13.png"></viewable-image>
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-start-15.png">
-<img src="./medias/jeu-de-plateforme/plateformer-start-16.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-15.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-16.png"></viewable-image>
 </div>
 
 Une fois ça fait, il faut définir les tuiles (Tiles) qui peuvent être utilisées.
 
 Pour cela, il suffit de cliquer sur les tuiles que l'on va utiliser en étant en mode ![Godot - Tools](../../medias/godot-icons/Tools.svg) Setup
 
-<img src="./medias/jeu-de-plateforme/plateformer-start-14.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-start-14.gif"></viewable-image>
 
 ## Création de la TileMap
 
 Pour cela, il faut ajouter un [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer) à notre scène.
 
 <div class="side-by-side two-to-one">
-<img src="./medias/jeu-de-plateforme/plateformer-tilemap-1.png">
-<img src="./medias/jeu-de-plateforme/plateformer-tilemap-2.png">
-<img src="./medias/jeu-de-plateforme/plateformer-tilemap-3.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-tilemap-1.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-tilemap-2.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-tilemap-3.png"></viewable-image>
 </div>
 
 Ensuite on ajoute le **TileSet** que l'on a créé dans le **paramètre** `tileset` du [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer).
 
 On clique dessus puis sur *"Quick load"* et on sélectionne le **TileSet** que l'on a créé.
 
-<img src="./medias/jeu-de-plateforme/plateformer-tilemap-4.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-tilemap-4.gif"></viewable-image>
 
 Cela nous ouvre alors l'onglet [![Godot - TileMap](../../medias/godot-icons/TileMapPanel.svg) TileMap](#godot/interface.md#tilemap) avec notre TileSet de sélectionné.
 
-<img src="./medias/jeu-de-plateforme/plateformer-tilemap-5.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-tilemap-5.png"></viewable-image>
 
 ## Création d'un niveau
 
 Maintenant il nous suffit de **cliquer sur une tuile** dans cette fenêtre et on peut commencer à **peindre notre niveau**:
 
-<img src="./medias/jeu-de-plateforme/plateformer-level-1.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-1.gif"></viewable-image>
 
 Mais on a un petit **soucis**: les **pixels** des tuiles sont **flous**.
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-level-2.png">
-<img src="./medias/jeu-de-plateforme/plateformer-level-3.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-2.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-3.png"></viewable-image>
 </div>
 
 Par défaut Godot **lisse les textures**, c'est l'*anti-aliasing*.
 
 Pour palier à cela, il faut modifier les **paramètres du projet**. Plus précisément: mettre le **paramètre** `default_texture_filter` sur `Nearest`.
 
-<img src="./medias/jeu-de-plateforme/plateformer-level-4.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-4.gif"></viewable-image>
 
 Maintenant on peut **créer notre premier niveau**. <span style="color: var(--body-text-color-faded); font-size: .8em">Pour plus de précision sur la peinture des Tiles rendez vous sur la page [![Godot - TileMap](../../medias/godot-icons/TileMapPanel.svg) TileMap](#godot/interface.md#tilemap).</span>
 
@@ -132,18 +132,18 @@ Maintenant on peut **créer notre premier niveau**. <span style="color: var(--bo
 Je vais faire mon niveau sur plusieurs *"calques"*, pour cela il me suffit d'utiliser un [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer) par *"calque"*. Je vais les renommer pour plus de clarté.
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-level-test-1.png">
-<img src="./medias/jeu-de-plateforme/plateformer-level-test-2.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-test-1.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-test-2.png"></viewable-image>
 </div>
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-level-test-3.png">
-<img src="./medias/jeu-de-plateforme/plateformer-level-test-4.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-test-3.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-test-4.png"></viewable-image>
 </div>
 
 Je vais aussi **modifier** la **couleur de fond** pour la mettre en noir.
 
-<img src="./medias/jeu-de-plateforme/plateformer-level-test-5.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-level-test-5.gif"></viewable-image>
 
 > **Prenez le temps de faire un niveau que vous aimez !**
 
@@ -154,14 +154,14 @@ Maintenant il nous faut un **personnage** pour se balader dans notre niveau.
 Pour commencer on vas créer une scène avec un node [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) comme racine.
 
 <div class="side-by-side two-to-one" style='grid-template: "a c" "b c" / 1fr 2fr;'>
-<img src="./medias/jeu-de-plateforme/plateformer-player-1.png">
-<img src="./medias/jeu-de-plateforme/plateformer-player-2.png">
-<img src="./medias/jeu-de-plateforme/plateformer-player-3.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-1.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-2.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-3.png"></viewable-image>
 </div>
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-player-4.png">
-<img src="./medias/jeu-de-plateforme/plateformer-player-5.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-4.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-5.png"></viewable-image>
 </div>
 
 <span style="color: var(--body-text-color-faded); font-size: .8em">N'oubliez pas de sauvegarder !</span>
@@ -175,15 +175,15 @@ On va donc ajouter un [![Godot - AnimatedSprite2D](../../medias/godot-icons/Anim
 > <span style="color: var(--body-text-color-faded); font-size: .8em">On **pourrait** utiliser un simple [![Godot - Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d) mais un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) nous permet de l'**animer** plus simplement.</span>
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-player-6.png">
-<img src="./medias/jeu-de-plateforme/plateformer-player-7.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-6.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-7.gif"></viewable-image>
 </div>
 
 À cet [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d), on ajoute une **ressource** ![Godot - SpriteFrames](../../medias/godot-icons/SpriteFrames.svg) SpriteFrames que l'on va **paramétrer**.
 
 Pour cela il suffit de cliquer dessus, ce qui nous ouvre l'onglet des ![Godot - SpriteFrames](../../medias/godot-icons/SpriteFrames.svg) SpriteFrames.
 
-<img src="./medias/jeu-de-plateforme/plateformer-player-8.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-8.gif"></viewable-image>
 
 <span style="color: var(--body-text-color-faded); font-size: .8em">Attention à bien paramétrer la taille sur 12x12 pour notre [![Godot - TileSetPanel](../../medias/godot-icons/TileSet.svg) TileSet](#godot/interface.md#tileset) !</span>
 
@@ -191,13 +191,13 @@ Pour cela il suffit de cliquer dessus, ce qui nous ouvre l'onglet des ![Godot - 
 
 On voit qu'à coté de notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) Player](#godot/nodes.md#characterbody2d) il y a un "![Godot - NodeWarning](../../medias/godot-icons/NodeWarning.svg)" qui signifie qu'il y a un ou des **avertissement(s)** qui sont les suivants:
 
-<img src="./medias/jeu-de-plateforme/plateformer-player-9.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-9.png"></viewable-image>
 
 Ce message nous indique que notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) n'as pas de collision et nous conseille d'en ajouter une.
 
 Effectivement, le [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) est un Node qui **réagit à la physique** *(la gravité, les murs etc...)*. Il lui faut donc une zone de **collision**. On lui **ajoute** alors tout simplement un node [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
 
-<img src="./medias/jeu-de-plateforme/plateformer-player-10.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-10.png"></viewable-image>
 
 De même, notre [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d) a aussi un ![Godot - NodeWarning](../../medias/godot-icons/NodeWarning.svg) **warning**:
 > "A shape must be provided for CollisionShape2D to function. Please create a shape resource for it!"
@@ -206,7 +206,7 @@ Ce qui signifie que notre **collision** nécessite une **forme** pour fonctionne
 
 On veut que le **dessous** de cette forme soit **aligné** au pieds de notre [![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) Player](#godot/nodes.md#characterbody2d).
 
-<img src="./medias/jeu-de-plateforme/plateformer-player-11.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-11.gif"></viewable-image>
 
 ### Programmation
 
@@ -217,13 +217,13 @@ On va maintenant passer à la **programmation** de notre **personnage** !
 D'abord on ajoute un [![Godot - Script](../../medias/godot-icons/Script.svg) Script](#godot/interface.md#onglet-script) à notre joueur.
 
 <div class="side-by-side content">
-<img src="./medias/jeu-de-plateforme/plateformer-player-12.png">
-<img src="./medias/jeu-de-plateforme/plateformer-player-13.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-12.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-13.png"></viewable-image>
 </div>
 
 <span style="color: var(--body-text-color-faded); font-size: .8em">On va utiliser le template *Basic Movement* parce qu'il contient déjà la majorité du code que l'on veut utiliser.</span>
 
-<img src="./medias/jeu-de-plateforme/plateformer-player-14.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-player-14.png"></viewable-image>
 
 **Analysons** ce code ensemble **ligne par ligne**.
 
@@ -315,7 +315,7 @@ Enfin, on dit à Godot de calculer la physique de notre personnage en appelant l
 
 Pour cela, on retourne sur la scène *Game* et on y glisse la scène du **joueur**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-test-1.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-1.gif"></viewable-image>
 
 Et maintenant on peut **tester** le jeu en appyant sur **F6** <span style="color: var(--body-text-color-faded); font-size: .8em">(ou sur ![Godot - Lauch Scene](../../medias/godot-icons/godot-play-scene-icon.svg))</span>.
 
@@ -323,17 +323,17 @@ Et maintenant on peut **tester** le jeu en appyant sur **F6** <span style="color
 
 **Mais gros problème !** La scène du jeu n'est pas du tout **centrée** !
 
-<img src="./medias/jeu-de-plateforme/plateformer-test-2.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-2.png"></viewable-image>
 
 ### La caméra
 
 Pour résoudre cela, on pourrait **décaler toute la scène**, mais le plus simple reste d'**ajouter une camera**. On ajoute alors une [![Godot - Camera2D](../../medias/godot-icons/Camera2D.svg) Camera2D](#godot/nodes.md#camera2d).
 
-<img src="./medias/jeu-de-plateforme/plateformer-test-3.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-3.gif"></viewable-image>
 
 **Testons de nouveau !**
 
-<img src="./medias/jeu-de-plateforme/plateformer-test-4.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-4.gif"></viewable-image>
 
 ### Les collisions
 
@@ -346,18 +346,18 @@ Pour résoudre ce problème il faut modifier notre ressource [![Godot - TileSet]
 Pour cela, on ajoute un `physics_layer` à notre [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) tileset](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
 <div class="side-by-side two-to-one" style="grid-template-columns: 1fr 1fr">
-<img src="./medias/jeu-de-plateforme/plateformer-test-6.png">
-<img src="./medias/jeu-de-plateforme/plateformer-test-7.png">
-<img src="./medias/jeu-de-plateforme/plateformer-test-8.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-6.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-7.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-8.png"></viewable-image>
 </div>
 
 Puis on applique la **collision** sur les murs.
 
-<img src="./medias/jeu-de-plateforme/plateformer-test-9.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-9.gif"></viewable-image>
 
 **Testons encore !** C'est en testant qu'on trouve les **problèmes**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-test-10.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-test-10.gif"></viewable-image>
 
 ### Les mouvements
 
@@ -393,11 +393,11 @@ On va alors leur ajouter des **collisions**, changer leur **forme** et créer un
 
 Pour cela, on change la forme de la **collision**, puis on active le **paramètre** `polygon_0_one_way`. L'idée est que *one way* signifie que la **collision** n'est active que d'**un coté**. On peut donc **monter** sur la plateforme **par en bas**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-1.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-1.gif"></viewable-image>
 
 On ajoute une plateforme pour tester le jeu.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-2.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-2.gif"></viewable-image>
 
 ### Bouton intéractible
 
@@ -411,7 +411,7 @@ On vas alors créer une nouvelle **scène** avec un [![Godot - Area2D](../../med
 
 On lui rajoute un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) puis une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-3.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-3.png"></viewable-image>
 
 <span style="color: var(--body-text-color-faded); font-size: .8em">(Si vous ne vous rappelez pas de comment créer une scène, une collision ou un sprite, référez vous à [# Création du personnage](#ateliers/jeu-de-plateforme.md#creation-du-personnage))</span>
 
@@ -419,13 +419,13 @@ On lui rajoute un [![Godot - AnimatedSprite2D](../../medias/godot-icons/Animated
 
 On ajoute un script      à notre [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) OrdinateurBouton](#ressources-suplementaires/lexique-game-dev.md#area2d). Ensuite on connecte son **signal** `body_entered`.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-4.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-4.gif"></viewable-image>
 
 Maintenant on veut que quand le ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) **personnage** joueur se trouve près de l'**ordinateur**, on lui propose d'**intéragir** avec.
 
 Pour détecter si le `body` qui est entré dans le périmètre de notre [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d) est bien le **joueur**, on va l'ajouter dans un [![Godot - Groups](../../medias/godot-icons/Groups.svg) groupe](#godot/godot.md#groupes).
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-5.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-5.gif"></viewable-image>
 
 Il nous est maintenant possible d'accèder à notre joueur simplement à l'aide de son groupe.
 
@@ -440,15 +440,15 @@ func _on_body_entered(body: Node2D) -> void:
 
 Pour **tester** si notre code **fonctionne**, il nous suffit de **remplacer** l'écran que l'on avait précédamment placé sur notre [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer) par la scène **OrdinateurBouton** que nous venons de créer.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-6.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-6.gif"></viewable-image>
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-7.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-7.gif"></viewable-image>
 
 #### Intéraction
 
 Pour **prévenir** le joueur qu'il peut **intéragir** avec l'**ordinateur**, on va ajouter le **texte**: "↑ intéragir" à l'aide d'un [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label). On va égallement changer la **fonte** (en *Tiny5*) du label pour quelque chose de plus **pixélisé**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-8.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-8.gif"></viewable-image>
 
 Puis on modifie le code:
 
@@ -476,7 +476,7 @@ Dans `_ready` on utilise la fonction `hide` pour que le **texte** ne sois **pas 
 
 On va égallement connecter le signal `body_exited` de notre [![Godot - Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#ressources-suplementaires/lexique-game-dev.md#area2d). Quand le joueur s'éloigne de l'ordinateur, on n'affiche plus le texte.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-9.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-9.png"></viewable-image>
 
 Puis modifier la **fonction** appelée par le **signal**:
 
@@ -514,13 +514,13 @@ La fonction `event.is_action_pressed(action_name)` permet de détecter si l'acti
 Il lui faut aussi un [![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) ainsi qu'une [![Godot - CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d).
 
 <div class="side-by-side">
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-10.png">
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-11.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-10.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-11.png"></viewable-image>
 </div>
 
 Pour l'[![Godot - AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) j'ai créé **une animation par état**: **ouvert** et **fermé**.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-12.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-12.gif"></viewable-image>
 
 <span style="color: var(--body-text-color-faded); font-size: .8em">(Pour ajouter une nouvelle animation, il suffit d'appuyer sur ![Godot - New](../../medias/godot-icons/New.svg))</span>
 
@@ -560,13 +560,13 @@ C'est à dire qu'on met l'**animation** du mur **ouvert** <span style="color: va
 
 Enfin, on ajoute le mur intéractif au **groupe** `interaction_wall`.
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-13.png">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-13.png"></viewable-image>
 
 ### Modification du niveau
 
 Comme pour l'ordinateur, on va les retirer du [![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer). Mais on peut faire **mieux**: on va **ajouter** les scènes de l'ordinateur et des murs intéractifs à notre [![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet](#ressources-suplementaires/lexique-game-dev.md#tileset).
 
-<img src="./medias/jeu-de-plateforme/plateformer-ammeliorations-14.gif">
+<viewable-image src="./medias/jeu-de-plateforme/plateformer-ammeliorations-14.gif"></viewable-image>
 
 ## C'est fini !
 
