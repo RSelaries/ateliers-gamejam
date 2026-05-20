@@ -216,7 +216,7 @@ class LeftPanel extends LitElement {
         const hash = window.location.hash.split("#")
         const pageToOpen = hash.length > 1 ? hash[1].replace(".html", "").replace(".md", "").split("/")[1] : null
         
-        for(let i = 0; i< allPagesBtns.length; i++) {
+        for(let i = 0; i < allPagesBtns.length; i++) {
             if (caterogyToOpen) {
                 if (allPagesBtns[i].className.includes(pageToOpen)) {
                     allPagesBtns[i].setAttribute("open", true)

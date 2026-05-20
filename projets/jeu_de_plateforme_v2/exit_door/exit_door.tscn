@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://d2advlg1fhy52"]
+
+[ext_resource type="Script" uid="uid://c4rkkswvr2mjq" path="res://exit_door/exit_door.gd" id="1_iyflb"]
+[ext_resource type="Texture2D" uid="uid://dui1nev6jdeeu" path="res://assets/tileset_texture.png" id="1_tqxgo"]
+[ext_resource type="LabelSettings" uid="uid://q8e0xvcr0x86" path="res://assets/tiny5_label_settings.tres" id="3_iyflb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5ia2"]
+atlas = ExtResource("1_tqxgo")
+region = Rect2(256, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyflb"]
+atlas = ExtResource("1_tqxgo")
+region = Rect2(256, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxprd"]
+atlas = ExtResource("1_tqxgo")
+region = Rect2(288, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7q8ro"]
+atlas = ExtResource("1_tqxgo")
+region = Rect2(304, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ogsil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5ia2")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyflb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxprd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q8ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7q8ro")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ixc"]
+size = Vector2(14, 15)
+
+[node name="ExitDoor" type="Area2D" unique_id=1799110855]
+script = ExtResource("1_iyflb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=417082029]
+sprite_frames = SubResource("SpriteFrames_ogsil")
+animation = &"opening"
+autoplay = "closed"
+
+[node name="Label" type="Label" parent="." unique_id=885295411]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "↑ Entrer"
+label_settings = ExtResource("3_iyflb")
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=54557104]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_r6ixc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

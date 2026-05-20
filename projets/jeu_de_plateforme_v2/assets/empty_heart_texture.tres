@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://bv5gda7d2pb1f"]
+
+[ext_resource type="Texture2D" uid="uid://dui1nev6jdeeu" path="res://assets/tileset_texture.png" id="1_1hete"]
+
+[resource]
+atlas = ExtResource("1_1hete")
+region = Rect2(0, 0, 16, 16)
+filter_clip = true

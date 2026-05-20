@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bsuev03vfxyxa"]
+
+[ext_resource type="Texture2D" uid="uid://dui1nev6jdeeu" path="res://assets/tileset_texture.png" id="1_7k7c6"]
+[ext_resource type="Script" uid="uid://cqsppvvcyswkd" path="res://bonus_components/diamonds/diamond.gd" id="1_fmth3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmth3"]
+radius = 4.0
+
+[node name="Diamond" type="Area2D" unique_id=380185625]
+script = ExtResource("1_fmth3")
+metadata/unique_id = 0
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="." unique_id=2103453580]
+texture = ExtResource("1_7k7c6")
+region_enabled = true
+region_rect = Rect2(32, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1813392549]
+shape = SubResource("CircleShape2D_fmth3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

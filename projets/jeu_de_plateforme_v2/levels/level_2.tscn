@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ck0we48kr4m81"]
+
+[ext_resource type="Script" uid="uid://cb62hre2ocbwm" path="res://levels/level.gd" id="1_0srwa"]
+[ext_resource type="TileSet" uid="uid://bqmjfwt7w6hid" path="res://tileset.tres" id="1_mi4ay"]
+[ext_resource type="PackedScene" uid="uid://byqq8snuvdeem" path="res://player_controller/player_controller.tscn" id="2_pqqg8"]
+
+[node name="Level2" type="Node2D" unique_id=1569210854 node_paths=PackedStringArray("transition_rect")]
+script = ExtResource("1_0srwa")
+transition_rect = NodePath("CanvasLayer/TransitionRect")
+metadata/_custom_type_script = "uid://cb62hre2ocbwm"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1804962956]
+
+[node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=1315836704]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=834125109]
+tile_map_data = PackedByteArray(0, 0, 252, 255, 2, 0, 0, 0, 10, 0, 13, 0, 0, 0, 253, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 254, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 255, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 0, 0, 2, 0, 0, 0, 12, 0, 13, 0, 0, 0)
+tile_set = ExtResource("1_mi4ay")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=488470309]
+
+[node name="PlayerController" parent="." unique_id=1234192509 instance=ExtResource("2_pqqg8")]
+position = Vector2(-8, 24)

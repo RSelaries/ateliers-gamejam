@@ -49,6 +49,16 @@ export default
                         link: "ateliers/jeu-plateforme-plus-loin.md",
                         icon: "./medias/icons/plus-loin.svg",
                     },
+                    {
+                        title: "OLD - Jeu de plateforme",
+                        link: "ateliers/jeu-de-plateforme-old.md",
+                        icon: "./medias/icons/plus-loin.svg",
+                    },
+                    {
+                        title: "OLD - Aller plus loin",
+                        link: "ateliers/jeu-plateforme-old-plus-loin.md",
+                        icon: "./medias/icons/plus-loin.svg",
+                    },
                 ],
             },
             {
