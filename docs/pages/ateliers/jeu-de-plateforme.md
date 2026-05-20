@@ -69,3 +69,62 @@ On va créer une scène *"level_1"* de type [![Node2D](../../medias/godot-icons/
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-1.gif"></viewable-image>
 
+### Peinture des tuiles
+
+On peut ajouter un node [![TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer) à notre scène.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-2.gif"></viewable-image>
+
+On va ensuite utiliser notre "![Tileset](../../medias/godot-icons/TileSet.svg) tileset.tres" pour la propriété `tile_set` du [![TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer](#godot/nodes.md#tilemaplayer).
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-3.gif"></viewable-image>
+
+Dans la fenêtre "![Tilemap](../../medias/godot-icons/TileMapPanel.svg) TileMap", on peut utiliser l'outil "![Paint](../../medias/godot-icons/Edit.svg)" pour peindre des tuiles.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-4.gif"></viewable-image>
+
+Je vais créer un petit niveau de test.
+
+<div class="side-by-side">
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-5.gif"></viewable-image>
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-6.png"></viewable-image>
+</div>
+
+**Super !** On a un magnifique niveau, mais deux problèmes:
+
+- Le fond est gris et moche.
+
+- Les textures sont étrangement floues.
+
+### Changer la couleur de fond
+
+Pour changer la couleur de fond, il faut changer les paramètres de projet: *"Project > Project Settings..."*. Puis dans les paramètres: *"Rendering > Environment > Default Clear Color"* qu'on modifie pour du noir.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-7.gif"></viewable-image>
+
+### Textures "pixélisées"
+
+Pour que nos textures soient bien pixélisées il faut également modifier un paramètre de projet: *"Rendering > Textures > Canvas Textures > Default Texture Filter"* > *Nearest*.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-8.gif"></viewable-image>
+
+<div class="side-by-side">
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-9.png"></viewable-image>
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-10.png"></viewable-image>
+</div>
+
+<span style="color: var(--body-text-color-faded); font-size: .8em">Comparaison AVANT - APRÈS</span>
+
+## Création du personnage
+
+Maintenant que l'on a créé *le meilleur niveau de l'histoire du jeu vidéo*, il nous faut un **personnage** qui puisse se déplacer dans ce niveau.
+
+<br>
+
+Pour cela, on va créer une nouvelle scène *"player.tscn"* de type [![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) que l'on va ranger dans un dossier *"/player/"*.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-1.gif"></viewable-image>
+
+
+
+
