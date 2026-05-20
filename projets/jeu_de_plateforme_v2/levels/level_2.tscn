@@ -3,6 +3,16 @@
 [ext_resource type="Script" uid="uid://cb62hre2ocbwm" path="res://levels/level.gd" id="1_0srwa"]
 [ext_resource type="TileSet" uid="uid://bqmjfwt7w6hid" path="res://tileset.tres" id="1_mi4ay"]
 [ext_resource type="PackedScene" uid="uid://byqq8snuvdeem" path="res://player_controller/player_controller.tscn" id="2_pqqg8"]
+[ext_resource type="Script" uid="uid://olbdyd0vh3eo" path="res://bonus_components/kill_zone/kill_zone.gd" id="4_v5uil"]
+[ext_resource type="FontFile" uid="uid://cfcndb5vvcrrc" path="res://assets/fonts/CHNOPixelCodePro-Italic.otf" id="5_5722l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5722l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ilhis"]
+font = ExtResource("5_5722l")
+font_size = 20
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Level2" type="Node2D" unique_id=1569210854 node_paths=PackedStringArray("transition_rect")]
 script = ExtResource("1_0srwa")
@@ -25,6 +35,28 @@ tile_map_data = PackedByteArray(0, 0, 252, 255, 2, 0, 0, 0, 10, 0, 13, 0, 0, 0, 
 tile_set = ExtResource("1_mi4ay")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=488470309]
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1381398563]
+position = Vector2(0, 128)
+script = ExtResource("4_v5uil")
+metadata/_custom_type_script = "uid://olbdyd0vh3eo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1635592451]
+shape = SubResource("WorldBoundaryShape2D_5722l")
+
+[node name="Label" type="Label" parent="." unique_id=153524052]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -26.0
+offset_right = 138.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "J'ai fait que 2 niveaux"
+label_settings = SubResource("LabelSettings_ilhis")
 
 [node name="PlayerController" parent="." unique_id=1234192509 instance=ExtResource("2_pqqg8")]
 position = Vector2(-8, 24)
