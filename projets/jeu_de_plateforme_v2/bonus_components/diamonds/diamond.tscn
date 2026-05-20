@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dui1nev6jdeeu" path="res://assets/tileset_texture.png" id="1_7k7c6"]
 [ext_resource type="Script" uid="uid://cqsppvvcyswkd" path="res://bonus_components/diamonds/diamond.gd" id="1_fmth3"]
+[ext_resource type="AudioStream" uid="uid://cgp4gqoo48e64" path="res://assets/audio/pickupCoin.wav" id="3_mb1i8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fmth3"]
 radius = 4.0
@@ -17,5 +18,9 @@ region_rect = Rect2(32, 48, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1813392549]
 shape = SubResource("CircleShape2D_fmth3")
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="." unique_id=354493292]
+unique_name_in_owner = true
+stream = ExtResource("3_mb1i8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

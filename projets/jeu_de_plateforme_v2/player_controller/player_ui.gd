@@ -10,6 +10,7 @@ extends CanvasLayer
 func _ready() -> void:
 	PlayerManager.diamond_count_changed.connect(_on_diamond_count_changed)
 	PlayerManager.health_changed.connect(_on_health_changed)
+	_on_health_changed()
 	show()
 
 

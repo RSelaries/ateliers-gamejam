@@ -9,6 +9,8 @@ extends CharacterBody2D
 var alive: bool = true
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jump_sound: AudioStreamPlayer = %JumpSound
+@onready var die_sound: AudioStreamPlayer = %DieSound
 
 
 func _ready() -> void:
@@ -26,6 +28,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump
 	if Input.is_action_just_pressed(&"movement_jump") and is_on_floor() and alive:
 		velocity.y = jump_velocity
+		jump_sound.pitch_scale = randf_range(0.7, 1.3)
+		jump_sound.play()
 	
 	# Handle left-right movements
 	var direction: float
@@ -46,6 +50,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_health_changed() -> void:
 	if PlayerManager.health <= 0:
+		die_sound.play()
 		PlayerManager.health = 0
 		alive = false
 		animated_sprite_2d.play(&"dead")

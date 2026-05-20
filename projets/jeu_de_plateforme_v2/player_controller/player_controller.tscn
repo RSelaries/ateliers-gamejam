@@ -7,6 +7,8 @@
 [ext_resource type="LabelSettings" uid="uid://q8e0xvcr0x86" path="res://assets/tiny5_label_settings.tres" id="4_6a43r"]
 [ext_resource type="Texture2D" uid="uid://d3c0t3b7140at" path="res://assets/gold_texture.tres" id="4_h00al"]
 [ext_resource type="Texture2D" uid="uid://bv5gda7d2pb1f" path="res://assets/empty_heart_texture.tres" id="4_l0ty0"]
+[ext_resource type="AudioStream" uid="uid://dv2xv6ahekfqm" path="res://assets/audio/jump.wav" id="8_cgibb"]
+[ext_resource type="AudioStream" uid="uid://d4byidiyxcj6" path="res://assets/audio/explosion.wav" id="10_5xsdm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgibb"]
 atlas = ExtResource("1_0a3u7")
@@ -425,3 +427,11 @@ label_settings = ExtResource("4_6a43r")
 layout_mode = 2
 texture = ExtResource("4_h00al")
 stretch_mode = 5
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=467883509]
+unique_name_in_owner = true
+stream = ExtResource("8_cgibb")
+
+[node name="DieSound" type="AudioStreamPlayer" parent="." unique_id=1966690465]
+unique_name_in_owner = true
+stream = ExtResource("10_5xsdm")
