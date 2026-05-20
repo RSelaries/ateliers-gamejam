@@ -33,6 +33,7 @@ em {
 }
 
 .icon {
+    display: inline-block;
     mask-position: center center;
     mask-size: contain;
     height: 24px;

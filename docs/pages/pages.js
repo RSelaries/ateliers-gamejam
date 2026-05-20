@@ -51,13 +51,13 @@ export default
                     },
                     {
                         title: "OLD - Jeu de plateforme",
-                        link: "ateliers/jeu-de-plateforme-old.md",
-                        icon: "./medias/icons/plus-loin.svg",
+                        link: "ateliers/jeu-plateforme-old.md",
+                        icon: "./medias/icons/warning-icon.svg",
                     },
                     {
                         title: "OLD - Aller plus loin",
-                        link: "ateliers/jeu-plateforme-old-plus-loin.md",
-                        icon: "./medias/icons/plus-loin.svg",
+                        link: "ateliers/jeu-pltforme-old-plus-loin.md",
+                        icon: "./medias/icons/warning-icon.svg",
                     },
                 ],
             },

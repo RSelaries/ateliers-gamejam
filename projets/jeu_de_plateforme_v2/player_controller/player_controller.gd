@@ -1,3 +1,4 @@
+class_name PlayerController
 extends CharacterBody2D
 
 
@@ -18,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		if not animated_sprite_2d.animation == &"jump":
+		if not animated_sprite_2d.animation == &"jump" and alive:
 			animated_sprite_2d.play(&"jump")
 			animated_sprite_2d.frame = randi_range(0, 3)
 	
@@ -37,7 +38,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.play(&"run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
-		if is_on_floor():
+		if is_on_floor() and alive:
 			animated_sprite_2d.play(&"idle")
 	
 	move_and_slide()
@@ -49,7 +50,11 @@ func _on_health_changed() -> void:
 		alive = false
 		animated_sprite_2d.play(&"dead")
 		await animated_sprite_2d.animation_finished
-		get_tree().reload_current_scene()
+		if owner is Level:
+			var level = owner as Level
+			level.reload_current_scene()
+		else:
+			get_tree().reload_current_scene()
 		PlayerManager.heal(3)
 
 

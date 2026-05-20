@@ -83,6 +83,12 @@ class LeftPanel extends LitElement {
             }
         }
 
+        .page-btn:has(.subpage-btn[open]) {
+            .subpage-btn {
+                display: inline;
+            }
+        }
+
         .page-btn .page-icon {
             height: 16px;
             aspect-ratio: 1;

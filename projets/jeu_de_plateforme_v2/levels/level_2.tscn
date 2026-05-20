@@ -10,15 +10,15 @@ transition_rect = NodePath("CanvasLayer/TransitionRect")
 metadata/_custom_type_script = "uid://cb62hre2ocbwm"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1804962956]
+layer = 1000
 
 [node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=1315836704]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=834125109]
 tile_map_data = PackedByteArray(0, 0, 252, 255, 2, 0, 0, 0, 10, 0, 13, 0, 0, 0, 253, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 254, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 255, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 0, 0, 2, 0, 0, 0, 12, 0, 13, 0, 0, 0)

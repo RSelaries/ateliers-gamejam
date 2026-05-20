@@ -3,7 +3,7 @@ class_name Level
 extends Node2D
 
 
-const TRANSITION_DURATION = 1.0
+const TRANSITION_DURATION = .3
 
 
 var in_transition := false
@@ -36,6 +36,18 @@ func change_to_scene(scene_file: String) -> void:
 		await get_tree().create_timer(TRANSITION_DURATION).timeout
 	
 	get_tree().change_scene_to_file(scene_file)
+
+
+func reload_current_scene() -> void:
+	if transition_rect:
+		transition_rect.color = Color(0, 0, 0, 0)
+		transition_rect.show()
+		var tween := get_tree().create_tween()
+		tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
+		tween.tween_property(transition_rect, "color", Color(0, 0, 0, 1), TRANSITION_DURATION)
+		await get_tree().create_timer(TRANSITION_DURATION).timeout
+	
+	get_tree().reload_current_scene()
 
 
 func _get_configuration_warnings() -> PackedStringArray:
