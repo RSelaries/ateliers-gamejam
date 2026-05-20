@@ -47,7 +47,7 @@ Pour créer une resource, il suffit de faire *clic-droit* dans le [![FileSys](..
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-start-4.gif"></viewable-image>
 
-
+Une fois le ![Tileset](../../medias/godot-icons/TileSet.svg) Tileset créé, un onglet "![Tileset](../../medias/godot-icons/TileSet.svg) Tileset" s'ouvre automatiquement dans la fenêtre du bas. Si ce n'est pas le cas, il suffit de re-sélectionner le fichier *"tileset.tres"*
 
 
 

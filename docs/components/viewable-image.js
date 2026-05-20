@@ -52,7 +52,7 @@ class ViewableImage extends LitElement {
         return html`
             <img src="${this.src}" @click=${this.show} class="img-btn">
             <div class="viewer-wrapper" @click=${this.hide}>
-                <img loading="lazy" src="${this.src}">
+                <img src="${this.src}">
             </div>
         `
     }
