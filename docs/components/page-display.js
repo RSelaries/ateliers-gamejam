@@ -140,7 +140,8 @@ class PageDisplay extends LitElement {
     }
 
     async waitForImages(container) {
-        const images = container.querySelectorAll("img")
+        const viewableImages = container.querySelectorAll("viewable-image")
+        const images = [...viewableImages].map((viewableImage) => viewableImage.shadowRoot.querySelector("img"))
 
         await Promise.all(
             [...images].map(img => {

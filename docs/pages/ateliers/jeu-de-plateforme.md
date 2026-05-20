@@ -47,7 +47,25 @@ Pour créer une resource, il suffit de faire *clic-droit* dans le [![FileSys](..
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-start-4.gif"></viewable-image>
 
-Une fois le ![Tileset](../../medias/godot-icons/TileSet.svg) Tileset créé, un onglet "![Tileset](../../medias/godot-icons/TileSet.svg) Tileset" s'ouvre automatiquement dans la fenêtre du bas. Si ce n'est pas le cas, il suffit de re-sélectionner le fichier *"tileset.tres"*
+Une fois le ![Tileset](../../medias/godot-icons/TileSet.svg) Tileset créé, un onglet "![Tileset](../../medias/godot-icons/TileSet.svg) Tileset" s'ouvre automatiquement dans la fenêtre du bas. Si ce n'est pas le cas, il suffit de re-sélectionner le fichier *"tileset.tres"*.
 
+Dans la fenêtre ![Tileset](../../medias/godot-icons/TileSet.svg) Tileset, il faut ajouter notre *"tileset_texture.png"*, pour cela on clique sur ![Add](../../medias/godot-icons/Add.svg) puis sur *"atlas"* et enfin on sélectionne notre fichier.
 
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-start-5.gif"></viewable-image>
+
+Godot nous informe:
+
+> The atlas's texture was modified.<br>Would you like to automatically create tiles in the atlas ?
+
+Si on répond "Yes", Godot vas tenter de **détecter automatiquements les tuiles**. On peut sélectionner "Yes".
+
+## Création du premier niveau
+
+On peut maintenant commencer à créer notre premier niveau !
+
+<br>
+
+On va créer une scène *"level_1"* de type [![Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node2d) que l'on va ranger dans un dossier *"/levels/"*.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-1.gif"></viewable-image>
 
