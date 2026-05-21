@@ -7,15 +7,17 @@ class WCFooter extends LitElement {
             margin: 0;
             border-top: solid 1px var(--border-color);
             padding: 10px 30px;
+            display: flex;
+            gap: 16px;
+        
+            > div {
+                flex: 1;
+            }
         }
 
         .logo-row {
             display: flex;
             gap: 16px;
-        }
-
-        .logo-row > div {
-            flex: 1;
         }
 
         .logo {
@@ -38,16 +40,37 @@ class WCFooter extends LitElement {
             background-repeat: no-repeat;
             padding-right: 16px;
         }
+
+        @media screen and (max-width: 1000px) {
+            footer {
+                .logo-row {
+                    flex-direction: column;
+                    gap: 0px;
+                    align-items: center;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                align-items: center;
+                
+                .logo-row {
+                    flex-direction: column;
+                }
+            }
+        }
     `
 
     render() {
         return html`
-        <footer class="logo-row">
+        <footer>
             <div>
                 Site et Ateliers créés par Raphaël Selaries
             </div>
 
-            <div style="display: flex">
+            <div class="logo-row">
                 <div style="display: flex; gap: 5px">
                     <div class="logo" style="mask-image: url(./medias/logo-sirius.svg)"></div>
                     <a href="https://sirius-productions.fr/accueil">Sirius Productions</a>

@@ -30,11 +30,23 @@ La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D rep
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link">Documentation officielle</a></span>
 
+### ![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D
+
+Un ![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D est un [![Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d) qui peut jouer une ou plusieurs animations.
+
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_animatedsprite2d.html" class="documentation-link">Documentation officielle</a></span>
+
 ### ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D
 
 Un ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) utilisé pour créer des **personnages** qui subissent la **physique** (Gravité, collisions avec les murs...).
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link">Documentation officielle</a></span>
+
+### ![Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D
+
+Un ![Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D est un node qui permet d'afficher une texture. Les sprites sont le plus souvent utilisés pour les personnages, ennemis et autres objets d'un jeu en 2D.
+
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_sprite2d.html" class="documentation-link">Documentation officielle</a></span>
 
 ### ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer
 

@@ -7,7 +7,7 @@ extends CharacterBody2D
 @export var acceleration: float = 50.0
 
 var alive: bool = true
-
+	
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer = %JumpSound
 @onready var die_sound: AudioStreamPlayer = %DieSound

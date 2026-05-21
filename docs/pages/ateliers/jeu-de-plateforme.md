@@ -125,6 +125,193 @@ Pour cela, on va créer une nouvelle scène *"player.tscn"* de type [![Character
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-1.gif"></viewable-image>
 
+### Texture du personnage
+
+On aimerait **ajouter une texture à notre personnage**. On peut utiliser un node [![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d).
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-2.gif"></viewable-image>
+
+Pour paramétrer le sprite, on va ajouter une resource ![Spriteframe](../../medias/godot-icons/SpriteFrames.svg) SpriteFrame, dans laquelle on ajoute les animations de notre personnage.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-3.gif"></viewable-image>
+
+Je vais créer 4 animations:
+
+- **Idle**: Quand le personnage est immobile.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-4.png"></viewable-image>
+
+- **Run**: Quand le personnage se déplace.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-5.png"></viewable-image>
+
+- **Jump**: Quand le personnage saute.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-6.png"></viewable-image>
+
+- **Die**: Quand le personnage meurt.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-7.png"></viewable-image>
+
+### Programmation du personnage
+
+Avant de réellement commencer à programmer notre personnage, on voit que le [![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) nous affiche un avertissement (![Warning](../../medias/godot-icons/NodeWarning.svg)) qui nous informe que:
+
+> - This node has no shape, so it can't collide or interact with other objects.
+>
+> Consider adding a CollisionShape2D or CollisionPolygon2D as a child to define its shape.
+
+En effet, pour calculer la physique on utilise une forme simplifiée de collision.
+
+Suivons donc la recommandation de Godot et ajoutons une [![CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d) à notre scène *Player*.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-8.gif"></viewable-image>
+
+On peut maintenant ajouter un script à notre personnage. Pour cela je vais choisir le template du ![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D qui contient déjà un code que l'on peut utiliser.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-9.gif"></viewable-image>
+
+Le template du ![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D est le suivant:
+
+```GDScript
+extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+
+```
+
+Tout en haut du script, la ligne `extends CharacterBody2D` définie que le script sera attché à un node [![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d).
+
+Ensuite, deux valeurs sont définies en tant que constantes:
+
+```GDScript
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+```
+
+- `SPEED`: La vitesse du personnage en pixels/seconde.
+
+- `JUMP_VELOCITY`: La force en pixels/seconde qui sera ajouté au personnage au moment du saut.
+
+Ensuite, tout le code est écrit dans la fonction `_physics_process(delta: float)`. Cette fonction **est appellée**, non pas chaque frame comme la fonction `_process(delta: float)`, mais à un **rythme constant** <span style="color: var(--body-text-color-faded); font-size: .8em">(par défaut 60 fois par seconde)</span>. Il est grandement recommandé d'écrire tout code qui **influs sur la physique** dans cette fonction pour plus de stabilité.
+
+<br>
+
+Dans l'ordre:
+
+```GDScript
+# Add the gravity.
+if not is_on_floor():
+    velocity += get_gravity() * delta
+```
+
+Ici on test d'abord si le personnage est **dans les airs** <span style="color: var(--body-text-color-faded); font-size: .8em">(si il ne touche pas le sol)</span>, et si c'est le cas, on va ajouter une **force verticale** pour créer de la gravité.
+
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Le symbole '<code>#</code>' permet d'écrire des notes dans le code</span>
+
+```GDScript
+# Handle jump.
+if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+    velocity.y = JUMP_VELOCITY
+```
+
+Ensuite, si on détecte un **appui de la touche** `"ui_accept"` ET si le personnage est au sol, alors on lui applique une **force verticale** égale à `JUMP_VELOCITY`. Cela fait alors sauter le personnage.
+
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Godot contient par **défaut** une **liste de touches** (qui commencent toute par `"ui_*"`). `"ui_accept"` représente les touches *"Entrée"* et *"Espace"*.</span>
+
+```GDScript
+# Get the input direction and handle the movement/deceleration.
+# As good practice, you should replace UI actions with custom gameplay actions.
+var direction := Input.get_axis("ui_left", "ui_right")
+```
+
+Ici, on va d'abord récupérer la **direction** du mouvement que le joueur sélectionne. `Input.get_axis()` prend en entrée le nom de *deux touches*, et donne en *sortie* un nombre entre `-1` et `1`. Dans ce contexte, `-1` représente un mouvement vers la **gauche**, `1` vers la **droite**, et `0` représente que le personnage est **immobile**.
+
+<br>
+
+Puis, `if direction:` est la même chose que `if direction != 0`, si la direcition n'est pas égale à `0` et donc si le personnage est en mouvement alors on applique une force horizontale calculée par `SPEED` multiplié par la `direction`.
+
+```GDScript
+velocity.x = direction * SPEED
+```
+
+Sinon (`else:`), si `direction` est égale à `0`, et donc que le personnage devrais être immobile, alots on réduit la force horizontale jusqu'à ce qu'elle atteigne `0`.
+
+```GDScript
+velocity.x = move_toward(velocity.x, 0, SPEED)
+```
+
+
+<iframe-player launchFullscreen="false" style="aspect-ratio: 16/9" title="Visualisation de la variable direction" class="game" src="./game-builds/direction-representation/index.html"></iframe-player>
+
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Visualisation de l'impact de `direction` sur le mouvement et la `velocity`.</span>
+
+Enfin,
+
+```GDScript
+move_and_slide()
+```
+
+`move_and_slide()` est une fonction du node [![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d) qui permet d'appliquer la physique à l'aide de la variable `velocity`.
+
+## Test du jeu
+
+On peut maintenant ajouter notre personnage à notre premier niveau et tester le jeu.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-10.gif"></viewable-image>
+
+Et mainetnant si on test notre jeu (![LaunchScene](../../medias/godot-icons/godot-play-scene-icon.svg)):
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-11.gif"></viewable-image>
+
+On a deux problèmes:
+
+- Le niveau n'est pas du tout **au centre de la fenêtre**.
+
+- Le personnage **passe au travers** des plateformes.
+
+### La fenêtre de jeu
+
+Pour rêgler le premier problème on peut faire plusieurs choses. D'abord on vas modifier les propriété de la fenêtre du jeu: *Project > Project Settings...* dans la section *Display > Window* on va modifier les propriétés *Viewport Width* et *Viewport Height* en `640` et `360`. Ensuite on va modifier la propriété *Stretch > Mode* en *canvas_item* et *Stretch > Aspect* en *keep_height*.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-window-1.png"></viewable-image>
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-window-2.png"></viewable-image>
+
+Une fois ça fait, on peut ajouter une [![Camera2D](../../medias/godot-icons/Camera2D.svg) Camera2D](#godot/nodes.md#camera2d) à notre niveau et la placer au centre de notre niveau.
+
+<div class="side-by-side content">
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-window-3.png"></viewable-image>
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-window-4.png"></viewable-image>
+</div>
+
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Le rectangle violet représente le champ de vision de la caméra.</span>
+
+### Les collisions
+
+Il nous faut maintenant retourner sur notre resource ![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet <span style="color: var(--body-text-color-faded); font-size: .8em">(*"tileset.tres"*)</span> et y ajouter des collisions pour éviter que notre personnage passe aux travers des plateformes.
+
 
 
 
