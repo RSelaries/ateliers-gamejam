@@ -310,8 +310,24 @@ Une fois ça fait, on peut ajouter une [![Camera2D](../../medias/godot-icons/Cam
 
 ### Les collisions
 
-Il nous faut maintenant retourner sur notre resource ![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet <span style="color: var(--body-text-color-faded); font-size: .8em">(*"tileset.tres"*)</span> et y ajouter des collisions pour éviter que notre personnage passe aux travers des plateformes.
+Il nous faut maintenant retourner sur notre resource ![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet <span style="color: var(--body-text-color-faded); font-size: .8em">(*"tileset.tres"*)</span> et y ajouter des collisions pour éviter que notre personnage passe aux travers des plateformes. 
 
+<br>
 
+Pour cela on ouvre ses propriétés, et dans la section *"physics layers"* on clique sur "![Add](../../medias/godot-icons/Add.svg) Add Element".
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-collisions-1.gif"></viewable-image>
+
+Enfin, il nous suffit d'ajouter les collisions sur les plateformes à l'aide de l'outil ![Paint](../../medias/godot-icons/Paint.svg) Paint en sélectionnant le *"physics_layer_0"*.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-collisions-2.gif"></viewable-image>
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-collisions-3.gif"></viewable-image>
+
+On peut relancer le jeu, ce qui nous donne:
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-collisions-4.gif"></viewable-image>
+
+Les collisions fonctionnent ! Par contre notre personnage se déplace bien, bien trop rapidement, j'ai donc changé `SPEED` à `120` et `JUMP_VELOCITY` à `-300`.
 
 
