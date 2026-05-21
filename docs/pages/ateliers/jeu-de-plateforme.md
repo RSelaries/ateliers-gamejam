@@ -27,9 +27,9 @@ Comme la dernière fois, on va créer un **nouveau projet**.
 
 Une fois le projet créé, on va télécharger les assets de notre jeu. Vous pouvez directement télécharger le dossier */assets/* de mon projet <a class="external-link" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2/assets" target="blank" download>ici</a>.
 
-> <span style="color: var(--body-text-color-faded); font-size: .8em">Je vous coneille fortement d'utiliser le dossier /assets/ que je fourni, mais vous pouvez également chercher un tileset vous même. Vous pouvez par exemple chercher <a class="external-link" href="https://itch.io/game-assets/tag-side-scroller/tag-tileset" target="blank">ici</a>.</span>
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Je vous conseille fortement d'utiliser le dossier /assets/ que je fourni, mais vous pouvez également chercher un tileset vous même. Vous pouvez par exemple chercher <a class="external-link" href="https://itch.io/game-assets/tag-side-scroller/tag-tileset" target="blank">ici</a>.</span>
 
-Il nous suffit ensuite de **decompresser** le fichier *zip*, puis de le glisser dans notre projet.
+Il nous suffit ensuite de **décompresser** le fichier *zip*, puis de le glisser dans notre projet.
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-start-2.gif"></viewable-image>
 
@@ -39,11 +39,11 @@ Le dossier */assets/* contient plusieurs sous-dossiers et fichiers. Pour l'insta
 
 ## Création du tileset
 
-Pour ce second jeu, nous allons utiliser la technique de création d'environement appelé [Tileset](#ressources-suplementaires/lexique-game-dev.md#tileset). Pour pouvoir utiliser le tileset que l'on a téléchargé <span style="color: var(--body-text-color-faded); font-size: .8em">(*/tileset_texture.png*)</span> dans Godot, il faut créer une resource ![Tileset](../../medias/godot-icons/TileSet.svg) **Tileset**.
+Pour ce second jeu, nous allons utiliser la technique de création d'environement appelé [Tileset](#ressources-suplementaires/lexique-game-dev.md#tileset). Pour pouvoir utiliser le tileset que l'on a téléchargé <span style="color: var(--body-text-color-faded); font-size: .8em">(*/tileset_texture.png*)</span> dans Godot, il faut créer une ressource ![Tileset](../../medias/godot-icons/TileSet.svg) **Tileset**.
 
 <br>
 
-Pour créer une resource, il suffit de faire *clic-droit* dans le [![FileSys](../../medias/godot-icons/Folder.svg) FileSystem](), puis "![Res](../../medias/godot-icons/Object.svg) New Resource..." et enfin chercher la resource ![Tileset](../../medias/godot-icons/TileSet.svg) **Tileset**.
+Pour créer une ressource, il suffit de faire *clic-droit* dans le [![FileSys](../../medias/godot-icons/Folder.svg) FileSystem](), puis "![Res](../../medias/godot-icons/Object.svg) New Resource..." et enfin chercher la ressource ![Tileset](../../medias/godot-icons/TileSet.svg) **Tileset**.
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-start-4.gif"></viewable-image>
 
@@ -57,7 +57,7 @@ Godot nous informe:
 
 > The atlas's texture was modified.<br>Would you like to automatically create tiles in the atlas ?
 
-Si on répond "Yes", Godot vas tenter de **détecter automatiquements les tuiles**. On peut sélectionner "Yes".
+Si on répond "Yes", Godot va tenter de **détecter automatiquements les tuiles**. On peut sélectionner "Yes".
 
 ## Création du premier niveau
 
@@ -96,9 +96,9 @@ Je vais créer un petit niveau de test.
 
 - Les textures sont étrangement floues.
 
-### Changer la couleur de fond
+### Changer la couleur du fond
 
-Pour changer la couleur de fond, il faut changer les paramètres de projet: *"Project > Project Settings..."*. Puis dans les paramètres: *"Rendering > Environment > Default Clear Color"* qu'on modifie pour du noir.
+Pour changer la couleur du fond, il faut changer les paramètres de projet: *"Project > Project Settings..."*. Puis dans les paramètres: *"Rendering > Environment > Default Clear Color"* qu'on modifie pour du noir.
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level1-7.gif"></viewable-image>
 
@@ -131,7 +131,7 @@ On aimerait **ajouter une texture à notre personnage**. On peut utiliser un nod
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-2.gif"></viewable-image>
 
-Pour paramétrer le sprite, on va ajouter une resource ![Spriteframe](../../medias/godot-icons/SpriteFrames.svg) SpriteFrame, dans laquelle on ajoute les animations de notre personnage.
+Pour paramétrer le sprite, on va ajouter une ressource ![Spriteframe](../../medias/godot-icons/SpriteFrames.svg) SpriteFrame, dans laquelle on ajoute les animations de notre personnage.
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-3.gif"></viewable-image>
 
@@ -202,7 +202,7 @@ func _physics_process(delta: float) -> void:
 
 ```
 
-Tout en haut du script, la ligne `extends CharacterBody2D` définie que le script sera attché à un node [![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d).
+Tout en haut du script, la ligne `extends CharacterBody2D` définie que le script sera attaché à un node [![CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D](#godot/nodes.md#characterbody2d).
 
 Ensuite, deux valeurs sont définies en tant que constantes:
 
@@ -213,9 +213,9 @@ const JUMP_VELOCITY = -400.0
 
 - `SPEED`: La vitesse du personnage en pixels/seconde.
 
-- `JUMP_VELOCITY`: La force en pixels/seconde qui sera ajouté au personnage au moment du saut.
+- `JUMP_VELOCITY`: La force en pixels/seconde qui sera ajoutée au personnage au moment du saut.
 
-Ensuite, tout le code est écrit dans la fonction `_physics_process(delta: float)`. Cette fonction **est appellée**, non pas chaque frame comme la fonction `_process(delta: float)`, mais à un **rythme constant** <span style="color: var(--body-text-color-faded); font-size: .8em">(par défaut 60 fois par seconde)</span>. Il est grandement recommandé d'écrire tout code qui **influs sur la physique** dans cette fonction pour plus de stabilité.
+Ensuite, tout le code est écrit dans la fonction `_physics_process(delta: float)`. Cette fonction **est appellée**, non pas chaque frame comme la fonction `_process(delta: float)`, mais à un **rythme constant** <span style="color: var(--body-text-color-faded); font-size: .8em">(par défaut 60 fois par seconde)</span>. Il est grandement recommandé d'écrire tout code qui **influ sur la physique** dans cette fonction pour plus de stabilité.
 
 <br>
 
@@ -227,7 +227,7 @@ if not is_on_floor():
     velocity += get_gravity() * delta
 ```
 
-Ici on test d'abord si le personnage est **dans les airs** <span style="color: var(--body-text-color-faded); font-size: .8em">(si il ne touche pas le sol)</span>, et si c'est le cas, on va ajouter une **force verticale** pour créer de la gravité.
+Ici on teste d'abord si le personnage est **dans les airs** <span style="color: var(--body-text-color-faded); font-size: .8em">(si il ne touche pas le sol)</span>, et si c'est le cas, on va ajouter une **force verticale** pour créer de la gravité.
 
 > <span style="color: var(--body-text-color-faded); font-size: .8em">Le symbole '<code>#</code>' permet d'écrire des notes dans le code</span>
 
@@ -239,7 +239,7 @@ if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 
 Ensuite, si on détecte un **appui de la touche** `"ui_accept"` ET si le personnage est au sol, alors on lui applique une **force verticale** égale à `JUMP_VELOCITY`. Cela fait alors sauter le personnage.
 
-> <span style="color: var(--body-text-color-faded); font-size: .8em">Godot contient par **défaut** une **liste de touches** (qui commencent toute par `"ui_*"`). `"ui_accept"` représente les touches *"Entrée"* et *"Espace"*.</span>
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Godot contient par **défaut** une **liste de touches** (qui commencent toutes par `"ui_*"`). `"ui_accept"` représente les touches *"Entrée"* et *"Espace"*.</span>
 
 ```GDScript
 # Get the input direction and handle the movement/deceleration.
@@ -251,13 +251,13 @@ Ici, on va d'abord récupérer la **direction** du mouvement que le joueur séle
 
 <br>
 
-Puis, `if direction:` est la même chose que `if direction != 0`, si la direcition n'est pas égale à `0` et donc si le personnage est en mouvement alors on applique une force horizontale calculée par `SPEED` multiplié par la `direction`.
+Puis, `if direction:` est la même chose que `if direction != 0`, si la direction n'est pas égale à `0` et donc si le personnage est en mouvement alors on applique une force horizontale calculée par `SPEED` multiplié par la `direction`.
 
 ```GDScript
 velocity.x = direction * SPEED
 ```
 
-Sinon (`else:`), si `direction` est égale à `0`, et donc que le personnage devrais être immobile, alots on réduit la force horizontale jusqu'à ce qu'elle atteigne `0`.
+Sinon (`else:`), si `direction` est égale à `0`, et donc que le personnage devrait être immobile, alors on réduit la force horizontale jusqu'à ce qu'elle atteigne `0`.
 
 ```GDScript
 velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -282,7 +282,7 @@ On peut maintenant ajouter notre personnage à notre premier niveau et tester le
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-10.gif"></viewable-image>
 
-Et mainetnant si on test notre jeu (![LaunchScene](../../medias/godot-icons/godot-play-scene-icon.svg)):
+Et mainetnant si on teste notre jeu (![LaunchScene](../../medias/godot-icons/godot-play-scene-icon.svg)):
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-player-11.gif"></viewable-image>
 
@@ -294,7 +294,7 @@ On a deux problèmes:
 
 ### La fenêtre de jeu
 
-Pour rêgler le premier problème on peut faire plusieurs choses. D'abord on vas modifier les propriété de la fenêtre du jeu: *Project > Project Settings...* dans la section *Display > Window* on va modifier les propriétés *Viewport Width* et *Viewport Height* en `640` et `360`. Ensuite on va modifier la propriété *Stretch > Mode* en *canvas_item* et *Stretch > Aspect* en *keep_height*.
+Pour régler le premier problème on peut faire plusieurs choses. D'abord on vas modifier les propriétés de la fenêtre du jeu: *Project > Project Settings...* dans la section *Display > Window* on va modifier les propriétés *Viewport Width* et *Viewport Height* en `640` et `360`. Ensuite on va modifier la propriété *Stretch > Mode* en *canvas_item* et *Stretch > Aspect* en *keep_height*.
 
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-window-1.png"></viewable-image>
 <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-window-2.png"></viewable-image>
@@ -310,7 +310,7 @@ Une fois ça fait, on peut ajouter une [![Camera2D](../../medias/godot-icons/Cam
 
 ### Les collisions
 
-Il nous faut maintenant retourner sur notre resource ![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet <span style="color: var(--body-text-color-faded); font-size: .8em">(*"tileset.tres"*)</span> et y ajouter des collisions pour éviter que notre personnage passe aux travers des plateformes. 
+Il nous faut maintenant retourner sur notre ressource ![Godot - TileSet](../../medias/godot-icons/TileSet.svg) TileSet <span style="color: var(--body-text-color-faded); font-size: .8em">(*"tileset.tres"*)</span> et y ajouter des collisions pour éviter que notre personnage passe au travers des plateformes. 
 
 <br>
 

@@ -6,6 +6,10 @@ const opened = new URL( "../medias/icons/folder-opened.svg", import.meta.url).hr
 const closed = new URL( "../medias/icons/folder-closed.svg", import.meta.url).href
 
 class LeftPanel extends LitElement {
+    static properties = {
+        noMaxHeight: {},
+    }
+
     static styles = css`
         .left-panel-nav {
             text-decoration: none;
@@ -153,6 +157,8 @@ class LeftPanel extends LitElement {
     constructor() {
         super()
 
+        this.noMaxHeight = "false"
+
         window.addEventListener("hashchange", () => {
             this.openActivePage()
         })
@@ -186,7 +192,7 @@ class LeftPanel extends LitElement {
         }
 
         return html`
-        <nav class="left-panel-nav">
+        <nav class="left-panel-nav" style="${this.noMaxHeight === "true" ? 'max-height: none' : ''}">
             <ol class="category-list">
                 ${pages.map((category) => html`<li class="category ${category.slug}">
                     <details open="">

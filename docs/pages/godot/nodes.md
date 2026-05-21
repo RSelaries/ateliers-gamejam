@@ -104,6 +104,6 @@ Un ![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit est un [!
 
 ### ![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox
 
-Un ![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox est un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) qui permet çà l'utilisateur de rentrer un nombre qui peut être récupéré par code.
+Un ![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox est un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) qui permet à l'utilisateur de rentrer un nombre qui peut être récupéré par code.
 
 > <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_spinbox.html" class="documentation-link">Documentation officielle</a></span>

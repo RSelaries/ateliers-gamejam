@@ -77,6 +77,13 @@ class LeftPanelBurger extends LitElement {
         }
     `
 
+    constructor() {
+        super()
+        window.addEventListener("hashchange", () => {
+            this.closeMenu()
+        })
+    }
+
     render() {
         return html`
             <details>
@@ -88,7 +95,7 @@ class LeftPanelBurger extends LitElement {
                         <button class="exit-menu" @click=${this.closeMenu}>
                             <div style="mask-image: url(${burgerMenuCloseIcon})"></div>
                         </button>
-                        <left-panel></left-panel>
+                        <left-panel noMaxHeight="true"></left-panel>
                     </div>
                 </div>
             </details>
