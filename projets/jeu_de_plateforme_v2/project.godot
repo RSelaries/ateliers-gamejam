@@ -25,7 +25,6 @@ PlayerManager="*uid://bnnp6a88yy5no"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 

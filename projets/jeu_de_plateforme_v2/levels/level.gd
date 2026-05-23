@@ -24,6 +24,7 @@ func _ready() -> void:
 		tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUART)
 		tween.tween_property(transition_rect, "color", Color(0, 0, 0, 0), TRANSITION_DURATION)
 		tween.tween_property(self, "in_transition", false, 0.0)
+		tween.tween_property(transition_rect, "visible", false, 0.0)
 
 
 func change_to_scene(scene_file: String) -> void:

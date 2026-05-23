@@ -330,4 +330,180 @@ On peut relancer le jeu, ce qui nous donne:
 
 Les collisions fonctionnent ! Par contre notre personnage se déplace bien, bien trop rapidement, j'ai donc changé `SPEED` à `120` et `JUMP_VELOCITY` à `-300`.
 
+## Plusieurs niveaux
+
+Il ne nous manque plus qu'un élément pour avoir un jeu jouable: avoir **plusieurs niveaux**.
+
+<br>
+
+Pour cela, on va créer une nouvelle scène [![Area2D](../../medias/godot-icons/Area2D.svg) Area2D](#godot/nodes.md#area2d) qu'on va appeller *"exit_door"*. Ensuite on lui ajoute un [![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d) et une [![CollisionShape2D](../../medias/godot-icons/CollisionShape2D.svg) CollisionShape2D](#godot/nodes.md#collisionshape2d) et enfin on peut l'enregistrer dans un dossier *"/components/"*.
+
+<div class="side-by-side content">
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-1.png"></viewable-image>
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-2.png"></viewable-image>
+    <viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-3.png"></viewable-image>
+</div>
+
+On peut créer deux animation à la porte:
+
+- `closed`: Pour quand la porte est fermée, se lance automatiquement
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-4.png"></viewable-image>
+
+- `opening`: Pour quand le joueur ouvre la porte, il faut désactiver la boucle d'animation pour éviter que la porte s'ouvre encore et encore.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-5.png"></viewable-image>
+
+Enfin on va ajouter un texte à notre porte pour que le joueur sache qu'il peut ouvrir la porte. On ajoute donc un [![Godot - Label](../../medias/godot-icons/Label.svg) Label](#godot/nodes.md#label), on change sa propriété `text` pour *`"↑ Entrer"`*. Et pour que le texte soit pixélisé, on modifie sa fonte et sa taille, pour ça il on ajoute le `"tiny5_label_settings.tres"` <span style="color: var(--body-text-color-faded); font-size: .8em">(dans le dossier *"/assets/"*)</span> dans la propriété `label_settings` du ![Godot - Label](../../medias/godot-icons/Label.svg) Label.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-6.gif"></viewable-image>
+
+### Programmation de la porte
+
+Comme à notre habitude, on va ajouter un script à notre scène, puis on va connecter les signaux `body_entered` et `body_exited` à notre script.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-7.gif"></viewable-image>
+
+<br>
+
+On a donc le script suivant:
+
+```gdscript
+extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
+```
+
+Pour que notre porte fonctionne, il nous faut:
+
+- **Une référence au Label**: Pour l'afficher ou le cacher
+
+- **Une référence au AnimatedSprite2D**: Pour jouer l'animation de la porte
+
+- **Une référence vers le niveau**: Pour pouvoir réutiliser la même porte sur tous nos niveaux
+
+- **Une variable "`player_inside`"**: Pour savoir si le joueur se trouve dans le perimètre de la porte
+
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Le mot clé `@export` permet de visualiser et modifier une variable dans l'**Inspecteur**. `@export_file_path()` permet de préciser à Godot que l'on veut avoir **accès à un fichier** et on précise que c'est un fichier de scène *(.tscn)*.</span>
+
+Ce qui nous donne:
+
+```gdscript
+extends Area2D
+
+
+@export_file_path("*.tscn") var to_level: String
+
+var text_label: Label
+var animated_sprite: AnimatedSprite2D
+var player_inside: bool = false
+
+
+func _ready() -> void:
+	text_label = $Label
+	text_label.hide()
+	animated_sprite = $AnimatedSprite2D
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass
+
+
+func _on_body_exited(body: Node2D) -> void:
+	pass
+```
+
+Ensuite on veut savoir quand le personnage entre dans notre **Area** pour afficher le texte. Pour s'assuer que ce soit bien le *personnage* qui rentre dans la porte, et pas un *ennemi* ou *autre objet*, on va ajouter le **personnage** joueur dans un **groupe**.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-8.gif"></viewable-image>
+
+Ce qui nous permet de vérifier que le `body` qui entre dans la porte est bien le joueur.
+
+```gdscript
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		player_inside = true
+		text_label.show()
+
+
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		player_inside = true
+		text_label.hide()
+```
+
+À ce stade là on peut ajouter la porte à notre premier niveau et s'assurer que ça fonctionne.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-exit-door-9.gif"></viewable-image>
+
+### Changement de niveau
+
+Pour finaliser notre porte, il faut détecter quand le joueur appuie sur `"↑"`, et si il est dans la porte, on charge le prochain niveau.
+
+On ajoute donc au script de la porte la fonciton suivante:
+
+```gdscript
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_up") and player_inside:
+		animated_sprite.play(&"opening")
+		await animated_sprite.animation_finished
+		get_tree().change_scene_to_file(to_level)
+```
+
+La fonction `_unhandled_input(event)` est **appellée** dès qu'il y a une *touche de clavier*, un *bouton de souris*, un *bouton de manette*...
+
+<br>
+
+Ensuite on test si l'évenement reçu est la touche `"↑"` <span style="color: var(--body-text-color-faded); font-size: .8em">(qui s'appelle par défaut `"ui_up"`)</span> à l'aide de la fonction `is_action_pressed()`.
+
+<br>
+
+Enfin, on joue l'animation de l'ouverture de la porte avec la fonction `play()` du [![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D](#godot/nodes.md#animatedsprite2d). Puis on attend que cette animation soit finie, et enfin on change vers le prochain niveau à l'aide de la fonction `get_tree().change_scene_to_file()`.
+
+## Deuxième niveau
+
+Pour s'assurer que notre porte fonctionne bien, on va **créer un deuxième niveau**, puis connecter la porte du premier niveau au deuxième.
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level2-1.gif"></viewable-image>
+
+Enfin, on retourne sur notre niveau 1, et on modifie la porte pour qu'elle soit reliée au deuxième niveau:
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level2-2.gif"></viewable-image>
+
+On peut maitenant tester notre jeu:
+
+<viewable-image src="./medias/jeu-de-plateforme-v2/platformer-level2-3.gif"></viewable-image>
+
+## Jeu fini
+
+On a un jeu fonctionnel ! Vous pouvez dès maintenant faire d'autres niveaux et les relier ensemble à l'aide des portes et vous faire un jeu avec 200 niveaux.
+
+<br>
+
+Vous pouvez retrouver tous les fichier du projet <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a> et vous pouvez les télécharger <a class="external-link" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a>.
+
+Si vous avez encore envie d'améliorer votre jeu vous pouvez:
+
+- [Ajouter des points de vie](#ateliers/jeu-plateforme-plus-loin.md)
+
+- [Ajouter des diamands](#ateliers/jeu-plateforme-plus-loin.md)
+
+- [Faire des meilleures plateformes](#ateliers/jeu-plateforme-plus-loin.md)
+
 

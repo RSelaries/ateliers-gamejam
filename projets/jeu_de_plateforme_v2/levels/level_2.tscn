@@ -1,10 +1,50 @@
-[gd_scene format=3 uid="uid://ck0we48kr4m81"]
+[gd_scene format=4 uid="uid://ck0we48kr4m81"]
 
 [ext_resource type="Script" uid="uid://cb62hre2ocbwm" path="res://levels/level.gd" id="1_0srwa"]
 [ext_resource type="TileSet" uid="uid://bqmjfwt7w6hid" path="res://tileset.tres" id="1_mi4ay"]
 [ext_resource type="PackedScene" uid="uid://byqq8snuvdeem" path="res://player_controller/player_controller.tscn" id="2_pqqg8"]
+[ext_resource type="Script" uid="uid://u6btsqexddot" path="res://levels/reload_game_btn.gd" id="3_ep78u"]
 [ext_resource type="Script" uid="uid://olbdyd0vh3eo" path="res://bonus_components/kill_zone/kill_zone.gd" id="4_v5uil"]
 [ext_resource type="FontFile" uid="uid://cfcndb5vvcrrc" path="res://assets/fonts/CHNOPixelCodePro-Italic.otf" id="5_5722l"]
+[ext_resource type="FontFile" uid="uid://dge7vivcp6t6q" path="res://assets/fonts/Tiny5-Regular.ttf" id="6_ilhis"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilhis"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 7.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 5
+expand_margin_top = 3.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep78u"]
+content_margin_left = 4.0
+content_margin_top = 7.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 5
+expand_margin_bottom = 3.0
+anti_aliasing = false
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5722l"]
 
@@ -22,16 +62,38 @@ metadata/_custom_type_script = "uid://cb62hre2ocbwm"
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1804962956]
 layer = 1000
 
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=249020779]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 110.0
+offset_right = 48.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ilhis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ilhis")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ep78u")
+text = "REJOUER"
+script = ExtResource("3_ep78u")
+scene = "res://levels/level_0.tscn"
+
 [node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=1315836704]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=834125109]
-tile_map_data = PackedByteArray(0, 0, 252, 255, 2, 0, 0, 0, 10, 0, 13, 0, 0, 0, 253, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 254, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 255, 255, 2, 0, 0, 0, 11, 0, 13, 0, 0, 0, 0, 0, 2, 0, 0, 0, 12, 0, 13, 0, 0, 0)
+tile_map_data = PackedByteArray("AAD9/wIAAAAKAA0AAAD+/wIAAAALAA0AAAD//wIAAAALAA0AAAAAAAIAAAALAA0AAAABAAIAAAALAA0AAAACAAIAAAAMAA0AAAA=")
 tile_set = ExtResource("1_mi4ay")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=488470309]
