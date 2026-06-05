@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Jeu de plateforme v2"
-config/tags=PackedStringArray("ateliers_gamejam")
+config/name="Atelier 2: Jeu de plateforme"
+config/tags=PackedStringArray("ateliers_gamejam", "sirius")
 run/main_scene="uid://bjipynha068me"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -41,6 +41,10 @@ folder_colors={
 [global_group]
 
 player=""
+
+[godots]
+
+version_hint=""
 
 [input]
 

@@ -1,0 +1,43 @@
+~ start
+$> open_dialogue_app()
+=> reveil
+
+~ reveil
+$> change_icon(ICON_SMARTPHONE)
+$> add_image_viewer(&"smartphone", SMORTPHONE, "Smartphone").move(Vector2(0.75, 0.4))
+Téléphone: [wait=0.5][speed=0.5]Tudududu [wait=0.5]tudududu [wait=0.5]tudududu [wait=0.5]tudududu
+	[wait=0.7]Il est 12h30. [wait=0.7]Une alarme sonne. [wait=0.7]Une main vient se poser sur l'écran d'un téléphone. [wait=0.7]L'alarme s'arrête.
+$> change_icon(ICON_ATHAVAN)
+$> remove_image_viewer(&"smartphone")
+$> add_image_viewer(&"athavan", ATHAVAN_AU_LIT, "Athavan").move(Vector2(0.3, 0.2), false)
+Athavan: [wave amp=25 freq=5]*soupir*[/wave]... "Pourquoi est-ce que je dois me lever si tôt pour aller au travail ?! Je n'ai pu dormir que quatres heures cette nuit." (J'ai joué à Valorant jusqu'à 8h. J'aurais aimé continuer.)
+
+- S'habiller
+	Athavan: Athavan enfile un jogging. Puis un t-shirt Hollow Knight flocké au fablab de Sirius.  Il sors de sa chambre, et descends ses escaliers deux à deux vers la salle de bain. Il croise Jacky sur le chemin.
+	=> salle_de_bain
+
+- Enfiler des chaussettes et aller petit déjeuner
+	Athavan: Il ouvre ses yeux. Péniblement. Enfile une paire de chaussette. Puis descend de sa chambre vers le salon. Il croise Jacky sur son chemin, qui le regarde du coin de l'oeil.
+	Maman d'Athavan: "C'est pas mal les chaussettes mais t'aurais pu mettre un caleçon quand même."
+	Athavan: "Merde"
+	=> game_over
+
+- Aller petit déjeuner
+	Athavan: Yay
+
+- Se rendormir
+	Athavan: Et puis merde, je vais démissionner de Sirius toute façon...
+
+~ salle_de_bain
+
+~ aller_au_boulot
+$> change_icon(ICON_ATHAVAN)
+Athavan: Pffff... [speed=0.2][wave amp=15 freq=2]Je veeuuux paaaasss...[/wave]
+
+~ game_over
+Jeu: [b]Game Over[/b]
+- Recommencer
+	=> start
+- Quitter le jeu
+	$> quit()
+	=> game_over

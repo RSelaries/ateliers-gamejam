@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="devine-le-nombre"
-config/tags=PackedStringArray("ateliers_gamejam")
+config/name="Atelier 1: Devine le nombre"
+config/tags=PackedStringArray("ateliers_gamejam", "sirius")
 run/main_scene="uid://dswx32eqwv5es"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.08235294, 0.08235294, 0.08235294, 1)
@@ -26,6 +26,10 @@ folder_colors={
 [global_group]
 
 boutons=""
+
+[godots]
+
+version_hint=""
 
 [physics]
 

@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://st4fobr7ba57"]
+
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="1_61eq5"]
+[ext_resource type="Script" uid="uid://3yh0quf5ecin" path="res://ui/os_window/os_window.gd" id="2_1im57"]
+[ext_resource type="Resource" uid="uid://bird31ns0fkke" path="res://dialogues/test_dialogue.dialogue" id="3_84ka8"]
+[ext_resource type="Texture2D" uid="uid://dqvla5kiyly33" path="res://assets/ui_textures/icons/mon_ordinateur.png" id="4_77h4l"]
+[ext_resource type="Texture2D" uid="uid://1kgbwt1b2s5g" path="res://assets/ui_textures/icons/start_game.png" id="5_k2t68"]
+[ext_resource type="Texture2D" uid="uid://s4p8vob0di47" path="res://assets/ui_textures/icons/game.png" id="6_mwkcr"]
+[ext_resource type="Texture2D" uid="uid://ck6rrt8sn0c6" path="res://assets/ui_textures/nine_patch_textures/task_bar.png" id="7_g31bl"]
+[ext_resource type="FontFile" uid="uid://bphpf0q76jomy" path="res://assets/fonts/ari-w9500/ari-w9500-bold.otf" id="8_qmci1"]
+[ext_resource type="Texture2D" uid="uid://bmyf40vikndv5" path="res://assets/ui_textures/icons/start_taskbar_icon.png" id="9_lmoic"]
+[ext_resource type="Script" uid="uid://cu5nwseykx1mg" path="res://ui/os_window/start_button.gd" id="10_61eq5"]
+[ext_resource type="Texture2D" uid="uid://dvb8efo583uc5" path="res://assets/ui_textures/icons/dialogue_icon.png" id="10_imtx2"]
+[ext_resource type="Texture2D" uid="uid://df6vn51hbehyj" path="res://assets/ui_textures/nine_patch_textures/nine_patch_panel.png" id="12_ek2n0"]
+[ext_resource type="Script" uid="uid://ces5bsm0bc1co" path="res://ui/os_window/hour_label.gd" id="13_v47k0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3x4f6"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0.5019608, 0.5019608, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3x4f6"]
+content_margin_left = 2.0
+content_margin_top = 6.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+texture = ExtResource("7_g31bl")
+texture_margin_top = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_272ik"]
+texture = ExtResource("12_ek2n0")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qd8cd"]
+
+[node name="OSWindow" type="Control" unique_id=215140744]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_61eq5")
+script = ExtResource("2_1im57")
+start_dialogue = ExtResource("3_84ka8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2089134794]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Desktop" type="PanelContainer" parent="VBoxContainer" unique_id=1379552820]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3x4f6")
+
+[node name="VFlowContainer" type="VFlowContainer" parent="VBoxContainer/Desktop" unique_id=1870994423]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Desktop/VFlowContainer" unique_id=1600679760]
+custom_minimum_size = Vector2(170, 120)
+custom_maximum_size = Vector2(170, 120)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="QuitGameBtn" type="TextureButton" parent="VBoxContainer/Desktop/VFlowContainer/VBoxContainer" unique_id=358930948]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("4_77h4l")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Desktop/VFlowContainer/VBoxContainer" unique_id=546396515]
+layout_mode = 2
+text = "Fermer le jeu"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/Desktop/VFlowContainer" unique_id=1138992333]
+visible = false
+custom_minimum_size = Vector2(170, 120)
+custom_maximum_size = Vector2(170, 120)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Desktop/VFlowContainer/VBoxContainer3" unique_id=175626683]
+layout_mode = 2
+texture = ExtResource("5_k2t68")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Desktop/VFlowContainer/VBoxContainer3" unique_id=493383385]
+layout_mode = 2
+text = "Paramètres"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/Desktop/VFlowContainer" unique_id=1987988618]
+custom_minimum_size = Vector2(170, 120)
+custom_maximum_size = Vector2(170, 120)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="StartGameButton" type="TextureButton" parent="VBoxContainer/Desktop/VFlowContainer/VBoxContainer2" unique_id=1015299606]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("6_mwkcr")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/Desktop/VFlowContainer/VBoxContainer2" unique_id=918804797]
+layout_mode = 2
+text = "Commencer"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="TaskBar" type="PanelContainer" parent="VBoxContainer" unique_id=1414014562]
+texture_filter = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3x4f6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TaskBar" unique_id=1580099843]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=168646644]
+layout_mode = 2
+theme_type_variation = &"TaskbarButton"
+theme_override_fonts/font = ExtResource("8_qmci1")
+toggle_mode = true
+text = "Démarrer"
+icon = ExtResource("9_lmoic")
+alignment = 0
+script = ExtResource("10_61eq5")
+
+[node name="StartMenu" type="PopupMenu" parent="VBoxContainer/TaskBar/HBoxContainer/StartButton" unique_id=1370027852]
+oversampling_override = 1.0
+position = Vector2i(0, 581)
+size = Vector2i(64, 8)
+hide_on_item_selection = false
+hide_on_checkable_item_selection = false
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/TaskBar/HBoxContainer/StartButton/StartMenu" unique_id=1397621113]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WindowPanel"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TaskBar/HBoxContainer/StartButton/StartMenu/PanelContainer" unique_id=128913418]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/TaskBar/HBoxContainer/StartButton/StartMenu/PanelContainer/HBoxContainer" unique_id=1952914806]
+layout_mode = 2
+theme_type_variation = &"WindowTopPanel"
+
+[node name="Label" type="Label" parent="VBoxContainer/TaskBar/HBoxContainer/StartButton/StartMenu/PanelContainer/HBoxContainer/PanelContainer" unique_id=1077984169]
+custom_minimum_size = Vector2(42, 0)
+layout_mode = 2
+offset_transform_rotation = -1.5707964
+text = "Ddzqdqz"
+autowrap_mode = 1
+
+[node name="TaskBarContainer" type="HBoxContainer" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=258965779]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="DialogueBtn" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/TaskBarContainer" unique_id=56401459]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_type_variation = &"TaskbarButton"
+toggle_mode = true
+text = "Dialogues"
+icon = ExtResource("10_imtx2")
+alignment = 0
+
+[node name="Gap" type="Control" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=441013846]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=505082807]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="HourLabel" type="Label" parent="VBoxContainer/TaskBar/HBoxContainer/MarginContainer" unique_id=757046253]
+custom_minimum_size = Vector2(128, 0)
+custom_maximum_size = Vector2(128, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_272ik")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qd8cd")
+text = "16:27"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_v47k0")
+
+[connection signal="pressed" from="VBoxContainer/Desktop/VFlowContainer/VBoxContainer/QuitGameBtn" to="." method="_on_quit_game_btn_pressed"]

@@ -13,38 +13,40 @@ J'ai fait une petite sélection de jeux que je trouve intéressants.
 
 <div class="itch-grid">
 
-<iframe class="itch-embed" width="552" height="167" frameborder="0" src="https://itch.io/embed/2156549?dark=true"><a href="https://kindanice.itch.io/making-the-game">Making the Game by kindanice</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/2156549?dark=true"><a href="https://kindanice.itch.io/making-the-game">Making the Game by kindanice</a></iframe>
 
-<iframe class="itch-embed" src="https://itch.io/embed/3283588?dark=true" width="552" height="167" frameborder="0"><a href="https://rumyoonomicon.itch.io/fuse-on-the-loose">Fuse on the Loose by rumyooonomicon</a></iframe>
+<iframe class="itch-embed" src="https://itch.io/embed/3283588?dark=true" height="167" frameborder="0"><a href="https://rumyoonomicon.itch.io/fuse-on-the-loose">Fuse on the Loose by rumyooonomicon</a></iframe>
 
-<iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/663774?dark=true" width="552" height="167"><a href="https://matheuscunegato.itch.io/hardcoded">HardCoded by MatheusCunegato, dorodo, MDSalomon</a></iframe>
+<iframe class="itch-embed" frameborder="0" src="https://itch.io/embed/663774?dark=true" height="167"><a href="https://matheuscunegato.itch.io/hardcoded">HardCoded by MatheusCunegato, dorodo, MDSalomon</a></iframe>
 
-<iframe class="itch-embed" src="https://itch.io/embed/2901936?dark=true" width="552" height="167" frameborder="0"><a href="https://antoine-foucault.itch.io/the-pocket-master">The Pocket Master by Antoine Foucault</a></iframe>
+<iframe class="itch-embed" src="https://itch.io/embed/2901936?dark=true" height="167" frameborder="0"><a href="https://antoine-foucault.itch.io/the-pocket-master">The Pocket Master by Antoine Foucault</a></iframe>
 
-<iframe class="itch-embed" src="https://itch.io/embed/2909856?dark=true" width="552" height="167" frameborder="0"><a href="https://legoliomanikas.itch.io/scale-mail">Scale Mail by legoliomanikas, j. lyell, JooshOnTheLoosh, hollow-at-best, henree</a></iframe>
+<iframe class="itch-embed" src="https://itch.io/embed/2909856?dark=true" height="167" frameborder="0"><a href="https://legoliomanikas.itch.io/scale-mail">Scale Mail by legoliomanikas, j. lyell, JooshOnTheLoosh, hollow-at-best, henree</a></iframe>
 
-<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/3028801?dark=true" width="552"><a href="https://kenforest.itch.io/creature-packets">Creature packets by kenforest</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/3028801?dark=true"><a href="https://kenforest.itch.io/creature-packets">Creature packets by kenforest</a></iframe>
 
-<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/339268?dark=true" width="552"><a href="https://dmullinsgames.itch.io/sacrifices-must-be-made">Sacrifices Must Be Made by Daniel Mullins</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/339268?dark=true"><a href="https://dmullinsgames.itch.io/sacrifices-must-be-made">Sacrifices Must Be Made by Daniel Mullins</a></iframe>
 
-<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/47367?dark=true" width="552"><a href="https://graebor.itch.io/sort-the-court">Sort the Court! by Graeme Borland</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/47367?dark=true"><a href="https://graebor.itch.io/sort-the-court">Sort the Court! by Graeme Borland</a></iframe>
 
-<iframe class="itch-embed" width="552" height="167" frameborder="0" src="https://itch.io/embed/1116350?dark=true"><a href="https://nivrad00.itch.io/purrgatory">purrgatory by Niv</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/1116350?dark=true"><a href="https://nivrad00.itch.io/purrgatory">purrgatory by Niv</a></iframe>
 
-<iframe class="itch-embed" width="552" height="167" frameborder="0" src="https://itch.io/embed/2618028?dark=true"><a href="https://nightframes.itch.io/the-true-story-of-the-agujero">AGUJERO by Nightframes_, Eufrasio, Pikas, Culo, chuso, Renato Meyer, AQUILES</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/2618028?dark=true"><a href="https://nightframes.itch.io/the-true-story-of-the-agujero">AGUJERO by Nightframes_, Eufrasio, Pikas, Culo, chuso, Renato Meyer, AQUILES</a></iframe>
 
-<iframe class="itch-embed" src="https://itch.io/embed/2900665?dark=true" width="552" height="167" frameborder="0"><a href="https://zeehatcher.itch.io/windowframe">Windowframe by ZeeHatcher, Zircon332</a></iframe>
+<iframe class="itch-embed" src="https://itch.io/embed/2900665?dark=true" height="167" frameborder="0"><a href="https://zeehatcher.itch.io/windowframe">Windowframe by ZeeHatcher, Zircon332</a></iframe>
 
-<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/2149381?dark=true" width="552"><a href="https://pulni.itch.io/sneakerdoodle">Sneakerdoodle by Pulni, Lithimlin, Katamarang_Art, andrground, Nikkar, VexenD, MokeyMokey, Jenny Schukin, Aviv Youker Harel</a></iframe>
+<iframe class="itch-embed" height="167" frameborder="0" src="https://itch.io/embed/2149381?dark=true"><a href="https://pulni.itch.io/sneakerdoodle">Sneakerdoodle by Pulni, Lithimlin, Katamarang_Art, andrground, Nikkar, VexenD, MokeyMokey, Jenny Schukin, Aviv Youker Harel</a></iframe>
 
-<iframe height="167" frameborder="0" src="https://itch.io/embed/3456582?dark=true" width="552"><a href="https://studio-laaya.itch.io/cheese-is-the-reason">Cheese is the Reason by Studio Laaya, Jeemeli, Axel Kulomaa, mumu</a></iframe>
+<iframe height="167" frameborder="0" src="https://itch.io/embed/3456582?dark=true"><a href="https://studio-laaya.itch.io/cheese-is-the-reason">Cheese is the Reason by Studio Laaya, Jeemeli, Axel Kulomaa, mumu</a></iframe>
 
-<iframe height="167" frameborder="0" src="https://itch.io/embed/834216?dark=true" width="552"><a href="https://synthcoder.itch.io/project-forlorn">PROJECT FORLORN by 𝖘𝖞𝖓𝖙𝖍𝖈𝖔𝖉𝖊𝖗</a></iframe>
+<iframe height="167" frameborder="0" src="https://itch.io/embed/834216?dark=true"><a href="https://synthcoder.itch.io/project-forlorn">PROJECT FORLORN by 𝖘𝖞𝖓𝖙𝖍𝖈𝖔𝖉𝖊𝖗</a></iframe>
 
-<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/3996638?dark=true"><a href="https://jontopielski.itch.io/1000000-shrimp">1,000,000 shrimp by Jon Topielski, mafgar</a></iframe>
+<iframe height="167" frameborder="0" src="https://itch.io/embed/3996638?dark=true"><a href="https://jontopielski.itch.io/1000000-shrimp">1,000,000 shrimp by Jon Topielski, mafgar</a></iframe>
 
-<iframe height="167" frameborder="0" src="https://itch.io/embed/4270123?dark=true" width="552"><a href="https://papercookies.itch.io/skinface">SKINFACE by adam pype, Ties Groen</a></iframe>
+<iframe height="167" frameborder="0" src="https://itch.io/embed/4270123?dark=true"><a href="https://papercookies.itch.io/skinface">SKINFACE by adam pype, Ties Groen</a></iframe>
 
-<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/4420109?dark=true"><a href="https://wer8888.itch.io/horse-magnifier">Horse Magnifier by wer8888</a></iframe>
+<iframe src="https://itch.io/embed/2901938?dark=true" width="552" height="167" frameborder="0"><a href="https://vividfax.itch.io/shutterbug">Shutterbug by vividfax, Dan Emmerson</a></iframe>
+
+<iframe src="https://itch.io/embed/2494006?dark=true" width="552" height="167" frameborder="0"><a href="https://dobrastudios.itch.io/pan">PAN by DobraStudios, nbmach1ne, Ivan Papiol</a></iframe>
 
 </div>

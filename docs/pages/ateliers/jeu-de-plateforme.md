@@ -500,6 +500,8 @@ Vous pouvez retrouver tous les fichier du projet <a class="external-link" href="
 
 Si vous avez encore envie d'améliorer votre jeu vous pouvez:
 
+- [Ammélioration du personnage joueur](#ateliers/jeu-plateforme-plus-loin.md)
+
 - [Ajouter des points de vie](#ateliers/jeu-plateforme-plus-loin.md)
 
 - [Ajouter des diamands](#ateliers/jeu-plateforme-plus-loin.md)

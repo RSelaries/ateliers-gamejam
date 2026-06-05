@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://duykywj2yh0ve"]
+
+[ext_resource type="Script" uid="uid://cvmp2lq7g0uxj" path="res://ui/intro_scene/intro_scene.gd" id="1_n346h"]
+[ext_resource type="Texture2D" uid="uid://bl4d8b54eqt02" path="res://assets/backgrounds/windows_95_boot_image.png" id="1_uok53"]
+[ext_resource type="Texture2D" uid="uid://mrlacidrmrtv" path="res://assets/ui_textures/logo/intro_splash_screen.png" id="2_gd3ow"]
+[ext_resource type="Shader" uid="uid://r282swccchmv" path="res://ui/intro_scene/dithering.gdshader" id="4_ggijc"]
+
+[sub_resource type="Gradient" id="Gradient_gd3ow"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.68235296, 0.72156864, 0.75686276, 1, 0.3019608, 0.49803922, 0.72156864, 1, 0.68235296, 0.72156864, 0.75686276, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n346h"]
+gradient = SubResource("Gradient_gd3ow")
+width = 26
+height = 20
+fill_from = Vector2(278.69763, 0)
+fill_to = Vector2(279.56714, 0)
+repeat = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qd8cd"]
+shader = ExtResource("4_ggijc")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 12
+shader_parameter/dither_size = 1
+
+[node name="IntroScene" type="Control" unique_id=342612061]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n346h")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=269355444]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1987597272]
+handle_input_locally = false
+size = Vector2i(960, 540)
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=829954647]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uok53")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=1585051349]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gd3ow")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Gradient" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=1659274492]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_n346h")
+
+[node name="Dithering" type="ColorRect" parent="SubViewportContainer/SubViewport" unique_id=1126427628]
+material = SubResource("ShaderMaterial_qd8cd")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,249 @@
+[gd_scene format=3 uid="uid://bqd1jhgj8crjs"]
+
+[ext_resource type="Script" uid="uid://08ukes1w4bdb" path="res://dialogue_balloon/balloon.gd" id="1_64gkb"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="2_3vlmg"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Script" uid="uid://chq58e0r2dpcw" path="res://ui/window_title_bar/window_title_bar.gd" id="3_64gkb"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Texture2D" uid="uid://btfddu73ttwtp" path="res://assets/ui_textures/icons/smartphone_icon.png" id="4_2iqhw"]
+[ext_resource type="Script" uid="uid://ca8tg0p0hwhr4" path="res://dialogue_balloon/character_icon.gd" id="5_luqjh"]
+[ext_resource type="Texture2D" uid="uid://cvx2d1jg8muoq" path="res://assets/ui_textures/nine_patch_textures/dialogue_background.png" id="5_x2ikp"]
+[ext_resource type="Texture2D" uid="uid://kcek8hgpvr6" path="res://assets/ui_textures/close_button.png" id="6_64gkb"]
+[ext_resource type="Script" uid="uid://bacgse7qf676r" path="res://dialogue_balloon/close_button.gd" id="7_2iqhw"]
+[ext_resource type="Texture2D" uid="uid://ckwl48bv7nkqt" path="res://assets/ui_textures/can_progress.png" id="13_luqjh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqqy8"]
+atlas = ExtResource("13_luqjh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chbm5"]
+atlas = ExtResource("13_luqjh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rviev"]
+atlas = ExtResource("13_luqjh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgnap"]
+atlas = ExtResource("13_luqjh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qd8cd"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_xqqy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chbm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rviev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgnap")
+}],
+"loop": 1,
+"name": &"progress",
+"speed": 5.0
+}]
+
+[node name="BalloonScene" type="Window" unique_id=93605565]
+oversampling_override = 1.0
+title = "Dialogue"
+position = Vector2i(0, 322)
+size = Vector2i(1200, 240)
+borderless = true
+max_size = Vector2i(1200, 240)
+script = ExtResource("1_64gkb")
+
+[node name="Balloon" type="PanelContainer" parent="." unique_id=2118552077]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_3vlmg")
+theme_type_variation = &"WindowPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon" unique_id=1030936092]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer" unique_id=1624289611]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer/VBoxContainer" unique_id=2122967321]
+layout_mode = 2
+theme_type_variation = &"WindowTopPanel"
+script = ExtResource("3_64gkb")
+close_button = null
+
+[node name="Character" type="HBoxContainer" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer" unique_id=258452015]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer/Character" unique_id=2011793021]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="CharacterIcon" type="TextureRect" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer/Character/MarginContainer" unique_id=2107623886]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("4_2iqhw")
+script = ExtResource("5_luqjh")
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer/Character" unique_id=507199029]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer/Character" unique_id=2142565883]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="CloseButton" type="TextureButton" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer/Character/MarginContainer2" unique_id=1118688603]
+layout_mode = 2
+texture_normal = ExtResource("6_64gkb")
+script = ExtResource("7_2iqhw")
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/VBoxContainer" unique_id=878662708]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer" unique_id=2102219741]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+texture = ExtResource("5_x2ikp")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer" unique_id=1380829919]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Dialogue" type="HBoxContainer" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer" unique_id=1428277592]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue" unique_id=1799656388]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer" unique_id=79546161]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="DialogueLabel" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer" unique_id=1734167016 instance=ExtResource("2_a8ve6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+Dialogue blah blah
+"
+fit_content = false
+scroll_active = true
+scroll_following_visible_characters = true
+
+[node name="ResponsesMenu" type="FlowContainer" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer" unique_id=2016370365 node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("3_72ixx")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=434731887]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "S'habiller"
+
+[node name="ResponseExample2" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=1675833060]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enfiler des chaussettes et aller petit déjeuner"
+
+[node name="ResponseExample3" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=1100959083]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Aller petit déjeuner"
+
+[node name="ResponseExample4" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=1246034894]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Se rendormir"
+
+[node name="DialogueScrollBar" type="VScrollBar" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue" unique_id=2131848887]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+max_value = 252.0
+step = 1.0
+page = 114.0
+value = 100.0
+
+[node name="MarginContainer" type="Control" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/DialogueScrollBar" unique_id=1621907377]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Progress" type="AnimatedSprite2D" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/DialogueScrollBar/MarginContainer" unique_id=2123473346]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_qd8cd")
+animation = &"progress"
+autoplay = "progress"
+frame_progress = 0.49353725
+centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
+unique_name_in_owner = true
+
+[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

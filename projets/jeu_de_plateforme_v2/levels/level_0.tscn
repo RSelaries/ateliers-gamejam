@@ -20,6 +20,7 @@ metadata/_custom_type_script = "uid://cb62hre2ocbwm"
 layer = 1000
 
 [node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=1401700594]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -1,17 +1,9 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
 config_version=5
 
 [application]
 
-config/name="Jeu de Plateforme"
-config/tags=PackedStringArray("ateliers_gamejam")
+config/name="Atelier 2: Jeu de Plateforme OLD"
+config/tags=PackedStringArray("ateliers_gamejam", "sirius")
 run/main_scene="uid://btkmd0hqtd0j0"
 run/print_header=false
 config/features=PackedStringArray("4.6", "GL Compatibility")
@@ -74,3 +66,7 @@ rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+
+[godots]
+
+version_hint=""

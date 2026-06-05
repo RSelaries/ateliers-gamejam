@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b8kf32u72f3ss"]
+
+[ext_resource type="Script" uid="uid://dotlqti2a4m4e" path="res://ui/image_viewer/image_viewer.gd" id="1_mpqol"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="2_ktqcv"]
+[ext_resource type="PackedScene" uid="uid://bnavdiyf7no7l" path="res://ui/window_title_bar/window_title_bar.tscn" id="3_pg1ag"]
+[ext_resource type="Texture2D" uid="uid://d28w8rc3o7emx" path="res://assets/ui_textures/icons/image_icon.png" id="4_n0bim"]
+[ext_resource type="Shader" uid="uid://r282swccchmv" path="res://ui/intro_scene/dithering.gdshader" id="9_5k6r3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qd8cd"]
+shader = ExtResource("9_5k6r3")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 12
+shader_parameter/dither_size = 1
+
+[node name="ImageViewer" type="Window" unique_id=2042765907]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Image Viewer"
+size = Vector2i(160, 64)
+wrap_controls = true
+transient = true
+unresizable = true
+borderless = true
+transparent = true
+minimize_disabled = true
+maximize_disabled = true
+script = ExtResource("1_mpqol")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1000600062]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ktqcv")
+theme_type_variation = &"WindowPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=817093889]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1149044555]
+layout_mode = 2
+
+[node name="WindowTitleBar" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1881519950 instance=ExtResource("3_pg1ag")]
+layout_mode = 2
+close_button = false
+icon = ExtResource("4_n0bim")
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=391620075]
+layout_mode = 2
+
+[node name="ImageTextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer2" unique_id=1234356531]
+unique_name_in_owner = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Dither" type="ColorRect" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer2" unique_id=533522254]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_qd8cd")
+layout_mode = 2

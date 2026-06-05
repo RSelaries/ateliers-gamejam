@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bnavdiyf7no7l"]
+
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="1_kelir"]
+[ext_resource type="Texture2D" uid="uid://btfddu73ttwtp" path="res://assets/ui_textures/icons/smartphone_icon.png" id="2_l1toc"]
+[ext_resource type="Script" uid="uid://chq58e0r2dpcw" path="res://ui/window_title_bar/window_title_bar.gd" id="2_nph6s"]
+[ext_resource type="Texture2D" uid="uid://kcek8hgpvr6" path="res://assets/ui_textures/close_button.png" id="4_ypxwq"]
+
+[node name="WindowTitleBar" type="PanelContainer" unique_id=1881519950]
+offset_right = 180.0
+offset_bottom = 36.0
+theme = ExtResource("1_kelir")
+theme_type_variation = &"WindowTopPanel"
+script = ExtResource("2_nph6s")
+close_button = null
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=656333183]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=910233320]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="WindowIcon" type="TextureRect" parent="HBoxContainer/MarginContainer" unique_id=1351216907]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_l1toc")
+
+[node name="WindowName" type="RichTextLabel" parent="HBoxContainer" unique_id=305688498]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "Atelier 3: Visual Novel"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=339612252]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="CloseButton" type="TextureButton" parent="HBoxContainer/MarginContainer2" unique_id=2113612532]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_ypxwq")

@@ -1,0 +1,188 @@
+[gd_resource type="Theme" format=3 uid="uid://cw0j7po5to87n"]
+
+[ext_resource type="Texture2D" uid="uid://c1v66qwnd27cd" path="res://assets/ui_textures/button/button_nine_rect_focus.png" id="1_3ur47"]
+[ext_resource type="Texture2D" uid="uid://bxsdkafj070os" path="res://assets/ui_textures/button/button_nine_rect_hover.png" id="2_m1an1"]
+[ext_resource type="Texture2D" uid="uid://cxpu72xgdacaf" path="res://assets/ui_textures/button/button_nine_rect_normal.png" id="3_vnxnn"]
+[ext_resource type="Texture2D" uid="uid://djg0gorrskvf2" path="res://assets/ui_textures/button/button_nine_rect_pressed.png" id="4_kxi8s"]
+[ext_resource type="Texture2D" uid="uid://bpki84povst4x" path="res://assets/ui_textures/nine_patch_textures/window_inside.png" id="5_6ou4e"]
+[ext_resource type="FontFile" uid="uid://bphpf0q76jomy" path="res://assets/fonts/ari-w9500/ari-w9500-bold.otf" id="6_wq7e0"]
+[ext_resource type="FontFile" uid="uid://c70o70upl6c13" path="res://assets/fonts/chno-pixel-code-pro/chno_pixel_code_pro_italic.otf" id="7_s7ics"]
+[ext_resource type="Texture2D" uid="uid://bo750xf8cjbqm" path="res://assets/ui_textures/button/taskbar_button_nine_patch.png" id="8_m1an1"]
+[ext_resource type="Texture2D" uid="uid://bsfva8noflp34" path="res://assets/ui_textures/scroll_top.png" id="8_wum7n"]
+[ext_resource type="Texture2D" uid="uid://bei28u7gjybq0" path="res://assets/ui_textures/scroll_bottom.png" id="9_6oebs"]
+[ext_resource type="Texture2D" uid="uid://dee05qssiyula" path="res://assets/ui_textures/scroll_handle.png" id="10_ijfa2"]
+[ext_resource type="Texture2D" uid="uid://ccabyaf20c7mt" path="res://assets/ui_textures/scroll_background.png" id="11_gpn6w"]
+[ext_resource type="Texture2D" uid="uid://cy0awgf35s3n" path="res://assets/ui_textures/nine_patch_textures/window_container.png" id="12_pmkcj"]
+[ext_resource type="FontFile" uid="uid://ccvjp2lwuq3co" path="res://assets/fonts/ari-w9500/ari-w9500.otf" id="13_eo8kh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onj3k"]
+content_margin_left = 23.0
+content_margin_top = 8.0
+content_margin_right = 26.0
+content_margin_bottom = 10.0
+texture = ExtResource("1_3ur47")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gshyp"]
+content_margin_left = 23.0
+content_margin_top = 8.0
+content_margin_right = 26.0
+content_margin_bottom = 10.0
+texture = ExtResource("2_m1an1")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql81v"]
+content_margin_left = 23.0
+content_margin_top = 8.0
+content_margin_right = 26.0
+content_margin_bottom = 10.0
+texture = ExtResource("3_vnxnn")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uoeaf"]
+content_margin_left = 23.0
+content_margin_top = 8.0
+content_margin_right = 26.0
+content_margin_bottom = 10.0
+texture = ExtResource("4_kxi8s")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2iqhw"]
+texture = ExtResource("5_6ou4e")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5r2v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gxqab"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 8.0
+content_margin_bottom = 6.0
+texture = ExtResource("3_vnxnn")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ur47"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 6.0
+content_margin_bottom = 4.0
+texture = ExtResource("8_m1an1")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgh7x"]
+atlas = ExtResource("8_wum7n")
+region = Rect2(0, 0, 32, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7eedb"]
+atlas = ExtResource("8_wum7n")
+region = Rect2(32, 0, 32, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luqjh"]
+atlas = ExtResource("9_6oebs")
+region = Rect2(0, 0, 32, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwfcy"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource("10_ijfa2")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 32, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rgh7x"]
+content_margin_left = 16.0
+content_margin_top = 0.0
+content_margin_right = 16.0
+content_margin_bottom = 0.0
+texture = ExtResource("11_gpn6w")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7eedb"]
+texture = ExtResource("12_pmkcj")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ur47"]
+bg_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3x4f6"]
+bg_color = Color(0, 0, 0.50980395, 1)
+
+[resource]
+default_font = ExtResource("13_eo8kh")
+default_font_size = 22
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxTexture_onj3k")
+Button/styles/hover = SubResource("StyleBoxTexture_gshyp")
+Button/styles/normal = SubResource("StyleBoxTexture_ql81v")
+Button/styles/pressed = SubResource("StyleBoxTexture_uoeaf")
+DialogueLabel/base_type = &"RichTextLa"
+MarginContainer/constants/margin_bottom = 8
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 8
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_2iqhw")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/italics_font_size = 20
+RichTextLabel/fonts/bold_font = ExtResource("6_wq7e0")
+RichTextLabel/fonts/italics_font = ExtResource("7_s7ics")
+RichTextLabel/styles/focus = SubResource("StyleBoxEmpty_l5r2v")
+TaskbarButton/base_type = &"Button"
+TaskbarButton/constants/h_separation = 6
+TaskbarButton/styles/hover = SubResource("StyleBoxTexture_gxqab")
+TaskbarButton/styles/normal = SubResource("StyleBoxTexture_gxqab")
+TaskbarButton/styles/pressed = SubResource("StyleBoxTexture_3ur47")
+VScrollBar/icons/decrement = SubResource("AtlasTexture_rgh7x")
+VScrollBar/icons/decrement_highlight = SubResource("AtlasTexture_rgh7x")
+VScrollBar/icons/decrement_pressed = SubResource("AtlasTexture_7eedb")
+VScrollBar/icons/increment = SubResource("AtlasTexture_luqjh")
+VScrollBar/icons/increment_highlight = SubResource("AtlasTexture_luqjh")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_iwfcy")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_iwfcy")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_iwfcy")
+VScrollBar/styles/scroll = SubResource("StyleBoxTexture_rgh7x")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxTexture_rgh7x")
+WindowPanel/base_type = &"PanelContainer"
+WindowPanel/styles/panel = SubResource("StyleBoxTexture_7eedb")
+WindowTopPanel/base_type = &"PanelContainer"
+WindowTopPanel/styles/panel = SubResource("StyleBoxFlat_3ur47")
+WindowTopPanelSelected/base_type = &"PanelContainer"
+WindowTopPanelSelected/styles/panel = SubResource("StyleBoxFlat_3x4f6")
