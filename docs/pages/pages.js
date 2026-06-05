@@ -66,16 +66,16 @@ export default
                 link: "ateliers/visual-novel.md",
                 icon: "./medias/icons/visual-novel.svg",
             },
-            {
-                title: "Tiny Dungeon",
-                link: "ateliers/tiny-dungeon.md",
-                icon: "./medias/icons/tiny-dungeon.svg",
-            },
-            {
-                title: "Walking Simulator",
-                link: "ateliers/walking-simulator.md",
-                icon: "./medias/godot-icons/Camera.svg",
-            },
+            // {
+            //     title: "Tiny Dungeon",
+            //     link: "ateliers/tiny-dungeon.md",
+            //     icon: "./medias/icons/tiny-dungeon.svg",
+            // },
+            // {
+            //     title: "Walking Simulator",
+            //     link: "ateliers/walking-simulator.md",
+            //     icon: "./medias/godot-icons/Camera.svg",
+            // },
         ],
     },
     // Godot

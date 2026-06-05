@@ -23,4 +23,5 @@ func _on_no_button_pressed() -> void:
 
 
 func _on_yes_button_pressed() -> void:
+	JavaScriptBridge.eval("console.log(document)")
 	get_tree().quit()
