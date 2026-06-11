@@ -7,7 +7,7 @@ strong {
     color: var(--highlight-color);
 }
 
-.learning-details {
+details {
     border: solid 1px var(--border-color);
     padding: 1em 2em;
     border-radius: 15px;
@@ -27,6 +27,7 @@ strong {
         margin-bottom: 0;
     }
 }
+
 
 em {
     color: var(--highlight-color);

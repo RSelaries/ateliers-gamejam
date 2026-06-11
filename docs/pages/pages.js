@@ -43,23 +43,23 @@ export default
                 title: "Jeu de plateforme",
                 link: "ateliers/jeu-de-plateforme.md",
                 icon: "./medias/icons/plateformer-icon.svg",
-                subPages: [
-                    {
-                        title: "Aller plus loin",
-                        link: "ateliers/jeu-plateforme-plus-loin.md",
-                        icon: "./medias/icons/plus-loin.svg",
-                    },
-                    {
-                        title: "OLD - Jeu de plateforme",
-                        link: "ateliers/jeu-plateforme-old.md",
-                        icon: "./medias/icons/warning-icon.svg",
-                    },
-                    {
-                        title: "OLD - Aller plus loin",
-                        link: "ateliers/jeu-pltforme-old-plus-loin.md",
-                        icon: "./medias/icons/warning-icon.svg",
-                    },
-                ],
+                // subPages: [
+                //     {
+                //         title: "Aller plus loin",
+                //         link: "ateliers/jeu-plateforme-plus-loin.md",
+                //         icon: "./medias/icons/plus-loin.svg",
+                //     },
+                //     {
+                //         title: "OLD - Jeu de plateforme",
+                //         link: "ateliers/jeu-plateforme-old.md",
+                //         icon: "./medias/icons/warning-icon.svg",
+                //     },
+                //     {
+                //         title: "OLD - Aller plus loin",
+                //         link: "ateliers/jeu-pltforme-old-plus-loin.md",
+                //         icon: "./medias/icons/warning-icon.svg",
+                //     },
+                // ],
             },
             {
                 title: "Visual Novel",

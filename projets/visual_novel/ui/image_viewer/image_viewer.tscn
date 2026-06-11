@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b8kf32u72f3ss"]
 
 [ext_resource type="Script" uid="uid://dotlqti2a4m4e" path="res://ui/image_viewer/image_viewer.gd" id="1_mpqol"]
-[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="2_ktqcv"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://ui/windows_95_style.tres" id="2_ktqcv"]
 [ext_resource type="PackedScene" uid="uid://bnavdiyf7no7l" path="res://ui/window_title_bar/window_title_bar.tscn" id="3_pg1ag"]
-[ext_resource type="Texture2D" uid="uid://d28w8rc3o7emx" path="res://assets/ui_textures/icons/image_icon.png" id="4_n0bim"]
+[ext_resource type="Texture2D" uid="uid://d28w8rc3o7emx" path="res://ui/ui_textures/icons/image_icon.png" id="4_n0bim"]
 [ext_resource type="Shader" uid="uid://r282swccchmv" path="res://ui/intro_scene/dithering.gdshader" id="9_5k6r3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qd8cd"]

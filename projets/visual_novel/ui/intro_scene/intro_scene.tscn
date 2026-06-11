@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://duykywj2yh0ve"]
 
 [ext_resource type="Script" uid="uid://cvmp2lq7g0uxj" path="res://ui/intro_scene/intro_scene.gd" id="1_n346h"]
-[ext_resource type="Texture2D" uid="uid://bl4d8b54eqt02" path="res://assets/backgrounds/windows_95_boot_image.png" id="1_uok53"]
-[ext_resource type="Texture2D" uid="uid://mrlacidrmrtv" path="res://assets/ui_textures/logo/intro_splash_screen.png" id="2_gd3ow"]
+[ext_resource type="Texture2D" uid="uid://bl4d8b54eqt02" path="res://assets/backgrounds/clouds.png" id="1_uok53"]
+[ext_resource type="Texture2D" uid="uid://mrlacidrmrtv" path="res://ui/ui_textures/logo/intro_splash_screen.png" id="2_gd3ow"]
 [ext_resource type="Shader" uid="uid://r282swccchmv" path="res://ui/intro_scene/dithering.gdshader" id="4_ggijc"]
 
 [sub_resource type="Gradient" id="Gradient_gd3ow"]

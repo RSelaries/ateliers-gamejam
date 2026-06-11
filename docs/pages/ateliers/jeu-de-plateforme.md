@@ -498,7 +498,7 @@ On a un jeu fonctionnel ! Vous pouvez dès maintenant faire d'autres niveaux et 
 
 Vous pouvez retrouver tous les fichier du projet <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a> et vous pouvez les télécharger <a class="external-link" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a>.
 
-Si vous avez encore envie d'améliorer votre jeu vous pouvez:
+<!-- Si vous avez encore envie d'améliorer votre jeu vous pouvez:
 
 - [Ammélioration du personnage joueur](#ateliers/jeu-plateforme-plus-loin.md)
 
@@ -506,6 +506,4 @@ Si vous avez encore envie d'améliorer votre jeu vous pouvez:
 
 - [Ajouter des diamands](#ateliers/jeu-plateforme-plus-loin.md)
 
-- [Faire des meilleures plateformes](#ateliers/jeu-plateforme-plus-loin.md)
-
-
+- [Faire des meilleures plateformes](#ateliers/jeu-plateforme-plus-loin.md) -->

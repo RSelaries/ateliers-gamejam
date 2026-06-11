@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bnavdiyf7no7l"]
 
-[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="1_kelir"]
-[ext_resource type="Texture2D" uid="uid://btfddu73ttwtp" path="res://assets/ui_textures/icons/smartphone_icon.png" id="2_l1toc"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://ui/windows_95_style.tres" id="1_kelir"]
+[ext_resource type="Texture2D" uid="uid://btfddu73ttwtp" path="res://ui/ui_textures/icons/smartphone_icon.png" id="2_l1toc"]
 [ext_resource type="Script" uid="uid://chq58e0r2dpcw" path="res://ui/window_title_bar/window_title_bar.gd" id="2_nph6s"]
-[ext_resource type="Texture2D" uid="uid://kcek8hgpvr6" path="res://assets/ui_textures/close_button.png" id="4_ypxwq"]
+[ext_resource type="Texture2D" uid="uid://kcek8hgpvr6" path="res://ui/ui_textures/close_button.png" id="4_ypxwq"]
 
 [node name="WindowTitleBar" type="PanelContainer" unique_id=1881519950]
 offset_right = 180.0

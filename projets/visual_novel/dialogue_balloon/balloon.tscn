@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://bqd1jhgj8crjs"]
 
 [ext_resource type="Script" uid="uid://08ukes1w4bdb" path="res://dialogue_balloon/balloon.gd" id="1_64gkb"]
-[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="2_3vlmg"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://ui/windows_95_style.tres" id="2_3vlmg"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://chq58e0r2dpcw" path="res://ui/window_title_bar/window_title_bar.gd" id="3_64gkb"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://btfddu73ttwtp" path="res://assets/ui_textures/icons/smartphone_icon.png" id="4_2iqhw"]
+[ext_resource type="Texture2D" uid="uid://btfddu73ttwtp" path="res://ui/ui_textures/icons/smartphone_icon.png" id="4_2iqhw"]
 [ext_resource type="Script" uid="uid://ca8tg0p0hwhr4" path="res://dialogue_balloon/character_icon.gd" id="5_luqjh"]
-[ext_resource type="Texture2D" uid="uid://cvx2d1jg8muoq" path="res://assets/ui_textures/nine_patch_textures/dialogue_background.png" id="5_x2ikp"]
-[ext_resource type="Texture2D" uid="uid://kcek8hgpvr6" path="res://assets/ui_textures/close_button.png" id="6_64gkb"]
+[ext_resource type="Texture2D" uid="uid://cvx2d1jg8muoq" path="res://ui/ui_textures/nine_patch_textures/dialogue_background.png" id="5_x2ikp"]
+[ext_resource type="Texture2D" uid="uid://kcek8hgpvr6" path="res://ui/ui_textures/close_button.png" id="6_64gkb"]
 [ext_resource type="Script" uid="uid://bacgse7qf676r" path="res://dialogue_balloon/close_button.gd" id="7_2iqhw"]
-[ext_resource type="Texture2D" uid="uid://ckwl48bv7nkqt" path="res://assets/ui_textures/can_progress.png" id="13_luqjh"]
+[ext_resource type="Texture2D" uid="uid://ckwl48bv7nkqt" path="res://ui/ui_textures/can_progress.png" id="13_luqjh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqqy8"]
 atlas = ExtResource("13_luqjh")
@@ -51,7 +51,7 @@ animations = [{
 [node name="BalloonScene" type="Window" unique_id=93605565]
 oversampling_override = 1.0
 title = "Dialogue"
-position = Vector2i(0, 322)
+position = Vector2i(275, 441)
 size = Vector2i(1200, 240)
 borderless = true
 max_size = Vector2i(1200, 240)
@@ -81,7 +81,6 @@ layout_mode = 2
 layout_mode = 2
 theme_type_variation = &"WindowTopPanel"
 script = ExtResource("3_64gkb")
-close_button = null
 
 [node name="Character" type="HBoxContainer" parent="Balloon/MarginContainer/VBoxContainer/PanelContainer" unique_id=258452015]
 layout_mode = 2

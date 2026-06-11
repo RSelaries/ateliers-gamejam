@@ -2,7 +2,7 @@ extends Control
 
 
 # Objects images
-const SMORTPHONE = preload("uid://bydyyjc5e2f0q")
+const SMARTPHONE = preload("uid://bydyyjc5e2f0q")
 
 # Characetrs images
 const ATHAVAN_AU_LIT = preload("uid://c65r27s2n7tv5")

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://st4fobr7ba57"]
 
-[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="1_61eq5"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://ui/windows_95_style.tres" id="1_61eq5"]
 [ext_resource type="Script" uid="uid://3yh0quf5ecin" path="res://ui/os_window/os_window.gd" id="2_1im57"]
 [ext_resource type="Resource" uid="uid://bird31ns0fkke" path="res://dialogues/test_dialogue.dialogue" id="3_84ka8"]
-[ext_resource type="Texture2D" uid="uid://dqvla5kiyly33" path="res://assets/ui_textures/icons/mon_ordinateur.png" id="4_77h4l"]
-[ext_resource type="Texture2D" uid="uid://1kgbwt1b2s5g" path="res://assets/ui_textures/icons/start_game.png" id="5_k2t68"]
-[ext_resource type="Texture2D" uid="uid://s4p8vob0di47" path="res://assets/ui_textures/icons/game.png" id="6_mwkcr"]
-[ext_resource type="Texture2D" uid="uid://ck6rrt8sn0c6" path="res://assets/ui_textures/nine_patch_textures/task_bar.png" id="7_g31bl"]
+[ext_resource type="Texture2D" uid="uid://dqvla5kiyly33" path="res://ui/ui_textures/icons/mon_ordinateur.png" id="4_77h4l"]
+[ext_resource type="Texture2D" uid="uid://1kgbwt1b2s5g" path="res://ui/ui_textures/icons/start_game.png" id="5_k2t68"]
+[ext_resource type="Texture2D" uid="uid://s4p8vob0di47" path="res://ui/ui_textures/icons/game.png" id="6_mwkcr"]
+[ext_resource type="Texture2D" uid="uid://ck6rrt8sn0c6" path="res://ui/ui_textures/nine_patch_textures/task_bar.png" id="7_g31bl"]
 [ext_resource type="FontFile" uid="uid://bphpf0q76jomy" path="res://assets/fonts/ari-w9500/ari-w9500-bold.otf" id="8_qmci1"]
-[ext_resource type="Texture2D" uid="uid://bmyf40vikndv5" path="res://assets/ui_textures/icons/start_taskbar_icon.png" id="9_lmoic"]
+[ext_resource type="Texture2D" uid="uid://bmyf40vikndv5" path="res://ui/ui_textures/icons/start_taskbar_icon.png" id="9_lmoic"]
 [ext_resource type="Script" uid="uid://cu5nwseykx1mg" path="res://ui/os_window/start_button.gd" id="10_61eq5"]
-[ext_resource type="Texture2D" uid="uid://dvb8efo583uc5" path="res://assets/ui_textures/icons/dialogue_icon.png" id="10_imtx2"]
-[ext_resource type="Texture2D" uid="uid://df6vn51hbehyj" path="res://assets/ui_textures/nine_patch_textures/nine_patch_panel.png" id="12_ek2n0"]
+[ext_resource type="Texture2D" uid="uid://dvb8efo583uc5" path="res://ui/ui_textures/icons/dialogue_icon.png" id="10_imtx2"]
+[ext_resource type="Texture2D" uid="uid://df6vn51hbehyj" path="res://ui/ui_textures/nine_patch_textures/nine_patch_panel.png" id="12_ek2n0"]
 [ext_resource type="Script" uid="uid://ces5bsm0bc1co" path="res://ui/os_window/hour_label.gd" id="13_v47k0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3x4f6"]
@@ -213,7 +213,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_272ik")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qd8cd")
-text = "16:35"
+text = "15:32"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("13_v47k0")

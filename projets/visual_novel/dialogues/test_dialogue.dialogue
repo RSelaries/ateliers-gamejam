@@ -4,7 +4,7 @@ $> open_dialogue_app()
 
 ~ reveil
 $> change_icon(ICON_SMARTPHONE)
-$> add_image_viewer(&"smartphone", SMORTPHONE, "Smartphone").move(Vector2(0.75, 0.4))
+$> add_image_viewer(&"smartphone", SMARTPHONE, "Smartphone").move(Vector2(0.75, 0.4))
 Téléphone: [wait=0.5][speed=0.5]Tudududu [wait=0.5]tudududu [wait=0.5]tudududu [wait=0.5]tudududu
 	[wait=0.7]Il est 12h30. [wait=0.7]Une alarme sonne. [wait=0.7]Une main vient se poser sur l'écran d'un téléphone. [wait=0.7]L'alarme s'arrête.
 $> change_icon(ICON_ATHAVAN)

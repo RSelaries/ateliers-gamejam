@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8burm0q87ky1" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Resource" uid="uid://bird31ns0fkke" path="res://dialogues/test_dialogue.dialogue" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://cottruesy5jw7" path="res://assets/ui_textures/cursors/cursor_loader.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://cottruesy5jw7" path="res://ui/ui_textures/cursors/cursor_loader.gd" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://st4fobr7ba57" path="res://ui/os_window/os_window.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node" unique_id=1952233708]
@@ -11,6 +11,5 @@ test_dialogue = ExtResource("2_1bvp3")
 
 [node name="CursorLoader" type="Node" parent="." unique_id=695488043]
 script = ExtResource("3_1bvp3")
-metadata/_custom_type_script = "uid://cottruesy5jw7"
 
 [node name="OSWindow" parent="." unique_id=215140744 instance=ExtResource("4_1bvp3")]

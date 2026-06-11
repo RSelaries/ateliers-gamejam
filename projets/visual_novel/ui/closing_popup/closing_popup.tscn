@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8ndop072gsu4"]
 
 [ext_resource type="Script" uid="uid://byffkebbko7eh" path="res://ui/closing_popup/closing_popup.gd" id="1_x8au4"]
-[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://assets/windows_95_style.tres" id="2_83gie"]
+[ext_resource type="Theme" uid="uid://cw0j7po5to87n" path="res://ui/windows_95_style.tres" id="2_83gie"]
 [ext_resource type="PackedScene" uid="uid://bnavdiyf7no7l" path="res://ui/window_title_bar/window_title_bar.tscn" id="3_32ydo"]
 
 [node name="ClosingPopup" type="Node" unique_id=349742255]
