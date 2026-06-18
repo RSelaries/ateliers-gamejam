@@ -2,4 +2,4 @@
 
 <h1 style="justify-content: center"><div class="icon" style="mask-image: url(./medias/icons/attention.svg)"></div>Page en cours<div class="icon" style="mask-image: url(./medias/icons/attention.svg)"></div></h1>
 
-- <a class="external-link" href="https://github.com/nathanhoad/godot_dialogue_manager">Dialogue Manager</a>
+- <a class="external-link" target="_blank" href="https://github.com/nathanhoad/godot_dialogue_manager">Dialogue Manager</a>

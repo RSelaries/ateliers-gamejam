@@ -10,13 +10,13 @@ Cette page contient une explication courte et simple des Nodes que nous allons u
 
 Le ![Godot - Node](../../medias/godot-icons/Node.svg) Node le plus simple, il fonctionne dans le ![Godot - SceneTree](../../medias/godot-icons/PackedScene.svg) [SceneTree](#godot/godot.md#scenetree). Et implémente les fonctions `_ready` et `_process`.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_node.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_node.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - WorldEnvironment](../../medias/godot-icons/WorldEnvironment.svg) WorldEnvironment
 
 À rédiger
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_worldenvironment.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_worldenvironment.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - AnimationPlayer](../../medias/godot-icons/AnimationPlayer.svg) AnimationPlayer
 
@@ -28,31 +28,31 @@ Le ![Godot - Node](../../medias/godot-icons/Node.svg) Node le plus simple, il fo
 
 La famille des ![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D représente les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour tous les éléments de jeu en 2D (sauf les éléments d'[interfaces utilisateur](#godot/control_nodes.md)).
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D
 
 Un ![AnimatedSprite2D](../../medias/godot-icons/AnimatedSprite2D.svg) AnimatedSprite2D est un [![Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D](#godot/nodes.md#sprite2d) qui peut jouer une ou plusieurs animations.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_animatedsprite2d.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_animatedsprite2d.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D
 
 Un ![Godot - CharacterBody2D](../../medias/godot-icons/CharacterBody2D.svg) CharacterBody2D est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) utilisé pour créer des **personnages** qui subissent la **physique** (Gravité, collisions avec les murs...).
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D
 
 Un ![Sprite2D](../../medias/godot-icons/Sprite2D.svg) Sprite2D est un node qui permet d'afficher une texture. Les sprites sont le plus souvent utilisés pour les personnages, ennemis et autres objets d'un jeu en 2D.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_sprite2d.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_sprite2d.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer
 
 Un ![Godot - TileMapLayer](../../medias/godot-icons/TileMapLayer.svg) TileMapLayer est un [![Godot - Node2D](../../medias/godot-icons/Node2D.svg) Node2D](#godot/nodes.md#node) qui permet d'arranger des tuiles d'un  <a class="external-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset">TileSet</a>.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_tilemaplayer.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_tilemaplayer.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 <!--        -->
 <!--        -->
@@ -66,13 +66,13 @@ La famille des ![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D rep
 
 Un ![Godot - CharacterBody3D](../../medias/godot-icons/CharacterBody3D.svg) CharacterBody3D est un [![Godot - Node3D](../../medias/godot-icons/Node3D.svg) Node3D](#godot/nodes.md#node) utilisé pour créer des **personnages** qui subissent la **physique** (Gravité, collisions avec les murs...).
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody3d.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_characterbody3d.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - DirectionalLight3D](../../medias/godot-icons/DirectionalLight3D.svg) DirectionalLight3D
 
 À rédiger
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_directionallight3d.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_directionallight3d.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 <!--         -->
 <!--         -->
@@ -82,28 +82,28 @@ Un ![Godot - CharacterBody3D](../../medias/godot-icons/CharacterBody3D.svg) Char
 
 La famille des ![Godot - Control](../../medias/godot-icons/Control.svg) Control représente tous les [![Godot - Node](../../medias/godot-icons/Node.svg) Nodes](#godot/nodes.md#node) utilisés pour les [interfaces utilisateur](#godot/control_nodes.md).
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_control.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_control.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - Label](../../medias/godot-icons/Label.svg) Label
 
 Un ![Godot - Label](../../medias/godot-icons/Label.svg) Label est un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) permettant d'**afficher du texte**. On peut modifier la taille de la police, la fonte, la couleur, le contour et plus.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_label.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_label.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - Button](../../medias/godot-icons/Button.svg) Button
 
 Un ![Godot - Button](../../medias/godot-icons/Button.svg) Button est un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) qui permet de créer un bouton clickable.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_button.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_button.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit
 
 Un ![Godot - LineEdit](../../medias/godot-icons/LineEdit.svg) LineEdit est un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) qui permet à l'utilisateur de rentrer du texte qui peut être récupéré par code.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_lineedit.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_lineedit.html" class="documentation-link" target="_blank">Documentation officielle</a></span>
 
 ### ![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox
 
 Un ![Godot - SpinBox](../../medias/godot-icons/SpinBox.svg) SpinBox est un [![Godot - Node](../../medias/godot-icons/Node.svg) Node](#godot/nodes.md#node) qui permet à l'utilisateur de rentrer un nombre qui peut être récupéré par code.
 
-> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_spinbox.html" class="documentation-link">Documentation officielle</a></span>
+> <span style="font-size: 0.8em"><a href="https://docs.godotengine.org/en/stable/classes/class_spinbox.html" class="documentation-link" target="_blank">Documentation officielle</a></span>

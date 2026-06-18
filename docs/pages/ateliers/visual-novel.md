@@ -16,7 +16,7 @@ Dans cet atelier, on va apprendre à utiliser le [![plugin](../../medias/godot-i
 
 ## Création du projet
 
-On commence en créant notre projet, je vais l'appeler *"Atelier Visual Novel"*. À ce projet on ajoute le fichier *"/assets/"* que vous pouvez télécharger <a href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/visual_novel/assets" class="external-link">ici</a>. (Vous pouvez égallement vous rendre sur <a href="https://itch.io/game-assets/genre-visual-novel/tag-no-ai" class="external-link">cette page</a> pour chercher d'autres images)
+On commence en créant notre projet, je vais l'appeler *"Atelier Visual Novel"*. À ce projet on ajoute le fichier *"/assets/"* que vous pouvez télécharger <a href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/visual_novel/assets" class="external-link" target="_blank">ici</a>. (Vous pouvez égallement vous rendre sur <a href="https://itch.io/game-assets/genre-visual-novel/tag-no-ai" class="external-link" target="_blank">cette page</a> pour chercher d'autres images)
 
 > Si vous avez oublié comment faire, vous pouvez relire la partie [Création du projet](#ateliers/jeu-de-plateforme.md#creation-du-projet) du deuxième atelier.
 
@@ -259,7 +259,7 @@ Enfin, pour pouvoir utiliser nos assets il nous en faut une référence, pour ce
 const CIEL_BLEU = preload("res://assets/background/clouds.png")
 ```
 
-Sinon, pour vous simplifier la vie j'ai déjà créé un script *textures* qui contient une référence à tous les assets que je vous ai fourni, pour y accéder dans notre dialogue, on peut en faire un <a class="documentation-link" href="https://docs.godotengine.org/fr/4.x/tutorials/scripting/singletons_autoload.html">autoload</a>.
+Sinon, pour vous simplifier la vie j'ai déjà créé un script *textures* qui contient une référence à tous les assets que je vous ai fourni, pour y accéder dans notre dialogue, on peut en faire un <a class="documentation-link" target="_blank" href="https://docs.godotengine.org/fr/4.x/tutorials/scripting/singletons_autoload.html">autoload</a>.
 
 <details>
     <summary>Faire un autoload</summary>

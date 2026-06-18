@@ -25,9 +25,9 @@ Comme la dernière fois, on va créer un **nouveau projet**.
 
 <br>
 
-Une fois le projet créé, on va télécharger les assets de notre jeu. Vous pouvez directement télécharger le dossier */assets/* de mon projet <a class="external-link" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2/assets" target="blank" download>ici</a>.
+Une fois le projet créé, on va télécharger les assets de notre jeu. Vous pouvez directement télécharger le dossier */assets/* de mon projet <a class="external-link" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2/assets" download>ici</a>.
 
-> <span style="color: var(--body-text-color-faded); font-size: .8em">Je vous conseille fortement d'utiliser le dossier /assets/ que je fourni, mais vous pouvez également chercher un tileset vous même. Vous pouvez par exemple chercher <a class="external-link" href="https://itch.io/game-assets/tag-side-scroller/tag-tileset" target="blank">ici</a>.</span>
+> <span style="color: var(--body-text-color-faded); font-size: .8em">Je vous conseille fortement d'utiliser le dossier /assets/ que je fourni, mais vous pouvez également chercher un tileset vous même. Vous pouvez par exemple chercher <a class="external-link" target="_blank" href="https://itch.io/game-assets/tag-side-scroller/tag-tileset">ici</a>.</span>
 
 Il nous suffit ensuite de **décompresser** le fichier *zip*, puis de le glisser dans notre projet.
 
@@ -496,7 +496,7 @@ On a un jeu fonctionnel ! Vous pouvez dès maintenant faire d'autres niveaux et 
 
 <br>
 
-Vous pouvez retrouver tous les fichier du projet <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a> et vous pouvez les télécharger <a class="external-link" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a>.
+Vous pouvez retrouver tous les fichier du projet <a class="external-link" target="_blank" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a> et vous pouvez les télécharger <a class="external-link" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/jeu_de_plateforme_v2">ici</a>.
 
 <!-- Si vous avez encore envie d'améliorer votre jeu vous pouvez:
 

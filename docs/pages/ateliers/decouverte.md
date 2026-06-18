@@ -3,7 +3,7 @@
 Merci d'être présents pour ce premier atelier !
 
 Pour débuter, on va simplement **jouer à des jeux de gamejams** pour se rendre compte de **ce qui peut être produit** en un **temps limité**.
-J'ai préparé une **collection** <a href="https://itch.io/" class="external-link">itch.io</a> de <a href="https://itch.io/c/5926827/gamejams" class="external-link">jeux de gamejams</a>. Sinon vous pouvez aussi chercher des jeux vous même <a href="https://itch.io/games/tag-game-jam" class="external-link">ici</a>.
+J'ai préparé une **collection** <a href="https://itch.io/" class="external-link" target="_blank">itch.io</a> de <a href="https://itch.io/c/5926827/gamejams" class="external-link" target="_blank">jeux de gamejams</a>. Sinon vous pouvez aussi chercher des jeux vous même <a href="https://itch.io/games/tag-game-jam" class="external-link" target="_blank">ici</a>.
 
 ## Exemples que je trouve intéressants
 

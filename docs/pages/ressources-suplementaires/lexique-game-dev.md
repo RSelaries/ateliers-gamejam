@@ -53,7 +53,7 @@ Agencement de tuiles *(à partir d'un [tileset](#ressources-suplementaires/lexiq
 
 Ensemble de tuiles *(tiles)* regroupées sur une même image. Souvent utilisé pour les environements.
 
-> Dans Godot, on utiliserais une ressource <a class="documentation-link" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset">TileSet</a>.
+> Dans Godot, on utiliserais une ressource <a class="documentation-link" target="_blank" href="https://docs.godotengine.org/en/stable/classes/class_tileset.html#tileset">TileSet</a>.
 
 ## Version Control
 

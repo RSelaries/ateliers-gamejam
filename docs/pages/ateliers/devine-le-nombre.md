@@ -23,7 +23,7 @@ Pour apprendre les bases de [Godot](#godot/godot.md) et de la programmation on v
 
 ## I. Télécharger Godot
 
-Rendez vous sur ce lien: <a href="https://godotengine.org/download/windows/" class="external-link">godotengine.org/download/windows</a>, puis téléchargez la version ***Godot Engine***, pas *Godot Engine - .NET*.
+Rendez vous sur ce lien: <a href="https://godotengine.org/download/windows/" class="external-link" target="_blank">godotengine.org/download/windows</a>, puis téléchargez la version ***Godot Engine***, pas *Godot Engine - .NET*.
 
 <!-- > <span style="font-size: 0.8em">Il est techniquement tout à fait possible d'utiliser la version .NET pour tout le reste. Cette version est **la même** mais avec le support du language **C# en plus**, nous n'en avons **pas besoin**.</span> -->
 
@@ -96,7 +96,7 @@ Sur cette fenêtre, on a également accès à l'[historique](#godot/interface.md
 
 <viewable-image src="./medias/devine-le-nombre/interface-godot-11.webp"></viewable-image>
 
-> Si ces explications vous ont laissé dubitatif, je vous invite à consulter l'<a href="https://docs.godotengine.org/fr/4.x/about/introduction.html" class="external-link">introduction</a> de la documentation de Godot. Et plus précisément la partie sur l'<a class="external-link" href="https://docs.godotengine.org/fr/4.x/getting_started/introduction/first_look_at_the_editor.html">interface</a> de Godot.
+> Si ces explications vous ont laissé dubitatif, je vous invite à consulter l'<a href="https://docs.godotengine.org/fr/4.x/about/introduction.html" class="external-link" target="_blank">introduction</a> de la documentation de Godot. Et plus précisément la partie sur l'<a class="external-link" target="_blank" href="https://docs.godotengine.org/fr/4.x/getting_started/introduction/first_look_at_the_editor.html">interface</a> de Godot.
 
 ## III. Créer la scène de jeu
 
@@ -489,8 +489,8 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 		reference_label.text = "Trouvé!"
 ```
 
-> Vous pouvez **retrouver l'intégraliter du projet** dans le <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam">repo</a> de ces ateliers au lien suivant: <a class="external-link" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre</a>.
+> Vous pouvez **retrouver l'intégraliter du projet** dans le <a class="external-link" target="_blank" href="https://github.com/RSelaries/ateliers-gamejam">repo</a> de ces ateliers au lien suivant: <a class="external-link" target="_blank" href="https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre</a>.
 
-> Vous pouvez aussi directement **télécharger le projet** <a class="external-link" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">ici</a>.
+> Vous pouvez aussi directement **télécharger le projet** <a class="external-link" target="_blank" target="_blank" href="https://downgit.github.io/#/home?url=https://github.com/RSelaries/ateliers-gamejam/tree/main/projets/devine_le_nombre">ici</a>.
 
 <viewable-image src="./medias/devine-le-nombre/jeu-fini.png"></viewable-image>

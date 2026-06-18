@@ -161,6 +161,21 @@ li {
     margin-bottom: 10px;
 }
 
+.tag {
+    font-size: 0.8em;
+    font-weight: 800;
+    padding: 2px 20px;
+    border-radius: 100px;
+    background-color: var(--highlight-color);
+    color: var(--text-color-light-theme);
+}
+
+.tag.t2d { background-color: #8DA5F3; }
+.tag.t3d { background-color: #FC7F7F; }
+.tag.control { background-color: #8EEF97; }
+.tag.other { background-color: #E0E0E0; }
+
+
 code {
     color: var(--code-color);
     word-wrap: break-word;

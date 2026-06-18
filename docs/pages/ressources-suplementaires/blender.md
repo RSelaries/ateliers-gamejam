@@ -1,6 +1,6 @@
 # <div class="icon" style="mask-image: url(./medias/icons/blender-icon.svg)"></div> Blender
 
-<a href="https://www.blender.org/" class="external-link">Blender</a> est un logiciel de **modélisation 3D** **gratuit** et **open source**. C'est aujourd'hui le logiciel de 3D **le plus utilisé** par tous les **indépendants** et il commence à être de plus en plus utilisé dans les **milieux professionels**.
+<a href="https://www.blender.org/" target="_blank" class="external-link">Blender</a> est un logiciel de **modélisation 3D** **gratuit** et **open source**. C'est aujourd'hui le logiciel de 3D **le plus utilisé** par tous les **indépendants** et il commence à être de plus en plus utilisé dans les **milieux professionels**.
 
 <br>
 
@@ -10,7 +10,7 @@ Il est majoritairement utilisé pour la **modélisation de personnages**, pour l
 
 <br>
 
-<a href="https://www.blender.org/" style="width:100%"><img style="width:100%; height: auto" src="./medias/blender.jpg"></a>
+<a href="https://www.blender.org/" target="_blank" style="width:100%"><img style="width:100%; height: auto" src="./medias/blender.jpg"></a>
 
 <br>
 
