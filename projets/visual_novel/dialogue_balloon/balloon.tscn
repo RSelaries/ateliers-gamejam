@@ -51,7 +51,7 @@ animations = [{
 [node name="BalloonScene" type="Window" unique_id=93605565]
 oversampling_override = 1.0
 title = "Dialogue"
-position = Vector2i(275, 441)
+position = Vector2i(360, 751)
 size = Vector2i(1200, 240)
 borderless = true
 max_size = Vector2i(1200, 240)
@@ -193,22 +193,17 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=434731887]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "S'habiller"
+text = "Choix 1"
 
 [node name="ResponseExample2" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=1675833060]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Enfiler des chaussettes et aller petit déjeuner"
+text = "Choix très long qui prend de la place"
 
 [node name="ResponseExample3" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=1100959083]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Aller petit déjeuner"
-
-[node name="ResponseExample4" type="Button" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue/MarginContainer/VBoxContainer/ResponsesMenu" unique_id=1246034894]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Se rendormir"
+text = "Choix 3"
 
 [node name="DialogueScrollBar" type="VScrollBar" parent="Balloon/MarginContainer/VBoxContainer/MarginContainer/MarginContainer/Dialogue" unique_id=2131848887]
 unique_name_in_owner = true

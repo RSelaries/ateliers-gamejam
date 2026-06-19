@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dc1cy6b4fhhp2"]
+
+[ext_resource type="Texture2D" uid="uid://blg5j7vdo5ymx" path="res://assets/materials/prototyping_materials/textures/wall/pruple_wall.png" id="1_1fe0u"]
+
+[resource]
+albedo_texture = ExtResource("1_1fe0u")
+uv1_triplanar = true
+uv1_world_triplanar = true

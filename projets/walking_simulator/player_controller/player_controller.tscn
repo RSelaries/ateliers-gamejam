@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cpop3vptq5i17"]
+
+[ext_resource type="Script" uid="uid://uioiw4h6hxnk" path="res://player_controller/player_controller.gd" id="1_lvefo"]
+[ext_resource type="Script" uid="uid://bnhre8erit6u" path="res://player_controller/interaction_raycast.gd" id="2_irswo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qd8cd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irswo"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_irswo"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PlayerController" type="CharacterBody3D" unique_id=1539733184]
+script = ExtResource("1_lvefo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1305254118]
+shape = SubResource("CapsuleShape3D_qd8cd")
+debug_color = Color(0, 0.5950001, 0.7, 1)
+
+[node name="CameraYRotation" type="Node3D" parent="." unique_id=1410213196]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraYRotation" unique_id=1127419785]
+unique_name_in_owner = true
+
+[node name="InteractionRayCast" type="RayCast3D" parent="CameraYRotation/Camera3D" unique_id=2048772811]
+visible = false
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 3
+collide_with_areas = true
+script = ExtResource("2_irswo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1560867301]
+visible = false
+
+[node name="Crosshair" type="Panel" parent="CanvasLayer" unique_id=492284928]
+custom_maximum_size = Vector2(2, 2)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_irswo")
+
+[node name="InteractLabel" type="Label" parent="CanvasLayer/Crosshair" unique_id=861579118]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -36.0
+offset_right = 31.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Interact"
+label_settings = SubResource("LabelSettings_irswo")

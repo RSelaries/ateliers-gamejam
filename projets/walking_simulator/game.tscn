@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://htqlfvoputp7"]
+
+[ext_resource type="PackedScene" uid="uid://cpop3vptq5i17" path="res://player_controller/player_controller.tscn" id="1_80nbo"]
+[ext_resource type="Material" uid="uid://mp6c5t6mild2" path="res://assets/materials/prototyping_materials/blank/black_blank.tres" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://croyqfak0itpy" path="res://confetti_button.gd" id="3_feb5d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80nbo"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_e2o6t"]
+sky_material = SubResource("ProceduralSkyMaterial_80nbo")
+
+[sub_resource type="Environment" id="Environment_feb5d"]
+background_mode = 2
+sky = SubResource("Sky_e2o6t")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_feb5d"]
+height = 0.10183716
+radius = 0.12792969
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feb5d"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fc0e3"]
+material = SubResource("StandardMaterial3D_feb5d")
+top_radius = 0.12
+bottom_radius = 0.12
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fc0e3"]
+albedo_color = Color(1, 0, 0, 1)
+stencil_flags = 2
+stencil_outline_thickness = 0.106
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7jktm"]
+material = SubResource("StandardMaterial3D_fc0e3")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
+shading_mode = 0
+albedo_color = Color(1, 0.65, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_skc8t"]
+material = SubResource("StandardMaterial3D_ryrav")
+flip_faces = true
+top_radius = 0.12
+bottom_radius = 0.12
+height = 0.07878906
+
+[sub_resource type="Curve" id="Curve_fc0e3"]
+_data = [Vector2(0.8836364, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_feb5d"]
+curve = SubResource("Curve_fc0e3")
+
+[sub_resource type="Curve" id="Curve_feb5d"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 5.825226), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fc0e3"]
+curve = SubResource("Curve_feb5d")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qd8cd"]
+particle_flag_rotate_y = true
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, 1, 0)
+spread = 20.0
+initial_velocity_min = 2.0
+initial_velocity_max = 3.0
+gravity = Vector3(0, -1.5, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 0.09999776
+linear_accel_curve = SubResource("CurveTexture_fc0e3")
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = 0.49999776
+color = Color(1, 0, 0, 1)
+alpha_curve = SubResource("CurveTexture_feb5d")
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
+collision_mode = 1
+collision_friction = 1.0
+collision_bounce = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
+transparency = 1
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_feb5d"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(0.05, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvhwa"]
+albedo_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qd8cd"]
+material = SubResource("StandardMaterial3D_cvhwa")
+top_radius = 0.1
+bottom_radius = 0.057
+height = 0.1303711
+
+[node name="Game" type="Node3D" unique_id=1074062371]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=371871288]
+environment = SubResource("Environment_feb5d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1106741571]
+transform = Transform3D(0.8688814, 0.082512304, 0.48809493, -0.45506817, 0.5212102, 0.7219785, -0.19482796, -0.8494302, 0.4904186, 0, 0, 0)
+shadow_enabled = true
+
+[node name="PlayerController" parent="." unique_id=1539733184 instance=ExtResource("1_80nbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=537957882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+material_override = ExtResource("2_e2o6t")
+use_collision = true
+size = Vector3(32, 0.5, 32)
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="Floor" unique_id=1983628070]
+size = Vector3(32, 0.5, 32)
+
+[node name="ConfettiButton" type="Area3D" parent="." unique_id=118702859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1523329, -3.0026982)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_feb5d")
+metadata/_custom_type_script = "uid://cs2i2cmt5bmtv"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConfettiButton" unique_id=507756692]
+transform = Transform3D(1, -4.462251e-16, -1.0957901e-13, -3.330669e-15, 0.8660254, -0.5, 0, 0.5, 0.8660254, 3.2887206e-15, 0.05245447, 0.03016305)
+shape = SubResource("CylinderShape3D_feb5d")
+debug_color = Color(0, 0.6460767, 0.26006752, 1)
+
+[node name="Collumn" type="CSGBox3D" parent="ConfettiButton" unique_id=914464428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.50406325, 0.002698183)
+use_collision = true
+size = Vector3(0.38110352, 1.2965393, 0.359375)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="ConfettiButton/Collumn" unique_id=1016902231]
+transform = Transform3D(1, -9.0529255e-09, 6.9465522e-09, 1.1313338e-08, 0.8660255, -0.5, -1.4894299e-09, 0.5, 0.8660255, 4.752301e-09, 0.62013173, 0.07313967)
+operation = 2
+size = Vector3(0.4411621, 0.23242188, 0.5505371)
+
+[node name="Bouton" type="MeshInstance3D" parent="ConfettiButton" unique_id=2104386696]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, 0, 0)
+mesh = SubResource("CylinderMesh_fc0e3")
+
+[node name="Bouton" type="MeshInstance3D" parent="ConfettiButton/Bouton" unique_id=834799331]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
+mesh = SubResource("CylinderMesh_7jktm")
+
+[node name="BoutonOutline" type="MeshInstance3D" parent="ConfettiButton/Bouton/Bouton" unique_id=130016359]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030605435, 0)
+mesh = SubResource("CylinderMesh_skc8t")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ConfettiButton" unique_id=1136829453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5088613, -0.8610195, -0.6146462)
+use_collision = true
+radius = 0.107421875
+height = 0.669
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="ConfettiButton/CSGCylinder3D" unique_id=584860520]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41729677, 0)
+emitting = false
+amount = 500
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+collision_base_size = 0.03
+process_material = SubResource("ParticleProcessMaterial_qd8cd")
+draw_pass_1 = SubResource("QuadMesh_feb5d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ConfettiButton/CSGCylinder3D" unique_id=2118288626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37963867, 0)
+mesh = SubResource("CylinderMesh_qd8cd")

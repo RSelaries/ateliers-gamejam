@@ -17,6 +17,7 @@ boot_splash/bg_color=Color(0, 0.5019608, 0.5019608, 1)
 boot_splash/stretch_mode=4
 boot_splash/image="uid://uky224qnifk6"
 config/icon="res://icon.svg"
+config/tags=PackedStringArray("ateliers_gamejam", "sirius")
 
 [autoload]
 
