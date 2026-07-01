@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://htqlfvoputp7"]
 
 [ext_resource type="PackedScene" uid="uid://cpop3vptq5i17" path="res://player_controller/player_controller.tscn" id="1_80nbo"]
-[ext_resource type="Material" uid="uid://mp6c5t6mild2" path="res://assets/materials/prototyping_materials/blank/black_blank.tres" id="2_e2o6t"]
+[ext_resource type="Material" uid="uid://mp6c5t6mild2" path="res://assets/materials/prototyping_materials/black_blank.tres" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://croyqfak0itpy" path="res://confetti_button.gd" id="3_feb5d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80nbo"]
@@ -147,9 +147,9 @@ use_collision = true
 size = Vector3(0.38110352, 1.2965393, 0.359375)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="ConfettiButton/Collumn" unique_id=1016902231]
-transform = Transform3D(1, -9.0529255e-09, 6.9465522e-09, 1.1313338e-08, 0.8660255, -0.5, -1.4894299e-09, 0.5, 0.8660255, 4.752301e-09, 0.62013173, 0.07313967)
+transform = Transform3D(1, -9.0529255e-09, 6.9465522e-09, 1.1313338e-08, 0.8660255, -0.5, -1.4894299e-09, 0.5, 0.8660255, 4.7433875e-09, 0.61782885, 0.04966283)
 operation = 2
-size = Vector3(0.4411621, 0.23242188, 0.5505371)
+size = Vector3(0.39648438, 0.20495605, 0.43222046)
 
 [node name="Bouton" type="MeshInstance3D" parent="ConfettiButton" unique_id=2104386696]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, 0, 0)

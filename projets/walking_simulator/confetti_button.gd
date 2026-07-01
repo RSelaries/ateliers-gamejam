@@ -15,6 +15,7 @@ func _interacted_with() -> void:
 	tween.tween_property(bouton, ^"position:y", bouton.position.y - 0.04, 0.05)
 	gpu_particles_3d.restart()
 	collision_layer = 0
+	
 	await gpu_particles_3d.finished
 	collision_layer = 2
 	tween = get_tree().create_tween()

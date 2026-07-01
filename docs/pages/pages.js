@@ -71,11 +71,11 @@ export default
                 link: "ateliers/walking-simulator.md",
                 icon: "./medias/godot-icons/Camera.svg",
             },
-            // {
-            //     title: "Tiny Dungeon",
-            //     link: "ateliers/tiny-dungeon.md",
-            //     icon: "./medias/icons/tiny-dungeon.svg",
-            // },
+            {
+                title: "Walking Sim - Suite",
+                link: "ateliers/walking-sim-interaction.md",
+                icon: "./medias/icons/walking-sim-interact-icon.svg",
+            },
         ],
     },
     // Godot
