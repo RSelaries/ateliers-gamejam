@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jofjivqwdxlj"]
+
+[ext_resource type="Texture2D" uid="uid://k41s8vcbq3kn" path="res://assets/materials/prototyping_materials/textures/door/orange_door.png" id="1_23m5h"]
+
+[resource]
+albedo_texture = ExtResource("1_23m5h")
+uv1_triplanar = true
+uv1_world_triplanar = true

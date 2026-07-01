@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bdcrj7bkxdpix"]
+
+[ext_resource type="Material" uid="uid://mp6c5t6mild2" path="res://assets/materials/prototyping_materials/black_blank.tres" id="1_08ylb"]
+[ext_resource type="PackedScene" uid="uid://d3ign2l5bwh6v" path="res://player/Player.tscn" id="2_mjrkt"]
+
+[node name="TestScene" type="Node3D" unique_id=1416267176]
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1063062062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+material_override = ExtResource("1_08ylb")
+size = Vector3(32, 0.5, 32)
+
+[node name="Player" parent="." unique_id=1794341598 instance=ExtResource("2_mjrkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
