@@ -70,6 +70,31 @@ a {
     }
 }
 
+a.documentation-link {
+    color: var(--external-link-color);
+    text-decoration: underline;
+    word-break: break-word;
+    
+    background-image: var(--external-link-icon), var(--documentation-link-icon);
+    background-size: 12px, 16px;
+    background-position: center right, center left;
+    background-repeat: no-repeat;
+    padding-right: 16px;
+    padding-left: 20px;
+}
+
+a.download-link {
+    color: var(--external-link-color);
+    text-decoration: underline;
+    word-break: break-word;
+    
+    background-image: var(--download-icon);
+    background-size: 12px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 16px;
+}
+
 a.wikipedia-link {
     color: var(--external-link-color);
     text-decoration: underline;

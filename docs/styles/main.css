@@ -35,6 +35,9 @@
     --external-link-icon-light: url(../medias/icons/external-link-icon-light.svg);
     --external-link-icon-dark: url(../medias/icons/external-link-icon-dark.svg);
 
+    --download-icon-light: url(../medias/icons/download-icon-light.svg);
+    --download-icon-dark: url(../medias/icons/download-icon-dark.svg);
+
     --code-color-light-theme: #e700d8;
     --code-color-dark-theme: #f0b0ec;
 
@@ -77,11 +80,13 @@ body {
 body.light {
     color-scheme: light;
     --external-link-icon: var(--external-link-icon-light);
+    --download-icon: var(--download-icon-light);
 }
 
 body.dark {
     color-scheme: dark;
     --external-link-icon: var(--external-link-icon-dark);
+    --download-icon: var(--download-icon-dark);
 }
 
 wc-header {
