@@ -65,7 +65,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_irswo")
 
 [node name="InteractLabel" type="Label" parent="CanvasLayer/Crosshair" unique_id=861579118]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -80,32 +79,3 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Interact"
 label_settings = SubResource("LabelSettings_irswo")
-
-[node name="Control" type="Control" parent="." unique_id=1589951766]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=26489864]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer" unique_id=1217239242]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="Label" type="Label" parent="Control/PanelContainer/MarginContainer" unique_id=368431425]
-layout_mode = 2
-size_flags_vertical = 1
-text = "Titre"
-vertical_alignment = 2

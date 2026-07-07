@@ -3,6 +3,7 @@ import { LitElement, html, css } from 'https://unpkg.com/lit?module'
 class ViewableImage extends LitElement {
     static properties = {
         src: {},
+        height: {},
     }
 
     static styles = css`
@@ -50,7 +51,7 @@ class ViewableImage extends LitElement {
 
     render() {
         return html`
-            <img src="${this.src}" @click=${this.show} class="img-btn">
+            <img style="${this.height ? 'height: ' + String(this.height): ''}" src="${this.src}" @click=${this.show} class="img-btn">
             <div class="viewer-wrapper" @click=${this.hide}>
                 <img src="${this.src}">
             </div>

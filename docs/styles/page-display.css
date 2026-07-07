@@ -11,8 +11,7 @@ details {
     border: solid 1px var(--border-color);
     padding: 1em 2em;
     border-radius: 15px;
-    margin: 15px;
-    margin-left: 0px;
+    margin: 15px 0px;
 
     summary {
         /* color: var(--highlight-color); */

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b4jnekfk4o165"]
+
+[ext_resource type="Script" uid="uid://c7cv3apha7i3l" path="res://assets/interactable_objects/door/door.gd" id="1_1gbql"]
+
+[node name="Door" type="Node3D" unique_id=1064084321]
+script = ExtResource("1_1gbql")
+
+[node name="DoorFrame" type="CSGBox3D" parent="." unique_id=1095502009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2608073, 0)
+size = Vector3(1.7, 2.666748, 0.2)
+
+[node name="DoorHole" type="CSGBox3D" parent="DoorFrame" unique_id=92795287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01500988, 0)
+operation = 2
+calculate_tangents = false
+use_collision = true
+size = Vector3(1.5, 2.5022826, 0.3)
+
+[node name="DoorHinge" type="Node3D" parent="." unique_id=1114772777]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 1.5, 0)
+
+[node name="Door" type="CSGBox3D" parent="DoorHinge" unique_id=1848377571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.2515478, 4.7683716e-07)
+use_collision = true
+size = Vector3(1.5, 2.5, 0.1)
+
+[node name="Handle" type="CSGBox3D" parent="DoorHinge/Door" unique_id=676100428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48853904, 0, 0)
+size = Vector3(0.27874756, 0.0625, 0.32055664)
+
+[node name="HandleSub" type="CSGBox3D" parent="DoorHinge/Door/Handle" unique_id=923354580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029220581, 0, 0)
+operation = 2
+size = Vector3(0.2203064, 0.118896484, 0.21313477)
