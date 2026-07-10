@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://dpcttqjsca6pr"]
+
+[ext_resource type="PackedScene" uid="uid://duw4gjiqf0e6j" path="res://assets/mesh/exit_tunnel/exit_tunnel.glb" id="1_nlhhq"]
+[ext_resource type="Texture2D" uid="uid://dxoqgbhlarc3j" path="res://assets/textures/skyboxes/file.jpg" id="1_tuq12"]
+[ext_resource type="ArrayMesh" uid="uid://daf2mdqtpn8ws" path="res://assets/mesh/grass_floor/grass_floor.glb" id="2_jf6fd"]
+[ext_resource type="PackedScene" uid="uid://5yo05acjqbq" path="res://assets/mesh/appartment/concrete_fence.glb" id="3_vjp7k"]
+[ext_resource type="PackedScene" uid="uid://d3ign2l5bwh6v" path="res://player/player.tscn" id="4_4pmar"]
+[ext_resource type="PackedScene" uid="uid://cimt0bxxdjpth" path="res://assets/mesh/appartment/appartment.glb" id="5_vqtpo"]
+[ext_resource type="PackedScene" uid="uid://cxfqokg4cr3vr" path="res://assets/mesh/grass_floor/pine_tree.glb" id="6_6d36j"]
+[ext_resource type="Script" uid="uid://b8jlxjaqrv84v" path="res://components/change_scene_area_3d.gd" id="7_tuq12"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tuq12"]
+panorama = ExtResource("1_tuq12")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_6d36j"]
+sky_material = SubResource("PanoramaSkyMaterial_tuq12")
+
+[sub_resource type="Environment" id="Environment_qd8cd"]
+background_mode = 2
+sky = SubResource("Sky_6d36j")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tuq12"]
+data = PackedVector3Array(-57.016098, 0, 57.016098, 57.016098, 0, -57.016098, 57.016098, 0, 57.016098, -57.016098, 0, 57.016098, -57.016098, 0, -57.016098, 57.016098, 0, -57.016098)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qd8cd"]
+size = Vector3(1.2431641, 2.408081, 0.58703613)
+
+[node name="AppartmentExterior" type="Node3D" unique_id=1277252062]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1437067746]
+environment = SubResource("Environment_qd8cd")
+
+[node name="GrassFloor" type="MeshInstance3D" parent="." unique_id=663448609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08753538, 0, -1.5635557)
+mesh = ExtResource("2_jf6fd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GrassFloor" unique_id=84284395]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrassFloor/StaticBody3D" unique_id=1048279510]
+shape = SubResource("ConcavePolygonShape3D_tuq12")
+
+[node name="AppartmentFront" type="Node3D" parent="." unique_id=827088891]
+
+[node name="Appartment" parent="AppartmentFront" unique_id=1321643386 instance=ExtResource("5_vqtpo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39504528, -9.536743e-07, -20.027527)
+
+[node name="ConcreteFence" parent="AppartmentFront" unique_id=812630431 instance=ExtResource("3_vjp7k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1105843, 0, -1.2524617)
+
+[node name="ConcreteFence2" parent="AppartmentFront" unique_id=1717218070 instance=ExtResource("3_vjp7k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.1133094, 0, -1.2524617)
+
+[node name="ConcreteFence3" parent="AppartmentFront" unique_id=2059019395 instance=ExtResource("3_vjp7k")]
+transform = Transform3D(-1.0000001, 0, 0, 0, 1, 0, 0, 0, -1.0000001, -8.28441, 0, -5.4157104)
+
+[node name="ConcreteFence4" parent="AppartmentFront" unique_id=114363516 instance=ExtResource("3_vjp7k")]
+transform = Transform3D(-1.0000001, 0, 0, 0, 1, 0, 0, 0, -1.0000001, 7.628356, 0, -5.4157104)
+
+[node name="PineTree" parent="AppartmentFront" unique_id=19662935 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.528863, 9.536743e-07, -8.037424)
+
+[node name="PineTree2" parent="AppartmentFront" unique_id=656692321 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8674355, -9.536743e-07, -7.457908)
+
+[node name="PineTree6" parent="AppartmentFront" unique_id=1760897596 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.064501, -9.536743e-07, -5.597595)
+
+[node name="PineTree7" parent="AppartmentFront" unique_id=1616898422 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.596018, -9.536743e-07, -9.702095)
+
+[node name="PineTree8" parent="AppartmentFront" unique_id=1367209121 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.485863, -9.536743e-07, -7.4874363)
+
+[node name="PineTree9" parent="AppartmentFront" unique_id=2074381633 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.338219, -9.536743e-07, -3.6191657)
+
+[node name="PineTree10" parent="AppartmentFront" unique_id=124977237 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9208355, -9.536743e-07, 0.21957636)
+
+[node name="PineTree11" parent="AppartmentFront" unique_id=1559389081 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1667004, -9.536743e-07, 2.7295222)
+
+[node name="PineTree12" parent="AppartmentFront" unique_id=168009578 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2681675, -9.536743e-07, 0.55965257)
+
+[node name="PineTree13" parent="AppartmentFront" unique_id=1317200405 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.023556, -9.536743e-07, 2.2473295)
+
+[node name="PineTree14" parent="AppartmentFront" unique_id=1772325926 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.021214, -9.536743e-07, 0.3874414)
+
+[node name="PineTree15" parent="AppartmentFront" unique_id=1938743370 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9155445, -9.536743e-07, -2.1612937)
+
+[node name="PineTree16" parent="AppartmentFront" unique_id=1652349987 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.641176, -9.536743e-07, -5.467761)
+
+[node name="PineTree17" parent="AppartmentFront" unique_id=1155193422 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.948816, -9.536743e-07, -7.4998612)
+
+[node name="PineTree18" parent="AppartmentFront" unique_id=1488119351 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.227867, -9.536743e-07, -9.359751)
+
+[node name="PineTree3" parent="AppartmentFront" unique_id=339975157 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.927902, -9.536743e-07, -0.2339822)
+
+[node name="PineTree4" parent="AppartmentFront" unique_id=228061849 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.697186, 0, -2.792551)
+
+[node name="PineTree5" parent="AppartmentFront" unique_id=1942124687 instance=ExtResource("6_6d36j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.697186, 0, -2.792551)
+
+[node name="ExitTunnel" parent="AppartmentFront" unique_id=358353158 instance=ExtResource("1_nlhhq")]
+
+[node name="ChangeSceneArea3D" type="Area3D" parent="." unique_id=1267950697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40189737, 1.2954259, -9.860924)
+script = ExtResource("7_tuq12")
+target_scene = "uid://b4wiilvfayoku"
+interaction_name = "Ouvrir"
+metadata/_custom_type_script = "uid://b8jlxjaqrv84v"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChangeSceneArea3D" unique_id=1600556787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0791626, -0.20648193)
+shape = SubResource("BoxShape3D_qd8cd")
+
+[node name="Player" parent="." unique_id=1794341598 instance=ExtResource("4_4pmar")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.6586385)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Player/Neck/Camera3D" parent_id_path=PackedInt32Array(1794341598, 376861065) index="1" unique_id=1859601231]
+light_color = Color(0.59446573, 0.31230158, 0.042102605, 1)
+spot_range = 15.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Player/Neck/Camera3D" parent_id_path=PackedInt32Array(1794341598, 376861065) index="2" unique_id=1058307909]
+light_color = Color(0.59446573, 0.31230158, 0.042102605, 1)
+
+[editable path="Player"]

@@ -1,44 +1,41 @@
-@icon("uid://bf7ixnig6obi7")
+@icon("res://assets/icons/InteractableArea3D.svg")
 class_name InteractableArea3D
 extends Area3D
 
-@export_group("Animation")
-## Une référence vers le node [class AnimationPlayer] qui va jouer les animations.
-@export var animation_player: AnimationPlayer
-## Le nom de l'animation qui va être jouée au moment où le joueur intéragit avec cet [param InteractableArea3D].
-@export var on_interact_animation: StringName
-## Le nom de l'animation qui va être jouée au moment où le joueur vise cet [param InteractableArea3D].
-@export var on_focused_animation: StringName
-## Le nom de l'animation qui va être jouée au moment où le joueur ne vise plus cet [param InteractableArea3D].
-@export var on_unfocused_animation: StringName
+
+## Signal émit au moment où le joueur intéragit avec ce composant.
+signal interaction_started
+## Signal émit au moment où le joueur arrête d'intéragir avec ce composant.
+signal interaction_ended
+## Signal émit au moment où le joueur regarde ce composant.
+signal focus_gained
+## Signal émit au moment où le joueur arrête de regarder ce composant.
+signal focus_lost
 
 
+@export var interaction_name: String = "Intéragir"
+
+
+## Si [code]true[/code]: le joueur regarde ce composant.
 var focused: bool = false:
 	set = _set_focused
 
 
-func _interacted_with() -> void: pass
-func _focused() -> void: pass
-func _unfocused() -> void: pass
+## Appeler cette fonction pour intéragir avec ce composant.
+func start_interacting() -> void:
+	interaction_started.emit()
 
 
-func _init() -> void:
-	collision_layer = 2
+## Appeler cettte fonction pour arrêter d'intéragir avec ce composant.
+func stop_interaction() -> void:
+	interaction_ended.emit()
 
 
-func interact() -> void:
-	if animation_player and on_interact_animation:
-		animation_player.play(on_interact_animation)
-	_interacted_with()
-
-
-func _set_focused(value: bool) -> void:
-	focused = value
-	if value:
-		if animation_player and on_focused_animation:
-			animation_player.play(on_focused_animation)
-		_focused()
+# Setter de focused
+func _set_focused(new_value: bool) -> void:
+	focused = new_value
+	if new_value:
+		focus_gained.emit()
+		Player.interaction_label.text = interaction_name
 	else:
-		if animation_player and on_unfocused_animation:
-			animation_player.play(on_unfocused_animation)
-		_unfocused()
+		focus_lost.emit()

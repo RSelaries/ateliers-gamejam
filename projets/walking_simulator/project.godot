@@ -10,11 +10,28 @@ config_version=5
 
 [application]
 
-config/name="Atelier ?: Walking Simulator"
-config/tags=PackedStringArray("ateliers_gamejam", "sirius")
-run/main_scene="uid://htqlfvoputp7"
+config/name="Walking Simulator"
+run/main_scene="uid://btfje13da2waw"
 config/features=PackedStringArray("4.7")
-config/icon="uid://c1xr4fn6jvidb"
+config/icon="uid://5s68cr6rlllo"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://components/": "purple",
+"res://player/": "green",
+"res://scenes/": "yellow"
+}
 
 [input]
 
@@ -43,16 +60,16 @@ movement_jump={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
-interact={
+release_mouse={
 "deadzone": 0.2,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":96,"key_label":0,"unicode":178,"location":0,"echo":false,"script":null)
 ]
 }
-
-[layer_names]
-
-3d_physics/layer_1="Physics"
-3d_physics/layer_2="Interactions"
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 

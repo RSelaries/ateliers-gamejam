@@ -2,6 +2,10 @@
 
 Dans cet atelier, on va reprendre le projet du [walking simulator](#ateliers/walking-simulator.md), mais en y ajoutant la possibilité d'intéragir avec des éléments.
 
+## Jeu
+
+<iframe-player launchFullscreen="true" title="Walking Simulator" class="game" src="./game-builds/walking-sim/index.html"></iframe-player>
+
 ## Création du projet
 
 Si vous étiez présent au [dernier atelier](#ateliers/walking-simulator.md), vous pouvez relancer ce projet. Sinon, téléchargez le projet de l'atelier précédent <a class="download-link" href="./downloadables/walking_sim_starter.zip" download>ici</a>.
@@ -54,9 +58,9 @@ On peut donc référencer ces 4 signaux dans notre script:
 <span class="hljs-keyword">signal</span> focus_lost</code></pre>
 
 <details>
-    <summary>Ajouter des commentaires de documentation</summary>
-    <br>Si vous voulez amméliorer vos custom nodes, vous pouvez leur ajouter de la documentation. Pour cela il suffit d'ajouter un commentaire avec deux <em>'#'</em> au dessus de la <em>fonction</em>/<em>variable</em>/<em>signal </em><span style="color: var(--body-text-color-faded)">(etc.)</span> que vous voulez documenter:
-    <pre><code class="hljs language-gdscript"><span class="hljs-keyword">extends</span> <span class="hljs-built_in">Area3D</span><br><br>
+	<summary>Ajouter des commentaires de documentation</summary>
+	<br>Si vous voulez amméliorer vos custom nodes, vous pouvez leur ajouter de la documentation. Pour cela il suffit d'ajouter un commentaire avec deux <em>'#'</em> au dessus de la <em>fonction</em>/<em>variable</em>/<em>signal </em><span style="color: var(--body-text-color-faded)">(etc.)</span> que vous voulez documenter:
+	<pre><code class="hljs language-gdscript"><span class="hljs-keyword">extends</span> <span class="hljs-built_in">Area3D</span><br><br>
 <span class="hljs-comment">## Signal émit au moment où le joueur intéragit avec ce composant.</span>
 <span class="hljs-keyword">signal</span> interaction_started
 <span class="hljs-comment">## Signal émit au moment où le joueur arrête d'intéragir avec ce composant.</span>
@@ -65,8 +69,8 @@ On peut donc référencer ces 4 signaux dans notre script:
 <span class="hljs-keyword">signal</span> focus_gained
 <span class="hljs-comment">## Signal émit au moment où le joueur arrête de regarder ce composant.</span>
 <span class="hljs-keyword">signal</span> focus_lost</code></pre>
-    Maitenant, quand on a le curseur au niveau d'un de nos signaux, on peut lire la documentation que l'on a écrit:<br>
-    <viewable-image src="./medias/walk-sim-suite/doc.gif"></viewable-image>
+	Maitenant, quand on a le curseur au niveau d'un de nos signaux, on peut lire la documentation que l'on a écrit:<br>
+	<viewable-image src="./medias/walk-sim-suite/doc.gif"></viewable-image>
 </details>
 
 #### Intéraction
@@ -214,15 +218,15 @@ Et on change le `focused` de ce composant selon si on le regarde ou non.
 <pre><code class="hljs language-gdscript"><span class="hljs-keyword">func</span> <span class="hljs-title function_">_physics_process</span>(delta: <span class="hljs-built_in">float</span>) -> <span class="hljs-built_in">void</span>:
 	<span class="hljs-comment"># Si le raycast est en collision avec un objet qui n'est pas un InteractableArea3D,</span>
 	<span class="hljs-comment"># alors collider sera null</span>
-    <span class="hljs-keyword">var</span> collider := <span class="hljs-title function_">get_collider</span>() <span class="hljs-keyword">as</span> InteractableArea3D
+	<span class="hljs-keyword">var</span> collider := <span class="hljs-title function_">get_collider</span>() <span class="hljs-keyword">as</span> InteractableArea3D
 	
-    <span class="hljs-comment"># Si le raycast est en collision avec un InteractableArea,</span>
-    <span class="hljs-comment"># et que ce composant n'est pas celui que l'on regarde déjà</span>
+	<span class="hljs-comment"># Si le raycast est en collision avec un InteractableArea,</span>
+	<span class="hljs-comment"># et que ce composant n'est pas celui que l'on regarde déjà</span>
 	<span class="hljs-keyword">if</span> collider <span class="hljs-keyword">and</span> collider != focused_interactable_area:
 		focused_interactable_area = collider
 		focused_interactable_area.focused = <span class="hljs-keyword">true</span>
-    <span class="hljs-comment"># Si le raycast n'est pas en collision avec un InteractableArea,</span>
-    <span class="hljs-comment"># et qu'un 'focused_interactable_area' est déjà renseigné, le supprimer</span>
+	<span class="hljs-comment"># Si le raycast n'est pas en collision avec un InteractableArea,</span>
+	<span class="hljs-comment"># et qu'un 'focused_interactable_area' est déjà renseigné, le supprimer</span>
 	<span class="hljs-keyword">elif</span> <span class="hljs-keyword">not</span> collider <span class="hljs-keyword">and</span> focused_interactable_area:
 		focused_interactable_area.focused = <span class="hljs-keyword">false</span>
 		focused_interactable_area = <span class="hljs-keyword">null</span></code></pre>
@@ -235,7 +239,7 @@ Enfin, si le joueur appuie sur une certaine touche, on intéragit avec le compos
 
 
 <span class="hljs-keyword">func</span> <span class="hljs-title function_">_physics_process</span>(delta: <span class="hljs-built_in">float</span>) -> <span class="hljs-built_in">void</span>:
-    <span class="hljs-keyword">var</span> collider := <span class="hljs-title function_">get_collider</span>() <span class="hljs-keyword">as</span> InteractableArea3D
+	<span class="hljs-keyword">var</span> collider := <span class="hljs-title function_">get_collider</span>() <span class="hljs-keyword">as</span> InteractableArea3D
 	
 	<span class="hljs-keyword">if</span> collider <span class="hljs-keyword">and</span> collider != focused_interactable_area:
 		focused_interactable_area = collider

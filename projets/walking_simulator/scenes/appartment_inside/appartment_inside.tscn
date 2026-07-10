@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b4wiilvfayoku"]
+
+[ext_resource type="PackedScene" uid="uid://bedc4mlsx566k" path="res://assets/mesh/appartment/appartment_inside.glb" id="1_lryl8"]
+[ext_resource type="PackedScene" uid="uid://e5fvmwdli2ch" path="res://assets/mesh/appartment/appartment_door.glb" id="2_kc3s7"]
+[ext_resource type="PackedScene" uid="uid://c2ubpore1fa6t" path="res://scenes/appartment_inside/computer/computer.tscn" id="3_fliiq"]
+[ext_resource type="PackedScene" uid="uid://d3ign2l5bwh6v" path="res://player/player.tscn" id="4_auvps"]
+[ext_resource type="PackedScene" uid="uid://dcaflbqc6xd2" path="res://assets/mesh/appartment/table.glb" id="5_wba43"]
+[ext_resource type="PackedScene" uid="uid://cf8mfeygwnh7e" path="res://assets/mesh/appartment/chair.glb" id="6_us21g"]
+[ext_resource type="PackedScene" uid="uid://dh1xmm3ajw566" path="res://assets/mesh/appartment/bed.glb" id="7_1cewx"]
+
+[node name="AppartmentInside" type="Node3D" unique_id=151611050]
+
+[node name="Mesh" parent="." unique_id=879001459 instance=ExtResource("1_lryl8")]
+
+[node name="AppartmentDoor" parent="." unique_id=2136629369 instance=ExtResource("2_kc3s7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9111383, 1.1076063, -2.920246)
+
+[node name="Player" parent="." unique_id=1794341598 instance=ExtResource("4_auvps")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.8529725, 1, -2.25634)
+
+[node name="Computer" parent="." unique_id=479596361 instance=ExtResource("3_fliiq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.439081, 0.7788456, 5.4091573)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1835888799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0136886835, 3.2745519, 4.431368)
+light_color = Color(0.9542878, 0.51838666, 0.4159466, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=913974370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.861982, 3.2745519, -1.3051032)
+light_color = Color(1, 0.4825003, 0.34741268, 1)
+light_energy = 0.5
+
+[node name="Table" parent="." unique_id=1933627175 instance=ExtResource("5_wba43")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.4978049, 0.00053572666, 5.3812776)
+
+[node name="chair" parent="." unique_id=177955768 instance=ExtResource("6_us21g")]
+transform = Transform3D(0.68578666, 0, -0.72780263, 0, 1, 0, 0.72780263, 0, 0.68578666, 1.7956313, 0, 5.5432425)
+
+[node name="bed" parent="." unique_id=2113767290 instance=ExtResource("7_1cewx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.1317606, 5.0176334e-07, 5.2373986)

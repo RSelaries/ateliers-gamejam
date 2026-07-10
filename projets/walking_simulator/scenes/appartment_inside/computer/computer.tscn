@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c2ubpore1fa6t"]
+
+[ext_resource type="Script" uid="uid://x7suakditfmj" path="res://scenes/appartment_inside/computer/computer.gd" id="1_l6khl"]
+[ext_resource type="ArrayMesh" uid="uid://dfssdaoop5igk" path="res://assets/mesh/appartment/computer.glb" id="2_3iy24"]
+[ext_resource type="Script" uid="uid://ck30ys6dk2dco" path="res://components/interactable_area_3d.gd" id="3_3iy24"]
+[ext_resource type="PackedScene" uid="uid://dbss2yldwi8il" path="res://scenes/appartment_inside/computer/computer_control/computer_control.tscn" id="3_e4v2g"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e4v2g"]
+viewport_path = NodePath("ComputerScreen")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e4v2g"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_e4v2g")
+emission_enabled = true
+emission_texture = SubResource("ViewportTexture_e4v2g")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3iy24"]
+size = Vector3(0.39538574, 0.31468505, 0.061328128)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e4v2g"]
+size = Vector3(0.6220703, 0.038466647, 0.25683594)
+
+[node name="Computer" type="Node3D" unique_id=479596361]
+script = ExtResource("1_l6khl")
+
+[node name="Computer" type="MeshInstance3D" parent="." unique_id=1378786082]
+mesh = ExtResource("2_3iy24")
+surface_material_override/1 = SubResource("StandardMaterial3D_e4v2g")
+
+[node name="ComputerScreen" type="SubViewport" parent="." unique_id=1691416466]
+unique_name_in_owner = true
+size = Vector2i(445, 343)
+
+[node name="ComputerControl" parent="ComputerScreen" unique_id=775557432 instance=ExtResource("3_e4v2g")]
+unique_name_in_owner = true
+
+[node name="ComputerCamera" type="Camera3D" parent="." unique_id=1698840297]
+unique_name_in_owner = true
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.193, 0.293, 0.358)
+visible = false
+fov = 40.0
+
+[node name="InteractableArea3D" type="Area3D" parent="." unique_id=1904253828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19629788, 0.28811473, 0.016286448)
+script = ExtResource("3_3iy24")
+interaction_name = "Utiliser"
+metadata/_custom_type_script = "uid://ck30ys6dk2dco"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D" unique_id=411446790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002380371, -0.0012145638, -0.043359376)
+shape = SubResource("BoxShape3D_3iy24")
+debug_color = Color(0, 0.60038817, 0.70000815, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractableArea3D" unique_id=427746384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002380371, -0.24791539, 0.13764265)
+shape = SubResource("BoxShape3D_e4v2g")
+debug_color = Color(0, 0.60038817, 0.70000815, 1)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1771319990]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.198, 0.293, -0.002)
+light_color = Color(0.32811204, 0.69905126, 0.65771675, 1)
+area_size = Vector2(0.32, 0.246)
+
+[connection signal="interaction_started" from="InteractableArea3D" to="." method="_on_interactable_area_3d_interaction_started"]
