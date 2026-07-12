@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmiy8dk8f4cnr"
-path="res://.godot/imported/bed_Image_1.jpg-2d2c8b7b9990d73affa4d01dea80f40e.ctex"
+path.s3tc="res://.godot/imported/bed_Image_1.jpg-2d2c8b7b9990d73affa4d01dea80f40e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "51f83892eeb5d6023591f30b9ed55261"
@@ -14,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/mesh/appartment/bed_Image_1.jpg"
-dest_files=["res://.godot/imported/bed_Image_1.jpg-2d2c8b7b9990d73affa4d01dea80f40e.ctex"]
+dest_files=["res://.godot/imported/bed_Image_1.jpg-2d2c8b7b9990d73affa4d01dea80f40e.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://73mpvd47y6ny"]
+
+[ext_resource type="Theme" uid="uid://bvbdjld6x8rvy" path="res://assets/themes/windows98.tres" id="1_resnm"]
+[ext_resource type="Script" uid="uid://b77q58exvv5q4" path="res://scenes/devine_le_nombre/devine_le_nombre.gd" id="2_yhbp5"]
+[ext_resource type="PackedScene" uid="uid://w3h2kny8wjhn" path="res://scenes/devine_le_nombre/window_menu.tscn" id="3_g8xnl"]
+
+[node name="DevineLeNombre" type="MarginContainer" unique_id=906828291]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_resnm")
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+script = ExtResource("2_yhbp5")
+window_menu = ExtResource("3_g8xnl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=363675649]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=2068866965]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/PanelContainer" unique_id=358676205]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2" unique_id=991637683]
+layout_mode = 2
+text = "Réponses"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer2" unique_id=313494020]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/PanelContainer/VBoxContainer2" unique_id=2033214092]
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/VBoxContainer2/ScrollContainer" unique_id=493263110]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ResponsesId" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2/ScrollContainer/HBoxContainer" unique_id=95797068]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "5.
+4.
+3.
+2.
+1."
+horizontal_alignment = 1
+
+[node name="Responses" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2/ScrollContainer/HBoxContainer" unique_id=638841940]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "19
+15
+26
+94
+23"
+horizontal_alignment = 1
+
+[node name="ResponsesLevel" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer2/ScrollContainer/HBoxContainer" unique_id=2040015208]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "🗸
+↑
+↓
+↓
+↓"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=256216672]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1682276164]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer" unique_id=1943335967]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer" unique_id=1463362884]
+custom_minimum_size = Vector2(120, 60)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"WindowPanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=1474578682]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="HintLabel" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer" unique_id=1574035379]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Devine le nombre"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer" unique_id=2015795188]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Votre réponse"
+alignment = 1
+editable = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=85756274]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RestartButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=930441241]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Recommencer"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer" unique_id=1515289295]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[connection signal="text_submitted" from="HBoxContainer/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

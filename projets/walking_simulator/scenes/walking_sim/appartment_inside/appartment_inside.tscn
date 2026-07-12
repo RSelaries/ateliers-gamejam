@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://b4wiilvfayoku"]
+
+[ext_resource type="Script" uid="uid://2dm366vvgwbo" path="res://scenes/walking_sim/appartment_inside/appartment_inside.gd" id="1_gkcrn"]
+[ext_resource type="PackedScene" uid="uid://bedc4mlsx566k" path="res://assets/mesh/appartment/appartment_inside.glb" id="1_lryl8"]
+[ext_resource type="PackedScene" uid="uid://cw8jv7dgun4lh" path="res://scenes/walking_sim/appartment_inside/door/appartment_door.tscn" id="2_gooqi"]
+[ext_resource type="PackedScene" uid="uid://c2ubpore1fa6t" path="res://scenes/walking_sim/appartment_inside/computer/computer.tscn" id="3_fliiq"]
+[ext_resource type="PackedScene" uid="uid://d3ign2l5bwh6v" path="res://player/player.tscn" id="4_auvps"]
+[ext_resource type="PackedScene" uid="uid://dcaflbqc6xd2" path="res://assets/mesh/appartment/table.glb" id="5_wba43"]
+[ext_resource type="PackedScene" uid="uid://cf8mfeygwnh7e" path="res://assets/mesh/appartment/chair.glb" id="6_us21g"]
+[ext_resource type="PackedScene" uid="uid://dh1xmm3ajw566" path="res://assets/mesh/appartment/bed.glb" id="7_1cewx"]
+[ext_resource type="PackedScene" uid="uid://b8f4hoo18ct8y" path="res://assets/mesh/appartment/toilet.glb" id="9_7ndka"]
+[ext_resource type="PackedScene" uid="uid://dwerc3psysa1p" path="res://assets/mesh/appartment/sink.glb" id="10_i1jvu"]
+[ext_resource type="PackedScene" uid="uid://cpk2r6vix0n1j" path="res://assets/mesh/appartment/toilet_paper.glb" id="11_i1jvu"]
+[ext_resource type="PackedScene" uid="uid://bogxklb6my07o" path="res://assets/mesh/appartment/fridge.glb" id="12_ghuc7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gooqi"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_73bm2"]
+sky_material = SubResource("ProceduralSkyMaterial_gooqi")
+
+[sub_resource type="Environment" id="Environment_4jb21"]
+sky = SubResource("Sky_73bm2")
+ambient_light_source = 2
+ambient_light_color = Color(0.056291647, 0.056291588, 0.056291573, 1)
+fog_mode = 1
+fog_light_color = Color(0.11207495, 0.025840001, 0.025840001, 1)
+fog_density = 1.0
+fog_sky_affect = 0.0
+fog_depth_curve = 0.43527535
+fog_depth_begin = 2.0
+fog_depth_end = 15.0
+
+[node name="AppartmentInside" type="Node3D" unique_id=151611050]
+script = ExtResource("1_gkcrn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1653342246]
+environment = SubResource("Environment_4jb21")
+
+[node name="Appartment" parent="." unique_id=879001459 instance=ExtResource("1_lryl8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034849644, 0.0038256645, -0.0063681602)
+
+[node name="AppartmentDoor" parent="Appartment" unique_id=991628623 instance=ExtResource("2_gooqi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9507335, 1.1009262, -2.9937382)
+
+[node name="AppartmentDoor2" parent="Appartment" unique_id=1767319259 instance=ExtResource("2_gooqi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.6317143, 1.1009262, -1.3428955)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Appartment" unique_id=1835888799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058033943, 3.135427, 4.295801)
+light_color = Color(0.9529412, 0.5176471, 0.41568628, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Appartment" unique_id=913974370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.858485, 3.1356971, -1.2996318)
+light_color = Color(1, 0.4825003, 0.34741268, 1)
+light_energy = 0.2
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Appartment" unique_id=871946849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5862003, 2.848578, -0.63009435)
+light_color = Color(0.2257, 0.61, 0.46268508, 1)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Table" parent="Appartment" unique_id=1933627175 instance=ExtResource("5_wba43")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5012898, -0.003289938, 5.3876457)
+
+[node name="chair" parent="Appartment" unique_id=177955768 instance=ExtResource("6_us21g")]
+transform = Transform3D(0.68578666, 0, -0.72780263, 0, 1, 0, 0.72780263, 0, 0.68578666, 1.7991163, -0.0038256645, 5.5496106)
+
+[node name="bed" parent="Appartment" unique_id=2113767290 instance=ExtResource("7_1cewx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.1282756, 0.0565159, 5.332141)
+
+[node name="toilet" parent="Appartment" unique_id=41943455 instance=ExtResource("9_7ndka")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.9696386, -0.00018310547, -1.2801751)
+
+[node name="sink" parent="Appartment" unique_id=1317706143 instance=ExtResource("10_i1jvu")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.9844105, 0.94994044, -0.112188056)
+
+[node name="toilet_paper" parent="Appartment" unique_id=1203976682 instance=ExtResource("11_i1jvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2311773, 0.7916534, -1.8747227)
+
+[node name="Player" parent="." unique_id=1794341598 instance=ExtResource("4_auvps")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.4497708, 1.0000001, 4.8472753)
+
+[node name="Computer" parent="." unique_id=479596361 instance=ExtResource("3_fliiq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.439081, 0.7788456, 5.4091573)
+
+[node name="fridge" parent="." unique_id=771051981 instance=ExtResource("12_ghuc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2110765, 0.0038258433, 1.3692884)

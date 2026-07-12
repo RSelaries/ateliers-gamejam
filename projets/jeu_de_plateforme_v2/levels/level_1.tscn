@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://cb62hre2ocbwm"
 layer = 1000
 
 [node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=994873207]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -46,8 +47,8 @@ metadata/_custom_type_script = "uid://olbdyd0vh3eo"
 shape = SubResource("WorldBoundaryShape2D_btoec")
 
 [connection signal="body_entered" from="TileMapLayer/Diamond" to="TileMapLayer/Diamond" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@65450" to="TileMapLayer/@Area2D@65450" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@65451" to="TileMapLayer/@Area2D@65451" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@65452" to="TileMapLayer/@Area2D@65452" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@65453" to="TileMapLayer/@Area2D@65453" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@65454" to="TileMapLayer/@Area2D@65454" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@70263" to="TileMapLayer/@Area2D@70263" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@70264" to="TileMapLayer/@Area2D@70264" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@70265" to="TileMapLayer/@Area2D@70265" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@70266" to="TileMapLayer/@Area2D@70266" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@70267" to="TileMapLayer/@Area2D@70267" method="_on_body_entered"]

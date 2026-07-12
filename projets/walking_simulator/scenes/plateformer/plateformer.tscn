@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d18nwso6lmipd"]
+
+[ext_resource type="Script" uid="uid://cao0knmc58btn" path="res://scenes/plateformer/plateformer.gd" id="1_d5bdw"]
+[ext_resource type="PackedScene" uid="uid://ctnmkrgydun0" path="res://scenes/plateformer/levels/level_1.tscn" id="2_0ykpa"]
+
+[node name="Plateformer" type="Node" unique_id=228195162]
+script = ExtResource("1_d5bdw")
+
+[node name="Level1" parent="." unique_id=1160465256 instance=ExtResource("2_0ykpa")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2039553689]
+
+[node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=139497493]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

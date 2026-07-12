@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://dbss2yldwi8il"]
+
+[ext_resource type="Theme" uid="uid://bvbdjld6x8rvy" path="res://assets/themes/windows98.tres" id="1_pn6nt"]
+[ext_resource type="Script" uid="uid://dxjr6cjt5s4e3" path="res://scenes/computer_ui/computer_control.gd" id="2_fuflu"]
+[ext_resource type="Texture2D" uid="uid://bbn5lo4rkgneo" path="res://assets/textures/cursors/default.png" id="3_25nwx"]
+[ext_resource type="Texture2D" uid="uid://c0eewdj06ro4i" path="res://assets/textures/windows98/icons/programs/decouverte.png" id="4_ilgvf"]
+[ext_resource type="Script" uid="uid://xg8ob081mwe1" path="res://scenes/computer_ui/program_button.gd" id="5_g3oqu"]
+[ext_resource type="Texture2D" uid="uid://cqir5epejkfs7" path="res://assets/textures/windows98/icons/programs/devine_le_nombre.png" id="6_y4p0m"]
+[ext_resource type="Texture2D" uid="uid://fnbv2xrmgeqo" path="res://assets/textures/windows98/icons/programs/jeu_de_plateforme.png" id="7_nddq0"]
+[ext_resource type="Texture2D" uid="uid://bn6keid0sheeq" path="res://assets/textures/windows98/icons/programs/visual_novel.png" id="8_gaopg"]
+[ext_resource type="Texture2D" uid="uid://b83hyrwdo0im4" path="res://assets/textures/windows98/icons/programs/walking_simulator.png" id="9_xdc14"]
+[ext_resource type="PackedScene" uid="uid://bc1p1akdsx8yi" path="res://scenes/computer_ui/opened_program.tscn" id="10_pn6nt"]
+[ext_resource type="Texture2D" uid="uid://cfh32y3bop4xa" path="res://assets/textures/windows98/task_bar.png" id="10_saoem"]
+[ext_resource type="Texture2D" uid="uid://bv1mv2pv1qnah" path="res://assets/textures/windows98/icons/start_taskbar_icon.png" id="11_2utqt"]
+[ext_resource type="Script" uid="uid://bwvnwp2ja855t" path="res://scenes/computer_ui/start_menu_btn.gd" id="12_tv0po"]
+[ext_resource type="Texture2D" uid="uid://tfhwgqgsxnv3" path="res://assets/textures/windows98/sirius_os_logo_menu_bar.png" id="13_y00h6"]
+[ext_resource type="Texture2D" uid="uid://e8b4kmbeelbb" path="res://assets/textures/windows98/icons/programs.png" id="14_kisk0"]
+[ext_resource type="Texture2D" uid="uid://5uhi8540lwx4" path="res://assets/textures/windows98/icons/documents.png" id="15_obrpd"]
+[ext_resource type="Texture2D" uid="uid://bq0hslqykaybs" path="res://assets/textures/windows98/icons/settings.png" id="16_vxxbx"]
+[ext_resource type="Texture2D" uid="uid://m34s1el12kyd" path="res://assets/textures/windows98/icons/find.png" id="17_bc4x6"]
+[ext_resource type="Texture2D" uid="uid://ca15s54vvkf5v" path="res://assets/textures/windows98/icons/help.png" id="18_4kat3"]
+[ext_resource type="Texture2D" uid="uid://bjkb1jpjjusgt" path="res://assets/textures/windows98/icons/shutdown.png" id="19_x8i3k"]
+[ext_resource type="Script" uid="uid://d3ucgbj0kicpl" path="res://scenes/computer_ui/shutdown_button.gd" id="20_8xwan"]
+[ext_resource type="Script" uid="uid://cdhnb6gf8gw20" path="res://scenes/computer_ui/hour_label.gd" id="22_3lhfh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xd251"]
+bg_color = Color(0, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_abv66"]
+content_margin_left = 1.0
+content_margin_top = 3.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("10_saoem")
+texture_margin_top = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="ComputerControl" type="Control" unique_id=775557432]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pn6nt")
+script = ExtResource("2_fuflu")
+
+[node name="Cursor" type="Sprite2D" parent="." unique_id=971438397]
+unique_name_in_owner = true
+top_level = true
+texture_filter = 1
+position = Vector2(200, 150)
+texture = ExtResource("3_25nwx")
+centered = false
+offset = Vector2(-10, -10)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=692150222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Desktop" type="PanelContainer" parent="VBoxContainer" unique_id=716618351]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_xd251")
+
+[node name="DesktopIcons" type="MarginContainer" parent="VBoxContainer/Desktop" unique_id=1183865092]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VFlowContainer" type="VFlowContainer" parent="VBoxContainer/Desktop/DesktopIcons" unique_id=1007724917]
+layout_mode = 2
+
+[node name="DiscoverBtn" type="Button" parent="VBoxContainer/Desktop/DesktopIcons/VFlowContainer" unique_id=1448839725]
+custom_minimum_size = Vector2(70, 75)
+layout_mode = 2
+theme_type_variation = &"ProgramButton"
+text = "Découverte
+ "
+icon = ExtResource("4_ilgvf")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("5_g3oqu")
+metadata/_custom_type_script = "uid://xg8ob081mwe1"
+
+[node name="GuessTheNumberBtn" type="Button" parent="VBoxContainer/Desktop/DesktopIcons/VFlowContainer" unique_id=700230671]
+custom_minimum_size = Vector2(70, 75)
+layout_mode = 2
+theme_type_variation = &"ProgramButton"
+text = "Devine le Nombre"
+icon = ExtResource("6_y4p0m")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("5_g3oqu")
+program_to_open = "uid://73mpvd47y6ny"
+program_name = "Devine le nombre"
+metadata/_custom_type_script = "uid://xg8ob081mwe1"
+
+[node name="PlateformerBtn" type="Button" parent="VBoxContainer/Desktop/DesktopIcons/VFlowContainer" unique_id=1862231832]
+custom_minimum_size = Vector2(70, 75)
+layout_mode = 2
+theme_type_variation = &"ProgramButton"
+text = "Jeu de Plateforme"
+icon = ExtResource("7_nddq0")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("5_g3oqu")
+program_to_open = "uid://d18nwso6lmipd"
+program_name = "Jeu de plateformer"
+metadata/_custom_type_script = "uid://xg8ob081mwe1"
+
+[node name="VisualNovelBtn" type="Button" parent="VBoxContainer/Desktop/DesktopIcons/VFlowContainer" unique_id=1096348274]
+custom_minimum_size = Vector2(70, 75)
+layout_mode = 2
+theme_type_variation = &"ProgramButton"
+text = "Visual Novel
+ "
+icon = ExtResource("8_gaopg")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("5_g3oqu")
+metadata/_custom_type_script = "uid://xg8ob081mwe1"
+
+[node name="WalkingSimulatorBtn" type="Button" parent="VBoxContainer/Desktop/DesktopIcons/VFlowContainer" unique_id=1117721618]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 75)
+layout_mode = 2
+theme_type_variation = &"ProgramButton"
+text = "Walking Simulator"
+icon = ExtResource("9_xdc14")
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("5_g3oqu")
+open_program = false
+metadata/_custom_type_script = "uid://xg8ob081mwe1"
+
+[node name="OpenedProgram" parent="VBoxContainer/Desktop" unique_id=1519018056 instance=ExtResource("10_pn6nt")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="TaskBar" type="PanelContainer" parent="VBoxContainer" unique_id=1576796566]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_abv66")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TaskBar" unique_id=783215343]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="StartMenuBtn" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=1799523010]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"TaskbarButton"
+toggle_mode = true
+text = "Menu"
+icon = ExtResource("11_2utqt")
+script = ExtResource("12_tv0po")
+metadata/_custom_type_script = "uid://cknfdxybiklyi"
+
+[node name="StartMenuInputGrabber" type="Control" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn" unique_id=1614464240]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchor_left = -5.0
+anchor_top = -20.0
+anchor_right = 15.0
+anchor_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartMenu" type="PanelContainer" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn" unique_id=511028851]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 1.0
+offset_bottom = 1.0
+grow_vertical = 0
+theme_type_variation = &"StartMenuPanel"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu" unique_id=819851869]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer" unique_id=1633439784]
+layout_mode = 2
+texture = ExtResource("13_y00h6")
+patch_margin_left = 21
+patch_margin_bottom = 95
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer" unique_id=2087089668]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="ProgramsButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1658581139]
+layout_mode = 2
+theme_type_variation = &"StartMenuButton"
+text = "Programmes"
+icon = ExtResource("14_kisk0")
+alignment = 0
+
+[node name="DocumentsButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1710289948]
+layout_mode = 2
+theme_type_variation = &"StartMenuButton"
+text = "Documents"
+icon = ExtResource("15_obrpd")
+alignment = 0
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1783204144]
+layout_mode = 2
+theme_type_variation = &"StartMenuButton"
+text = "Paramètres"
+icon = ExtResource("16_vxxbx")
+alignment = 0
+
+[node name="FindButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1300532525]
+layout_mode = 2
+theme_type_variation = &"StartMenuButton"
+text = "Chercher"
+icon = ExtResource("17_bc4x6")
+alignment = 0
+
+[node name="HelpButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1705114732]
+layout_mode = 2
+theme_type_variation = &"StartMenuButton"
+text = "Aide"
+icon = ExtResource("18_4kat3")
+alignment = 0
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1829139593]
+layout_mode = 2
+
+[node name="ShutdownButton" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer/StartMenuBtn/StartMenu/HBoxContainer/VBoxContainer" unique_id=1389132792]
+layout_mode = 2
+theme_type_variation = &"StartMenuButton"
+text = "Arrêter"
+icon = ExtResource("19_x8i3k")
+alignment = 0
+script = ExtResource("20_8xwan")
+
+[node name="ProgramBtn" type="Button" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=914352978]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"TaskbarButton"
+text = "Devine le nombre"
+alignment = 0
+
+[node name="HourBox" type="MarginContainer" parent="VBoxContainer/TaskBar/HBoxContainer" unique_id=1609089475]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/TaskBar/HBoxContainer/HourBox" unique_id=1074571370]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TaskBar/HBoxContainer/HourBox/PanelContainer" unique_id=2051883184]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 0
+
+[node name="HourLabel" type="Label" parent="VBoxContainer/TaskBar/HBoxContainer/HourBox/PanelContainer/MarginContainer" unique_id=1377358376]
+layout_mode = 2
+text = "1 : 47"
+script = ExtResource("22_3lhfh")
+
+[connection signal="double_clicked" from="VBoxContainer/Desktop/DesktopIcons/VFlowContainer/DiscoverBtn" to="." method="_on_website_btn_pressed"]
+[connection signal="opened_program" from="VBoxContainer/Desktop/DesktopIcons/VFlowContainer/GuessTheNumberBtn" to="." method="_on_program_opened"]
+[connection signal="opened_program" from="VBoxContainer/Desktop/DesktopIcons/VFlowContainer/PlateformerBtn" to="." method="_on_program_opened"]
+[connection signal="double_clicked" from="VBoxContainer/Desktop/DesktopIcons/VFlowContainer/WalkingSimulatorBtn" to="." method="_on_get_up_btn_pressed"]
+[connection signal="program_changed" from="VBoxContainer/Desktop/OpenedProgram" to="." method="_on_opened_program_program_changed"]
+[connection signal="program_closed" from="VBoxContainer/Desktop/OpenedProgram" to="." method="_on_opened_program_program_closed"]
+[connection signal="pressed" from="VBoxContainer/TaskBar/HBoxContainer/ProgramBtn" to="." method="_on_program_btn_pressed"]

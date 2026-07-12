@@ -26,7 +26,7 @@ func _physics_process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if focused_interactable_area:
-			focused_interactable_area.start_interacting()
+			focused_interactable_area.start_interacting(Player.current_player)
 	elif event.is_action_released("interact"):
 		if focused_interactable_area:
-			focused_interactable_area.stop_interaction()
+			focused_interactable_area.stop_interaction(Player.current_player)

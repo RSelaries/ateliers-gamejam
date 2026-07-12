@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btfje13da2waw"]
 
-[ext_resource type="PackedScene" uid="uid://bdcrj7bkxdpix" path="res://scenes/start_scene/start_scene.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://b4wiilvfayoku" path="res://scenes/walking_sim/appartment_inside/appartment_inside.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Node" unique_id=1596778765]
 
-[node name="TestScene" parent="." unique_id=1416267176 instance=ExtResource("1_ig7tw")]
+[node name="AppartmentInside" parent="." unique_id=151611050 instance=ExtResource("1_ig7tw")]

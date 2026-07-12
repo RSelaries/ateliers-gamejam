@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cw8jv7dgun4lh"]
+
+[ext_resource type="PackedScene" uid="uid://e5fvmwdli2ch" path="res://assets/mesh/appartment/appartment_door.glb" id="1_gft5e"]
+[ext_resource type="Script" uid="uid://cm4whapm6tyhr" path="res://scenes/walking_sim/appartment_inside/door/appartment_door.gd" id="1_s62aa"]
+[ext_resource type="Script" uid="uid://ck30ys6dk2dco" path="res://components/interactable_area_3d.gd" id="3_p8fj7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p8fj7"]
+size = Vector3(0.9227295, 1.8671875, 0.115234375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qd8cd"]
+size = Vector3(0.9227295, 1.8671875, 0.08569336)
+
+[node name="AppartmentDoor" type="Node3D" unique_id=991628623]
+script = ExtResource("1_s62aa")
+
+[node name="AppartmentDoor" parent="." unique_id=105695551 instance=ExtResource("1_gft5e")]
+
+[node name="AppartmentDoor_001" parent="AppartmentDoor/AppartmentDoorFrame" parent_id_path=PackedInt32Array(105695551, 1955499439) index="0" unique_id=1974503543]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0.35657194, -0.006860489, 0)
+
+[node name="InteractableArea3D" type="Area3D" parent="AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001" index="0" unique_id=1685911261]
+script = ExtResource("3_p8fj7")
+interaction_name = "Ouvrir"
+metadata/_custom_type_script = "uid://ck30ys6dk2dco"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001/InteractableArea3D" unique_id=1595733506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.394104, 0, 0)
+shape = SubResource("BoxShape3D_p8fj7")
+debug_color = Color(0.92294055, 0.27770585, 0, 1)
+
+[node name="AnimatableBody3D" type="StaticBody3D" parent="AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001/InteractableArea3D" unique_id=906792569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.394104, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001/InteractableArea3D/AnimatableBody3D" unique_id=1592676669]
+unique_name_in_owner = true
+shape = SubResource("BoxShape3D_qd8cd")
+debug_color = Color(0, 0.60038817, 0.70000815, 1)
+
+[connection signal="interaction_started" from="AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001/InteractableArea3D" to="." method="_on_interaction_started"]
+
+[editable path="AppartmentDoor"]

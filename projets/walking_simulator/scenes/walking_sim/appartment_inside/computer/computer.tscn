@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c2ubpore1fa6t"]
+
+[ext_resource type="Script" uid="uid://x7suakditfmj" path="res://scenes/walking_sim/appartment_inside/computer/computer.gd" id="1_l6khl"]
+[ext_resource type="ArrayMesh" uid="uid://dfssdaoop5igk" path="res://assets/mesh/appartment/computer.glb" id="2_3iy24"]
+[ext_resource type="Script" uid="uid://ck30ys6dk2dco" path="res://components/interactable_area_3d.gd" id="3_3iy24"]
+[ext_resource type="PackedScene" uid="uid://dbss2yldwi8il" path="res://scenes/computer_ui/computer_control.tscn" id="3_e4v2g"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qd8cd"]
+viewport_path = NodePath("ComputerScreen")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3iy24"]
+size = Vector3(0.39538574, 0.31468505, 0.061328128)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e4v2g"]
+size = Vector3(0.6220703, 0.038466647, 0.25683594)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pqb8r"]
+viewport_path = NodePath("ComputerScreen")
+
+[node name="Computer" type="Node3D" unique_id=479596361]
+script = ExtResource("1_l6khl")
+
+[node name="ComputerScreenSprite" type="Sprite3D" parent="." unique_id=535550778]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19760022, 0.29285786, 0.002457261)
+pixel_size = 0.00072
+transparent = false
+double_sided = false
+texture_filter = 0
+texture = SubResource("ViewportTexture_qd8cd")
+
+[node name="Computer" type="MeshInstance3D" parent="." unique_id=1378786082]
+mesh = ExtResource("2_3iy24")
+
+[node name="ComputerScreen" type="SubViewport" parent="." unique_id=1691416466]
+unique_name_in_owner = true
+size = Vector2i(445, 343)
+
+[node name="ComputerControl" parent="ComputerScreen" unique_id=775557432 instance=ExtResource("3_e4v2g")]
+unique_name_in_owner = true
+
+[node name="ComputerCamera" type="Camera3D" parent="." unique_id=1698840297]
+unique_name_in_owner = true
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.198, 0.293, 0.358)
+visible = false
+fov = 40.6
+
+[node name="InteractableArea3D" type="Area3D" parent="." unique_id=1904253828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19629788, 0.28811473, 0.016286448)
+script = ExtResource("3_3iy24")
+interaction_name = "Utiliser"
+metadata/_custom_type_script = "uid://ck30ys6dk2dco"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea3D" unique_id=411446790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002380371, -0.0012145638, -0.043359376)
+shape = SubResource("BoxShape3D_3iy24")
+debug_color = Color(0, 0.60038817, 0.70000815, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="InteractableArea3D" unique_id=427746384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002380371, -0.24791539, 0.13764265)
+shape = SubResource("BoxShape3D_e4v2g")
+debug_color = Color(0, 0.60038817, 0.70000815, 1)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1771319990]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.198, 0.293, -0.002)
+light_color = Color(0.32811204, 0.69905126, 0.65771675, 1)
+light_energy = 0.5
+area_range = 2.185
+area_attenuation = 2.0
+area_size = Vector2(0.32, 0.246)
+
+[node name="ComputerFlat" type="CanvasLayer" parent="." unique_id=804566146]
+unique_name_in_owner = true
+layer = 100
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="ComputerFlat" unique_id=859573365]
+custom_minimum_size = Vector2(445, 343)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.5
+offset_top = -171.5
+offset_right = 222.5
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("ViewportTexture_pqb8r")
+
+[connection signal="interaction_started" from="InteractableArea3D" to="." method="_on_interactable_area_3d_interaction_started"]

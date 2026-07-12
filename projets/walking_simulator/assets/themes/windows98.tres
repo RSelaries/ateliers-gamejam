@@ -1,0 +1,284 @@
+[gd_resource type="Theme" format=3 uid="uid://bvbdjld6x8rvy"]
+
+[ext_resource type="FontFile" uid="uid://bnul1tctyvmft" path="res://assets/fonts/ari-w9500-bold.otf" id="1_4c0tk"]
+[ext_resource type="Texture2D" uid="uid://sf2vqehelaea" path="res://assets/textures/windows98/button_nine_rect_normal.png" id="1_jkqos"]
+[ext_resource type="Texture2D" uid="uid://b1kt335vonog8" path="res://assets/textures/windows98/nine_patch_panel.png" id="1_t06nr"]
+[ext_resource type="FontFile" uid="uid://0nkvvkhyri6e" path="res://assets/fonts/ari-w9500.otf" id="1_ttfof"]
+[ext_resource type="Texture2D" uid="uid://ek1fmq4mln5a" path="res://assets/textures/windows98/button_nine_rect_focus.png" id="2_4c0tk"]
+[ext_resource type="Texture2D" uid="uid://dusxxyxuwhu27" path="res://assets/textures/windows98/button_nine_rect_pressed.png" id="4_vseg0"]
+[ext_resource type="Texture2D" uid="uid://fre27fv0smi2" path="res://assets/textures/windows98/h_separator.png" id="5_3wms3"]
+[ext_resource type="Texture2D" uid="uid://cfmojm5iyedjm" path="res://assets/textures/windows98/window_nine_rect_tex.png" id="5_wuef5"]
+[ext_resource type="Texture2D" uid="uid://dqb3quy7h5ggp" path="res://assets/textures/windows98/taskbar_button_nine_patch.png" id="6_7l77u"]
+[ext_resource type="Texture2D" uid="uid://s2o4yegcd1l3" path="res://assets/textures/windows98/line_edit.png" id="6_fvsyd"]
+[ext_resource type="Texture2D" uid="uid://bfjlgrhhngpvp" path="res://assets/textures/windows98/program_focus.png" id="7_6bnm7"]
+[ext_resource type="Texture2D" uid="uid://dhsvum3gsukff" path="res://assets/textures/windows98/line_edit_disabled.png" id="7_jom5l"]
+[ext_resource type="Texture2D" uid="uid://uikoexykc60q" path="res://assets/textures/windows98/nine_rect_window_inside.png" id="9_tihjk"]
+[ext_resource type="Texture2D" uid="uid://bsoglghedk6e7" path="res://assets/textures/windows98/scroll_handle.png" id="11_rjn4p"]
+[ext_resource type="Texture2D" uid="uid://clt354rmkq3uw" path="res://assets/textures/windows98/scroll_top.png" id="11_vf1wm"]
+[ext_resource type="Texture2D" uid="uid://c3bg12hywikjx" path="res://assets/textures/windows98/scroll_background.png" id="12_4pyk1"]
+[ext_resource type="Texture2D" uid="uid://crtkhjnrdon5w" path="res://assets/textures/windows98/scroll_bottom.png" id="12_7suhb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xd251"]
+texture = ExtResource("2_4c0tk")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wuef5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 6.0
+content_margin_bottom = 4.0
+texture = ExtResource("1_jkqos")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7l77u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 6.0
+content_margin_bottom = 4.0
+texture = ExtResource("4_vseg0")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvsyd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qd8cd"]
+texture = ExtResource("5_3wms3")
+texture_margin_top = 1.0
+texture_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_resnm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tihjk"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+texture = ExtResource("6_fvsyd")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g8xnl"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+texture = ExtResource("7_jom5l")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4c0tk"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+texture = ExtResource("1_t06nr")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4qea"]
+texture = ExtResource("7_6bnm7")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e4qea"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g8xnl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3wms3"]
+content_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bo8d"]
+content_margin_left = 2.0
+bg_color = Color(0, 0, 0.5019608, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6bnm7"]
+load_path = "res://.godot/imported/window_nine_rect_tex.png-8b8507941edb843ca9075187e5676307.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gksw2"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+texture = SubResource("CompressedTexture2D_6bnm7")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbwxv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 6.0
+content_margin_bottom = 4.0
+texture = ExtResource("6_7l77u")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pyk1"]
+atlas = ExtResource("11_vf1wm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf1wm"]
+atlas = ExtResource("11_vf1wm")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr6ob"]
+atlas = ExtResource("12_7suhb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7suhb"]
+atlas = ExtResource("12_7suhb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jom5l"]
+texture = ExtResource("11_rjn4p")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vf1wm"]
+texture = ExtResource("12_4pyk1")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pn6nt"]
+texture = ExtResource("9_tihjk")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vseg0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("5_wuef5")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bnm7"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0.5019608, 1)
+
+[resource]
+default_font = ExtResource("1_ttfof")
+default_font_size = 11
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 11
+Button/fonts/font = ExtResource("1_ttfof")
+Button/styles/focus = SubResource("StyleBoxTexture_xd251")
+Button/styles/hover = SubResource("StyleBoxTexture_wuef5")
+Button/styles/normal = SubResource("StyleBoxTexture_wuef5")
+Button/styles/pressed = SubResource("StyleBoxTexture_7l77u")
+EmptyPanel/base_type = &"PanelContainer"
+EmptyPanel/styles/panel = SubResource("StyleBoxEmpty_fvsyd")
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = SubResource("StyleBoxTexture_qd8cd")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+LineEdit/colors/caret_color = Color(0, 0, 0, 1)
+LineEdit/colors/clear_button_color = Color(0, 0, 0, 1)
+LineEdit/colors/clear_button_color_pressed = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_placeholder_color = Color(0.5254902, 0.5411765, 0.5568628, 1)
+LineEdit/colors/font_selected_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_uneditable_color = Color(0, 0, 0, 1)
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_resnm")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_tihjk")
+LineEdit/styles/read_only = SubResource("StyleBoxTexture_g8xnl")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_4c0tk")
+ProgramButton/base_type = &"Button"
+ProgramButton/styles/focus = SubResource("StyleBoxTexture_e4qea")
+ProgramButton/styles/hover = SubResource("StyleBoxEmpty_e4qea")
+ProgramButton/styles/hover_pressed = SubResource("StyleBoxEmpty_e4qea")
+ProgramButton/styles/normal = SubResource("StyleBoxEmpty_e4qea")
+ProgramButton/styles/pressed = SubResource("StyleBoxEmpty_e4qea")
+ScrollContainer/styles/focus = SubResource("StyleBoxEmpty_g8xnl")
+StartMenuButton/base_type = &"Button"
+StartMenuButton/colors/font_hover_color = Color(1, 1, 1, 1)
+StartMenuButton/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+StartMenuButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+StartMenuButton/styles/focus = SubResource("StyleBoxEmpty_3wms3")
+StartMenuButton/styles/hover = SubResource("StyleBoxFlat_0bo8d")
+StartMenuButton/styles/hover_pressed = SubResource("StyleBoxFlat_0bo8d")
+StartMenuButton/styles/normal = SubResource("StyleBoxEmpty_3wms3")
+StartMenuButton/styles/pressed = SubResource("StyleBoxFlat_0bo8d")
+StartMenuPanel/base_type = &"PanelContainer"
+StartMenuPanel/styles/panel = SubResource("StyleBoxTexture_gksw2")
+TaskbarButton/base_type = &"Button"
+TaskbarButton/styles/pressed = SubResource("StyleBoxTexture_xbwxv")
+VScrollBar/icons/decrement = SubResource("AtlasTexture_4pyk1")
+VScrollBar/icons/decrement_highlight = SubResource("AtlasTexture_4pyk1")
+VScrollBar/icons/decrement_pressed = SubResource("AtlasTexture_vf1wm")
+VScrollBar/icons/increment = SubResource("AtlasTexture_nr6ob")
+VScrollBar/icons/increment_highlight = SubResource("AtlasTexture_nr6ob")
+VScrollBar/icons/increment_pressed = SubResource("AtlasTexture_7suhb")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_jom5l")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_jom5l")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_jom5l")
+VScrollBar/styles/scroll = SubResource("StyleBoxTexture_vf1wm")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxTexture_vf1wm")
+WindowInsidePanel/base_type = &"PanelContainer"
+WindowInsidePanel/styles/panel = SubResource("StyleBoxTexture_pn6nt")
+WindowPanel/base_type = &"PanelContainer"
+WindowPanel/styles/panel = SubResource("StyleBoxTexture_vseg0")
+WindowTitle/base_type = &"Label"
+WindowTitle/colors/font_color = Color(1, 1, 1, 1)
+WindowTitle/fonts/font = ExtResource("1_4c0tk")
+WindowTitleFocused/base_type = &"PanelContainer"
+WindowTitleFocused/styles/panel = SubResource("StyleBoxFlat_6bnm7")

@@ -25,8 +25,6 @@ static var can_move_camera: bool = true
 
 
 func _ready() -> void:
-	# Attrape le curseur de la souris
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	interaction_label = %InteractionLabel
 	interaction_label.hide()
 	current_player = self
@@ -39,8 +37,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	if can_move:
+	if can_move and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		_move()
+	else:
+		velocity = velocity.move_toward(Vector3(0, velocity.y, 0), speed * 0.5)
 	
 	move_and_slide()
 
@@ -49,7 +49,7 @@ func _move() -> void:
 	# Sauter
 	#if Input.is_action_just_pressed(&"movement_jump") and is_on_floor() and can_move:
 		#velocity.y = jump_velocity
-
+	
 	# Déplacements
 	var input_dir := Input.get_vector(&"movement_left", &"movement_right", &"movement_up", &"movement_down")
 	var direction := (neck.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -67,11 +67,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	Input.mouse_mode == Input.MOUSE_MODE_CAPTURED):
 		neck.rotate_y(-event.relative.x * mouse_sensibility)
 		camera.rotate_x(-event.relative.y * mouse_sensibility)
-	
-	# Libérer la souris
-	if event.is_action_pressed(&"release_mouse"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	
-	if event is InputEventMouseButton:
-		if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)

@@ -1,0 +1,26 @@
+[gd_scene format=4 uid="uid://durrs2mglj7cy"]
+
+[ext_resource type="TileSet" uid="uid://bqmjfwt7w6hid" path="res://assets/plateformer/plateformer_tileset.tres" id="1_jaltx"]
+[ext_resource type="PackedScene" uid="uid://dlx7wqqt1e0bj" path="res://scenes/plateformer/player/plateformer_player.tscn" id="2_1lpqm"]
+
+[node name="Level2" type="Node2D" unique_id=1160465256]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1915490750]
+custom_minimum_size = Vector2(2000, 2000)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=916402163]
+tile_map_data = PackedByteArray("AADt/wMAAAAKAAkAAADt/wQAAAAKAAoAAADt/wUAAAAKAA4AAADt/wYAAAAKAAoAAADt/wcAAAAKAA4AAADt/wgAAAAKAAoAAADt/wkAAAAKAA4AAADt/woAAAAKAAoAAADt/wsAAAAKAA4AAADu/wMAAAALAAkAAADu/wcAAAALAA4AAADv/wMAAAALAAkAAADv/wUAAAALAAoAAADv/woAAAALAA4AAADw/wEAAAAGAAkAAADw/wIAAAAFAAoAAADw/wMAAAALAAkAAADx/wMAAAALAAkAAADx/wgAAAALAAoAAADy/wMAAAALAAkAAADz/wMAAAALAAkAAAD0/wMAAAALAAkAAAD1/wMAAAALAAkAAAA=")
+tile_set = ExtResource("1_jaltx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1253238401]
+limit_top = 2
+limit_bottom = 2
+
+[node name="PlateformerPlayer" parent="." unique_id=1567452590 instance=ExtResource("2_1lpqm")]
+position = Vector2(-207, 40)

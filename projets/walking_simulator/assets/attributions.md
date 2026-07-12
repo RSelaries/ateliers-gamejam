@@ -7,3 +7,4 @@
 - [PSX Table](https://skfb.ly/pGwvq) by Arimantos
 - [Low poly psx style common chair](https://skfb.ly/pILTn) by ramdom_sp
 - [PSX Bed](https://skfb.ly/pzSWM) by anthonythorsen0914
+- [PSX Fridge](https://skfb.ly/pBVOL) by emnix
