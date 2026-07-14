@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cc0dfsxlrlnt3"]
+
+[ext_resource type="Theme" uid="uid://bvbdjld6x8rvy" path="res://assets/themes/windows98.tres" id="1_wmau8"]
+[ext_resource type="Script" uid="uid://dnrpkf8g5jxrf" path="res://scenes/plateformer/platformer_window_menu/platformer_window_menu.gd" id="2_e1atn"]
+[ext_resource type="FontFile" uid="uid://bnul1tctyvmft" path="res://assets/fonts/ari-w9500-bold.otf" id="2_mo5mu"]
+[ext_resource type="Texture2D" uid="uid://ej51av4cvdkm" path="res://assets/textures/windows98/close_button.png" id="3_e1atn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1eioa"]
+font = ExtResource("2_mo5mu")
+font_size = 11
+
+[node name="PlatformerWindowMenu" type="HBoxContainer" unique_id=1983152055]
+theme = ExtResource("1_wmau8")
+theme_override_constants/separation = 0
+script = ExtResource("2_e1atn")
+
+[node name="HelpBtn" type="Button" parent="." unique_id=618402685]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"WindowMenuButton"
+text = "Touches"
+
+[node name="InputGrabber" type="Control" parent="HelpBtn" unique_id=765904579]
+unique_name_in_owner = true
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Popup" type="PanelContainer" parent="HelpBtn" unique_id=1117931232]
+unique_name_in_owner = true
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -38.0
+offset_right = 50.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WindowPanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpBtn/Popup" unique_id=1416474897]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HelpBtn/Popup/VBoxContainer" unique_id=770617354]
+layout_mode = 2
+theme_type_variation = &"WindowTitleFocused"
+
+[node name="Label" type="Label" parent="HelpBtn/Popup/VBoxContainer/PanelContainer" unique_id=1330601289]
+layout_mode = 2
+text = "Aide"
+label_settings = SubResource("LabelSettings_1eioa")
+
+[node name="CloseHelpBtn" type="TextureButton" parent="HelpBtn/Popup/VBoxContainer/PanelContainer" unique_id=279599095]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("3_e1atn")
+
+[node name="PanelContainer2" type="PanelContainer" parent="HelpBtn/Popup/VBoxContainer" unique_id=741794079]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"WindowInsidePanel"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HelpBtn/Popup/VBoxContainer/PanelContainer2" unique_id=1072915625]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[table=2]
+[cell][b]Touche[/b][/cell][cell][b]Action[/b][/cell]
+[cell]Z / ↑[/cell][cell]Intéragir[/cell]
+[cell]Q / ←[/cell][cell]Mouvement gauche[/cell]
+[cell]D / →[/cell][cell]Mouvement gauche[/cell]
+[cell]ESPACE[/cell][cell]Sauter[/cell]
+[/table]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RestartButton" type="Button" parent="." unique_id=1441826570]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"WindowMenuButton"
+text = "Recommencer"
+
+[connection signal="pressed" from="HelpBtn" to="." method="_on_help_btn_pressed"]
+[connection signal="gui_input" from="HelpBtn/InputGrabber" to="." method="_on_input_grabber_gui_input"]
+[connection signal="pressed" from="HelpBtn/Popup/VBoxContainer/PanelContainer/CloseHelpBtn" to="." method="_on_close_help_btn_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

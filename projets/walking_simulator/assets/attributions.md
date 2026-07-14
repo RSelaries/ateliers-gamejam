@@ -8,3 +8,4 @@
 - [Low poly psx style common chair](https://skfb.ly/pILTn) by ramdom_sp
 - [PSX Bed](https://skfb.ly/pzSWM) by anthonythorsen0914
 - [PSX Fridge](https://skfb.ly/pBVOL) by emnix
+- [Lo-Fi Microwave (PSX)](https://skfb.ly/pCEKx) by Vaportrash

@@ -1,4 +1,4 @@
-class_name PlateformerPlayer
+class_name PlatformerPlayer
 extends CharacterBody2D
 
 
@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	# Handle left-right movements
 	var direction: float
 	if _can_move():
-		direction = Input.get_axis(&"plateformer_left", &"plateformer_right")
+		direction = Input.get_axis(&"platformer_left", &"platformer_right")
 	if direction and alive:
 		animated_sprite_2d.flip_h = direction < 0.0
 		velocity.x = move_toward(velocity.x, direction * move_speed, acceleration)
@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _can_move() -> bool:
-	return not Plateformer.in_transition
+	return not Platformer.in_transition
 
 
 func _set_diamond_count(new_value: int) -> void:

@@ -103,6 +103,19 @@ texture_margin_bottom = 1.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qc5g1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("5_wuef5")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4qea"]
 texture = ExtResource("7_6bnm7")
 texture_margin_left = 1.0
@@ -191,6 +204,51 @@ texture_margin_bottom = 2.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nr6ob"]
+content_margin_left = 7.0
+content_margin_top = 3.0
+content_margin_right = 7.0
+content_margin_bottom = 3.0
+texture = ExtResource("2_4c0tk")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2fye"]
+content_margin_left = 7.0
+content_margin_top = 3.0
+content_margin_right = 7.0
+content_margin_bottom = 3.0
+texture = ExtResource("1_jkqos")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ih4f4"]
+content_margin_left = 7.0
+content_margin_top = 3.0
+content_margin_right = 7.0
+content_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7suhb"]
+content_margin_left = 7.0
+content_margin_top = 3.0
+content_margin_right = 7.0
+content_margin_bottom = 3.0
+texture = ExtResource("6_7l77u")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vseg0"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -242,12 +300,25 @@ LineEdit/styles/focus = SubResource("StyleBoxEmpty_resnm")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_tihjk")
 LineEdit/styles/read_only = SubResource("StyleBoxTexture_g8xnl")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_4c0tk")
+PopupPanel/styles/panel = SubResource("StyleBoxTexture_qc5g1")
 ProgramButton/base_type = &"Button"
 ProgramButton/styles/focus = SubResource("StyleBoxTexture_e4qea")
 ProgramButton/styles/hover = SubResource("StyleBoxEmpty_e4qea")
 ProgramButton/styles/hover_pressed = SubResource("StyleBoxEmpty_e4qea")
 ProgramButton/styles/normal = SubResource("StyleBoxEmpty_e4qea")
 ProgramButton/styles/pressed = SubResource("StyleBoxEmpty_e4qea")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_even_row_bg = Color(0.7647059, 0.7647059, 0.7647059, 1)
+RichTextLabel/colors/table_odd_row_bg = Color(0.7647059, 0.7647059, 0.7647059, 1)
+RichTextLabel/constants/table_h_separation = 8
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/font_sizes/bold_font_size = 11
+RichTextLabel/font_sizes/bold_italics_font_size = 11
+RichTextLabel/font_sizes/italics_font_size = 11
+RichTextLabel/font_sizes/mono_font_size = 11
+RichTextLabel/font_sizes/normal_font_size = 11
+RichTextLabel/fonts/bold_font = ExtResource("1_4c0tk")
 ScrollContainer/styles/focus = SubResource("StyleBoxEmpty_g8xnl")
 StartMenuButton/base_type = &"Button"
 StartMenuButton/colors/font_hover_color = Color(1, 1, 1, 1)
@@ -275,6 +346,11 @@ VScrollBar/styles/scroll = SubResource("StyleBoxTexture_vf1wm")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxTexture_vf1wm")
 WindowInsidePanel/base_type = &"PanelContainer"
 WindowInsidePanel/styles/panel = SubResource("StyleBoxTexture_pn6nt")
+WindowMenuButton/base_type = &"Button"
+WindowMenuButton/styles/focus = SubResource("StyleBoxTexture_nr6ob")
+WindowMenuButton/styles/hover = SubResource("StyleBoxTexture_y2fye")
+WindowMenuButton/styles/normal = SubResource("StyleBoxEmpty_ih4f4")
+WindowMenuButton/styles/pressed = SubResource("StyleBoxTexture_7suhb")
 WindowPanel/base_type = &"PanelContainer"
 WindowPanel/styles/panel = SubResource("StyleBoxTexture_vseg0")
 WindowTitle/base_type = &"Label"

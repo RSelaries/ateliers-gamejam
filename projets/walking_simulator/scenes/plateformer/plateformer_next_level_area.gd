@@ -1,4 +1,4 @@
-class_name PlateformerNextLevelArea
+class_name PlatformerNextLevelArea
 extends Area2D
 
 
@@ -11,5 +11,5 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is PlateformerPlayer and to_level:
-		Plateformer.change_level(to_level, transition)
+	if body is PlatformerPlayer and to_level:
+		Platformer.change_level(to_level, transition)

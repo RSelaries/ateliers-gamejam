@@ -13,6 +13,13 @@ signal focus_gained
 signal focus_lost
 
 
+@export var disable: bool = false:
+	set(value):
+		disable = value
+		if value:
+			process_mode = Node.PROCESS_MODE_DISABLED
+		else:
+			process_mode = Node.PROCESS_MODE_INHERIT
 @export var interaction_name: String = "Intéragir"
 
 

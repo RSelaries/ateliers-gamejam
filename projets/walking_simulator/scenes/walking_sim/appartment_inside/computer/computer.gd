@@ -18,7 +18,7 @@ func _ready() -> void:
 
 
 func _use_computer(transition: bool = true) -> void:
-	if in_transition: return
+	if in_transition or in_use: return
 	
 	Player.can_move = false
 	Player.can_interact = false
@@ -46,14 +46,16 @@ func _use_computer(transition: bool = true) -> void:
 	
 	_billboard(true)
 	in_use = true
+	print("computer in use")
 	computer_control.in_use = true
 
 
 func _stop_using_computer(transition: bool = true) -> void:
-	if in_transition: return
+	if in_transition or not in_use: return
 	
 	_billboard(false)
 	in_use = false
+	print("computer not in use")
 	computer_control.in_use = false
 	
 	var default_pos := computer_camera.global_position
@@ -91,10 +93,11 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
 		event.position = computer_control.cursor_pos
 		event.global_position = computer_control.cursor_pos
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and ComputerControl.cursor_visible:
 		computer_control.cursor_pos += event.relative
 		computer_control.cursor_pos = computer_control.cursor_pos.clamp(Vector2.ZERO, computer_screen.size - Vector2i(1, 1))
 		computer_control.cursor.position = computer_control.cursor_pos
+	
 	computer_screen.push_input(event)
 
 

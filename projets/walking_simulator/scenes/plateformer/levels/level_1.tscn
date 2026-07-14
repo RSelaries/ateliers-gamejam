@@ -40,6 +40,7 @@ editor_draw_limits = true
 position = Vector2(321, 0)
 script = ExtResource("3_6tfll")
 to_level = "uid://durrs2mglj7cy"
+transition = null
 metadata/_custom_type_script = "uid://d2cpl8tsja58x"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlateformerNextLevelArea" unique_id=355240147]
@@ -50,6 +51,7 @@ shape = SubResource("RectangleShape2D_qd8cd")
 position = Vector2(-4, 104)
 script = ExtResource("3_6tfll")
 to_level = "uid://ctnmkrgydun0"
+transition = null
 metadata/_custom_type_script = "uid://d2cpl8tsja58x"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=1437310301]

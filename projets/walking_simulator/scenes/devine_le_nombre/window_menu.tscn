@@ -1,11 +1,86 @@
 [gd_scene format=3 uid="uid://w3h2kny8wjhn"]
 
 [ext_resource type="Theme" uid="uid://bvbdjld6x8rvy" path="res://assets/themes/windows98.tres" id="1_le4gj"]
+[ext_resource type="Texture2D" uid="uid://ej51av4cvdkm" path="res://assets/textures/windows98/close_button.png" id="2_ih4f4"]
+[ext_resource type="Script" uid="uid://dgkr2baax842r" path="res://scenes/devine_le_nombre/window_menu.gd" id="2_y2fye"]
+[ext_resource type="FontFile" uid="uid://bnul1tctyvmft" path="res://assets/fonts/ari-w9500-bold.otf" id="3_h20ei"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qd8cd"]
+font = ExtResource("3_h20ei")
+font_size = 11
 
 [node name="WindowMenu" type="HBoxContainer" unique_id=265957123]
 theme = ExtResource("1_le4gj")
+script = ExtResource("2_y2fye")
 
-[node name="Button" type="Button" parent="." unique_id=689271521]
+[node name="HelpBtn" type="Button" parent="." unique_id=689271521]
 layout_mode = 2
-theme_type_variation = &"StartMenuButton"
+theme_type_variation = &"WindowMenuButton"
 text = "Aide"
+
+[node name="InputGrabber" type="Control" parent="HelpBtn" unique_id=250887187]
+unique_name_in_owner = true
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Popup" type="PanelContainer" parent="HelpBtn" unique_id=1933647460]
+unique_name_in_owner = true
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -79.0
+offset_right = 114.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"WindowPanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelpBtn/Popup" unique_id=1604093238]
+custom_minimum_size = Vector2(220, 150)
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HelpBtn/Popup/VBoxContainer" unique_id=847485982]
+layout_mode = 2
+theme_type_variation = &"WindowTitleFocused"
+
+[node name="Label" type="Label" parent="HelpBtn/Popup/VBoxContainer/PanelContainer" unique_id=1109288715]
+layout_mode = 2
+text = "Aide"
+label_settings = SubResource("LabelSettings_qd8cd")
+
+[node name="CloseHelpBtn" type="TextureButton" parent="HelpBtn/Popup/VBoxContainer/PanelContainer" unique_id=1285797610]
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("2_ih4f4")
+
+[node name="PanelContainer2" type="PanelContainer" parent="HelpBtn/Popup/VBoxContainer" unique_id=1032382969]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HelpBtn/Popup/VBoxContainer/PanelContainer2" unique_id=1379712555]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Le but du jeu est de deviner le nombre secret.
+
+- À chaque essai, le nombre que vous avez entré sera enregistré dans la section 'Réponses'.
+- Si votre réponse est [b]en dessous[/b] du nombre secret, le symbole '↑' sera présent à coté.
+- Si au contraire votre réponse est [b]en dessus[/b] du nombre secret, le symbole '↓' sera présent à coté.
+- La bonne réponse sera marquée par le symbole '🗸'."
+
+[connection signal="pressed" from="HelpBtn" to="." method="_on_help_btn_pressed"]
+[connection signal="gui_input" from="HelpBtn/InputGrabber" to="." method="_on_input_grabber_gui_input"]
+[connection signal="pressed" from="HelpBtn/Popup/VBoxContainer/PanelContainer/CloseHelpBtn" to="." method="_on_close_help_btn_pressed"]

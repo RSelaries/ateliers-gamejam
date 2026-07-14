@@ -1,7 +1,11 @@
 extends Node3D
 
 
-@export var can_be_opened: bool = true
+@export var can_be_opened: bool = true:
+	set(value):
+		can_be_opened = value
+		if interactable_area_3d:
+			interactable_area_3d.disable = !can_be_opened
 @export var bilateral: bool = true
 
 var _opened: bool = false
@@ -12,10 +16,16 @@ var in_transition: bool = false:
 
 @onready var door: MeshInstance3D = $AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001
 @onready var collision_shape_3d: CollisionShape3D = %CollisionShape3D
+@onready var interactable_area_3d: InteractableArea3D = $AppartmentDoor/AppartmentDoorFrame/AppartmentDoor_001/InteractableArea3D
+
+
+func _ready() -> void:
+	if interactable_area_3d:
+		interactable_area_3d.disable = !can_be_opened
 
 
 func open() -> void:
-	if in_transition: return
+	if in_transition or not can_be_opened: return
 	
 	_opened = true
 	
@@ -31,7 +41,7 @@ func open() -> void:
 
 
 func close() -> void:
-	if in_transition: return
+	if in_transition or not can_be_opened: return
 	
 	_opened = false
 	in_transition = true

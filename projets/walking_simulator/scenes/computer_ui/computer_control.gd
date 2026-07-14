@@ -4,18 +4,21 @@ extends Control
 
 signal stop_interacting
 
+static var self_ref: ComputerControl
 
 @onready var cursor: Sprite2D = %Cursor
 @onready var opened_program: OpenedProgram = %OpenedProgram
 @onready var program_btn: Button = %ProgramBtn
 
 
-var cursor_pos: Vector2
-var in_use: bool = false
+static var cursor_pos: Vector2
+static var in_use: bool = false
+static var cursor_visible: bool = true
 
 
 func _ready() -> void:
 	cursor_pos = cursor.position
+	self_ref = self
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -54,3 +57,19 @@ func _on_program_opened(title: String, file: String) -> void:
 
 func _on_program_btn_pressed() -> void:
 	opened_program.visible = !opened_program.visible
+
+
+func hide_cursor() -> void:
+	if not cursor_visible: return
+	
+	cursor.hide()
+	cursor_visible = false
+
+
+func show_cursor() -> void:
+	if cursor_visible: return
+	
+	cursor_pos = get_viewport_rect().size / 2.0
+	cursor.position = cursor_pos
+	cursor.show()
+	cursor_visible = true

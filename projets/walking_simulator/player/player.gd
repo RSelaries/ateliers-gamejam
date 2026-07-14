@@ -29,7 +29,6 @@ func _ready() -> void:
 	interaction_label.hide()
 	current_player = self
 	camera = %Camera3D
-	camera.make_current()
 
 
 func _physics_process(delta: float) -> void:

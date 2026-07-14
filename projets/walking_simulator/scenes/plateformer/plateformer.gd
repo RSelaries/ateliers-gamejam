@@ -1,19 +1,27 @@
-class_name Plateformer
+class_name Platformer
 extends Node
 
 
 static var in_transition: bool = false
 static var current_level: Node2D
-static var self_ref: Plateformer
+static var current_level_path: String
+static var self_ref: Platformer
+
+
+@export_file("*.tscn") var start_level: String
+@export var window_menu: PackedScene
 
 
 var stretch_shrink: int = 2
 
 
 @onready var transition_rect: ColorRect = %TransitionRect
+@onready var background: ColorRect = $Background
+@onready var platformer_menu: Control = %PlatformerMenu
 
 
-static func change_level(to_level: Variant, transition: bool = true) -> void:
+static func change_level(to_level: String, transition: bool = true) -> void:
+	current_level_path = to_level
 	var next_level_scene: PackedScene = load(to_level)
 	var next_level: Node = next_level_scene.instantiate()
 	
@@ -41,6 +49,30 @@ static func change_level(to_level: Variant, transition: bool = true) -> void:
 		in_transition = false
 
 
+static func reload_level() -> void:
+	change_level(current_level_path)
+
+
 func _ready() -> void:
-	current_level = get_child(0)
 	self_ref = self
+	platformer_menu.hide()
+	change_level(start_level)
+	ComputerControl.self_ref.hide_cursor()
+
+
+func _exit_tree() -> void:
+	ComputerControl.self_ref.show_cursor()
+
+
+func _process(_delta: float) -> void:
+	if current_level:
+		if ComputerControl.cursor_visible:
+			current_level.process_mode = Node.PROCESS_MODE_DISABLED
+		else:
+			current_level.process_mode = Node.PROCESS_MODE_INHERIT
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"platformer_menu"):
+		platformer_menu.show()
+		ComputerControl.self_ref.show_cursor()

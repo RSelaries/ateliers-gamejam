@@ -14,15 +14,15 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is PlateformerPlayer:
+	if body is PlatformerPlayer:
 		player_inside = true
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body is PlateformerPlayer:
+	if body is PlatformerPlayer:
 		player_inside = false
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"plateformer_up") and player_inside and to_level:
-		Plateformer.change_level(to_level, transition)
+		Platformer.change_level(to_level, transition)
