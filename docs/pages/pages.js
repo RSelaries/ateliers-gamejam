@@ -76,6 +76,11 @@ export default
                 link: "ateliers/walking-sim-interaction.md",
                 icon: "./medias/icons/walking-sim-interact-icon.svg",
             },
+            {
+                title: "Menus",
+                link: "ateliers/menus.md",
+                icon: "./medias/icons/control-icon.svg",
+            },
         ],
     },
     // Godot

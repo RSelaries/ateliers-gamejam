@@ -70,9 +70,3 @@ func _process(_delta: float) -> void:
 			current_level.process_mode = Node.PROCESS_MODE_DISABLED
 		else:
 			current_level.process_mode = Node.PROCESS_MODE_INHERIT
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"platformer_menu"):
-		platformer_menu.show()
-		ComputerControl.self_ref.show_cursor()

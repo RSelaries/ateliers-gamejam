@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d3c0t3b7140at" path="res://assets/gold_texture.tres" id="4_h00al"]
 [ext_resource type="Texture2D" uid="uid://bv5gda7d2pb1f" path="res://assets/empty_heart_texture.tres" id="4_l0ty0"]
 [ext_resource type="AudioStream" uid="uid://dv2xv6ahekfqm" path="res://assets/audio/jump.wav" id="8_cgibb"]
+[ext_resource type="PackedScene" uid="uid://ckyg1rtdrowso" path="res://player_controller/player_menu.tscn" id="8_itpup"]
 [ext_resource type="AudioStream" uid="uid://d4byidiyxcj6" path="res://assets/audio/explosion.wav" id="10_5xsdm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ioeb"]
@@ -426,6 +427,8 @@ label_settings = ExtResource("4_6a43r")
 layout_mode = 2
 texture = ExtResource("4_h00al")
 stretch_mode = 5
+
+[node name="PlayerMenu" parent="PlayerUi" unique_id=590079382 instance=ExtResource("8_itpup")]
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=467883509]
 unique_name_in_owner = true

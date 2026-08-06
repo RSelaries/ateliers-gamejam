@@ -6,6 +6,10 @@ signal program_changed(new_program_name: String)
 signal program_closed
 
 
+static var self_ref: OpenedProgram
+static var current_program: Node
+
+
 @export var program_title: String
 @export_file("*.tscn") var program_scene: String
 
@@ -15,6 +19,10 @@ signal program_closed
 @onready var window_menu: MarginContainer = %WindowMenu
 @onready var window_inside_panel: PanelContainer = %WindowInsidePanel
 @onready var sub_viewport_container: SubViewportContainer = %SubViewportContainer
+
+
+func _ready() -> void:
+	self_ref = self
 
 
 func update_program() -> void:
@@ -32,6 +40,7 @@ func update_program() -> void:
 		var program: PackedScene = load(program_scene)
 		if program:
 			var program_inst := program.instantiate()
+			current_program = program_inst
 			program_viewport.add_child(program_inst)
 			
 			# Program Settings
@@ -39,6 +48,8 @@ func update_program() -> void:
 				var window_menu_scene := program_inst["window_menu"] as PackedScene
 				if window_menu_scene:
 					var window_menu_inst := window_menu_scene.instantiate()
+					for child in window_menu.get_children():
+						child.queue_free()
 					window_menu.add_child(window_menu_inst)
 					window_menu.show()
 			if "window_panel" in program_inst:
@@ -54,7 +65,14 @@ func update_program() -> void:
 
 
 func _on_close_window_button_pressed() -> void:
-	if program_viewport:
-		for child in program_viewport.get_children():
+	close_program()
+
+
+static func close_program() -> void:
+	if self_ref.program_viewport:
+		for child in self_ref.program_viewport.get_children():
 			child.queue_free()
-	program_closed.emit()
+		for child in self_ref.window_menu.get_children():
+			child.queue_free()
+	current_program = null
+	self_ref.program_closed.emit()

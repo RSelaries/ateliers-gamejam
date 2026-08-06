@@ -2,7 +2,23 @@
 
 [ext_resource type="Script" uid="uid://cao0knmc58btn" path="res://scenes/plateformer/plateformer.gd" id="1_d5bdw"]
 [ext_resource type="PackedScene" uid="uid://cc0dfsxlrlnt3" path="res://scenes/plateformer/platformer_window_menu/platformer_window_menu.tscn" id="2_13d5v"]
+[ext_resource type="Shader" uid="uid://c1xs0n3akev1b" path="res://assets/shaders/one_bit_dithering.gdshader" id="3_3itbe"]
 [ext_resource type="PackedScene" uid="uid://bxcmss5uc72d1" path="res://scenes/plateformer/menu/platformer_menu.tscn" id="3_13d5v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4awus"]
+shader = ExtResource("3_3itbe")
+shader_parameter/texture_mode = 1
+shader_parameter/alpha_mode = 0
+shader_parameter/quantize_size = 1
+shader_parameter/snap_to_world = false
+shader_parameter/limit_subpixels = true
+shader_parameter/dither_enabled = true
+shader_parameter/dither_pattern = 1
+shader_parameter/levels = 2
+shader_parameter/contrast = 1.0
+shader_parameter/brightness = 0.0
+shader_parameter/average = 0.0
+shader_parameter/palette_mode = 0
 
 [node name="Platformer" type="Node" unique_id=228195162]
 script = ExtResource("1_d5bdw")
@@ -18,7 +34,8 @@ grow_vertical = 2
 focus_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2039553689]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1033813947]
+layer = 2
 
 [node name="TransitionRect" type="ColorRect" parent="CanvasLayer" unique_id=139497493]
 unique_name_in_owner = true
@@ -28,10 +45,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1033813947]
-layer = 2
-
-[node name="PlatformerMenu" parent="CanvasLayer2" unique_id=1966364406 instance=ExtResource("3_13d5v")]
+[node name="PlatformerMenu" parent="CanvasLayer" unique_id=1966364406 instance=ExtResource("3_13d5v")]
 unique_name_in_owner = true
+
+[node name="OneBitDithering" type="ColorRect" parent="CanvasLayer" unique_id=1660567241]
+material = SubResource("ShaderMaterial_4awus")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

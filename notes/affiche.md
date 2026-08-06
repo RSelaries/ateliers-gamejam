@@ -4,8 +4,7 @@
 - Prix: Gratuit
 - Inscriptions: Obligatoire, QR Code
 - Contacts: Numéro de Tel, Mail
-- Infos plus précises (si le design va bien avec, sinon non)
-
+- Infos plus précises (si le design va bien avec, sinon non) 
 # Inspis Jeu vidéo:
 
 <div class="row">

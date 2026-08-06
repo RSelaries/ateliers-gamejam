@@ -1,0 +1,333 @@
+[gd_scene format=3 uid="uid://ckyg1rtdrowso"]
+
+[ext_resource type="Script" uid="uid://cb86y0stsvqar" path="res://player_controller/player_menu.gd" id="1_1bdyw"]
+[ext_resource type="Theme" uid="uid://d3po4yq26mpba" path="res://menu_theme.tres" id="1_x3d1o"]
+
+[node name="PlayerMenu" type="Control" unique_id=590079382]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_x3d1o")
+script = ExtResource("1_1bdyw")
+
+[node name="PauseMenu" type="CenterContainer" parent="." unique_id=1606937408]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=1273866529]
+custom_minimum_size = Vector2(197, 0)
+layout_mode = 2
+
+[node name="ResumeBtn" type="Button" parent="PauseMenu/VBoxContainer" unique_id=288592865]
+layout_mode = 2
+text = "Reprendre"
+
+[node name="OptionsBtn" type="Button" parent="PauseMenu/VBoxContainer" unique_id=144808320]
+layout_mode = 2
+text = "Options"
+
+[node name="QuitBtn" type="Button" parent="PauseMenu/VBoxContainer" unique_id=158394706]
+layout_mode = 2
+text = "Quitter"
+
+[node name="OptionsMenu" type="MarginContainer" parent="." unique_id=872447368]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 32
+
+[node name="TabContainer" type="TabContainer" parent="OptionsMenu" unique_id=1464876755]
+layout_mode = 2
+tab_alignment = 1
+current_tab = 1
+
+[node name="Sons" type="Control" parent="OptionsMenu/TabContainer" unique_id=792750809]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="OptionsMenu/TabContainer/Sons" unique_id=345666906]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/TabContainer/Sons/CenterContainer" unique_id=940194433]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Sons/CenterContainer/VBoxContainer" unique_id=2088006791]
+layout_mode = 2
+text = "Son global"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/TabContainer/Sons/CenterContainer/VBoxContainer" unique_id=1369554665]
+layout_mode = 2
+value = 70.0
+
+[node name="Label2" type="Label" parent="OptionsMenu/TabContainer/Sons/CenterContainer/VBoxContainer" unique_id=1051668115]
+layout_mode = 2
+text = "Voix"
+
+[node name="HSlider2" type="HSlider" parent="OptionsMenu/TabContainer/Sons/CenterContainer/VBoxContainer" unique_id=635945209]
+layout_mode = 2
+value = 100.0
+
+[node name="Label3" type="Label" parent="OptionsMenu/TabContainer/Sons/CenterContainer/VBoxContainer" unique_id=1649493714]
+layout_mode = 2
+text = "Musique"
+
+[node name="HSlider3" type="HSlider" parent="OptionsMenu/TabContainer/Sons/CenterContainer/VBoxContainer" unique_id=589951779]
+layout_mode = 2
+value = 80.0
+
+[node name="Visuels" type="Control" parent="OptionsMenu/TabContainer" unique_id=1586296247]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="OptionsMenu/TabContainer/Visuels" unique_id=367430284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer" unique_id=1307456416]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer" unique_id=20387595]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=283823993]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=84013154]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Résolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1998698860]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+selected = 1
+item_count = 3
+popup/item_0/text = "1920 / 1080"
+popup/item_0/id = 1
+popup/item_1/text = "1280 / 720"
+popup/item_1/id = 2
+popup/item_2/text = "640 / 360"
+popup/item_2/id = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=472155839]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1891885484]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Écran"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=290852465]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Plein écran"
+popup/item_0/id = 0
+popup/item_1/text = "Plein écran exclusif"
+popup/item_1/id = 1
+popup/item_2/text = "Fenêtré"
+popup/item_2/id = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=364473166]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1759500196]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VSync "
+
+[node name="OptionButton" type="CheckButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer5" unique_id=2104200725]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1925380185]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=585745249]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VHS Shader"
+
+[node name="CheckButton" type="CheckButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1740936847]
+layout_mode = 2
+size_flags_horizontal = 3
+flat = true
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1469397101]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1296349279]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "RayTracing"
+
+[node name="CheckButton" type="CheckButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1498659808]
+layout_mode = 2
+size_flags_horizontal = 3
+flat = true
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=2143737117]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=64016389]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "IA Slop rendering"
+
+[node name="CheckButton" type="CheckButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer7" unique_id=1242034960]
+layout_mode = 2
+size_flags_horizontal = 3
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1701283561]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=192118836]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1543560662]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer12" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=162928379]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer12" unique_id=1429397747]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer12" unique_id=1761701625]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer13" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1349040428]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer13" unique_id=522671163]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer13" unique_id=1578578879]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer14" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=913071271]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer14" unique_id=69691443]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer14" unique_id=1110676606]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer15" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1871312633]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer15" unique_id=192086756]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer15" unique_id=318818560]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer16" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1134091638]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer16" unique_id=601381190]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer16" unique_id=1482727262]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer17" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1836028072]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer17" unique_id=1034204126]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer17" unique_id=70874538]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HBoxContainer18" type="HBoxContainer" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1674403229]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer18" unique_id=1591635715]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "résoolution"
+
+[node name="OptionButton" type="OptionButton" parent="OptionsMenu/TabContainer/Visuels/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer18" unique_id=361340853]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Touches" type="Control" parent="OptionsMenu/TabContainer" unique_id=1265528610]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ResumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/OptionsBtn" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
